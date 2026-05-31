@@ -12,6 +12,8 @@
   let currentPage = 0;
   let answers = {};
   let shuffle = false;
+  let listCacheKey = "";
+  let listCache = null;
 
   const el = {
     loading: document.getElementById("loading"),
@@ -94,14 +96,55 @@
     });
   }
 
+  function invalidateListCache() {
+    listCacheKey = "";
+    listCache = null;
+  }
+
   function getFilteredQuestions() {
-    let list = [...(data[currentType] || [])];
-    const topic = el.topicFilter?.value;
-    if (topic) list = list.filter((q) => (q.topic || "genel") === topic);
-    if (shuffle || el.shuffleCheck?.checked) {
-      list = shuffleArray(list);
+    const topic = el.topicFilter?.value || "";
+    const doShuffle = shuffle || el.shuffleCheck?.checked;
+    const key = `${currentType}|${topic}|${doShuffle}`;
+    if (key !== listCacheKey) {
+      let list = [...(data[currentType] || [])];
+      if (topic) list = list.filter((q) => (q.topic || "genel") === topic);
+      if (doShuffle) list = shuffleArray(list);
+      listCache = list;
+      listCacheKey = key;
     }
-    return list;
+    return listCache;
+  }
+
+  function saveCurrentPageAnswers() {
+    el.container.querySelectorAll(".question-card").forEach((card) => {
+      const id = card.dataset.id;
+      if (!id) return;
+      if (currentType === "test" || currentType === "kod") {
+        const sel = card.querySelector(`input[name="${id}"]:checked`);
+        if (sel) answers[id] = Number(sel.value);
+      } else if (currentType === "dogru") {
+        const sel = card.querySelector(".tf-btn.selected");
+        if (sel) answers[id] = sel.dataset.val === "true";
+      } else if (currentType === "bosluk") {
+        const inp = card.querySelector(".blank-input");
+        if (inp) answers[id] = inp.value.trim();
+      }
+    });
+  }
+
+  function restoreAnswer(card, q) {
+    const saved = answers[q.id];
+    if (saved === undefined || saved === "") return;
+    if (currentType === "test" || currentType === "kod") {
+      const radio = card.querySelector(`input[name="${q.id}"][value="${saved}"]`);
+      if (radio) radio.checked = true;
+    } else if (currentType === "dogru") {
+      const val = saved ? "true" : "false";
+      card.querySelector(`.tf-btn[data-val="${val}"]`)?.classList.add("selected");
+    } else if (currentType === "bosluk") {
+      const inp = card.querySelector(".blank-input");
+      if (inp) inp.value = saved;
+    }
   }
 
   function shuffleArray(arr) {
@@ -119,6 +162,7 @@
         currentType = tab.dataset.type;
         currentPage = 0;
         answers = {};
+        invalidateListCache();
         el.tabs.forEach((t) => t.classList.toggle("active", t === tab));
         el.scorePanel?.classList.remove("visible");
         render();
@@ -127,11 +171,13 @@
 
     el.topicFilter?.addEventListener("change", () => {
       currentPage = 0;
+      invalidateListCache();
       render();
     });
 
     el.shuffleCheck?.addEventListener("change", () => {
       currentPage = 0;
+      invalidateListCache();
       render();
     });
 
@@ -149,6 +195,7 @@
 
   function render() {
     if (!data) return;
+    saveCurrentPageAnswers();
     el.loading.style.display = "none";
     const list = getFilteredQuestions();
     const totalPages = Math.max(1, Math.ceil(list.length / PER_PAGE));
@@ -192,6 +239,11 @@
         li.innerHTML = `<label><input type="radio" name="${q.id}" value="${i}"> ${escapeHtml(opt)}</label>`;
         ul.appendChild(li);
       });
+      ul.querySelectorAll('input[type="radio"]').forEach((radio) => {
+        radio.addEventListener("change", () => {
+          answers[q.id] = Number(radio.value);
+        });
+      });
       card.appendChild(ul);
     } else if (currentType === "dogru") {
       card.innerHTML = header + `<p class="q-text">${escapeHtml(q.statement)}</p>`;
@@ -231,8 +283,15 @@
         li.innerHTML = `<label><input type="radio" name="${q.id}" value="${i}"><pre class="q-code" style="margin:0;padding:0.5rem;background:transparent;border:none;display:inline-block">${escapeHtml(opt)}</pre></label>`;
         ul.appendChild(li);
       });
+      ul.querySelectorAll('input[type="radio"]').forEach((radio) => {
+        radio.addEventListener("change", () => {
+          answers[q.id] = Number(radio.value);
+        });
+      });
       card.appendChild(ul);
     }
+
+    restoreAnswer(card, q);
 
     const fb = document.createElement("div");
     fb.className = "feedback";
@@ -273,14 +332,16 @@
   function getUserAnswer(q, card) {
     if (currentType === "test" || currentType === "kod") {
       const sel = card.querySelector(`input[name="${q.id}"]:checked`);
-      return sel ? Number(sel.value) : undefined;
+      if (sel) return Number(sel.value);
+      return answers[q.id];
     }
     if (currentType === "dogru") {
       return answers[q.id];
     }
     if (currentType === "bosluk") {
       const inp = card.querySelector(".blank-input");
-      return inp ? inp.value.trim() : answers[q.id];
+      if (inp && inp.value.trim()) return inp.value.trim();
+      return answers[q.id];
     }
   }
 
@@ -358,19 +419,7 @@
     correct = 0;
     answered = 0;
     list.forEach((q) => {
-      let ua = answers[q.id];
-      if (currentType === "test" || currentType === "kod") {
-        const card = document.querySelector(`[data-id="${q.id}"]`);
-        if (card) {
-          const sel = card.querySelector(`input[name="${q.id}"]:checked`);
-          if (sel) ua = Number(sel.value);
-        }
-      }
-      if (currentType === "bosluk") {
-        const card = document.querySelector(`[data-id="${q.id}"]`);
-        const inp = card?.querySelector(".blank-input");
-        if (inp) ua = inp.value.trim();
-      }
+      const ua = answers[q.id];
       if (ua !== undefined && ua !== "") {
         answered++;
         if (checkAnswer(q, ua)) correct++;
