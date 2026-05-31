@@ -1,0 +1,355 @@
+--- Sayfa 1 ---
+İNTERNET GÜVENLİĞİ
+HAFTA 9: Mobil Güvenlik ve IoT Güvenliği
+TSMYO – Öğr. Gör. Gizem ÇELİK
+“Her cihaz bir saldırı yüzeyidir”
+
+--- Sayfa 2 ---
+İÇİNDEKİLER
+Mobil Güvenlik
+IoT Güvenliği
+HAFTA 9: Mobil Güvenlik ve IoTGüvenliği
+
+--- Sayfa 3 ---
+Mobil Güvenlik ve
+IoT Güvenliği
+Bağlı dünyamızda milyarlarca cihaz her an veri üretiyor,
+üretiyor, iletişim kuruyor ve kritik altyapıları yönetiyor. Mobil
+Mobil cihazlar ve Nesnelerin İnterneti (IoT) ekosistemi,
+modern dijital dönüşümün omurgasını oluştururken aynı
+aynı zamanda siber saldırganların en çok hedef aldığı yüzeyler
+yüzeyler haline geliyor.
+HAFTA 9: Mobil Güvenlik ve IoT Güvenliği
+
+--- Sayfa 4 ---
+Neden Mobil ve IoT Güvenliği
+Kritik?
+%68 %57 4.5M %300
+Kurumsal IoT Cihazı Yeni mobil Saldırı
+ihlaller savunmasız zararlı artışı
+HAFTA 9: Mobil Güvenlik ve IoTGüvenliği
+
+--- Sayfa 5 ---
+Mobil Güvenlik
+HAFTA 9: Mobil Güvenlik ve IoTGüvenliği
+
+--- Sayfa 6 ---
+Mobil Güvenlik
+Akıllı telefonlar, tabletler ve dizüstü bilgisayarlar gibi taşınabilir cihazları; veri
+hırsızlığı, kötü amaçlı yazılımlar (malware), fidye yazılımları ve yetkisiz erişim gibi
+siber tehditlere karşı koruyan strateji, yazılım ve önlemler bütünüdür.
+Bu sistemler, cihazdaki kişisel verileri ve bağlantılı ağları güvence altına alarak gizliliği
+korur.
+6.8 Milyar %90 3.5M+ %43
+Akıllı telefon kullanıcısı İnternet erişimi mobilden Play Store uygulama sayısı Saldırıların mobil hedefi
+Patlamış Mısır düz dolguyla
+HAFTA 6: Sosyal Mühendislik Saldırıları
+
+--- Sayfa 7 ---
+Mobil Güvenlik
+Veri Koruma Cihazda depolanan fotoğraflar, mesajlar ve bankacılık bilgileri gibi kişisel
+verilerin şifrelenmesi ve korunması
+Kötü Amaçlı Virüsler, casus yazılımlar ve truva atları gibi zararlı uygulamaların tespiti
+Yazılım Koruması
+ve engellenmesi
+Ağ Güvenliği Güvensiz halka açık Wi-Fi ağlarına bağlanırken verilerin korunması.
+Uygulama Güvenilmeyen kaynaklardan yüklenen uygulamaların risklerine karşı
+Güvenliği
+koruma sağlanması.
+Cihaz Kaybolan veya çalınan cihazların uzaktan kilitlenmesi veya içindeki
+Kaybı/Hırsızlığı
+verilerin silinmesi.
+HAFTA 9: Mobil Güvenlik ve IoTGüvenliği
+
+--- Sayfa 8 ---
+Temel Güvenlik Katmanları
+Cihaz Güvenliği Uygulama Güvenliği Ağ Güvenliği
+Ekran kilidi (PIN, Sadece resmi uygulama Güvenli internet bağlantıları
+biyometrik), uzaktan mağazalarından (Google kullanmak ve gerektiğinde
+kilitleme/silme özellikleri ve Play, App Store) uygulama VPN gibi araçlarla trafiği
+güncel işletim sistemi indirmek ve uygulamalara şifrelemek.
+kullanımı. verilen izinleri kontrol
+etmek.
+HAFTA 9: Mobil Güvenlik ve IoTGüvenliği
+
+--- Sayfa 9 ---
+Mobil Güvenlik Tehditleri
+Kimlik Avı (Phishing) Ortadaki Adam Fidye Yazılımı
+Zararlı Uygulamalar Casus Yazılımlar Güvenlik Açıkları
+Saldırıları (MitM) Saldırıları (Ransomware)
+•Google Play veya •SMS (smishing), e- •Halka açık, şifresiz •Mobil cihazın •Konum, mesajlar ve •Güncellenmemiş
+App Store dışından posta veya Wi-Fi ağlarında kilitlenerek açılması aramalar gibi özel işletim sistemleri ve
+yüklenen, bankacılık mesajlaşma trafiğin dinlenerek için para talep bilgileri izinsiz uygulamalardaki
+Truva atları veya uygulamaları verilerin ele edilmesi. kaydeden yazılımlar. açıkların saldırganlar
+reklam yazılımları üzerinden gelen geçirilmesi. tarafından
+içeren uygulamalar. sahte linkler ile şifre kullanılması.
+ve kredi kartı
+bilgilerinin
+çalınması.
+HAFTA 9: Mobil Güvenlik ve IoTGüvenliği
+
+--- Sayfa 10 ---
+Güncel
+Örnekler
+HAFTA 9: Mobil Güvenlik ve IoTGüvenliği
+
+--- Sayfa 11 ---
+ANDROID GÜVENLİK MİMARİSİ
+Linux Kernel'den Uygulama Katmanına — 5 Güvenlik Katmanı
+Linux Kernel SELinux mandatory access control, seccomp filtresi, süreç izolasyonu, UID/GID tabanlı izinler
+HAL / Donanım Trusty TEE (Güvenilir Yürütme Ortamı), StrongBox Keymaster, donanım güven kökü
+Android Runtime (ART) Bytecode doğrulama, sandboxed uygulama yürütme, JIT/AOT derleme güvenliği
+Uygulama Çerçevesi İzin yöneticisi, Android Keystore, biyometri API, SafetyNet/Play Integrity API
+Uygulama Katmanı Her uygulama kendi UID'si ile izole sandbox'ta çalışır, inter-app iletişim Intent güvenliği
+HAFTA 9: Mobil Güvenlik ve IoTGüvenliği
+
+--- Sayfa 12 ---
+iOS GÜVENLİK MİMARİSİ
+Apple'ın Kapalı Ekosistem Güvenlik Modeli
+Secure Enclave
+Ayrı işlemci yongası — Touch ID/Face ID şablonları ve şifreleme anahtarları ana CPU'dan bağımsız saklanır.
+App Sandbox
+Her uygulama izole container'da çalışır. Diğer uygulamaların dosya sistemine, belleğine erişim yok.
+Code Signing
+Tüm uygulamalar Apple Developer sertifikasıyla imzalanmalı. İmzasız veya değiştirilmiş kod çalıştırılamaz.
+Data Protection API
+Dosyalar 4 güvenlik sınıfına ayrılır. CompleteProtection: kilit açılmadan erişilemez, AES-256 şifreleme.
+App Store Review
+Statik analiz + dinamik test + gizlilik kontrolleri + insan incelemesi. Kötü amaçlı uygulama tespiti otomatik.
+HAFTA 9: Mobil Güvenlik ve IoTGüvenliği
+
+--- Sayfa 13 ---
+OWASP MOBİLE TOP 10
+Mobil Uygulamalardaki En Kritik 10 Güvenlik Açığı — 2024
+M1 Improper Credential Usage M6 Inadequate Privacy Controls
+M2 Inadequate Supply Chain Security M7 Insufficient Binary Protections
+M3 Insecure Authentication / Auth M8 Security Misconfiguration
+M4 Insufficient Input/Output Validation M9 Insecure Data Storage
+M5 Insecure Communication M10 Insufficient Cryptography
+HAFTA 9: Mobil Güvenlik ve IoTGüvenliği
+
+--- Sayfa 14 ---
+Korunma Yöntemleri
+İki faktörlü kimlik İşletim
+doğrulamayı sistemlerini
+(2FA) etkinleştirin güncel tutun
+Ailenizi güvende
+Biyometrik erişim
+tutan yazılımlar
+kullanın
+kullanın
+Uygulamaları
+Uzak bağlantıyı
+indirmeden önce
+devre dışı bırakın
+kontrol edin
+Uygulamalar için
+sınırlandırılmış
+izinler sağlayın
+HAFTA 9: Mobil Güvenlik ve IoTGüvenliği
+
+--- Sayfa 15 ---
+MOBİL ZARARLI YAZILIMLAR
+Android & iOS'u Hedef Alan Malware Türleri
+Spyware Konum, SMS, arama kaydı, mikrofon/kamera gizlice izler. Pegasus gibi state-sponsored araçlar. Kritik
+Banking Trojan Ekran paylaşımı, SMS OTP yakalama, overlay saldırısı ile banka uygulamalarını taklit eder. Yüksek
+Ransomware Dosyaları şifreler veya ekranı kilitler. Android'de daha yaygın. Kripto para fidye talep eder. Yüksek
+Adware Agresif reklam gösterimi, kullanıcı davranışı takibi, gizlilik ihlali. Orta
+Stalkerware Kurbanın haberi olmadan konum ve iletişim takibi. Partner şiddeti vakalarında yaygın. Yüksek
+HAFTA 9: Mobil Güvenlik ve IoTGüvenliği
+
+--- Sayfa 16 ---
+MOBİL GİZLİLİK VE VERİ KORUMA
+KVKK, GDPR ve Mobil Uygulama Gizlilik Gereksinimleri
+İzin Yönetimi
+Yalnızca gerekli izinleri iste. İzni neden istediğini açıkla. Reddedilirse graceful degradation uygula.
+Veri Minimizasyonu
+Yalnızca gerekli veriyi topla. Amaç dışı kullanma. Saklama süresini sınırla ve sonra güvenle sil.
+3. Taraf SDK Riski
+Facebook, Google Analytics SDK'lar data toplar. Her SDK'nın gizlilik politikasını incele, sandbox et.
+Konum Verisi
+"Always" izin yerine "While Using" tercih et. Konum geçmişini saklamayı minimize et. Anonimleştir.
+Gizlilik Bildirimi: Uygulamanın hangi veriyi neden topladığını net şekilde kullanıHcıAyaF TbAild 6ir:m Seoks yKaVlK MK üMhaednddeis 1lik0 Skaapldsaırmılaınrıda zorunludur.
+
+--- Sayfa 17 ---
+IoT Güvenliği
+HAFTA 9: Mobil Güvenlik ve IoTGüvenliği
+
+--- Sayfa 18 ---
+Nesnelerin İnterneti (IoT)
+Sensörler, yazılımlar ve ağ bağlantısı ile donatılmış fiziksel cihazların
+internet üzerinden birbirleriyle veri alışverişi yaptığı akıllı bir ağdır
+Veri Toplama ve
+Bağlanabilirlik Akıllı İşlevsellik
+Paylaşım
+•Cihazlar, • Nesneler internet, • Toplanan veriler,
+çevrelerindeki Wi-Fi, Bluetooth makine öğrenimi
+verileri sensörler veya hücresel ağlar sayesinde
+aracılığıyla toplar üzerinden öngörülere ve
+ve bulut tabanlı birbiriyle veya otomatik
+sistemlere aktarır. merkezi bir eylemlere
+sistemle iletişim dönüştürülür.
+kurar. Patlamış Mısır düz dolguyla
+HAFTA 9: Mobil Güvenlik ve IoTGüvenliği
+
+--- Sayfa 19 ---
+IoT Güvenliği
+İnternete bağlı akıllı cihazları, sensörleri ve ağları siber saldırılardan,
+yetkisiz erişimden ve veri hırsızlığından koruyan bir stratejiler bütünüdür.
+Cihazları, yazılımları ve verileri güvence altına alarak dijital ekosistemin
+güvenli çalışmasını sağlar. Temel amacı, güvenlik açıklarını kapatarak
+kesintisiz çalışma ve veri gizliliği sağlamaktır.
+18.8 Milyar 41.6 Milyar %57 98%
+Bağlı IoT cihazı (2024) Tahmin: 2025 IoT cihazları IoT cihazları orta/yüksek risk IoT trafiği şifresiz
+HAFTA 9: Mobil Güvenlik ve IoTGüvenliği
+
+--- Sayfa 20 ---
+IoT Cihaz Kategorisi
+Akıllı Ev: Termostat, IP kamera, kapı kilidi, ampul, sesli asistan, buzdolabı
+Endüstriyel IoT: SCADA, PLC, sensörler, üretim hattı kontrolcüleri, robotik sistemler
+Sağlık IoT: Pacemaker, insülin pompası, hasta takip monitörü, akıllı ilaç dolabı
+Akıllı Şehir: Trafik kameraları, akıllı aydınlatma, enerji sayaçları, çevre sensörleri
+HAFTA 9: Mobil Güvenlik ve IoTGüvenliği
+
+--- Sayfa 21 ---
+IoT Tehdit Ortamı
+Mirai'den Günümüze — Botnet, DDoS ve Fidye
+VAKA: Mirai Botnet (2016) — İnternetin Tarihi En Büyük DDoS Saldırısı
+600.000+ IP kamerası ve DVR ele geçirildi. Dyn DNS'e 1.2 Tbps DDoS saldırısı: Twitter, Netflix, Reddit, GitHub, CNN saatlerce çevrimdışı kaldı.
+Neden? Tüm cihazlarda varsayılan fabrika şifresi (admin/admin, root/root) hiç değiştirilmemişti.
+Fabrika çıkışı şifreler asla değiştirilmez. Shodan ile saniyeler içinde bulunur. Mirai'nin temel sömürü
+Varsayılan Kimlik Bilgileri:
+yöntemi.
+Güncelleme Mekanizması Yok: Firmware güncellenemiyor. Kritik CVE'ler aylarca kapalı kalır. Satıcı desteği biter, cihaz savunmasız kalır.
+Şifrelenmemiş İletişim: Telnet, FTP, HTTP ile veri gönderilir. MITM saldırısı trivial. Tüm komutlar ve veri açık metin.
+UART/JTAG portları açık. Direct memory access. Firmware dump alınabilir. Maliyetli olmayan lab
+Fiziksel Güvenlik Eksikliği:
+ekipmanıyla mümkün.
+HAFTA 9: Mobil Güvenlik ve IoTGüvenliği
+
+--- Sayfa 22 ---
+OWASP IoT TOP 10
+IoT Cihazlarındaki En Kritik 10 Güvenlik Sorunu
+I1 Zayıf / Hardcoded Şifreler I6 Yetersiz Gizlilik Koruması
+I2 Güvensiz Ağ Servisleri I7 Güvensiz Veri Transferi ve Depolama
+I3 Güvensiz Ekosistem Arayüzleri I8 Cihaz Yönetimi Eksikliği
+I4 Güvenli Güncelleme Mekanizması Eksikliği I9 Güvensiz Varsayılan Ayarlar
+I5 Güvensiz veya Eski Bileşenler I10 Fiziksel Güvenlik Eksikliği
+HAFTA 9: Mobil Güvenlik ve IoTGüvenliği
+
+--- Sayfa 23 ---
+IoT PROTOKOL GÜVENLİĞİ
+MQTT, CoAP, Zigbee, Z-Wave, BLE, LoRaWAN Analizi
+Protokol Risk Güvenlik Sorunu Çözüm
+Varsayılan auth yok, anonim broker bağlantısı, tüm topic'ler
+MQTT Yüksek TLS + user/pass + ACL politikası
+okunabilir
+CoAP Yüksek UDP tabanlı, DTLS opsiyonel, amplification DDoS saldırısına açık DTLS zorunlu, kaynak doğrulama + rate limit
+Zigbee Orta Zayıf varsayılan network key, replay saldırısı, pairing sırasında açık Unique network key, güvenli komisyon
+Z-Wave Düşük Eski S0 güvenlik modu zayıf, eski cihazlar S0 kullanıyor S2 güvenlik modu zorunlu kılınmalı
+BLE Orta BlueBorne, BIAS saldırıları, eski BT sürümleri kritik açıklar içeriyor BT 5.0+ LE Secure Connections kullan
+Replay attack, eski cihazlarda ABP join zayıf güvenlik, NwkSKey
+LoRaWAN Düşük OTAA join, her oturum yeni anahtar
+paylaşımı
+HAFTA 9: Mobil Güvenlik ve IoTGüvenliği
+
+--- Sayfa 24 ---
+FİRMWARE GÜVENLİĞİ
+Güvenli Firmware Tasarımı ve OTA Güncelleme
+Firmware Saldırı Araçları Güvenli Firmware Tasarımı
+$ binwalk -e firmware.bin # Çıkart ✓ Güvenli önyükleme (Secure Boot)
+$ binwalk -E firmware.bin # Entropi analizi ✓ İmzalı OTA güncellemeleri
+$ firmwalker squashfs-root/ # Şifre bul
+✓ Şifreli firmware depolama
+$ strings binary | grep -iE 'pass|key|secret'
+✓ Minimum servis / açık port
+$ unsquashfs firmware.squashfs
+✓ Debug portları production'da kapalı
+Bootloader başlamadan önce firmware imzasını doğrular. RSA/ECDSA ile imzalı paket. Manipüle edilmiş firmware
+Secure Boot
+çalıştırılamaz.
+OTA Güncelleme Güncellemeler TLS üzerinden şifreli iletilir. Paket imzalı, sürüm numarası kontrollü, rollback koruması var.
+HAFTA 9: Mobil Güvenlik ve IoTGüvenliği
+
+--- Sayfa 25 ---
+AKILLI EV GÜVENLİĞİ
+Akıllı Ev Cihazlarındaki Gerçek Güvenlik Riskleri
+IP Kamera Akıllı Kapı Kilidi
+Risk: Protokol zafiyeti ile yetkisiz kilit açma, replay saldırısı, firmware
+Risk: Varsayılan şifre, açık RTSP akışı, uzaktan gözetleme imkânı
+manipülasyon
+Sesli Asistan Akıllı Termostat
+Risk: Gizlice dinleme endişesi, ultrasonic komut saldırısı (inaudible), veri
+Risk: Ev aktivitesi profili çıkarımı, ağ keşfi, komşu cihazlara pivot noktası
+buluta gönderme
+Bebek Monitörü Akıllı Elektrik Sayacı
+Risk: Enerji tüketim analizi ile ev aktivitesi, manipülasyon ile fatura
+Risk: Şifresiz video akışı, ses dinleme, konum tespiti, uzaktan kontrol
+sahteciliği
+HAFTA 9: Mobil Güvenlik ve IoTGüvenliği
+
+--- Sayfa 26 ---
+ENDÜSTRİYEL IoT — ICS/SCADA GÜVENLİĞİ
+Kritik Altyapı ve Operasyonel Teknoloji Tehditleri
+Stuxnet (2010) — İlk Siber Silah — Tarihin Dönüm Noktası
+İran nükleer tesisindeki Siemens S7-315 PLC'leri hedef aldı. Santrifüjlerin hızını gizlice %20 artırıp azaltarak fiziksel hasar verdi.
+Air-gapped ağa USB flash disk ile sızdı. 5 sıfırıncı gün açığı kullandı. OT güvenliğini dünyaya duyurdu.
+Purdue Model: IT/OT ağını 5 seviyeye ayırır. DMZ ile internet erişimi kısıtlanır. Legacy sistemler izole edilir.
+Protokol Güvensizliği: Kimlik doğrulama ve şifreleme yok.
+Air-Gap Yanılgısı: İzole sanılan ağlar USB, mühendis laptopları veya tedarik zinciri saldırısıyla ihlal edilebilir.
+IEC 62443 Standardı: Endüstriyel güvenlik için 4 seviye (SL1-SL4). Zone & Conduit modeli. Tedarikçi güvenlik gereksinimleri.
+HAFTA 9: Mobil Güvenlik ve IoTGüvenliği
+
+--- Sayfa 27 ---
+IoT KİMLİK VE ERİŞİM YÖNETİMİ
+Device Identity, PKI ve Sertifika Tabanlı Kimlik Doğrulama
+X.509 Cihaz Sertifikaları
+Her IoT cihazına üretimde benzersiz sertifika yüklenir. Mutual TLS ile kimlik doğrulama. CRL/OCSP ile iptal mekanizması.
+TPM 2.0 Güven Kökü
+Donanım güvenlik modülü. Şifreleme anahtarları yazılımdan çıkarılamaz. Trusted Platform Module
+Hafif Kimlik (Lightweight)
+Kısıtlı cihazlar için EDHOC, OSCORE protokolleri. CoAP + DTLS tabanlı. TLS'in 1/10 overhead'i.
+Sertifika Yaşam Döngüsü
+Otomatik yenileme (ACME/EST protokolleri). Çalınan cihaz durumunda uzaktan iptal. Zero-touch provisioning.
+HAFTA 9: Mobil Güvenlik ve IoTGüvenliği
+
+--- Sayfa 28 ---
+YASAL DÜZENLEMELER VE STANDARTLAR
+Mobil & IoT Güvenlik Çerçeveleri ve Mevzuat
+ETSI EN 303 645 Avrupa/Global Tüketici IoT temel güvenliği. Benzersiz şifre zorunluluğu, güvenlik açığı bildirimi, güncelleme desteği.
+NIST SP 800-213 ABD Federal IoT güvenlik çerçevesi. Cihaz kimliği, yapılandırma, veri koruma, erişim yönetimi.
+UK PSTI Act 2022 Birleşik Krallık IoT ürünler için 3 zorunluluk: benzersiz şifre, açık bildirimi, güncelleme desteği süresi.
+KVKK / GDPR TR / AB IoT cihazlarının topladığı kişisel veri için rıza, minimizasyon, ihlal bildirimi (72 saat).
+IEC 62443 Endüstriyel ICS/SCADA güvenliği. 4 güvenlik seviyesi (SL1-SL4). Zone & Conduit modeli, tedarikçi gereksinimleri.
+HAFTA 9: Mobil Güvenlik ve IoTGüvenliği
+
+--- Sayfa 29 ---
+GELECEĞİN TEHDİTLERİ
+2025 ve Ötesi — Yükselen Riskler
+Kuantum Sonrası Şifreleme
+Kuantum bilgisayarlar RSA/ECC'yi kırabilir. NIST PQC standardı: CRYSTALS-Kyber (KEM), CRYSTALS-Dilithium (imza). IoT cihazları şimdiden göç planlamalı.
+5G IoT Saldırı Yüzeyi
+5G ile patlayan IoT bağlantısı. Network slicing güvenliği, MEC saldırıları, 5G protokol açıkları (SUPI/SUCI). Gerçek zamanlı saldırı kapasitesi artar.
+Deepfake Biyometri Saldırıları
+GAN ile üretilen yüz/ses ile biyometrik kimlik doğrulama atlatılabilir. Liveness detection ve challenge-response kritik önem kazanıyor.
+Otonom Araç Güvenliği
+V2X (Vehicle-to-Everything) protokolleri, OTA güncellemeler, kamera/lidar sensör manipülasyonu — fiziksel tehlike yaratan siber saldırılar.
+HAFTA 9: Mobil Güvenlik ve IoTGüvenliği
+
+--- Sayfa 30 ---
+Korunma Yöntemleri
+IoT Güvenlik
+Varsayılan şifreler değiştirildi
+Firmware imzalı ve şifreli OTA
+Ayrı IoT VLAN / ağ segmenti
+Debug portları production'da kapalı
+Düzenli CVE/açık taraması yapılıyor
+Cihaz ömür sonu planı mevcut
+ETSI EN 303 645 uyumluluğu
+SBOM (yazılım malzeme listesi) hazır
+HAFTA 9: Mobil Güvenlik ve IoTGüvenliği
+
+--- Sayfa 31 ---
+Soru & Cevap
+Gelecek Hafta: Ağ İzleme ve Güvenlik Testleri
+HAFTA 9: Mobil Güvenlik ve IoTGüvenliği

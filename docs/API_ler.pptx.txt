@@ -1,0 +1,322 @@
+--- Slayt 1 ---
+API'lere Giriş
+
+--- Slayt 2 ---
+API'lere Giriş
+API Nedir? (API = Application Programming Interface (Uygulama Programlama Arayüzü))
+Basit Tanım:
+Farklı yazılımların birbiriyle iletişim kurmasını sağlayan kurallar ve protokoller bütünü
+Yazılımlar arasında bir "köprü" görevi görür
+İki programın birbiriyle konuşmasını sağlar
+
+--- Slayt 3 ---
+API'lere Giriş
+API Analoji:
+Program A (Çince konuşur) ←→ API (Arayüz) ←→ Program B (Japonca konuşur)
+
+
+
+
+Gerçek Dünya Örneği:
+Restoran menüsü gibi: Ne istediğini söylersin, mutfak (API) siparişini hazırlar
+Bilgisayar ile yazıcı arasındaki iletişim
+Telefon uygulamaları ile sunucular arasındaki veri alışverişi
+Gerçek Hayat API Örnekleri
+Hava Durumu API'si (OpenWeather)
+Senaryo: Günlük web sitesi yapıyorsun, her girişte o günün hava durumunu göstermek istiyorsun
+Nasıl çalışır?
+1. OpenWeather'ın API'sine istek gönder
+2. Enlem ve boylam bilgisi ver
+3. API sana sıcaklık, hava durumu ikonu, nem vb. verileri döndürür
+4. Bu verileri web sitende göster
+
+--- Slayt 4 ---
+API Mimarileri
+Popüler API Mimarileri:
+
+--- Slayt 5 ---
+API Mimarileri
+Mimari Analojisi ve Hangisi Kullanabiliriz?
+Bir ev inşa ederken farklı mimari stiller seçebilirsin
+İyon sütunları (REST) vs Dorik sütunları (SOAP)
+Her stilin kendine özgü kuralları vardır
+Web Geliştirme İçin En Önemli:
+REST API - Web'de en çok kullanılan
+HTTP protokolünü kullanır (GET, POST, PUT, PATCH, DELETE)
+Zaten öğrendiğimiz HTTP metodlarıyla çalışır!
+
+--- Slayt 6 ---
+API Mimarileri
+REST API Nedir?REST = Representational State Transfer
+Temel Prensipler:
+HTTP Protokolü kullanılır
+Kaynaklar (Resources) URL'lerle temsil edilir
+HTTP Metodları ile işlemler yapılır:
+GET → Veri al
+POST → Veri oluştur
+PUT → Veriyi tamamen güncelle
+PATCH → Veriyi kısmen güncelle
+DELETE → Veri sil
+GET    /api/users           → Tüm kullanıcıları getir
+GET    /api/users/123       → ID'si 123 olan kullanıcıyı getir
+POST   /api/users           → Yeni kullanıcı oluştur
+PUT    /api/users/123       → 123 numaralı kullanıcıyı güncelle
+DELETE /api/users/123       → 123 numaralı kullanıcıyı sil
+Neden REST Popüler?
+Basit ve anlaşılır
+HTTP zaten bildiğimiz bir protokol
+Her dil ve platformda kullanılabilir
+Ölçeklenebilir
+
+--- Slayt 7 ---
+ISS API ile Pratik
+ISS Nerede? API'siProje: Uluslararası Uzay İstasyonu'nun (ISS) anlık konumunu bulma
+API Adresi: https://wheretheiss.at/
+Öcelikle API’nın Dokümantasyonu okuyoruz. Ondan sonra Postman ile İstek Yapıyoruz:
+HTTP Metodu: GET
+URL: https://api.wheretheiss.at/v1/satellites/25544
+"Send" butonuna tıkla
+Latitude ve longitude değerlerini al
+JSON Format Çıkıtı alıyoruz
+
+--- Slayt 8 ---
+Önemli Çıkarımlar:
+API = Yazılımlar arasında iletişim köprüsü
+REST API = HTTP kullanan en popüler API türü
+HTTP metodları ile API'lere istek yapılır:
+GET → Veri almak için
+POST → Veri göndermek için
+API dokümantasyonu = API'nin kullanım kılavuzu
+Postman = API test etmek için harika bir araç
+Gerçek veri almak eğlencelidir (ISS konumu gibi)
+
+--- Slayt 9 ---
+API İsteklerini Yapılandırma (Özel API vs Genel API)
+Özel API (Private API):
+Kendi ön yüzünüz ile arka yüzünüz arasındaki iletişim
+Belgelendirilmemiş
+Sadece sizin uygulamanıza hizmet eder
+
+
+Genel API (Public API):
+Başka bir sunucu ile iletişim kurma
+Belgelendirilmiş
+Herkesin kullanımına açık
+API Uç Noktaları (Endpoints)
+Endpoint Nedir?
+API sağlayıcının sunucusunda farklı bir rota
+Her endpoint farklı bir amaç için
+API dokümantasyonunda listelenir
+Örnek: bir sıkıcı durmada aktivitelleri API bakalım.
+https://bored-api.appbrewery.com/ 
+
+
+├ Temel URL (Base URL)         ──┘ └ Uç Nokta (Endpoint) ┘
+Get Metodla POSTMAN’da kullanalım
+GET https://bored-api.appbrewery.com/random
+Ön Yüz (Frontend)
+(Web Siteniz)
+Arka Yüz (Backend)
+(Sizin Sunucunuz)
+GET İsteği
+Sunucunuz (sızın)
+Başka bir Sunucu
+(API Sağlayıcı)
+İstek
+https://api.bored.com/v1
+/random
+
+--- Slayt 10 ---
+API İsteklerini Yapılandırma (API Çeşitleri)
+Sorgu Parametreleri (Query Parameters)
+Sorgu Parametresi Yapısı:
+https://api.bored.com/v1/filter?type=social&participants=2
+Sözdizimi Kuralları:
+İlk parametre ? ile başlar
+Format: anahtar=değer
+Sonraki parametreler & ile eklenir
+Kullanım Alanları:
+Filtreleme (filtering)
+Sıralama (sorting)
+Arama (searching)
+Sayfalama (pagination)
+API Uç Noktaları (Endpoints)
+Fazla uç nokta uzantıları
+
+--- Slayt 11 ---
+API İsteklerini Yapılandırma (API Çeşitleri)
+Yol Parametreleri (Path Parameters): 
+Bu tip kullanılırken, belirli bir Kaynakları tanımlama yapıyoruz. 
+https://api.bored.com/v1/activity/5881028
+                               │         │
+                      │         └─ Yol Parametresi (benzersiz ID)
+                      └─ Endpoint
+
+--- Slayt 12 ---
+API İsteklerini Yapılandırma (API Çeşitleri)
+Önemli Çıkarımlar:
+Endpoint: API'nin farklı işlevleri için sabit yol
+Sorgu Parametreleri: Filtreleme, arama, sıralama için, ? ile başlar, & ile ayrılır
+Yol Parametreleri: Belirli bir kaynağı tanımlar, URL'nin parçasıdır
+API Dokümantasyonu her zaman ilk başvurulacak kaynaktır
+Oran Sınırları (Rate Limits) API'lerin kötüye kullanımını önler
+Postman API'leri test etmek için harika bir araçtır
+
+--- Slayt 13 ---
+JSON(JAVASCRIPT OBJECT NOTATION) - JavaScript Nesne Gösterimi
+JSON Nedir?
+Tanım:
+Verileri internet üzerinden göndermek için okunabilir ve verimli bir format
+JavaScript nesneleri gibi yapılandırılmıştır
+"Düz paket" (flat pack) formatı
+JavaScript Nesnesi vs JSON Karşılaştırması:
+javascript
+{
+  kapı: 2,
+  çekmece: 3,
+  renk: "beyaz"
+}
+JSON
+{
+ " kapı " : 2,
+ " çekmece " : 3,
+ " renk " : "beyaz"
+}
+
+--- Slayt 14 ---
+JSON(JAVASCRIPT OBJECT NOTATION) - JavaScript Nesne Gösterimi
+JSON Neden Kullanılır?(Düz Paket Analojisi)
+Sorun: Büyük Nesneleri Taşımak
+Büyük bir gardırop taşımak zordur
+Çok fazla hava ve boşluk içerir
+Arabanın üzerine bağlamak risklidir!
+Çözüm: Düz Paket (IKEA Modeli)
+Parçalarına ayır, sıkıştır
+Küçültülmüş formatta taşı
+Varış noktasında yeniden monte et
+JSON Aynı Şeyi Yapar:
+Stringify (Düz Paketleme): JavaScript nesnesini JSON string'ine dönüştürür
+İnternet üzerinden aktar: Küçük boyutlu, verimli
+Parse (Monte Etme): JSON'ı tekrar JavaScript nesnesine dönüştürür
+
+--- Slayt 15 ---
+JSON(JAVASCRIPT OBJECT NOTATION) - JavaScript Nesne Gösterimi
+Düz Paket JSON (İnternet üzerinden): 
+Örnek kodu: {"name":"Chicken Taco","ingredients":{"protein":{"name":"Chicken","preparation":"grilled"},"salsa":{"name":"Pico de gallo"},"toppings":[{"name":"Lettuce","quantity":"1 cup"},{"name":"Cheese","quantity":"1/2 cup"}]}}
+Monte Edilmiş JSON (Okunabilir):
+Örnek kodu: {
+  "name": "Chicken Taco",
+  "ingredients": {
+    "protein": {
+      "name": "Chicken",
+      "preparation": "grilled"
+    }    }   }
+JSON Görselleştirici: (Önerilen Araç: https://jsonviewer.stack.hu/)
+JSON'u metin olarak yapıştır
+"Viewer" sekmesine git
+İç içe geçmiş yapıyı genişlet/daralt
+ÇIKITI:
+└─ 0 (Chicken Taco)
+   ├─ name: "Chicken Taco"
+   └─ ingredients
+      ├─ protein
+      │  ├─ name: "Chicken"
+      │  └─ preparation: "grilled"
+      ├─ salsa
+      │  └─ name: "Pico de gallo"
+      └─ toppings (dizi)
+         ├─ 0: Lettuce, 1 cup
+         ├─ 1: Cheese, 1/2 cup
+         └─ 2: Guacamole, 1/4 cup
+
+--- Slayt 16 ---
+JSON(JAVASCRIPT OBJECT NOTATION) - JavaScript Nesne Gösterimi
+Veri Erişimi (JavaScript Nesnesi Olarak):
+// İlk tarifin adı
+recipe[0].name          // "Chicken Taco"
+// Protein adı
+recipe[0].ingredients.protein.name    // "Chicken"
+// İlk malzeme
+recipe[0].ingredients.toppings[0].name  // "Lettuce"
+// Tüm malzemelerde döngü
+recipe[0].ingredients.toppings.forEach(topping => {
+  console.log(topping.quantity, topping.name);
+});
+JSON'u metin olarak yapıştır
+"Viewer" sekmesine git
+İç içe geçmiş yapıyı genişlet/daralt
+ÇIKITI:
+└─ 0 (Chicken Taco)
+   ├─ name: "Chicken Taco"
+   └─ ingredients
+      ├─ protein
+      │  ├─ name: "Chicken"
+      │  └─ preparation: "grilled"
+      ├─ salsa
+      │  └─ name: "Pico de gallo"
+      └─ toppings (dizi)
+         ├─ 0: Lettuce, 1 cup
+         ├─ 1: Cheese, 1/2 cup
+         └─ 2: Guacamole, 1/4 cup
+
+--- Slayt 17 ---
+JSON(JAVASCRIPT OBJECT NOTATION) - JavaScript Nesne Gösterimi
+ALIŞTIRMA YAPALIM
+Bu Linkten başlancı klasör  indir sonra Vscode’de yükleyin:
+Bütün yapacağını görevleri index.js dosyada yazıdır: 
+https://drive.google.com/drive/folders/19I_Td1CwgW9iQREwf3dWP7ddUP_igzF4?usp=sharing 
+taco-yemek/
+├── public/
+│   └── main.css
+├── views/
+│   └── index.ejs
+├── index.js
+└── recipe.json
+Yapılması Gerekenler:
+npm install
+nodemon index.js
+Önemli Çıkarımlar: 
+JSON, veri aktarımı için hafif bir formattır
+JSON.stringify() nesneleri düz paketler (göndermek için)
+JSON.parse() JSON'ı nesnelere dönüştürür (kullanmak için)
+JSON Görselleştiriciler karmaşık verileri anlamaya yardımcı olur
+JavaScript nesneleri JSON'dan parse edildikten sonra normal nesneler gibi çalışır
+Nokta notasyonu ile iç içe verilere erişilir
+Dizi metodları (forEach, find, filter) JSON dizileri için kullanılabilir
+
+--- Slayt 18 ---
+Sunucu Tarafından API İstekleri Yapma
+Sunucunuz başka bir sunucuya istek yapsın:
+Neden Sunucu Tarafından İstek?
+Güvenlik (API anahtarları gizlenir)
+CORS kısıtlamalarından kaçınma
+Veri işleme ve dönüştürme
+Birden çok API'yi birleştirme
+Kimlik doğrulama ve yetkilendirme 
+
+Sunucudan API istekleri yaparken, aşağıdaki örnek kod parçacığında iki yöntemi karşılaştırabileceğimiz gibi, yerel HTTP yaklaşımını (uzun yol) veya AXIOS paketini (kısa ve en popüler yol) kullanabiliriz.
+
+--- Slayt 19 ---
+Sunucu Tarafından API İstekleri Yapma
+Node HTTPS Modülü ile İstek Yapma
+Axios ile API İstekleri
+Axios Nedir?  ( npm install axios  )
+HTTP istekleri için popüler istemci kütüphanesi
+Node.js'de ve tarayıcıda çalışır
+Native Node modülünden çok daha basit
+
+--- Slayt 20 ---
+Axios Metodları:
+
+--- Slayt 21 ---
+AXIOS alıştırma
+Hadi Axios kullanarak "Sıkıldım" projemizi değiştirmeye çalışalım. Aşağıdaki bağlantıdan başlangıç dosyalarını indirin ve index.js dosyasındaki YAPILACAKLAR talimatlarını takip edin.
+Proje link: https://drive.google.com/drive/folders/12V_s76TL_3hyoECCLzDzfgHzesUI08HA?usp=sharing
+Önemli Çıkarımlar:
+Axios, harici API istekleri yapmayı native Node'dan çok daha kolay hale getirir
+async/await kullanarak asenkron kodu senkron gibi yazabiliriz
+try/catch hataları zarifçe yakalamak için kullanılır
+Sorgu parametreleri nesne olarak veya URL string'inde geçilebilir
+API'lerden gelen verileri render etmeden önce doğrulayın
+Rastgele seçim dizilerdeki veriler için kullanışlıdır
+API'ler 404 gibi durum kodlarını yanıt olarak döndürebilir

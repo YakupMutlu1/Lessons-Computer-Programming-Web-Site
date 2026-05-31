@@ -1,0 +1,347 @@
+--- Sayfa 1 ---
+İNTERNET GÜVENLİĞİ
+HAFTA 3: Şifreleme ve Kriptografi Temelleri
+TSMYO – Öğr. Gör. Gizem ÇELİK
+
+--- Sayfa 2 ---
+İÇİNDEKİLER
+Kriptografiye Giriş
+Simetrik Şifreleme
+•Tarihçe ve temel kavramlar
+AES, DES ve çalışma modları
+Asimetrik Şifreleme Hash Fonksiyonları
+•RSA, ECC ve anahtar çiftleri SHA-256, MD5 ve bütünlük
+doğrulama
+Dijital İmzalar
+PKI & Sertifikalar
+•Kimlik doğrulama ve inkar
+SSL/TLS ve güven zinciri
+edememe
+HAFTA 3: Şifreleme ve Kriptografi Temelleri
+
+--- Sayfa 3 ---
+1. BÖLÜM
+Kriptografiye Giriş
+HAFTA 3: Şifreleme ve Kriptografi Temelleri
+
+--- Sayfa 4 ---
+Kriptografi Nedir?
+Tanım: Kriptografi, bilgiyi yalnızca yetkili kişilerin okuyabileceği bir forma dönüştürme
+bilimidir. Kelime olarak Yunanca kryptos (gizli) ve graphia (yazı) köklerinden gelir.
+Gizlilik Bütünlük
+İnkar Kimlik
+Edememe Doğrulama
+HAFTA 3: Şifreleme ve Kriptografi Temelleri
+
+--- Sayfa 5 ---
+Kriptografiye Giriş
+Kriptografinin Kısa Tarihi
+~50 BC 1940s 1976 2001 Bugün
+Sezar Şifresi Enigma Makinesi Açık Anahtar AES Standardı Kuantum Sonrası
+(Caesar Cipher) & Kırılması Kriptografisi (NIST) Kriptografi
+Temel Kavramlar
+Plaintext: Orijinal, şifrelenmemiş veri Ciphertext: Şifrelenmiş, okunamaz veri
+Anahtar (Key): Şifreleme/çözme için gizli parametre Algoritma: Dönüşüm için matematiksel yöntem
+HAFTA 3: Şifreleme ve Kriptografi Temelleri
+
+--- Sayfa 6 ---
+2. BÖLÜM
+Simetrik Şifreleme
+HAFTA 3: Şifreleme ve Kriptografi Temelleri
+
+--- Sayfa 7 ---
+Simetrik Şifreleme
+Tanım: Simetrik şifreleme, verinin şifrelenmesi ve şifresinin çözülmesi işlemlerinde
+aynı anahtarın kullanıldığı kriptografik yöntemdir.
+Avantajı
+Son derece hızlı. Büyük veri miktarlarını saniyeler içinde şifreler.
+Dezavantajı
+Anahtar Dağıtım Problemi.Anahtarı karşı tarafa nasıl güvenle ileteceksiniz? Eğer
+iletim kanalı güvenli olsaydı, zaten şifrelemeye gerek yoktu.
+
+--- Sayfa 8 ---
+Simetrik Şifreleme
+Medya Sunusu ana hat
+Videoyuizlemek
+içintıklayın
+HAFTA 3: Şifreleme ve Kriptografi Temelleri
+
+--- Sayfa 9 ---
+Simetrik Şifreleme
+Önemli Algoritmalar
+DES 3DES AES-128 AES-256
+56-bit 112/168-bit 128-bit 256-bit
+KALDIRILDI ESKİMİŞ STANDART EN GÜÇLÜ
+Artık güvensiz — modern DES'in üçlü uygulaması, geçiş için Günümüzde yaygın kullanım, çok Kuantum sonrası da güvenli olduğu
+donanımla dakikalar içinde kırılabilir kullanıldı hızlı ve güvenli öngörülüyor
+HAFTA 3: Şifreleme ve Kriptografi Temelleri
+
+--- Sayfa 10 ---
+3. BÖLÜM
+Asimetrik Şifreleme
+HAFTA 3: Şifreleme ve Kriptografi Temelleri
+
+--- Sayfa 11 ---
+Asimetrik Şifreleme
+Tanım: Asimetrik şifreleme, şifreleme ve şifre çözme işlemleri için birbirinden farklı ama
+matematiksel olarak ilişkili iki anahtarın kullanıldığı kriptografik yöntemdir.
+Bu iki anahtar şunlardır:
+Public Key (Açık Anahtar): Herkesle
+paylaşılabilir. Şifreleme işlemi için kullanılır.
+Private Key (Gizli Anahtar): Sadece
+sahibinde bulunur. Şifre çözme işlemi için
+kullanılır.
+HAFTA 3: Şifreleme ve Kriptografi Temelleri
+
+--- Sayfa 12 ---
+Asimetrik Şifreleme
+RSA Şifreleme
+• 1977'de Ron Rivest, Adi Shamirve Leonard Adleman
+geliştirdi. İki büyük asal sayının çarpımını çarpanlarına
+ayırmanın zorluğuna dayanır.
+• İki büyük asal sayı seçilir: p ve q. Bunlar gizli tutulur. N =
+p × q hesaplanır ve herkese açıklanır. Yalnızca p ve q'yu
+bilen kişi N'yi kolayca üretebilir, ama sadece N'yi bilen
+birinin p ve q'yu bulması pratik olarak imkânsızdır.
+• Günümüzde RSA; e-posta şifreleme, yazılım güvenliği,
+web sitesi verilerinin korunması gibi birçok alanda
+yaygın olarak kullanılmaktadır.
+• Dezavantajı: Yavaş. Simetrik şifrelemeden 1000 kat daha
+yavaş olabilir. Bu yüzden büyük veri şifrelemek için
+kullanılmaz; genellikle sadece anahtar değişimi için
+kullanılır.
+HAFTA 3: Şifreleme ve Kriptografi Temelleri
+
+--- Sayfa 13 ---
+Asimetrik Şifreleme
+ECC Şifreleme
+• ECC, EllipticCurve Cryptography (Eliptik Eğri
+Kriptografisi) anlamına gelir.
+• 1980’lerde NealKoblitz ve Victor Miller tarafından
+önerilmiştir. 2004 sonrası yaygınlaşmıştır.
+• ECC, sonlu alanlar üzerinde tanımlı eliptik eğrilerin
+cebirsel yapısına dayanır.
+• Güvenliği, Eliptik Eğri Ayrık Logaritma Problemi (ECDLP)
+üzerine kuruludur. Bu problem günümüzde
+çözülememiştir ve bruteforcedışında bir yöntem
+bilinmemektedir.
+• Neden önemli? ECC P-256 (256-bit), RSA-3072 ile aynı
+güvenlik seviyesini sağlar. 10 kat daha küçük anahtar, 10
+kat daha az hesaplama. Mobil cihazlar, akıllı kartlar, IoT
+için ideal.
+HAFTA 3: Şifreleme ve Kriptografi Temelleri
+
+--- Sayfa 14 ---
+Asimetrik Şifreleme
+ECC RSA
+2005 Standartlaşma 1995
+Asimetrik Yöntem Asimetrik
+Daha yeni benimsenmiş Kullanım Köklü ve yaygın
+Eliptik eğri temsiline dayanır Çalışma Prensibi Asal çarpanlara ayırma problemine
+dayanır
+Daha karmaşık Zorluk Görece daha basit
+Aynı güvenlik ve performans seviyesi Anahtar Uzunluğu ECC’yekıyasla daha uzun anahtar
+için çok daha kısa anahtarlar kullanır gerektirir, bu da performansı
+yavaşlatabilir
+HAFTA 3: Şifreleme ve Kriptografi Temelleri
+
+--- Sayfa 15 ---
+Asimetrik Şifreleme
+Medya Sunusu ana hat
+Videoyuizlemek
+içintıklayın
+HAFTA 3: Şifreleme ve Kriptografi Temelleri
+
+--- Sayfa 16 ---
+4. BÖLÜM
+Hash Fonksiyonları
+HAFTA 3: Şifreleme ve Kriptografi Temelleri
+
+--- Sayfa 17 ---
+Hash Fonksiyonları
+Tanım: Hash fonksiyonu, bir veriyi alıp onu sabit uzunlukta bir “dijital özete” dönüştüren
+matematiksel bir işlemdir.
+Hash fonksiyonları şifreleme değildir.
+Şifreleme tersine çevrilebilir; hash
+tersine çevrilemez. Hash bir imhadır, bir
+dönüşümdür.
+Örnek:
+"Merhaba" → SHA-256 → 185f8db32921bd46d35a7b7491f7a7b2a8a0a0a0...a8f7
+"merhaba" → SHA-256 → 8b1a9953c4611296a827abf8c47804d7...f8c4d5
+Tek karakterin değişmesi tüm hash'i değiştirir — Çığ Etkisi (Avalanche Effect)
+HAFTA 3: Şifreleme ve Kriptografi Temelleri
+
+--- Sayfa 18 ---
+Hash Fonksiyonları
+Güçlü Bir Hash Fonksiyonunun 4 Özelliği
+Tek Yönlü Deterministik
+Hash'ten orijinal veriye ulaşmak hesaplama açısından
+Aynı giriş her zaman aynı hash değerini üretir
+imkânsız
+Çakışma Direnci Çığ Etkisi
+İki farklı giriş için aynı hash değeri üretilmemelidir Küçük bir giriş değişikliği çıktıyı tamamen değiştirir
+HAFTA 3: Şifreleme ve Kriptografi Temelleri
+
+--- Sayfa 19 ---
+Hash Fonksiyonları
+Ne işe yarar?
+•Sistemler parolanızı düz metin olarak •Bir yazılım indirdiğinizde SHA-256 •Uzun dosyalar direkt imzalanmaz.
+saklamaz. hash'inikontrol edersiniz. İndirme Önce hash’ialınır, sonra o hash
+•Örneğin: sırasında dosya bozulduysa veya imzalanır.
+Parola: 123456 değiştirildiyse hasheşleşmez.
+Veritabanındasaklanan:
+e10adc3949ba59abbe56e057f20f883e
+•Siz giriş yapınca sistem tekrar hashalır
+ve karşılaştırır.
+Şifre Veri
+Dijital İmza
+saklama Bütünlüğü
+HAFTA 3: Şifreleme ve Kriptografi Temelleri
+
+--- Sayfa 20 ---
+Hash vs Şifreleme
+ÖZELLİK ŞİFRELEME HASH
+Tersine çevrilebilirlik Evet —anahtar ile orijinal veriye ulaşılabilir Hayır —hash'ten orijinal veriye dönüş mümkün değil
+Anahtar kullanımı Şifreleme ve çözme için anahtar gerekir Anahtar yoktur, sadece algoritma çalışır
+Çıktı uzunluğu Girdi ile orantılı değişir Her zaman sabit (SHA-256 → her zaman 256 bit)
+Amaç Veriyi gizlemek, sonra geri almak Veriyi doğrulamak, parmak izi almak
+Kullanım örnekleri Dosya şifreleme, mesajlaşma, HTTPS Şifre saklama, dosya bütünlüğü, blockchain
+Aynı girdi → aynı çıktı Hayır —her seferinde farklı olabilir (IV/nonce ile) Evet —deterministik
+Performans Görece ağır (özellikle asimetrik) Çok hızlı
+Algoritmalar AES, RSA, ECC SHA-256, SHA-3, bcrypt
+Güvenlik tehdit türü Anahtarın ele geçirilmesi Çakışma (collision) bulunması
+HAFTA 3: Şifreleme ve Kriptografi Temelleri
+
+--- Sayfa 21 ---
+5. BÖLÜM
+Dijital İmzalar
+HAFTA 3: Şifreleme ve Kriptografi Temelleri
+
+--- Sayfa 22 ---
+Dijital İmzalar
+Tanım: Dijital imza, bir mesajın ya da belgenin:
+Gerçekten gönderilen kişiden geldiğini
+Yolda değiştirilmediğini
+kanıtlayan kriptografik bir mekanizmadır.
+Dijital İmzanın 3 Garantisi
+Kimlik Doğrulama Bütünlük İnkar Edememe
+Belgeyi gerçekten o kişi imzaladı Belge sonradan değiştirilmedi İmzalayan kişi imzasını inkâr edemez
+HAFTA 3: Şifreleme ve Kriptografi Temelleri
+
+--- Sayfa 23 ---
+Dijital İmzalar
+Türkiye'de 5070 sayılı Elektronik İmza Kanunu ile güvenli elektronik imza, ıslak imzayla eşdeğer
+hukuki geçerliliğe sahiptir. E-devlet kapısındaki işlemler, e-faturalar, kamu ihaleleri dijital imza
+kullanır. Nitelikli Elektronik Sertifika (NES) bir CA tarafından verilir ve imzalayanın kimliğini garanti
+eder.
+HAFTA 3: Şifreleme ve Kriptografi Temelleri
+
+--- Sayfa 24 ---
+6. BÖLÜM
+Dijital İmzalar
+HAFTA 3: Şifreleme ve Kriptografi Temelleri
+
+--- Sayfa 25 ---
+PKI & Sertifikalar
+Tanım: Public Key Infrastructure (PKI), açık anahtarlı (asimetrik) kriptografi kullanarak
+dijital sertifikaların oluşturulması, dağıtılması, doğrulanması, saklanması ve iptal
+edilmesini yöneten; güven ilişkisini hiyerarşik bir yapı içinde sağlayan kriptografik ve
+organizasyonel altyapıdır.
+• Açık anahtar ile kimlik arasında güvenilir bir bağ
+kurmak
+• Dijital kimlik doğrulama sağlamak
+• Güvenli anahtar yönetimi yapmak
+• Dijital imza ve şifreli iletişimi desteklemek
+Matematiksel olarak PKI, asimetrik kriptografi
+sistemine dayanır:
+Key Pair=(Public Key, Private Key)
+Burada güven, açık anahtarın doğru kişiye ait
+olduğunun doğrulanmasıyla sağlanır.
+HAFTA 3: Şifreleme ve Kriptografi Temelleri
+
+--- Sayfa 26 ---
+Dijital Sertifikalar
+Tanım: Bir açık anahtarın belirli bir kişi, kurum veya alan adına ait olduğunu
+doğrulayan ve bu ilişkiyi bir Sertifika Otoritesi (CA) tarafından dijital olarak imzalanmış
+veri yapısıdır.
+Bir dijital sertifika şu temel alanları içerir:
+▪ Subject (Sahip bilgisi)
+▪ Subject Public Key (Açık anahtar)
+▪ Issuer (Veren CA)
+▪ Serial Number
+▪ Validity Period (Geçerlilik süresi)
+▪ Digital Signature (CA imzası)
+HAFTA 3: Şifreleme ve Kriptografi Temelleri
+
+--- Sayfa 27 ---
+Güven Zinciri
+Tanım: Bir dijital sertifikanın güvenilirliğinin, hiyerarşik olarak üst CA’ların imzası ile
+doğrulanmasını ifade eder.
+Zincirin Katmanları
+Kök CA (Root CA)
+Ara CA (Intermediate CA)
+Sunucu (Domain) Sertifikası
+HAFTA 3: Şifreleme ve Kriptografi Temelleri
+
+--- Sayfa 28 ---
+Güven Zinciri
+Tanım: Bir dijital sertifikanın güvenilirliğinin, hiyerarşik olarak üst CA’ların imzası ile
+doğrulanmasını ifade eder.
+TLS El Sıkışması (Handshake) — Nasıl Güvenli Bağlantı Kurulur?
+1. ClientHello Tarayıcı desteklediği şifreleme suite'lerini sunar
+2. ServerHello + Sertifika Sunucu sertifikasını ve tercih ettiği suite'i gönderir
+3. Doğrulama Tarayıcı sertifikayı CA'ya karşı doğrular
+4. Anahtar Değişimi Asimetrik şifreleme ile oturum anahtarı paylaşılır
+5. Şifreli Veri Akışı Simetrik AES ile hızlı ve güvenli iletişim başlar
+HAFTA 3: Şifreleme ve Kriptografi Temelleri
+
+--- Sayfa 29 ---
+SSL ve TLS
+SSL TLS
+SSL (Secure Sockets Layer), internet TLS (Transport Layer Security), SSL’in
+üzerindeki istemci (client) ile sunucu geliştirilmiş ve daha güvenli versiyonudur.
+(server) arasındaki iletişimi şifrelemek için TLS, istemci ile sunucu arasında güvenli,
+geliştirilmiş bir güvenlik protokolüdür. şifreli ve doğrulanmış bir iletişim kanalı
+Amaçları: oluşturur.
+• Veri gizliliğini sağlamak TLS şu güvenlik özelliklerini sağlar:
+• Veri bütünlüğünü korumak • Şifreleme (Confidentiality)
+• Sunucu kimliğini doğrulamak
+• Veri bütünlüğü (Integrity)
+SSL, Netscape tarafından 1990’lı yıllarda
+• Kimlik doğrulama (Authentication)
+geliştirilmiştir.
+Günümüzde HTTPS, e-posta güvenliği, VPN
+Günümüzde SSL artık kullanılmamaktadır;
+ve birçok güvenli iletişim sistemi TLS
+yerini TLS almıştır.
+kullanmaktadır.
+HAFTA 3: Şifreleme ve Kriptografi Temelleri
+
+--- Sayfa 30 ---
+Uygulama - 1
+Amaç: Sertifika zincirini canlı görmek
+1️⃣ https://www.google.com
+2️⃣ Adres çubuğundaki kilide tıklayın
+3️⃣ “Sertifika” veya “Connection is secure” bölümüne
+girin
+4️⃣ “Certificate is valid” kısmını açın
+HAFTA 3: Şifreleme ve Kriptografi Temelleri
+
+--- Sayfa 31 ---
+Uygulama - 2
+Amaç: Sertifika hatasını görmek
+Sertifikası süresi dolmuş site
+Self-signed sertifika
+https://expired.badssl.com
+HAFTA 3: Şifreleme ve Kriptografi Temelleri
+
+--- Sayfa 32 ---
+Hafta 3 Genel Özet
+Medya Sunusu ana hat
+Videoyuizlemek
+içintıklayın
+HAFTA 3: Şifreleme ve Kriptografi Temelleri
+
+--- Sayfa 33 ---
+Soru & Cevap
+Gelecek Hafta: Kimlik Doğrulama ve Erişim Kontrolü

@@ -1,0 +1,2652 @@
+window.QUIZ_DATA = {
+  "meta": {
+    "title": "İnternet Güvenliği",
+    "course": "guvenlik",
+    "testOnly": true,
+    "counts": {
+      "test": 220
+    }
+  },
+  "test": [
+    {
+      "topic": "giris",
+      "question": "CIA Triad'da 'C' neyi ifade eder?",
+      "options": [
+        "Confidentiality (Gizlilik)",
+        "Control",
+        "Certificate",
+        "Compliance"
+      ],
+      "correct": 0,
+      "id": "T1"
+    },
+    {
+      "topic": "giris",
+      "question": "DDoS saldırısı öncelikle hangi CIA bileşenini ihlal eder?",
+      "options": [
+        "Gizlilik",
+        "Bütünlük",
+        "Erişilebilirlik",
+        "Kimlik doğrulama"
+      ],
+      "correct": 2,
+      "id": "T2"
+    },
+    {
+      "topic": "giris",
+      "question": "Phishing'in Türkçe karşılığı?",
+      "options": [
+        "Kimlik avı / Oltalama",
+        "Şifreleme",
+        "Yedekleme",
+        "Firewall"
+      ],
+      "correct": 0,
+      "id": "T3"
+    },
+    {
+      "topic": "giris",
+      "question": "HTTPS hangi protokolü kullanır?",
+      "options": [
+        "FTP",
+        "HTTP + TLS",
+        "Telnet",
+        "SMTP only"
+      ],
+      "correct": 1,
+      "id": "T4"
+    },
+    {
+      "topic": "giris",
+      "question": "KVKK hangi ülke düzenlemesidir?",
+      "options": [
+        "AB GDPR",
+        "Türkiye kişisel veri kanunu",
+        "ABD HIPAA",
+        "ISO 27001"
+      ],
+      "correct": 1,
+      "id": "T5"
+    },
+    {
+      "topic": "ag",
+      "question": "PAN ağ türü kapsamı?",
+      "options": [
+        "1-10 metre",
+        "Şehir",
+        "Ülke",
+        "Kıta"
+      ],
+      "correct": 0,
+      "id": "T6"
+    },
+    {
+      "topic": "ag",
+      "question": "WAN örneği?",
+      "options": [
+        "Bluetooth kulaklık",
+        "İnternet",
+        "Ev Wi-Fi",
+        "USB"
+      ],
+      "correct": 1,
+      "id": "T7"
+    },
+    {
+      "topic": "ag",
+      "question": "OSI modelinde kaç katman vardır?",
+      "options": [
+        "5",
+        "7",
+        "4",
+        "10"
+      ],
+      "correct": 1,
+      "id": "T8"
+    },
+    {
+      "topic": "ag",
+      "question": "Router görevi?",
+      "options": [
+        "Paketleri ağlar arası yönlendirir",
+        "Sadece MAC ile switch gibi",
+        "Modem sinyali çevirir",
+        "Şifreleme yapar only"
+      ],
+      "correct": 0,
+      "id": "T9"
+    },
+    {
+      "topic": "ag",
+      "question": "ARP spoofing hangi katmanda?",
+      "options": [
+        "Fiziksel",
+        "Veri bağlantı (Layer 2)",
+        "Uygulama",
+        "Sunum"
+      ],
+      "correct": 1,
+      "id": "T10"
+    },
+    {
+      "topic": "kripto",
+      "question": "Simetrik şifrelemede anahtar sayısı?",
+      "options": [
+        "Aynı anahtar şifreleme ve çözme",
+        "İki farklı public/private",
+        "Anahtar yok",
+        "Sınırsız"
+      ],
+      "correct": 0,
+      "id": "T11"
+    },
+    {
+      "topic": "kripto",
+      "question": "AES günümüzde hangi kategori?",
+      "options": [
+        "Güvensiz DES",
+        "Modern simetrik standart",
+        "Sadece hash",
+        "Asimetrik"
+      ],
+      "correct": 1,
+      "id": "T12"
+    },
+    {
+      "topic": "kripto",
+      "question": "RSA hangi tür şifreleme?",
+      "options": [
+        "Simetrik",
+        "Asimetrik",
+        "Hash",
+        "Sıkıştırma"
+      ],
+      "correct": 1,
+      "id": "T13"
+    },
+    {
+      "topic": "kripto",
+      "question": "SHA-256 ne yapar?",
+      "options": [
+        "Şifreleme geri çözülür",
+        "Hash / özet üretir",
+        "Sertifika imzalar only",
+        "VPN kurar"
+      ],
+      "correct": 1,
+      "id": "T14"
+    },
+    {
+      "topic": "kripto",
+      "question": "MD5 güvenlik için?",
+      "options": [
+        "Hâlâ önerilir",
+        "Kırılgan, şifre için kullanılmamalı",
+        "En güçlü hash",
+        "TLS yerine"
+      ],
+      "correct": 1,
+      "id": "T15"
+    },
+    {
+      "topic": "kripto",
+      "question": "PKI ne sağlar?",
+      "options": [
+        "Dijital sertifika altyapısı",
+        "Sadece firewall",
+        "Antivirus",
+        "DDoS koruma"
+      ],
+      "correct": 0,
+      "id": "T16"
+    },
+    {
+      "topic": "kimlik",
+      "question": "Kimlik doğrulama faktörleri: bilgi, sahiplik, ___",
+      "options": [
+        "Biyometri",
+        "Ağ",
+        "Hash",
+        "VPN"
+      ],
+      "correct": 0,
+      "id": "T17"
+    },
+    {
+      "topic": "kimlik",
+      "question": "2FA ne demek?",
+      "options": [
+        "İki faktörlü kimlik doğrulama",
+        "İki firewall",
+        "İki IP",
+        "İki router"
+      ],
+      "correct": 0,
+      "id": "T18"
+    },
+    {
+      "topic": "kimlik",
+      "question": "RBAC neye dayanır?",
+      "options": [
+        "Rol tabanlı erişim",
+        "Rastgele şifre",
+        "Router backup",
+        "Root access only"
+      ],
+      "correct": 0,
+      "id": "T19"
+    },
+    {
+      "topic": "kimlik",
+      "question": "Brute force saldırısı?",
+      "options": [
+        "Tüm kombinasyonları dener",
+        "Sözlük only",
+        "Phishing",
+        "DDoS"
+      ],
+      "correct": 0,
+      "id": "T20"
+    },
+    {
+      "topic": "kimlik",
+      "question": "Credential stuffing?",
+      "options": [
+        "Sızmış şifreleri başka sitelerde dener",
+        "Şifre hashler",
+        "VPN",
+        "SSL handshake"
+      ],
+      "correct": 0,
+      "id": "T21"
+    },
+    {
+      "topic": "malware",
+      "question": "Malware genel adı?",
+      "options": [
+        "Zararlı yazılım",
+        "Yararlı yazılım",
+        "Açık kaynak",
+        "Firmware only"
+      ],
+      "correct": 0,
+      "id": "T22"
+    },
+    {
+      "topic": "malware",
+      "question": "WannaCry türü?",
+      "options": [
+        "Ransomware",
+        "Sadece adware",
+        "Browser eklentisi",
+        "Driver"
+      ],
+      "correct": 0,
+      "id": "T23"
+    },
+    {
+      "topic": "malware",
+      "question": "Trojan özelliği?",
+      "options": [
+        "Kendini faydalı gibi gizler",
+        "E-posta ile çoğalır only",
+        "Donanım bozar only",
+        "Şifrelemez"
+      ],
+      "correct": 0,
+      "id": "T24"
+    },
+    {
+      "topic": "malware",
+      "question": "Zero-day açık?",
+      "options": [
+        "Yaması henüz yok",
+        "Herkes bilir",
+        "Açık kaynak",
+        "Test ortamı"
+      ],
+      "correct": 0,
+      "id": "T25"
+    },
+    {
+      "topic": "malware",
+      "question": "C2 sunucusu?",
+      "options": [
+        "Zararlı yazılım komut alır",
+        "İkinci firewall",
+        "Certificate",
+        "Cloud backup"
+      ],
+      "correct": 0,
+      "id": "T26"
+    },
+    {
+      "topic": "sosyal",
+      "question": "Spear phishing?",
+      "options": [
+        "Hedefli oltalama",
+        "Genel spam",
+        "Sesli arama only",
+        "USB"
+      ],
+      "correct": 0,
+      "id": "T27"
+    },
+    {
+      "topic": "sosyal",
+      "question": "Vishing?",
+      "options": [
+        "Telefon ile oltalama",
+        "Video",
+        "SMS",
+        "USB drop"
+      ],
+      "correct": 0,
+      "id": "T28"
+    },
+    {
+      "topic": "sosyal",
+      "question": "Smishing?",
+      "options": [
+        "SMS phishing",
+        "Email",
+        "Social media only",
+        "VPN"
+      ],
+      "correct": 0,
+      "id": "T29"
+    },
+    {
+      "topic": "sosyal",
+      "question": "Pretexting?",
+      "options": [
+        "Sahte senaryo ile güven kazanma",
+        "Şifre hash",
+        "DDoS",
+        "ARP"
+      ],
+      "correct": 0,
+      "id": "T30"
+    },
+    {
+      "topic": "iot",
+      "question": "IoT OWASP Top 10?",
+      "options": [
+        "IoT güvenlik riskleri listesi",
+        "Web framework",
+        "Email protokol",
+        "5G standard"
+      ],
+      "correct": 0,
+      "id": "T31"
+    },
+    {
+      "topic": "iot",
+      "question": "MQTT güvenlik önerisi?",
+      "options": [
+        "TLS + güçlü kimlik doğrulama",
+        "Şifresiz her zaman",
+        "FTP",
+        "Telnet"
+      ],
+      "correct": 0,
+      "id": "T32"
+    },
+    {
+      "topic": "iot",
+      "question": "OTA güncelleme riski?",
+      "options": [
+        "İmzasız firmware",
+        "Her zaman güvenli",
+        "Sadece mobil",
+        "Yok"
+      ],
+      "correct": 0,
+      "id": "T33"
+    },
+    {
+      "topic": "izleme",
+      "question": "IDS vs IPS fark?",
+      "options": [
+        "IDS uyarır, IPS engelleyebilir",
+        "Aynı",
+        "IPS sadece log",
+        "IDS şifreler"
+      ],
+      "correct": 0,
+      "id": "T34"
+    },
+    {
+      "topic": "izleme",
+      "question": "Wireshark?",
+      "options": [
+        "Paket analiz aracı",
+        "Antivirus",
+        "Firewall",
+        "Hash tool"
+      ],
+      "correct": 0,
+      "id": "T35"
+    },
+    {
+      "topic": "izleme",
+      "question": "Penetrasyon testi?",
+      "options": [
+        "Yetkili saldırı simülasyonu",
+        "İzinsiz hack",
+        "Sadece antivirus",
+        "Backup"
+      ],
+      "correct": 0,
+      "id": "T36"
+    },
+    {
+      "topic": "izleme",
+      "question": "Zaafiyet taraması?",
+      "options": [
+        "Açıkları otomatik bulur",
+        "Saldırı yapar always",
+        "Şifre kırar only",
+        "DDoS"
+      ],
+      "correct": 0,
+      "id": "T37"
+    },
+    {
+      "topic": "izleme",
+      "question": "SIEM?",
+      "options": [
+        "Merkezi log ve olay korelasyonu",
+        "Email",
+        "Router",
+        "GPU"
+      ],
+      "correct": 0,
+      "id": "T38"
+    },
+    {
+      "topic": "protokol",
+      "question": "TLS SSL'in yerini aldı mı?",
+      "options": [
+        "Evet, TLS güncel",
+        "Hayır SSL kullanılır",
+        "İkisi yok",
+        "Sadece IPsec"
+      ],
+      "correct": 0,
+      "id": "T39"
+    },
+    {
+      "topic": "protokol",
+      "question": "IPsec hangi katmanda?",
+      "options": [
+        "Ağ katmanı",
+        "Uygulama only",
+        "Fiziksel",
+        "Sunum"
+      ],
+      "correct": 0,
+      "id": "T40"
+    },
+    {
+      "topic": "protokol",
+      "question": "SSH portu genelde?",
+      "options": [
+        "22",
+        "80",
+        "443",
+        "25"
+      ],
+      "correct": 0,
+      "id": "T41"
+    },
+    {
+      "topic": "protokol",
+      "question": "ISO 27001?",
+      "options": [
+        "Bilgi güvenliği yönetim standardı",
+        "Şifreleme algoritması",
+        "Antivirus",
+        "Wi-Fi"
+      ],
+      "correct": 0,
+      "id": "T42"
+    },
+    {
+      "topic": "olay",
+      "question": "IRT ekibi?",
+      "options": [
+        "Olay müdahale ekibi",
+        "Internet router team",
+        "IoT research",
+        "Image render"
+      ],
+      "correct": 0,
+      "id": "T43"
+    },
+    {
+      "topic": "olay",
+      "question": "Olay müdahale: Hazırlık, Tespit, Sınırlama, ___",
+      "options": [
+        "Kurtarma",
+        "Silme only",
+        "Ignore",
+        "Marketing"
+      ],
+      "correct": 0,
+      "id": "T44"
+    },
+    {
+      "topic": "olay",
+      "question": "SOAR?",
+      "options": [
+        "Güvenlik otomasyonu",
+        "Social media",
+        "SSL",
+        "SAP"
+      ],
+      "correct": 0,
+      "id": "T45"
+    },
+    {
+      "topic": "etik",
+      "question": "Dijital vatandaşlık?",
+      "options": [
+        "İnternette sorumlu davranış",
+        "Sadece programlama",
+        "Hack",
+        "Mining"
+      ],
+      "correct": 0,
+      "id": "T46"
+    },
+    {
+      "topic": "etik",
+      "question": "Etik hacker?",
+      "options": [
+        "Yetkili güvenlik testi yapan",
+        "Kara şapka",
+        "Spam gönderen",
+        "Phisher"
+      ],
+      "correct": 0,
+      "id": "T47"
+    },
+    {
+      "topic": "giris",
+      "question": "Morris Worm yılı?",
+      "options": [
+        "1988",
+        "2024",
+        "1969",
+        "2000"
+      ],
+      "correct": 0,
+      "id": "T48"
+    },
+    {
+      "topic": "malware",
+      "question": "Stuxnet?",
+      "options": [
+        "Endüstriyel sistemlere siber silah",
+        "Email virus",
+        "Mobile ad",
+        "Browser"
+      ],
+      "correct": 0,
+      "id": "T49"
+    },
+    {
+      "topic": "malware",
+      "question": "EternalBlue hangi saldırıda?",
+      "options": [
+        "WannaCry",
+        "ILOVEYOU",
+        "Melissa",
+        "Morris"
+      ],
+      "correct": 0,
+      "id": "T50"
+    },
+    {
+      "topic": "ag",
+      "question": "VPN amacı?",
+      "options": [
+        "Güvenli tünel / gizlilik",
+        "Hız artırma only",
+        "Antivirus",
+        "Email filter"
+      ],
+      "correct": 0,
+      "id": "T51"
+    },
+    {
+      "topic": "ag",
+      "question": "Firewall?",
+      "options": [
+        "Trafik filtreler",
+        "Virüs siler",
+        "Şifre üretir",
+        "Backup"
+      ],
+      "correct": 0,
+      "id": "T52"
+    },
+    {
+      "topic": "giris",
+      "question": "Digital footprint?",
+      "options": [
+        "Dijital iz",
+        "Hash",
+        "TLS",
+        "MAC"
+      ],
+      "correct": 0,
+      "id": "T53"
+    },
+    {
+      "topic": "kimlik",
+      "question": "OAuth kullanımı?",
+      "options": [
+        "Yetkilendirme / API erişim",
+        "Şifreleme",
+        "DDoS",
+        "ARP"
+      ],
+      "correct": 0,
+      "id": "T54"
+    },
+    {
+      "topic": "protokol",
+      "question": "Güvenlikte HTTPS padlock ne gösterir?",
+      "options": [
+        "Güvensiz site",
+        "TLS kullanımı",
+        "Ücretsiz site",
+        "VPN"
+      ],
+      "correct": 1,
+      "id": "T55"
+    },
+    {
+      "topic": "giris",
+      "question": "Aşağıdaki ifade doğru mudur?\n«İnternet güvenliği siber güvenlikten daha dar kapsamlıdır.»",
+      "options": [
+        "Sadece bazı durumlarda doğru",
+        "Hayır, ifade yanlıştır",
+        "PDF'te geçmiyor",
+        "Evet, ifade doğrudur"
+      ],
+      "correct": 3,
+      "id": "T56"
+    },
+    {
+      "topic": "giris",
+      "question": "Aşağıdaki ifade doğru mudur?\n«CIA: Confidentiality, Integrity, Availability.»",
+      "options": [
+        "PDF'te geçmiyor",
+        "Sadece bazı durumlarda doğru",
+        "Evet, ifade doğrudur",
+        "Hayır, ifade yanlıştır"
+      ],
+      "correct": 2,
+      "id": "T57"
+    },
+    {
+      "topic": "sosyal",
+      "question": "Aşağıdaki ifade doğru mudur?\n«Phishing teknik olmayan sosyal saldırıdır.»",
+      "options": [
+        "Hayır, ifade yanlıştır",
+        "PDF'te geçmiyor",
+        "Sadece bazı durumlarda doğru",
+        "Evet, ifade doğrudur"
+      ],
+      "correct": 3,
+      "id": "T58"
+    },
+    {
+      "topic": "kripto",
+      "question": "Aşağıdaki ifade doğru mudur?\n«DES hâlâ güvenli kabul edilir.»",
+      "options": [
+        "Hayır, ifade yanlıştır",
+        "Sadece bazı durumlarda doğru",
+        "Evet, ifade doğrudur",
+        "PDF'te geçmiyor"
+      ],
+      "correct": 0,
+      "id": "T59"
+    },
+    {
+      "topic": "kripto",
+      "question": "Aşağıdaki ifade doğru mudur?\n«Public key herkesle paylaşılabilir.»",
+      "options": [
+        "Hayır, ifade yanlıştır",
+        "Sadece bazı durumlarda doğru",
+        "PDF'te geçmiyor",
+        "Evet, ifade doğrudur"
+      ],
+      "correct": 3,
+      "id": "T60"
+    },
+    {
+      "topic": "kripto",
+      "question": "Aşağıdaki ifade doğru mudur?\n«Hash geri çevrilebilir olmalıdır.»",
+      "options": [
+        "Hayır, ifade yanlıştır",
+        "PDF'te geçmiyor",
+        "Sadece bazı durumlarda doğru",
+        "Evet, ifade doğrudur"
+      ],
+      "correct": 0,
+      "id": "T61"
+    },
+    {
+      "topic": "kimlik",
+      "question": "Aşağıdaki ifade doğru mudur?\n«bcrypt şifre saklamada kullanılır.»",
+      "options": [
+        "Sadece bazı durumlarda doğru",
+        "Hayır, ifade yanlıştır",
+        "Evet, ifade doğrudur",
+        "PDF'te geçmiyor"
+      ],
+      "correct": 2,
+      "id": "T62"
+    },
+    {
+      "topic": "kimlik",
+      "question": "Aşağıdaki ifade doğru mudur?\n«MFA iki veya daha fazla faktör kullanır.»",
+      "options": [
+        "Hayır, ifade yanlıştır",
+        "PDF'te geçmiyor",
+        "Evet, ifade doğrudur",
+        "Sadece bazı durumlarda doğru"
+      ],
+      "correct": 2,
+      "id": "T63"
+    },
+    {
+      "topic": "malware",
+      "question": "Aşağıdaki ifade doğru mudur?\n«Ransomware fidye talep edebilir.»",
+      "options": [
+        "Evet, ifade doğrudur",
+        "Sadece bazı durumlarda doğru",
+        "Hayır, ifade yanlıştır",
+        "PDF'te geçmiyor"
+      ],
+      "correct": 0,
+      "id": "T64"
+    },
+    {
+      "topic": "malware",
+      "question": "Aşağıdaki ifade doğru mudur?\n«Virüs kendini kopyalayabilir.»",
+      "options": [
+        "Sadece bazı durumlarda doğru",
+        "PDF'te geçmiyor",
+        "Evet, ifade doğrudur",
+        "Hayır, ifade yanlıştır"
+      ],
+      "correct": 2,
+      "id": "T65"
+    },
+    {
+      "topic": "malware",
+      "question": "Aşağıdaki ifade doğru mudur?\n«Zero-day yaması vardır.»",
+      "options": [
+        "Sadece bazı durumlarda doğru",
+        "Hayır, ifade yanlıştır",
+        "PDF'te geçmiyor",
+        "Evet, ifade doğrudur"
+      ],
+      "correct": 1,
+      "id": "T66"
+    },
+    {
+      "topic": "izleme",
+      "question": "Aşağıdaki ifade doğru mudur?\n«IDS otomatik engelleme yapar always.»",
+      "options": [
+        "PDF'te geçmiyor",
+        "Sadece bazı durumlarda doğru",
+        "Hayır, ifade yanlıştır",
+        "Evet, ifade doğrudur"
+      ],
+      "correct": 2,
+      "id": "T67"
+    },
+    {
+      "topic": "izleme",
+      "question": "Aşağıdaki ifade doğru mudur?\n«Pen test izinsiz yapılmalıdır.»",
+      "options": [
+        "PDF'te geçmiyor",
+        "Hayır, ifade yanlıştır",
+        "Evet, ifade doğrudur",
+        "Sadece bazı durumlarda doğru"
+      ],
+      "correct": 1,
+      "id": "T68"
+    },
+    {
+      "topic": "protokol",
+      "question": "Aşağıdaki ifade doğru mudur?\n«TLS 1.3 güncel önerilir.»",
+      "options": [
+        "Sadece bazı durumlarda doğru",
+        "PDF'te geçmiyor",
+        "Hayır, ifade yanlıştır",
+        "Evet, ifade doğrudur"
+      ],
+      "correct": 3,
+      "id": "T69"
+    },
+    {
+      "topic": "protokol",
+      "question": "Aşağıdaki ifade doğru mudur?\n«HTTPS port 443 kullanır.»",
+      "options": [
+        "Evet, ifade doğrudur",
+        "Hayır, ifade yanlıştır",
+        "PDF'te geçmiyor",
+        "Sadece bazı durumlarda doğru"
+      ],
+      "correct": 0,
+      "id": "T70"
+    },
+    {
+      "topic": "protokol",
+      "question": "Aşağıdaki ifade doğru mudur?\n«IPsec VPN temelini oluşturur.»",
+      "options": [
+        "PDF'te geçmiyor",
+        "Evet, ifade doğrudur",
+        "Sadece bazı durumlarda doğru",
+        "Hayır, ifade yanlıştır"
+      ],
+      "correct": 1,
+      "id": "T71"
+    },
+    {
+      "topic": "protokol",
+      "question": "Aşağıdaki ifade doğru mudur?\n«ISO 27001 sertifikasyon standardıdır.»",
+      "options": [
+        "Hayır, ifade yanlıştır",
+        "PDF'te geçmiyor",
+        "Sadece bazı durumlarda doğru",
+        "Evet, ifade doğrudur"
+      ],
+      "correct": 3,
+      "id": "T72"
+    },
+    {
+      "topic": "giris",
+      "question": "Aşağıdaki ifade doğru mudur?\n«KVKK kişisel veri korur.»",
+      "options": [
+        "Hayır, ifade yanlıştır",
+        "PDF'te geçmiyor",
+        "Evet, ifade doğrudur",
+        "Sadece bazı durumlarda doğru"
+      ],
+      "correct": 2,
+      "id": "T73"
+    },
+    {
+      "topic": "ag",
+      "question": "Aşağıdaki ifade doğru mudur?\n«WLAN güvenlik riski sahte AP içerir.»",
+      "options": [
+        "PDF'te geçmiyor",
+        "Sadece bazı durumlarda doğru",
+        "Hayır, ifade yanlıştır",
+        "Evet, ifade doğrudur"
+      ],
+      "correct": 3,
+      "id": "T74"
+    },
+    {
+      "topic": "ag",
+      "question": "Aşağıdaki ifade doğru mudur?\n«Switch MAC adresi ile çalışır.»",
+      "options": [
+        "Evet, ifade doğrudur",
+        "Hayır, ifade yanlıştır",
+        "Sadece bazı durumlarda doğru",
+        "PDF'te geçmiyor"
+      ],
+      "correct": 0,
+      "id": "T75"
+    },
+    {
+      "topic": "ag",
+      "question": "Aşağıdaki ifade doğru mudur?\n«ARP poisoning MITM sağlayabilir.»",
+      "options": [
+        "Evet, ifade doğrudur",
+        "Sadece bazı durumlarda doğru",
+        "PDF'te geçmiyor",
+        "Hayır, ifade yanlıştır"
+      ],
+      "correct": 0,
+      "id": "T76"
+    },
+    {
+      "topic": "sosyal",
+      "question": "Aşağıdaki ifade doğru mudur?\n«Spear phishing hedeflidir.»",
+      "options": [
+        "Evet, ifade doğrudur",
+        "PDF'te geçmiyor",
+        "Sadece bazı durumlarda doğru",
+        "Hayır, ifade yanlıştır"
+      ],
+      "correct": 0,
+      "id": "T77"
+    },
+    {
+      "topic": "sosyal",
+      "question": "Aşağıdaki ifade doğru mudur?\n«Tailgating fiziksel sosyal mühendisliktir.»",
+      "options": [
+        "Hayır, ifade yanlıştır",
+        "PDF'te geçmiyor",
+        "Sadece bazı durumlarda doğru",
+        "Evet, ifade doğrudur"
+      ],
+      "correct": 3,
+      "id": "T78"
+    },
+    {
+      "topic": "iot",
+      "question": "Aşağıdaki ifade doğru mudur?\n«IoT cihazları varsayılan güvenlidir.»",
+      "options": [
+        "Sadece bazı durumlarda doğru",
+        "PDF'te geçmiyor",
+        "Evet, ifade doğrudur",
+        "Hayır, ifade yanlıştır"
+      ],
+      "correct": 3,
+      "id": "T79"
+    },
+    {
+      "topic": "iot",
+      "question": "Aşağıdaki ifade doğru mudur?\n«GDPR AB veri koruma düzenlemesidir.»",
+      "options": [
+        "Sadece bazı durumlarda doğru",
+        "Evet, ifade doğrudur",
+        "Hayır, ifade yanlıştır",
+        "PDF'te geçmiyor"
+      ],
+      "correct": 1,
+      "id": "T80"
+    },
+    {
+      "topic": "olay",
+      "question": "Aşağıdaki ifade doğru mudur?\n«Olay müdahalede iletişim önemlidir.»",
+      "options": [
+        "Hayır, ifade yanlıştır",
+        "PDF'te geçmiyor",
+        "Evet, ifade doğrudur",
+        "Sadece bazı durumlarda doğru"
+      ],
+      "correct": 2,
+      "id": "T81"
+    },
+    {
+      "topic": "olay",
+      "question": "Aşağıdaki ifade doğru mudur?\n«Post-incident review önerilir.»",
+      "options": [
+        "PDF'te geçmiyor",
+        "Sadece bazı durumlarda doğru",
+        "Hayır, ifade yanlıştır",
+        "Evet, ifade doğrudur"
+      ],
+      "correct": 3,
+      "id": "T82"
+    },
+    {
+      "topic": "etik",
+      "question": "Aşağıdaki ifade doğru mudur?\n«Etik hacking yazılı izin gerektirir.»",
+      "options": [
+        "Hayır, ifade yanlıştır",
+        "PDF'te geçmiyor",
+        "Evet, ifade doğrudur",
+        "Sadece bazı durumlarda doğru"
+      ],
+      "correct": 2,
+      "id": "T83"
+    },
+    {
+      "topic": "etik",
+      "question": "Aşağıdaki ifade doğru mudur?\n«Telif hakkı ihlali etik sorundur.»",
+      "options": [
+        "PDF'te geçmiyor",
+        "Hayır, ifade yanlıştır",
+        "Evet, ifade doğrudur",
+        "Sadece bazı durumlarda doğru"
+      ],
+      "correct": 2,
+      "id": "T84"
+    },
+    {
+      "topic": "etik",
+      "question": "Aşağıdaki ifade doğru mudur?\n«Siber zorbalık internet etiği konusudur.»",
+      "options": [
+        "Evet, ifade doğrudur",
+        "Hayır, ifade yanlıştır",
+        "Sadece bazı durumlarda doğru",
+        "PDF'te geçmiyor"
+      ],
+      "correct": 0,
+      "id": "T85"
+    },
+    {
+      "topic": "malware",
+      "question": "Aşağıdaki ifade doğru mudur?\n«WannaCry 2017 ransomware.»",
+      "options": [
+        "Sadece bazı durumlarda doğru",
+        "Evet, ifade doğrudur",
+        "PDF'te geçmiyor",
+        "Hayır, ifade yanlıştır"
+      ],
+      "correct": 1,
+      "id": "T86"
+    },
+    {
+      "topic": "malware",
+      "question": "Aşağıdaki ifade doğru mudur?\n«Exploit açıktan yararlanır.»",
+      "options": [
+        "Evet, ifade doğrudur",
+        "PDF'te geçmiyor",
+        "Sadece bazı durumlarda doğru",
+        "Hayır, ifade yanlıştır"
+      ],
+      "correct": 0,
+      "id": "T87"
+    },
+    {
+      "topic": "malware",
+      "question": "Aşağıdaki ifade doğru mudur?\n«Payload zararlı eylemdir.»",
+      "options": [
+        "Evet, ifade doğrudur",
+        "Hayır, ifade yanlıştır",
+        "Sadece bazı durumlarda doğru",
+        "PDF'te geçmiyor"
+      ],
+      "correct": 0,
+      "id": "T88"
+    },
+    {
+      "topic": "izleme",
+      "question": "Aşağıdaki ifade doğru mudur?\n«Snort IDS/IPS olabilir.»",
+      "options": [
+        "Hayır, ifade yanlıştır",
+        "PDF'te geçmiyor",
+        "Evet, ifade doğrudur",
+        "Sadece bazı durumlarda doğru"
+      ],
+      "correct": 2,
+      "id": "T89"
+    },
+    {
+      "topic": "izleme",
+      "question": "Aşağıdaki ifade doğru mudur?\n«Wireshark pasif izleme yapar.»",
+      "options": [
+        "Hayır, ifade yanlıştır",
+        "Sadece bazı durumlarda doğru",
+        "Evet, ifade doğrudur",
+        "PDF'te geçmiyor"
+      ],
+      "correct": 2,
+      "id": "T90"
+    },
+    {
+      "topic": "kimlik",
+      "question": "Aşağıdaki ifade doğru mudur?\n«RBAC rol bazlıdır.»",
+      "options": [
+        "Hayır, ifade yanlıştır",
+        "Sadece bazı durumlarda doğru",
+        "PDF'te geçmiyor",
+        "Evet, ifade doğrudur"
+      ],
+      "correct": 3,
+      "id": "T91"
+    },
+    {
+      "topic": "kimlik",
+      "question": "Aşağıdaki ifade doğru mudur?\n«MAC erişim kontrol modelidir.»",
+      "options": [
+        "Hayır, ifade yanlıştır",
+        "Evet, ifade doğrudur",
+        "Sadece bazı durumlarda doğru",
+        "PDF'te geçmiyor"
+      ],
+      "correct": 1,
+      "id": "T92"
+    },
+    {
+      "topic": "kimlik",
+      "question": "Aşağıdaki ifade doğru mudur?\n«Dictionary attack wordlist kullanır.»",
+      "options": [
+        "Evet, ifade doğrudur",
+        "Sadece bazı durumlarda doğru",
+        "Hayır, ifade yanlıştır",
+        "PDF'te geçmiyor"
+      ],
+      "correct": 0,
+      "id": "T93"
+    },
+    {
+      "topic": "kripto",
+      "question": "Aşağıdaki ifade doğru mudur?\n«ECC RSA'dan küçük anahtarla güvenlik sağlar.»",
+      "options": [
+        "Hayır, ifade yanlıştır",
+        "Evet, ifade doğrudur",
+        "PDF'te geçmiyor",
+        "Sadece bazı durumlarda doğru"
+      ],
+      "correct": 1,
+      "id": "T94"
+    },
+    {
+      "topic": "kripto",
+      "question": "Aşağıdaki ifade doğru mudur?\n«Dijital imza inkar edilemezlik sağlar.»",
+      "options": [
+        "PDF'te geçmiyor",
+        "Hayır, ifade yanlıştır",
+        "Sadece bazı durumlarda doğru",
+        "Evet, ifade doğrudur"
+      ],
+      "correct": 3,
+      "id": "T95"
+    },
+    {
+      "topic": "protokol",
+      "question": "Aşağıdaki ifade doğru mudur?\n«SSL deprecated, TLS kullanılır.»",
+      "options": [
+        "PDF'te geçmiyor",
+        "Hayır, ifade yanlıştır",
+        "Evet, ifade doğrudur",
+        "Sadece bazı durumlarda doğru"
+      ],
+      "correct": 2,
+      "id": "T96"
+    },
+    {
+      "topic": "protokol",
+      "question": "Aşağıdaki ifade doğru mudur?\n«QUIC HTTP/3 ile ilişkilidir.»",
+      "options": [
+        "Sadece bazı durumlarda doğru",
+        "Hayır, ifade yanlıştır",
+        "Evet, ifade doğrudur",
+        "PDF'te geçmiyor"
+      ],
+      "correct": 2,
+      "id": "T97"
+    },
+    {
+      "topic": "ag",
+      "question": "Aşağıdaki ifade doğru mudur?\n«Man-in-the-middle şifrelenmemiş trafikte kolay.»",
+      "options": [
+        "PDF'te geçmiyor",
+        "Hayır, ifade yanlıştır",
+        "Sadece bazı durumlarda doğru",
+        "Evet, ifade doğrudur"
+      ],
+      "correct": 3,
+      "id": "T98"
+    },
+    {
+      "topic": "ag",
+      "question": "Aşağıdaki ifade doğru mudur?\n«Firewall default deny iyi pratiktir.»",
+      "options": [
+        "PDF'te geçmiyor",
+        "Evet, ifade doğrudur",
+        "Sadece bazı durumlarda doğru",
+        "Hayır, ifade yanlıştır"
+      ],
+      "correct": 1,
+      "id": "T99"
+    },
+    {
+      "topic": "kimlik",
+      "question": "Aşağıdaki ifade doğru mudur?\n«2FA SMS zayıf olabilir SIM swap.»",
+      "options": [
+        "Hayır, ifade yanlıştır",
+        "Evet, ifade doğrudur",
+        "PDF'te geçmiyor",
+        "Sadece bazı durumlarda doğru"
+      ],
+      "correct": 1,
+      "id": "T100"
+    },
+    {
+      "topic": "malware",
+      "question": "Aşağıdaki ifade doğru mudur?\n«Stuxnet zero-day kullandı.»",
+      "options": [
+        "Sadece bazı durumlarda doğru",
+        "Evet, ifade doğrudur",
+        "PDF'te geçmiyor",
+        "Hayır, ifade yanlıştır"
+      ],
+      "correct": 1,
+      "id": "T101"
+    },
+    {
+      "topic": "izleme",
+      "question": "Aşağıdaki ifade doğru mudur?\n«SOC 7/24 izleme merkezi.»",
+      "options": [
+        "PDF'te geçmiyor",
+        "Hayır, ifade yanlıştır",
+        "Sadece bazı durumlarda doğru",
+        "Evet, ifade doğrudur"
+      ],
+      "correct": 3,
+      "id": "T102"
+    },
+    {
+      "topic": "izleme",
+      "question": "Aşağıdaki ifade doğru mudur?\n«Threat modeling saldırıları önceden düşünür.»",
+      "options": [
+        "Hayır, ifade yanlıştır",
+        "Sadece bazı durumlarda doğru",
+        "Evet, ifade doğrudur",
+        "PDF'te geçmiyor"
+      ],
+      "correct": 2,
+      "id": "T103"
+    },
+    {
+      "topic": "etik",
+      "question": "Aşağıdaki ifade doğru mudur?\n«Black hat yasa dışı niyet.»",
+      "options": [
+        "PDF'te geçmiyor",
+        "Evet, ifade doğrudur",
+        "Hayır, ifade yanlıştır",
+        "Sadece bazı durumlarda doğru"
+      ],
+      "correct": 1,
+      "id": "T104"
+    },
+    {
+      "topic": "etik",
+      "question": "Aşağıdaki ifade doğru mudur?\n«White hat savunma için test yapar.»",
+      "options": [
+        "Hayır, ifade yanlıştır",
+        "Sadece bazı durumlarda doğru",
+        "PDF'te geçmiyor",
+        "Evet, ifade doğrudur"
+      ],
+      "correct": 3,
+      "id": "T105"
+    },
+    {
+      "topic": "sosyal",
+      "question": "Aşağıdaki ifade doğru mudur?\n«Deepfake sosyal mühendislik riski.»",
+      "options": [
+        "PDF'te geçmiyor",
+        "Hayır, ifade yanlıştır",
+        "Sadece bazı durumlarda doğru",
+        "Evet, ifade doğrudur"
+      ],
+      "correct": 3,
+      "id": "T106"
+    },
+    {
+      "topic": "sosyal",
+      "question": "Aşağıdaki ifade doğru mudur?\n«Baiting USB drop örneğidir.»",
+      "options": [
+        "Hayır, ifade yanlıştır",
+        "PDF'te geçmiyor",
+        "Sadece bazı durumlarda doğru",
+        "Evet, ifade doğrudur"
+      ],
+      "correct": 3,
+      "id": "T107"
+    },
+    {
+      "topic": "giris",
+      "question": "Aşağıdaki ifade doğru mudur?\n«Güvenlik süreçtir, sadece ürün değildir.»",
+      "options": [
+        "Evet, ifade doğrudur",
+        "PDF'te geçmiyor",
+        "Sadece bazı durumlarda doğru",
+        "Hayır, ifade yanlıştır"
+      ],
+      "correct": 0,
+      "id": "T108"
+    },
+    {
+      "topic": "giris",
+      "question": "Aşağıdaki ifade doğru mudur?\n«Güvenlik süreçtir, sadece ürün değildir.»",
+      "options": [
+        "Evet, ifade doğrudur",
+        "Sadece bazı durumlarda doğru",
+        "PDF'te geçmiyor",
+        "Hayır, ifade yanlıştır"
+      ],
+      "correct": 0,
+      "id": "T109"
+    },
+    {
+      "topic": "giris",
+      "question": "Aşağıdaki ifade doğru mudur?\n«Güvenlik süreçtir, sadece ürün değildir.»",
+      "options": [
+        "PDF'te geçmiyor",
+        "Evet, ifade doğrudur",
+        "Sadece bazı durumlarda doğru",
+        "Hayır, ifade yanlıştır"
+      ],
+      "correct": 1,
+      "id": "T110"
+    },
+    {
+      "topic": "giris",
+      "question": "Boşluğa uygun cevap hangisidir?\nCIA: C = ……… (Gizlilik)",
+      "options": [
+        "Confidentiality",
+        "Antivirus",
+        "Firewall",
+        "Router"
+      ],
+      "correct": 0,
+      "id": "T111"
+    },
+    {
+      "topic": "giris",
+      "question": "Boşluğa uygun cevap hangisidir?\nCIA: I = ……… (Bütünlük)",
+      "options": [
+        "Integrity",
+        "Firewall",
+        "Router",
+        "Antivirus"
+      ],
+      "correct": 0,
+      "id": "T112"
+    },
+    {
+      "topic": "giris",
+      "question": "Boşluğa uygun cevap hangisidir?\nCIA: A = ……… (Erişilebilirlik)",
+      "options": [
+        "Firewall",
+        "Router",
+        "Antivirus",
+        "Availability"
+      ],
+      "correct": 3,
+      "id": "T113"
+    },
+    {
+      "topic": "giris",
+      "question": "Boşluğa uygun cevap hangisidir?\nKimlik avı İngilizce: ………",
+      "options": [
+        "Router",
+        "Antivirus",
+        "Firewall",
+        "Phishing"
+      ],
+      "correct": 3,
+      "id": "T114"
+    },
+    {
+      "topic": "malware",
+      "question": "Boşluğa uygun cevap hangisidir?\nZararlı yazılım: ………",
+      "options": [
+        "Antivirus",
+        "Malware",
+        "Router",
+        "Firewall"
+      ],
+      "correct": 1,
+      "id": "T115"
+    },
+    {
+      "topic": "malware",
+      "question": "Boşluğa uygun cevap hangisidir?\nFidye yazılımı: ………",
+      "options": [
+        "Firewall",
+        "Router",
+        "Antivirus",
+        "Ransomware"
+      ],
+      "correct": 3,
+      "id": "T116"
+    },
+    {
+      "topic": "malware",
+      "question": "Boşluğa uygun cevap hangisidir?\nYaması olmayan açık: ………-day",
+      "options": [
+        "Antivirus",
+        "Router",
+        "Zero",
+        "Firewall"
+      ],
+      "correct": 2,
+      "id": "T117"
+    },
+    {
+      "topic": "kimlik",
+      "question": "Boşluğa uygun cevap hangisidir?\nİki faktörlü doğrulama: ………",
+      "options": [
+        "Firewall",
+        "Antivirus",
+        "2FA",
+        "Router"
+      ],
+      "correct": 2,
+      "id": "T118"
+    },
+    {
+      "topic": "kimlik",
+      "question": "Boşluğa uygun cevap hangisidir?\nRol tabanlı erişim: ………",
+      "options": [
+        "RBAC",
+        "Firewall",
+        "Antivirus",
+        "Router"
+      ],
+      "correct": 0,
+      "id": "T119"
+    },
+    {
+      "topic": "kripto",
+      "question": "Boşluğa uygun cevap hangisidir?\nSimetrik algoritma örneği: ………",
+      "options": [
+        "Antivirus",
+        "AES",
+        "Router",
+        "Firewall"
+      ],
+      "correct": 1,
+      "id": "T120"
+    },
+    {
+      "topic": "kripto",
+      "question": "Boşluğa uygun cevap hangisidir?\nAsimetrik algoritma: ………",
+      "options": [
+        "Router",
+        "Firewall",
+        "RSA",
+        "Antivirus"
+      ],
+      "correct": 2,
+      "id": "T121"
+    },
+    {
+      "topic": "kripto",
+      "question": "Boşluğa uygun cevap hangisidir?\nHash örneği: SHA-………",
+      "options": [
+        "Firewall",
+        "Router",
+        "256",
+        "Antivirus"
+      ],
+      "correct": 2,
+      "id": "T122"
+    },
+    {
+      "topic": "protokol",
+      "question": "Boşluğa uygun cevap hangisidir?\nGüvenli web: HTTP + ………",
+      "options": [
+        "Antivirus",
+        "Firewall",
+        "Router",
+        "TLS"
+      ],
+      "correct": 3,
+      "id": "T123"
+    },
+    {
+      "topic": "protokol",
+      "question": "Boşluğa uygun cevap hangisidir?\nAğ katmanı VPN: ………",
+      "options": [
+        "IPsec",
+        "Antivirus",
+        "Firewall",
+        "Router"
+      ],
+      "correct": 0,
+      "id": "T124"
+    },
+    {
+      "topic": "protokol",
+      "question": "Boşluğa uygun cevap hangisidir?\nUzak güvenli kabuk: ………",
+      "options": [
+        "Firewall",
+        "SSH",
+        "Router",
+        "Antivirus"
+      ],
+      "correct": 1,
+      "id": "T125"
+    },
+    {
+      "topic": "izleme",
+      "question": "Boşluğa uygun cevap hangisidir?\nPaket analiz: ………",
+      "options": [
+        "Router",
+        "Firewall",
+        "Antivirus",
+        "Wireshark"
+      ],
+      "correct": 3,
+      "id": "T126"
+    },
+    {
+      "topic": "izleme",
+      "question": "Boşluğa uygun cevap hangisidir?\nSaldırı tespit: ………",
+      "options": [
+        "Firewall",
+        "Antivirus",
+        "IDS",
+        "Router"
+      ],
+      "correct": 2,
+      "id": "T127"
+    },
+    {
+      "topic": "izleme",
+      "question": "Boşluğa uygun cevap hangisidir?\nSaldırı önleme: ………",
+      "options": [
+        "Router",
+        "Antivirus",
+        "IPS",
+        "Firewall"
+      ],
+      "correct": 2,
+      "id": "T128"
+    },
+    {
+      "topic": "izleme",
+      "question": "Boşluğa uygun cevap hangisidir?\nMerkezi log: ………",
+      "options": [
+        "Router",
+        "SIEM",
+        "Antivirus",
+        "Firewall"
+      ],
+      "correct": 1,
+      "id": "T129"
+    },
+    {
+      "topic": "izleme",
+      "question": "Boşluğa uygun cevap hangisidir?\nYetkili sızma testi: ……… test",
+      "options": [
+        "Antivirus",
+        "Penetration",
+        "Firewall",
+        "Router"
+      ],
+      "correct": 1,
+      "id": "T130"
+    },
+    {
+      "topic": "giris",
+      "question": "Boşluğa uygun cevap hangisidir?\nKişisel veri kanunu TR: ………",
+      "options": [
+        "Router",
+        "Antivirus",
+        "Firewall",
+        "KVKK"
+      ],
+      "correct": 3,
+      "id": "T131"
+    },
+    {
+      "topic": "iot",
+      "question": "Boşluğa uygun cevap hangisidir?\nAB veri koruma: ………",
+      "options": [
+        "Firewall",
+        "Antivirus",
+        "Router",
+        "GDPR"
+      ],
+      "correct": 3,
+      "id": "T132"
+    },
+    {
+      "topic": "olay",
+      "question": "Boşluğa uygun cevap hangisidir?\nOlay müdahale ekibi: ………",
+      "options": [
+        "Firewall",
+        "Router",
+        "Antivirus",
+        "IRT"
+      ],
+      "correct": 3,
+      "id": "T133"
+    },
+    {
+      "topic": "olay",
+      "question": "Boşluğa uygun cevap hangisidir?\nOtomasyon platformu: ………",
+      "options": [
+        "SOAR",
+        "Router",
+        "Firewall",
+        "Antivirus"
+      ],
+      "correct": 0,
+      "id": "T134"
+    },
+    {
+      "topic": "sosyal",
+      "question": "Boşluğa uygun cevap hangisidir?\nHedefli phishing: Spear ………",
+      "options": [
+        "Router",
+        "Phishing",
+        "Antivirus",
+        "Firewall"
+      ],
+      "correct": 1,
+      "id": "T135"
+    },
+    {
+      "topic": "sosyal",
+      "question": "Boşluğa uygun cevap hangisidir?\nSMS phishing: ………",
+      "options": [
+        "Router",
+        "Smishing",
+        "Antivirus",
+        "Firewall"
+      ],
+      "correct": 1,
+      "id": "T136"
+    },
+    {
+      "topic": "sosyal",
+      "question": "Boşluğa uygun cevap hangisidir?\nTelefon phishing: ………",
+      "options": [
+        "Vishing",
+        "Router",
+        "Firewall",
+        "Antivirus"
+      ],
+      "correct": 0,
+      "id": "T137"
+    },
+    {
+      "topic": "ag",
+      "question": "Boşluğa uygun cevap hangisidir?\nSahte erişim noktası: Evil ………",
+      "options": [
+        "Twin",
+        "Antivirus",
+        "Firewall",
+        "Router"
+      ],
+      "correct": 0,
+      "id": "T138"
+    },
+    {
+      "topic": "ag",
+      "question": "Boşluğa uygun cevap hangisidir?\nMAC taklit: MAC ………",
+      "options": [
+        "Router",
+        "Antivirus",
+        "spoofing",
+        "Firewall"
+      ],
+      "correct": 2,
+      "id": "T139"
+    },
+    {
+      "topic": "giris",
+      "question": "Boşluğa uygun cevap hangisidir?\nDağıtık hizmet reddi: ………",
+      "options": [
+        "Antivirus",
+        "Router",
+        "DDoS",
+        "Firewall"
+      ],
+      "correct": 2,
+      "id": "T140"
+    },
+    {
+      "topic": "malware",
+      "question": "Boşluğa uygun cevap hangisidir?\nKomut kontrol: ………",
+      "options": [
+        "Firewall",
+        "Antivirus",
+        "C2",
+        "Router"
+      ],
+      "correct": 2,
+      "id": "T141"
+    },
+    {
+      "topic": "malware",
+      "question": "Boşluğa uygun cevap hangisidir?\nZararlı yük: ………",
+      "options": [
+        "Firewall",
+        "Payload",
+        "Router",
+        "Antivirus"
+      ],
+      "correct": 1,
+      "id": "T142"
+    },
+    {
+      "topic": "malware",
+      "question": "Boşluğa uygun cevap hangisidir?\nAçıktan yararlanma: ………",
+      "options": [
+        "Firewall",
+        "Antivirus",
+        "Router",
+        "Exploit"
+      ],
+      "correct": 3,
+      "id": "T143"
+    },
+    {
+      "topic": "ag",
+      "question": "Boşluğa uygun cevap hangisidir?\n7 katman model: ………",
+      "options": [
+        "Antivirus",
+        "Router",
+        "OSI",
+        "Firewall"
+      ],
+      "correct": 2,
+      "id": "T144"
+    },
+    {
+      "topic": "ag",
+      "question": "Boşluğa uygun cevap hangisidir?\nKişisel alan ağı: ………",
+      "options": [
+        "Router",
+        "PAN",
+        "Antivirus",
+        "Firewall"
+      ],
+      "correct": 1,
+      "id": "T145"
+    },
+    {
+      "topic": "ag",
+      "question": "Boşluğa uygun cevap hangisidir?\nGeniş alan ağı: ………",
+      "options": [
+        "Antivirus",
+        "WAN",
+        "Router",
+        "Firewall"
+      ],
+      "correct": 1,
+      "id": "T146"
+    },
+    {
+      "topic": "protokol",
+      "question": "Boşluğa uygun cevap hangisidir?\nBilgi güvenliği standardı: ISO ………",
+      "options": [
+        "Antivirus",
+        "Router",
+        "Firewall",
+        "27001"
+      ],
+      "correct": 3,
+      "id": "T147"
+    },
+    {
+      "topic": "iot",
+      "question": "Boşluğa uygun cevap hangisidir?\nIoT hafif protokol: ………",
+      "options": [
+        "Antivirus",
+        "Firewall",
+        "MQTT",
+        "Router"
+      ],
+      "correct": 2,
+      "id": "T148"
+    },
+    {
+      "topic": "kripto",
+      "question": "Boşluğa uygun cevap hangisidir?\nDijital sertifika: ………",
+      "options": [
+        "PKI",
+        "Router",
+        "Antivirus",
+        "Firewall"
+      ],
+      "correct": 0,
+      "id": "T149"
+    },
+    {
+      "topic": "ag",
+      "question": "Boşluğa uygun cevap hangisidir?\nSanal özel ağ: ………",
+      "options": [
+        "VPN",
+        "Antivirus",
+        "Router",
+        "Firewall"
+      ],
+      "correct": 0,
+      "id": "T150"
+    },
+    {
+      "topic": "ag",
+      "question": "Boşluğa uygun cevap hangisidir?\nGüvenlik duvarı: ………",
+      "options": [
+        "Antivirus",
+        "Firewall",
+        "Router",
+        "HTML"
+      ],
+      "correct": 1,
+      "id": "T151"
+    },
+    {
+      "topic": "giris",
+      "question": "Boşluğa uygun cevap hangisidir?\nDijital iz: Digital ………",
+      "options": [
+        "Router",
+        "Antivirus",
+        "Firewall",
+        "Footprint"
+      ],
+      "correct": 3,
+      "id": "T152"
+    },
+    {
+      "topic": "sosyal",
+      "question": "Boşluğa uygun cevap hangisidir?\nSosyal mühendislik hedefi: ………",
+      "options": [
+        "Firewall",
+        "Antivirus",
+        "Router",
+        "insan"
+      ],
+      "correct": 3,
+      "id": "T153"
+    },
+    {
+      "topic": "etik",
+      "question": "Boşluğa uygun cevap hangisidir?\nBeyaz şapka: White ………",
+      "options": [
+        "Antivirus",
+        "Firewall",
+        "hat",
+        "Router"
+      ],
+      "correct": 2,
+      "id": "T154"
+    },
+    {
+      "topic": "etik",
+      "question": "Boşluğa uygun cevap hangisidir?\nKara şapka: Black ………",
+      "options": [
+        "Router",
+        "Firewall",
+        "Antivirus",
+        "hat"
+      ],
+      "correct": 3,
+      "id": "T155"
+    },
+    {
+      "topic": "kripto",
+      "question": "Boşluğa uygun cevap hangisidir?\nStandart şifreleme: AES-………",
+      "options": [
+        "Antivirus",
+        "Firewall",
+        "256",
+        "Router"
+      ],
+      "correct": 2,
+      "id": "T156"
+    },
+    {
+      "topic": "kripto",
+      "question": "Boşluğa uygun cevap hangisidir?\nEski simetrik: ………",
+      "options": [
+        "Firewall",
+        "DES",
+        "Antivirus",
+        "Router"
+      ],
+      "correct": 1,
+      "id": "T157"
+    },
+    {
+      "topic": "protokol",
+      "question": "Boşluğa uygun cevap hangisidir?\nİnternet protokol güvenliği: IP………",
+      "options": [
+        "Firewall",
+        "sec",
+        "Antivirus",
+        "Router"
+      ],
+      "correct": 1,
+      "id": "T158"
+    },
+    {
+      "topic": "izleme",
+      "question": "Boşluğa uygun cevap hangisidir?\nGüvenlik operasyon merkezi: ………",
+      "options": [
+        "Router",
+        "SOC",
+        "Antivirus",
+        "Firewall"
+      ],
+      "correct": 1,
+      "id": "T159"
+    },
+    {
+      "topic": "izleme",
+      "question": "Boşluğa uygun cevap hangisidir?\nZaafiyet tarama İngilizce: Vulnerability ………",
+      "options": [
+        "Firewall",
+        "Antivirus",
+        "Router",
+        "scan"
+      ],
+      "correct": 3,
+      "id": "T160"
+    },
+    {
+      "topic": "kripto",
+      "question": "Boşluğa uygun cevap hangisidir?\nBütünlük kontrolü: ………",
+      "options": [
+        "Antivirus",
+        "Hash",
+        "Firewall",
+        "Router"
+      ],
+      "correct": 1,
+      "id": "T161"
+    },
+    {
+      "topic": "kripto",
+      "question": "Boşluğa uygun cevap hangisidir?\nPublic anahtar şifreler, private ………",
+      "options": [
+        "Antivirus",
+        "Firewall",
+        "decrypts",
+        "Router"
+      ],
+      "correct": 2,
+      "id": "T162"
+    },
+    {
+      "topic": "protokol",
+      "question": "Boşluğa uygun cevap hangisidir?\nHTTPS = HTTP + ………",
+      "options": [
+        "Router",
+        "TLS",
+        "Firewall",
+        "Antivirus"
+      ],
+      "correct": 1,
+      "id": "T163"
+    },
+    {
+      "topic": "protokol",
+      "question": "Boşluğa uygun cevap hangisidir?\nHTTPS = HTTP + ………",
+      "options": [
+        "Antivirus",
+        "Firewall",
+        "Router",
+        "TLS"
+      ],
+      "correct": 3,
+      "id": "T164"
+    },
+    {
+      "topic": "protokol",
+      "question": "Boşluğa uygun cevap hangisidir?\nHTTPS = HTTP + ………",
+      "options": [
+        "Firewall",
+        "Antivirus",
+        "TLS",
+        "Router"
+      ],
+      "correct": 2,
+      "id": "T165"
+    },
+    {
+      "topic": "giris",
+      "question": "Aşağıdaki ifadenin kısa / doğru açıklaması hangisidir?\n\nIf an unauthorized person reads email in transit without encryption, which CIA principle is violated?\nAnswer in one line: Confidentiality / Gizlilik breach.",
+      "options": [
+        "None",
+        "Integrity only",
+        "Confidentiality violated",
+        "Availability"
+      ],
+      "correct": 2,
+      "id": "T166"
+    },
+    {
+      "topic": "giris",
+      "question": "Aşağıdaki ifadenin uzun / doğru açıklaması hangisidir?\n\nDDoS web server.",
+      "options": [
+        "Denial of Service attacks Availability of the web server.",
+        "Spam email",
+        "DDoS web server.",
+        "A distributed denial-of-service attack floods the server with traffic, violating availability (CIA)."
+      ],
+      "correct": 3,
+      "id": "T167"
+    },
+    {
+      "topic": "kimlik",
+      "question": "Aşağıdaki ifadenin kısa / doğru açıklaması hangisidir?\n\nUse strong password + 2FA + don't click suspicious links.",
+      "options": [
+        "Only antivirus",
+        "Layered authentication and phishing awareness for account security.",
+        "Disable firewall",
+        "Share password"
+      ],
+      "correct": 1,
+      "id": "T168"
+    },
+    {
+      "topic": "sosyal",
+      "question": "Aşağıdaki ifadenin uzun / doğru açıklaması hangisidir?\n\nphish email get password",
+      "options": [
+        "Spear phishing uses urgency and brand impersonation to steal passwords via fake sites.",
+        "phish email get password",
+        "secure email",
+        "Phishing email tricks user into revealing credentials on fake login page."
+      ],
+      "correct": 0,
+      "id": "T169"
+    },
+    {
+      "topic": "protokol",
+      "question": "Aşağıdaki ifadenin kısa / doğru açıklaması hangisidir?\n\nTLS handshake: client hello, server hello, cert verify, key exchange, finished.",
+      "options": [
+        "FTP login",
+        "ARP request",
+        "HTTP GET only",
+        "Full TLS handshake establishes encrypted session with certificate validation."
+      ],
+      "correct": 3,
+      "id": "T170"
+    },
+    {
+      "topic": "izleme",
+      "question": "Aşağıdaki ifadenin uzun / doğru açıklaması hangisidir?\n\nIDS alert",
+      "options": [
+        "Intrusion Detection System identified anomaly, logged event, SIEM correlated alert.",
+        "IDS alert",
+        "IDS detected suspicious signature and generated alert for SOC analyst review.",
+        "Backup done"
+      ],
+      "correct": 0,
+      "id": "T171"
+    },
+    {
+      "topic": "olay",
+      "question": "Aşağıdaki ifadenin kısa / doğru açıklaması hangisidir?\n\nPrepare, Detect, Contain, Eradicate, Recover, Lessons Learned.",
+      "options": [
+        "Delete logs",
+        "NIST-style incident response lifecycle phases.",
+        "Just reboot",
+        "Ignore"
+      ],
+      "correct": 1,
+      "id": "T172"
+    },
+    {
+      "topic": "malware",
+      "question": "Aşağıdaki ifadenin uzun / doğru açıklaması hangisidir?\n\nmalware C2",
+      "options": [
+        "Infected host communicates with C2 infrastructure to receive commands and upload stolen data.",
+        "safe update",
+        "Malware beacons to command-and-control server for instructions and exfiltration.",
+        "malware C2"
+      ],
+      "correct": 0,
+      "id": "T173"
+    },
+    {
+      "topic": "giris",
+      "question": "Aşağıdaki ifadenin uzun / doğru açıklaması hangisidir?\n\nencrypt with AES",
+      "options": [
+        "plain text",
+        "hash SHA",
+        "encrypt with AES",
+        "Encrypt data using AES symmetric algorithm with secure key management."
+      ],
+      "correct": 3,
+      "id": "T174"
+    },
+    {
+      "topic": "kripto",
+      "question": "Aşağıdaki ifadenin kısa / doğru açıklaması hangisidir?\n\nNever share OTP. Bank never asks password by phone.",
+      "options": [
+        "Click all links",
+        "Email password",
+        "Reject vishing; banks don't ask for OTP/password via unsolicited calls.",
+        "Share OTP"
+      ],
+      "correct": 2,
+      "id": "T175"
+    },
+    {
+      "topic": "kimlik",
+      "question": "Aşağıdaki ifadenin uzun / doğru açıklaması hangisidir?\n\nFW allow 443",
+      "options": [
+        "block all",
+        "Firewall rule: allow inbound TCP 443 for HTTPS traffic from internet to web server.",
+        "open 22 public",
+        "FW allow 443"
+      ],
+      "correct": 1,
+      "id": "T176"
+    },
+    {
+      "topic": "malware",
+      "question": "Aşağıdaki ifadenin kısa / doğru açıklaması hangisidir?\n\nHash password with bcrypt before storing in database.",
+      "options": [
+        "Store only salted bcrypt hash, never plaintext passwords.",
+        "No hash",
+        "MD5 only",
+        "Save plain password"
+      ],
+      "correct": 0,
+      "id": "T177"
+    },
+    {
+      "topic": "izleme",
+      "question": "Aşağıdaki ifadenin uzun / doğru açıklaması hangisidir?\n\nencrypt with AES",
+      "options": [
+        "encrypt with AES",
+        "Encrypt data using AES symmetric algorithm with secure key management.",
+        "hash SHA",
+        "plain text"
+      ],
+      "correct": 1,
+      "id": "T178"
+    },
+    {
+      "topic": "protokol",
+      "question": "Aşağıdaki ifadenin kısa / doğru açıklaması hangisidir?\n\nNever share OTP. Bank never asks password by phone.",
+      "options": [
+        "Share OTP",
+        "Click all links",
+        "Reject vishing; banks don't ask for OTP/password via unsolicited calls.",
+        "Email password"
+      ],
+      "correct": 2,
+      "id": "T179"
+    },
+    {
+      "topic": "olay",
+      "question": "Aşağıdaki ifadenin uzun / doğru açıklaması hangisidir?\n\nFW allow 443",
+      "options": [
+        "block all",
+        "FW allow 443",
+        "Firewall rule: allow inbound TCP 443 for HTTPS traffic from internet to web server.",
+        "open 22 public"
+      ],
+      "correct": 2,
+      "id": "T180"
+    },
+    {
+      "topic": "sosyal",
+      "question": "Aşağıdaki ifadenin kısa / doğru açıklaması hangisidir?\n\nHash password with bcrypt before storing in database.",
+      "options": [
+        "MD5 only",
+        "No hash",
+        "Store only salted bcrypt hash, never plaintext passwords.",
+        "Save plain password"
+      ],
+      "correct": 2,
+      "id": "T181"
+    },
+    {
+      "topic": "giris",
+      "question": "Aşağıdaki ifadenin uzun / doğru açıklaması hangisidir?\n\nencrypt with AES",
+      "options": [
+        "plain text",
+        "Encrypt data using AES symmetric algorithm with secure key management.",
+        "encrypt with AES",
+        "hash SHA"
+      ],
+      "correct": 1,
+      "id": "T182"
+    },
+    {
+      "topic": "kripto",
+      "question": "Aşağıdaki ifadenin kısa / doğru açıklaması hangisidir?\n\nNever share OTP. Bank never asks password by phone.",
+      "options": [
+        "Click all links",
+        "Email password",
+        "Reject vishing; banks don't ask for OTP/password via unsolicited calls.",
+        "Share OTP"
+      ],
+      "correct": 2,
+      "id": "T183"
+    },
+    {
+      "topic": "kimlik",
+      "question": "Aşağıdaki ifadenin uzun / doğru açıklaması hangisidir?\n\nFW allow 443",
+      "options": [
+        "Firewall rule: allow inbound TCP 443 for HTTPS traffic from internet to web server.",
+        "block all",
+        "FW allow 443",
+        "open 22 public"
+      ],
+      "correct": 0,
+      "id": "T184"
+    },
+    {
+      "topic": "malware",
+      "question": "Aşağıdaki ifadenin kısa / doğru açıklaması hangisidir?\n\nHash password with bcrypt before storing in database.",
+      "options": [
+        "No hash",
+        "MD5 only",
+        "Save plain password",
+        "Store only salted bcrypt hash, never plaintext passwords."
+      ],
+      "correct": 3,
+      "id": "T185"
+    },
+    {
+      "topic": "izleme",
+      "question": "Aşağıdaki ifadenin uzun / doğru açıklaması hangisidir?\n\nencrypt with AES",
+      "options": [
+        "Encrypt data using AES symmetric algorithm with secure key management.",
+        "encrypt with AES",
+        "hash SHA",
+        "plain text"
+      ],
+      "correct": 0,
+      "id": "T186"
+    },
+    {
+      "topic": "protokol",
+      "question": "Aşağıdaki ifadenin kısa / doğru açıklaması hangisidir?\n\nNever share OTP. Bank never asks password by phone.",
+      "options": [
+        "Email password",
+        "Share OTP",
+        "Click all links",
+        "Reject vishing; banks don't ask for OTP/password via unsolicited calls."
+      ],
+      "correct": 3,
+      "id": "T187"
+    },
+    {
+      "topic": "olay",
+      "question": "Aşağıdaki ifadenin uzun / doğru açıklaması hangisidir?\n\nFW allow 443",
+      "options": [
+        "Firewall rule: allow inbound TCP 443 for HTTPS traffic from internet to web server.",
+        "open 22 public",
+        "block all",
+        "FW allow 443"
+      ],
+      "correct": 0,
+      "id": "T188"
+    },
+    {
+      "topic": "sosyal",
+      "question": "Aşağıdaki ifadenin kısa / doğru açıklaması hangisidir?\n\nHash password with bcrypt before storing in database.",
+      "options": [
+        "MD5 only",
+        "Save plain password",
+        "No hash",
+        "Store only salted bcrypt hash, never plaintext passwords."
+      ],
+      "correct": 3,
+      "id": "T189"
+    },
+    {
+      "topic": "giris",
+      "question": "Aşağıdaki ifadenin uzun / doğru açıklaması hangisidir?\n\nencrypt with AES",
+      "options": [
+        "Encrypt data using AES symmetric algorithm with secure key management.",
+        "encrypt with AES",
+        "plain text",
+        "hash SHA"
+      ],
+      "correct": 0,
+      "id": "T190"
+    },
+    {
+      "topic": "kripto",
+      "question": "Aşağıdaki ifadenin kısa / doğru açıklaması hangisidir?\n\nNever share OTP. Bank never asks password by phone.",
+      "options": [
+        "Share OTP",
+        "Reject vishing; banks don't ask for OTP/password via unsolicited calls.",
+        "Email password",
+        "Click all links"
+      ],
+      "correct": 1,
+      "id": "T191"
+    },
+    {
+      "topic": "kimlik",
+      "question": "Aşağıdaki ifadenin uzun / doğru açıklaması hangisidir?\n\nFW allow 443",
+      "options": [
+        "FW allow 443",
+        "Firewall rule: allow inbound TCP 443 for HTTPS traffic from internet to web server.",
+        "block all",
+        "open 22 public"
+      ],
+      "correct": 1,
+      "id": "T192"
+    },
+    {
+      "topic": "malware",
+      "question": "Aşağıdaki ifadenin kısa / doğru açıklaması hangisidir?\n\nHash password with bcrypt before storing in database.",
+      "options": [
+        "No hash",
+        "Save plain password",
+        "Store only salted bcrypt hash, never plaintext passwords.",
+        "MD5 only"
+      ],
+      "correct": 2,
+      "id": "T193"
+    },
+    {
+      "topic": "izleme",
+      "question": "Aşağıdaki ifadenin uzun / doğru açıklaması hangisidir?\n\nencrypt with AES",
+      "options": [
+        "encrypt with AES",
+        "plain text",
+        "hash SHA",
+        "Encrypt data using AES symmetric algorithm with secure key management."
+      ],
+      "correct": 3,
+      "id": "T194"
+    },
+    {
+      "topic": "protokol",
+      "question": "Aşağıdaki ifadenin kısa / doğru açıklaması hangisidir?\n\nNever share OTP. Bank never asks password by phone.",
+      "options": [
+        "Click all links",
+        "Reject vishing; banks don't ask for OTP/password via unsolicited calls.",
+        "Share OTP",
+        "Email password"
+      ],
+      "correct": 1,
+      "id": "T195"
+    },
+    {
+      "topic": "olay",
+      "question": "Aşağıdaki ifadenin uzun / doğru açıklaması hangisidir?\n\nFW allow 443",
+      "options": [
+        "Firewall rule: allow inbound TCP 443 for HTTPS traffic from internet to web server.",
+        "FW allow 443",
+        "open 22 public",
+        "block all"
+      ],
+      "correct": 0,
+      "id": "T196"
+    },
+    {
+      "topic": "sosyal",
+      "question": "Aşağıdaki ifadenin kısa / doğru açıklaması hangisidir?\n\nHash password with bcrypt before storing in database.",
+      "options": [
+        "No hash",
+        "Save plain password",
+        "MD5 only",
+        "Store only salted bcrypt hash, never plaintext passwords."
+      ],
+      "correct": 3,
+      "id": "T197"
+    },
+    {
+      "topic": "giris",
+      "question": "Aşağıdaki ifadenin uzun / doğru açıklaması hangisidir?\n\nencrypt with AES",
+      "options": [
+        "Encrypt data using AES symmetric algorithm with secure key management.",
+        "encrypt with AES",
+        "plain text",
+        "hash SHA"
+      ],
+      "correct": 0,
+      "id": "T198"
+    },
+    {
+      "topic": "kripto",
+      "question": "Aşağıdaki ifadenin kısa / doğru açıklaması hangisidir?\n\nNever share OTP. Bank never asks password by phone.",
+      "options": [
+        "Reject vishing; banks don't ask for OTP/password via unsolicited calls.",
+        "Click all links",
+        "Share OTP",
+        "Email password"
+      ],
+      "correct": 0,
+      "id": "T199"
+    },
+    {
+      "topic": "kimlik",
+      "question": "Aşağıdaki ifadenin uzun / doğru açıklaması hangisidir?\n\nFW allow 443",
+      "options": [
+        "block all",
+        "open 22 public",
+        "Firewall rule: allow inbound TCP 443 for HTTPS traffic from internet to web server.",
+        "FW allow 443"
+      ],
+      "correct": 2,
+      "id": "T200"
+    },
+    {
+      "topic": "malware",
+      "question": "Aşağıdaki ifadenin kısa / doğru açıklaması hangisidir?\n\nHash password with bcrypt before storing in database.",
+      "options": [
+        "Save plain password",
+        "Store only salted bcrypt hash, never plaintext passwords.",
+        "MD5 only",
+        "No hash"
+      ],
+      "correct": 1,
+      "id": "T201"
+    },
+    {
+      "topic": "izleme",
+      "question": "Aşağıdaki ifadenin uzun / doğru açıklaması hangisidir?\n\nencrypt with AES",
+      "options": [
+        "plain text",
+        "Encrypt data using AES symmetric algorithm with secure key management.",
+        "encrypt with AES",
+        "hash SHA"
+      ],
+      "correct": 1,
+      "id": "T202"
+    },
+    {
+      "topic": "protokol",
+      "question": "Aşağıdaki ifadenin kısa / doğru açıklaması hangisidir?\n\nNever share OTP. Bank never asks password by phone.",
+      "options": [
+        "Click all links",
+        "Reject vishing; banks don't ask for OTP/password via unsolicited calls.",
+        "Share OTP",
+        "Email password"
+      ],
+      "correct": 1,
+      "id": "T203"
+    },
+    {
+      "topic": "olay",
+      "question": "Aşağıdaki ifadenin uzun / doğru açıklaması hangisidir?\n\nFW allow 443",
+      "options": [
+        "Firewall rule: allow inbound TCP 443 for HTTPS traffic from internet to web server.",
+        "FW allow 443",
+        "block all",
+        "open 22 public"
+      ],
+      "correct": 0,
+      "id": "T204"
+    },
+    {
+      "topic": "sosyal",
+      "question": "Aşağıdaki ifadenin kısa / doğru açıklaması hangisidir?\n\nHash password with bcrypt before storing in database.",
+      "options": [
+        "Store only salted bcrypt hash, never plaintext passwords.",
+        "MD5 only",
+        "Save plain password",
+        "No hash"
+      ],
+      "correct": 0,
+      "id": "T205"
+    },
+    {
+      "topic": "giris",
+      "question": "Aşağıdaki ifadenin uzun / doğru açıklaması hangisidir?\n\nencrypt with AES",
+      "options": [
+        "Encrypt data using AES symmetric algorithm with secure key management.",
+        "plain text",
+        "hash SHA",
+        "encrypt with AES"
+      ],
+      "correct": 0,
+      "id": "T206"
+    },
+    {
+      "topic": "kripto",
+      "question": "Aşağıdaki ifadenin kısa / doğru açıklaması hangisidir?\n\nNever share OTP. Bank never asks password by phone.",
+      "options": [
+        "Click all links",
+        "Reject vishing; banks don't ask for OTP/password via unsolicited calls.",
+        "Email password",
+        "Share OTP"
+      ],
+      "correct": 1,
+      "id": "T207"
+    },
+    {
+      "topic": "kimlik",
+      "question": "Aşağıdaki ifadenin uzun / doğru açıklaması hangisidir?\n\nFW allow 443",
+      "options": [
+        "Firewall rule: allow inbound TCP 443 for HTTPS traffic from internet to web server.",
+        "FW allow 443",
+        "open 22 public",
+        "block all"
+      ],
+      "correct": 0,
+      "id": "T208"
+    },
+    {
+      "topic": "malware",
+      "question": "Aşağıdaki ifadenin kısa / doğru açıklaması hangisidir?\n\nHash password with bcrypt before storing in database.",
+      "options": [
+        "MD5 only",
+        "Save plain password",
+        "No hash",
+        "Store only salted bcrypt hash, never plaintext passwords."
+      ],
+      "correct": 3,
+      "id": "T209"
+    },
+    {
+      "topic": "izleme",
+      "question": "Aşağıdaki ifadenin uzun / doğru açıklaması hangisidir?\n\nencrypt with AES",
+      "options": [
+        "plain text",
+        "hash SHA",
+        "Encrypt data using AES symmetric algorithm with secure key management.",
+        "encrypt with AES"
+      ],
+      "correct": 2,
+      "id": "T210"
+    },
+    {
+      "topic": "protokol",
+      "question": "Aşağıdaki ifadenin kısa / doğru açıklaması hangisidir?\n\nNever share OTP. Bank never asks password by phone.",
+      "options": [
+        "Share OTP",
+        "Email password",
+        "Click all links",
+        "Reject vishing; banks don't ask for OTP/password via unsolicited calls."
+      ],
+      "correct": 3,
+      "id": "T211"
+    },
+    {
+      "topic": "olay",
+      "question": "Aşağıdaki ifadenin uzun / doğru açıklaması hangisidir?\n\nFW allow 443",
+      "options": [
+        "FW allow 443",
+        "Firewall rule: allow inbound TCP 443 for HTTPS traffic from internet to web server.",
+        "block all",
+        "open 22 public"
+      ],
+      "correct": 1,
+      "id": "T212"
+    },
+    {
+      "topic": "sosyal",
+      "question": "Aşağıdaki ifadenin kısa / doğru açıklaması hangisidir?\n\nHash password with bcrypt before storing in database.",
+      "options": [
+        "MD5 only",
+        "Store only salted bcrypt hash, never plaintext passwords.",
+        "Save plain password",
+        "No hash"
+      ],
+      "correct": 1,
+      "id": "T213"
+    },
+    {
+      "topic": "giris",
+      "question": "Aşağıdaki ifadenin uzun / doğru açıklaması hangisidir?\n\nencrypt with AES",
+      "options": [
+        "Encrypt data using AES symmetric algorithm with secure key management.",
+        "hash SHA",
+        "encrypt with AES",
+        "plain text"
+      ],
+      "correct": 0,
+      "id": "T214"
+    },
+    {
+      "topic": "kripto",
+      "question": "Aşağıdaki ifadenin kısa / doğru açıklaması hangisidir?\n\nNever share OTP. Bank never asks password by phone.",
+      "options": [
+        "Click all links",
+        "Email password",
+        "Reject vishing; banks don't ask for OTP/password via unsolicited calls.",
+        "Share OTP"
+      ],
+      "correct": 2,
+      "id": "T215"
+    },
+    {
+      "topic": "kimlik",
+      "question": "Aşağıdaki ifadenin uzun / doğru açıklaması hangisidir?\n\nFW allow 443",
+      "options": [
+        "block all",
+        "open 22 public",
+        "FW allow 443",
+        "Firewall rule: allow inbound TCP 443 for HTTPS traffic from internet to web server."
+      ],
+      "correct": 3,
+      "id": "T216"
+    },
+    {
+      "topic": "malware",
+      "question": "Aşağıdaki ifadenin kısa / doğru açıklaması hangisidir?\n\nHash password with bcrypt before storing in database.",
+      "options": [
+        "Store only salted bcrypt hash, never plaintext passwords.",
+        "No hash",
+        "MD5 only",
+        "Save plain password"
+      ],
+      "correct": 0,
+      "id": "T217"
+    },
+    {
+      "topic": "izleme",
+      "question": "Aşağıdaki ifadenin uzun / doğru açıklaması hangisidir?\n\nencrypt with AES",
+      "options": [
+        "encrypt with AES",
+        "plain text",
+        "hash SHA",
+        "Encrypt data using AES symmetric algorithm with secure key management."
+      ],
+      "correct": 3,
+      "id": "T218"
+    },
+    {
+      "topic": "protokol",
+      "question": "Aşağıdaki ifadenin kısa / doğru açıklaması hangisidir?\n\nNever share OTP. Bank never asks password by phone.",
+      "options": [
+        "Email password",
+        "Click all links",
+        "Share OTP",
+        "Reject vishing; banks don't ask for OTP/password via unsolicited calls."
+      ],
+      "correct": 3,
+      "id": "T219"
+    },
+    {
+      "topic": "olay",
+      "question": "Aşağıdaki ifadenin uzun / doğru açıklaması hangisidir?\n\nFW allow 443",
+      "options": [
+        "Firewall rule: allow inbound TCP 443 for HTTPS traffic from internet to web server.",
+        "FW allow 443",
+        "block all",
+        "open 22 public"
+      ],
+      "correct": 0,
+      "id": "T220"
+    }
+  ]
+};

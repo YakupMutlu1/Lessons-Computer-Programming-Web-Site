@@ -1,0 +1,463 @@
+--- Sayfa 1 ---
+İNTERNET GÜVENLİĞİ
+HAFTA 11: Güvenlik Protokolleri ve Standartları
+TSMYO – Öğr. Gör. Gizem ÇELİK
+“Ağ izleme, dijital dünyanızın nabzını tutmaktır; nabız durursa, sistem ölür.”
+
+--- Sayfa 2 ---
+İÇİNDEKİLER
+Güvenlik Protokolü ve Standart Kavramı
+Güvenlik Protokollerinin Temel Amaçları
+TLS/SSL: Güvenli İletişimin Temeli
+IPsec: Ağ Katmanında Güvenlik
+SSH: Uzak Erişimde Güvenlik
+HTTPS, QUIC ve Modern Web Güvenliği
+Kimlik Doğrulama ve Yetkilendirme Protokolleri
+Kablosuz Ağ Güvenlik Standartları
+E-posta Güvenlik Protokolleri
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 3 ---
+Güvenlik Protokolü ve
+Standart Kavramı
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 4 ---
+Protokol Nedir?
+• Protokol, iki ya da daha fazla sistemin birbiriyle nasıl iletişim
+kuracağını belirleyen kurallar bütünüdür.
+• Veri gönderme, alma, doğrulama ve hata kontrolü gibi süreçleri
+düzenler.
+• Güvenlik protokolü, dijital sistemler arasında gerçekleştirilen veri
+iletişiminin hangi kurallar çerçevesinde yapılacağını belirleyen teknik
+yapılardır.
+• Güvenlik alanında protokoller; verinin gizliliğini, bütünlüğünü ve
+doğruluğunu korumayı amaçlar.
+• Örnek: TLS, SSH, IPsec
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 5 ---
+Standart Nedir?
+• Standart, bilgi güvenliği alanında benimsenen ortak kuralları,
+yöntemleri, gereksinimleri ve en iyi uygulamaları ifade eder.
+• Sistemlerin uyumlu, güvenli ve düzenli şekilde çalışmasını sağlar.
+sağlar.
+• Güvenlik standartları, kurumlara hangi önlemlerin alınması gerektiği
+gerektiği konusunda rehberlik eder.
+• Örnek: ISO 27001, NIST, OWASP
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 6 ---
+Protokol ve Standart Arasındaki Fark
+Protokol Standart
+Teknik iletişim kuralıdır Genel kabul görmüş
+• •
+çerçevedir
+Sistemler arası veri
+•
+alışverişini düzenler Güvenlik yönetimini ve
+•
+uyumu düzenler
+Uygulama düzeyinde çalışır
+•
+• Örnek: TLS, SSH, IPsec Kurumsal düzeyde
+•
+uygulanır
+• Örnek: ISO 27001, NIST,
+OWASP
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 7 ---
+Neden Ortak Kurallara İhtiyaç
+Vardır?
+• Farklı sistemlerin birbiriyle uyumlu çalışabilmesi için
+• Veri iletişiminde karışıklığı önlemek için
+• Güvenlik açıklarını azaltmak içinKurumlarda belirli bir güvenlik düzeni
+güvenlik düzeni oluşturmak için
+• Denetim ve kontrol süreçlerini kolaylaştırmak için
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 8 ---
+Güvenlik Protokollerinin Amaçları
+Kimlik İnkar Edememe Erişilebilirlik
+Gizlilik Bütünlük Yetkilendirme
+Doğrulama (Non- Desteği
+(Confidentiality) (Integrity) (Authorization)
+(Authentication) repudiation) (Availability)
+•Verinin yetkisiz •Verinin •Tarafların •Kullanıcının •Yapılan işlemin •Sistemlerin
+kişiler tarafından değiştirilmeden gerçekten iddia hangi kaynaklara sonradan sürekli
+okunmasını iletilmesini ettikleri kişi erişebileceğini reddedilememe erişilebilir
+engeller sağlar olduğunu belirler sini sağlar olmasını sağlar
+•Şifreleme •Hash ve dijital doğrular •Rol tabanlı •Dijital imza •DoSsaldırılarına
+yöntemleri imza kullanılır •Şifre, OTP, erişim kontrolü kullanılır karşı önlem
+kullanılır •Örnek: SHA, biyometrik (RBAC) •Örnek: e-imza, alınır
+•Örnek: HTTPS, HMAC yöntemler •Örnek: admin / e-fatura •Yedekleme ve
+VPN kullanılabilir kullanıcı yetkileri sistemleri izleme sistemleri
+•Örnek: 2FA, kullanılır
+sertifika
+doğrulama
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 9 ---
+TLS/SSL: Güvenli
+İletişimin Temeli
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 10 ---
+SSL Nedir?
+• Secure Sockets Layer (SSL), ilk güvenli iletişim protokolüdür
+• Günümüzde güvenlik açıkları nedeniyle kullanılmaz
+• Yerini TLS protokolü almıştır
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 11 ---
+TLS Nedir?
+• Transport Layer Security (TLS), SSL’in geliştirilmiş ve güvenli halidir
+halidir
+• İstemci ve sunucu arasında güvenli iletişim sağlar
+• Gizlilik, bütünlük ve kimlik doğrulama sağlar
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 12 ---
+HTPS ile İlişkisi
+• HTTPS = HTTP + TLS
+• Web sitelerinde güvenli veri iletimini sağlar
+• Tarayıcıdaki simgesi TLS kullanımını gösterir
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 13 ---
+TLS El Sıkışma (Handshake)
+• İstemci ve sunucu arasında güvenli
+bağlantı kurulma sürecidir
+• Kimlik doğrulama yapılır
+• Şifreleme algoritmaları belirlenir
+• Ortak anahtar oluşturulur
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 14 ---
+Sertifika Mantığı
+• Sunucunun kimliğini doğrulamak için kullanılır
+• Sertifika otoriteleri (CA) tarafından verilir
+• Sahte siteleri ayırt etmeye yardımcı olur
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 15 ---
+Simetrik ve Asimetrik Şifreleme
+• Asimetrik şifreleme → kimlik doğrulama ve anahtar paylaşımı
+• Simetrik şifreleme → hızlı veri iletimi
+• TLS, ikisini birlikte kullanır
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 16 ---
+IPsec:
+Ağ Katmanında Güvenlik
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 17 ---
+Ipsec Nedir?
+• Internet Protocol Security (IPsec), ağ katmanında çalışan bir
+güvenlik protokolüdür
+• IP paketlerini koruyarak güvenli veri iletimi sağlar
+• Gizlilik, bütünlük ve kimlik doğrulama sağlar
+Yapışkan Not Kağıdı düz dolguyla
+VPN ile İlişkisi
+• IPsec, VPN teknolojilerinin temelini oluşturur
+• Farklı ağlar arasında güvenli bağlantı kurar
+• İnternet üzerinden özel ağ gibi iletişim sağlar
+HAFTA 11: Güvenlik Protokolerive Standartları
+
+--- Sayfa 18 ---
+Ipsec Nedir?
+Kapat düz dolguyla
+• Internet Protocol Security (IPsec), ağ katmanında çalışan bir
+güvenlik protokolüdür
+Paket Seviyesinde Koruma
+• IP paketlerini koruyarak güvenli veri iletimi sağlar
+• G•izlIiPliske,c b, vüetrüiyni ulüygku vlaem kai mdelğikil pdaokğetr udülazmeyian dsea ğkolarurr
+• Her IP paketi şifrelenebilir ve doğrulanabilir
+• Ağ trafiği genel olarak güvence altına alınır
+VPN ile İlişkisi
+• IPsec, VPN teknolojilerinin temelini oluşturur
+• Farklı ağlar arasında güvenli bağlantı kurar
+• İnternet üzerinden özel ağ gibi iletişim sağlar
+HAFTA 11: Güvenlik Protokolerive Standartları
+
+--- Sayfa 19 ---
+AH ve ESP
+AH (Authentication Header)
+• Kimlik doğrulama ve bütünlük sağlar
+• Şifreleme yapmaz
+ESP (Encapsulating Security Payload)
+• Şifreleme + bütünlük sağlar
+• En yaygın kullanılan yapı
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 20 ---
+Tünel Modu ve Taşıma Modu
+• Taşıma modu:
+• Sadece veri kısmı
+korunur
+• Uçtan uca iletişim
+• Tünel modu:
+• Tüm paket kapsüllenerek
+korunur
+• VPN bağlantılarında
+kullanılır Patlamış Mısır düz dolguyla
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 21 ---
+SSH:
+Uzak Erişimde Güvenlik
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 22 ---
+SSH Nedir?
+• Secure Shell (SSH), uzak sistemlere
+güvenli erişim sağlayan bir protokoldür
+• Şifreli iletişim ile veri güvenliğini sağlar
+• Sistem yönetimi v<e uzaktan bağlantı
+için kullanılır
+HAFTA 11: Güvenlik Protokolerive Standartları
+
+--- Sayfa 23 ---
+Telnet Neden Güvensizdir?
+• Verileri şifrelemeden iletir
+• Kullanıcı adı ve şifre açık şekilde
+gönderilir
+• Ağ dinleme (sniffing) saldırılarına açıktır
+HAFTA 11: Güvenlik Protokolerive Standartları
+
+--- Sayfa 24 ---
+SSH Ne Sağlar?
+Şifreli iletişim
+Güvenli
+Kimlik
+komut
+doğrulama
+çalıştırma
+Veri bütünlüğü
+HAFTA 11: Güvenlik Protokolerive Standartları
+
+--- Sayfa 25 ---
+Güvenli Uzaktan Yönetim
+• Sunucuların uzaktan yönetilmesini sağlar
+• Sistem yöneticileri SSH ile bağlantı kurar
+• Komut satırı üzerinden kontrol imkânı
+sunar
+HAFTA 11: Güvenlik Protokolerive Standartları
+
+--- Sayfa 26 ---
+Anahtar Tabanlı Kimlik Doğrulama
+• Şifre yerine anahtar kullanılır
+• Public ve Private key mantığı vardır
+• Daha güvenli ve otomatik bağlantı sağlar
+HAFTA 11: Güvenlik Protokolerive Standartları
+
+--- Sayfa 27 ---
+HTTPS, QUIC ve
+Modern Web Güvenliği
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 28 ---
+HTTPS Nedir?
+• HyperText Transfer Protocol Secure
+(HTTPS), HTTP’nin güvenli versiyonudur
+• TLS protokolü kullanarak veri iletimini
+şifreler
+• Web trafiğinde gizlilik ve bütünlük sağlar
+HAFTA 11: Güvenlik Protokolerive Standartları
+
+--- Sayfa 29 ---
+QUIC Nedir?
+• UDP tabanlı modern bir iletişim
+protokolüdür
+• Google tarafından geliştirilmiş, IETF
+tarafından standartlaştırılmıştır
+• TLS 1.3 ile entegre çalışır
+HAFTA 11: Güvenlik Protokolerive Standartları
+
+--- Sayfa 30 ---
+Performans
+Geleneksel protokoller (TCP + TLS) gecikmeye
+ve Güvenlik
+neden olabilir
+İlişkisi
+QUIC, bağlantı kurulum süresini azaltır
+Daha hızlı + daha güvenli iletişim sağlar
+Modern web uygulamalarında tercih edilir
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 31 ---
+Kimlik Doğrulama ve
+Yetkilendirme Protokolleri
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 32 ---
+Kimlik Doğrulama ve
+Yetkilendirme Protokolleri
+• Kimlik doğrulama →Authentication
+• Yetkilendirme →Authorization
+• Bu süreçleri gerçekleştiren
+protokoller:
+• OAuth 2.0
+• SAML
+• SSO
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 33 ---
+OAuth 2.0
+• Yetkilendirme protokolüdür
+• Üçüncü taraf uygulamalara sınırlı
+erişim sağlar
+• Şifre paylaşmadan erişim imkânı
+sunar
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 34 ---
+SAML
+• Kimlik doğrulama ve yetkilendirme
+için kullanılan bir standarttır
+• Kurumsal sistemlerde yaygın olarak
+kullanılır
+• Tek oturum açma (SSO) sağlar
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 35 ---
+Tek Oturum Açma (SSO)
+• Kullanıcının tek girişle birden fazla sisteme
+erişmesini sağlar
+• Kullanıcı deneyimini artırır
+• Güvenli kimlik yönetimi sağlar
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 36 ---
+OAuth vs SAML
+OAuth SAML
+Yetkilendirme odaklı Kimlik doğrulama odaklı
+Modern uygulamalar Kurumsal sistemler
+API ve mobil uyumlu Web tabanlı sistemler
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 37 ---
+Kablosuz Ağ Güvenlik
+Standartları
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 38 ---
+Kablosuz Ağ Güvenliği Nedir?
+• Wi-Fi ağlarının yetkisiz erişime karşı
+korunmasını sağlar
+• Veri gizliliği ve bütünlüğünü
+hedefler
+• Şifreleme ve kimlik doğrulama
+yöntemleri kullanılır
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 39 ---
+WEP Neden Güvensizdir?
+• Zayıf şifreleme (RC4)
+• Kolay kırılabilir
+• Statik anahtar kullanır
+• Günümüzde kullanılmaz
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 40 ---
+WPA, WPA2, WPA3
+• WPA: WEP’e geçici çözüm
+• WPA2: AES tabanlı güçlü şifreleme
+• WPA3: Daha güçlü kimlik doğrulama ve
+saldırı koruması
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 41 ---
+Ev ve Kurumsal Ağ Farkları
+• Ev ağı: Tek parola (PSK)
+• Kurumsal ağ: Kullanıcı bazlı kimlik
+doğrulama (802.1X)
+• Merkezi yönetim ve izleme
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 42 ---
+Güçlü Parola ve Yapılandırma
+• Uzun ve karmaşık parola kullanımı
+• Varsayılan şifrelerin değiştirilmesi
+• Firmware güncellemeleri
+• Misafir ağı kullanımı
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 43 ---
+E-posta Güvenlik
+Protokolleri
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 44 ---
+E-posta Protokolleri
+• SMTP: E-posta gönderimi
+• POP3: E-posta alma (indirerek)
+• IMAP: E-posta alma (sunucu üzerinde)
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 45 ---
+SMTP Nasıl Çalışır?
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 46 ---
+IMAP vs POP3
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 47 ---
+ISO/IEC 27001
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 48 ---
+ISO/IEC 27001 Nedir?
+• Bilgi Güvenliği Yönetim Sistemi (BGYS) standardıdır
+• Kurumların bilgi güvenliğini sistematik şekilde
+yönetmesini sağlar
+• Uluslararası kabul görmüş bir standarttır
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 49 ---
+Bilgi Güvenliği Yönetim Sistemi
+(BGYS) Nedir?
+• Bilgi güvenliğini planlama, uygulama, izleme ve
+iyileştirme sürecidir
+• Politika, prosedür ve kontrolleri kapsar
+• Kurumsal güvenlik yapısını oluşturur
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 50 ---
+Risk Temelli Yaklaşım
+• Güvenlik önlemleri risklere göre belirlenir
+• Tüm sistemler aynı şekilde korunmaz
+• Önceliklendirme yapılır
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 51 ---
+Politika, Prosedür ve Kontroller
+• Politika: Genel kurallar
+• Prosedür: Nasıl yapılacağı
+• Kontrol: Uygulanan güvenlik önlemleri
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 52 ---
+Sürekli İyileştirme
+• PUKÖ (Planla-uygula-kontrol et-önlem al) döngüsü
+esas alınarak güvenlik süreçleri düzenli olarak
+gözden geçirilir
+• Eksikler tespit edilir ve geliştirilir
+• Değişen tehditlere uyum sağlanır
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 53 ---
+Kurumlar İçin Önemi
+• Kurumsal güvenlik yönetimi sağlar
+• Denetim ve uyum kolaylığı sağlar
+• Veri güvenliğini artırır
+• Güvenilirlik ve itibar kazandırır
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 54 ---
+Soru & Cevap
+Gelecek Hafta: Güvenlik Protokolleri ve Standartları
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri

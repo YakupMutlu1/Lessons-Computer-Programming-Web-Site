@@ -1,0 +1,310 @@
+--- Sayfa 1 ---
+İNTERNET GÜVENLİĞİ
+HAFTA 12: Siber Tehditler ve Acil Durum Yönetimi
+TSMYO – Öğr. Gör. Gizem ÇELİK
+
+--- Sayfa 2 ---
+İÇİNDEKİLER
+Siber Güvenlik Olayları
+Olay Müdahalesinin Önemi
+Etkin Olay Müdahale Ekibi
+Siber Acil Durum Yönetimi Süreci
+HAFTA 12: Siber Tehditler ve Acil Durum Yönetimi
+
+--- Sayfa 3 ---
+Siber Güvenlik Olayları
+HAFTA 12: Siber Tehditler ve Acil Durum Yönetimi
+
+--- Sayfa 4 ---
+Siber Güvenlik Olayları
+• Siber güvenlik olayı, bir kuruluşun bilgi sistemlerinin gizliliğini,
+bütünlüğünü veya kullanılabilirliğini tehlikeye atan herhangi bir
+olaydır.
+Yaygın Kötü amaçlı yazılım saldırıları
+Türleri
+Kimlik avı saldırıları
+Hizmet Reddi (DoS) Saldırıları
+İç tehditler
+HAFTA 12: Siber Tehditler ve Acil Durum Yönetimi
+
+--- Sayfa 5 ---
+Başlıca Saldırı Vektörleri
+Ele Geçirilmiş
+Sosyal
+Kimlik
+Mühendislik
+Bilgileri
+Yazılım Güvenlik
+Açıkları
+HAFTA 12: Siber Tehditler ve Acil Durum Yönetimi
+
+--- Sayfa 6 ---
+Siber Güvenlik Olaylarına Müdahale
+Nedir?
+Kuruluşların güvenlik olaylarını tespit etmek, yönetmek ve bunlardan
+bunlardan kurtulmak için izlediği yapılandırılmış yaklaşımdır.
+Olay Sonrası
+Tespit ve Analiz
+•Politikaların, araçların •Saldırıyı durdurmak, Faaliyetler
+ve eğitimli personelin tehditleri ortadan
+•Tehditlerin •Güvenlik önlemlerini
+oluşturulması kaldırmak ve normal
+belirlenmesi ve iyileştirmek için
+operasyonları yeniden
+etkilerinin olaydan ders çıkarmak
+başlatmak
+değerlendirilmesi
+Sınırlama, Yok
+Hazırlık
+Etme ve Kurtarma
+HAFTA 12: Siber Tehditler ve Acil Durum Yönetimi
+
+--- Sayfa 7 ---
+HHAAFFTTAA 1120:: SAiğb eİzr leTmehed vitele rG vüev eAncliilk D Tuersutmle rYiönetimi
+
+--- Sayfa 8 ---
+Olaylara Müdahalenin Kuruluşlar İçin
+Neden Önemli Olduğu
+Siber Olayların Artan Tehdidi
+Hazırlıklı Olmanın Rekabet Avantajı
+Olay Müdahalesinin Önemi
+İş sürekliliği ve itibar yönetimi
+Düzenleyici ve uyumluluk hususları
+Kötü olay müdahalesinin maliyeti
+HAFTA 12: Siber Tehditler ve Acil Durum Yönetimi
+
+--- Sayfa 9 ---
+Olay Müdahalesinde Karşılaşılan
+Zorluklar: Sık Yapılan Hatalar ve
+Bunlardan Nasıl Kaçınılır
+Belirsiz roller ve sorumluluklar
+Kriz durumlarında tanımlanmış rollere sahip net klavuzlaroluşturun ve düzenli masa başı tatbikatları yapın.
+Manuel süreçlere aşırı bağımlılık
+SOAR gibi otomasyon araçları, enfekte sistemleri hıza izole edebilir veya kötü amaçlı IP’leri engelleyerek süreci
+hızlandırabilir
+İletişimi ihmal etmek
+Zamanında ve şeffaf bildirimler sağlamak için iletişim protokolleri uygulayın ve önceden hazırlanmış şablonlar kullanın.
+Olay sonrası analizi atlamak
+Düzenli olay sonrası inclemeler, savunmlarıgeliştirmek ve gelecekteki ihlalleri önlemek için çok önemlidir.
+HAFTA 12: Siber Tehditler ve Acil Durum Yönetimi
+
+--- Sayfa 10 ---
+Etkin Olay Müdahale Ekibi
+(IRT) Oluşturmak
+HAFTA 12: Siber Tehditler ve Acil Durum Yönetimi
+
+--- Sayfa 11 ---
+Olay Müdahale Ekibi (IRT) Nedir?
+• Bir kurumun bilişim sistemlerine
+yönelik siber güvenlik tehditlerini,
+tehditlerini, saldırılarını veya veri
+ihlallerini tespit etmek, analiz etmek,
+etmek, sınırlandırmak ve bertaraf
+bertaraf etmekten sorumlu uzman
+uzman gruptur.
+HAFTA 12: Siber Tehditler ve Acil Durum Yönetimi
+
+--- Sayfa 12 ---
+Olay Müdahale Ekibi Oluşturmak
+• Güçlü bir Olay Müdahale Ekibi (IRT), bir kuruluşun siber güvenlik
+güvenlik savunmasının omurgasını oluşturur.
+• Bir siber olay meydana geldiğinde, yapılandırılmış ve iyi eğitimli bir
+eğitimli bir IRT, siber güvenlik olaylarına hızlı, koordineli ve etkili bir
+etkili bir yanıt verilmesini sağlar.
+• Bu, kesinti süresini en aza indirir, mali ve itibar kaybını azaltır ve siber
+ve siber dayanıklılığı güçlendirir.
+HAFTA 12: Siber Tehditler ve Acil Durum Yönetimi
+
+--- Sayfa 13 ---
+Olay Müdahale Ekibi Oluşturmak
+Başlıca Görev
+Olay Müdahale Yöneticisi
+ve
+Sorumluluklar
+Güvenlik Analistleri
+BT Destek ve Mühendislik Ekipleri
+Hukuk Danışmanları ve Uyumluluk Görevlileri
+Halkla İlişkiler ve İletişim
+HAFTA 12: Siber Tehditler ve Acil Durum Yönetimi
+
+--- Sayfa 14 ---
+Olay Müdahale Ekibi Oluşturmak
+Ağ mimarileri, işletim sistemleri, siber güvenlik
+Genel Teknik Yeterlilik
+araçları ve tehdit istihbaratı konularında
+derinlemesine bilgi sahibi olmak.
+Temel
+Saldırı modellerini değerlendirme, adli analiz
+Analitik Düşünme
+yapma ve etkili önlemler uygulama yeteneği.
+Beceriler
+Tehditleri kontrol altına almak ve hasarı en aza
+Kriz Yönetimi
+indirmek için baskı altında hızlı karar verme.
+Yöneticilere, paydaşlara ve düzenleyici
+İletişim ve Raporlama
+kurumlara açık ve özlü raporlama.
+Veri koruma yasalarına ve sektöre özgü
+Mevzuat Bilgisi
+uyumluluk gerekliliklerine aşinalık.
+HAFTA 12: Siber Tehditler ve Acil Durum Yönetimi
+
+--- Sayfa 15 ---
+Olay Müdahale Eğitiminde En İyi Uygulamalar
+•Ekiplerin müdahale •Kırmızı takımların (saldırganlar)
+prosedürlerini ve karar alma savunmaları test ettiği ve mavi
+süreçlerini geliştirmelerine takımların (savunmacılar)
+yardımcı olan simüle edilmiş gerçek zamanlı olarak yanıt
+saldırı senaryoları. verdiği uygulamalı saldırı
+simülasyonları.
+Düzenli Masa Kırmızı Takım
+Başı / Mavi Takım
+Tatbikatları Tatbikatları
+3 Aylık Olay
+Departmanlar
+Müdahale
+Arası İşbirliği
+Eğitimi
+•BT, hukuk, halkla ilişkiler ve •Eğitimlerin üç ayda bir
+yönetim ekiplerinin kriz yapılması, süreçlerin ve
+anındaki rollerini anlamalarını becerilerin sürekli akılda
+sağlamak. kalmasına yardımcı olur ve
+ayrıca herhangi bir değişiklik
+veya güncellemenin kolayca
+erişilebilir olmasını sağlar.
+HAFTA 12: Siber Tehditler ve Acil Durum Yönetimi
+
+--- Sayfa 16 ---
+Siber Acil Durum
+Yönetimi Süreci
+Aşamaları
+HAFTA 12: Siber Tehditler ve Acil Durum Yönetimi
+
+--- Sayfa 17 ---
+Aşama 1: Kapsamlı Bir Olay
+Müdahale Planı (IRP) Geliştirme
+• Kapsamlı bir Olay Müdahale Planı (IRP), ekipleri
+ekipleri olay müdahale sürecinde
+yönlendirmede kritik rol oynayan çeşitli temel
+temel bileşenleri içerir. Bu bileşenler, siber
+güvenlik olaylarına etkili bir yanıt verilmesini
+verilmesini sağlamak için hayati öneme
+sahiptir:
+HAFTA 12: Siber Tehditler ve Acil Durum Yönetimi
+
+--- Sayfa 18 ---
+Aşama 1: Kapsamlı Bir Olay
+Müdahale Planı (IRP) Geliştirme
+1. Olay Sınıflandırması ve Müdahale Protokolleri
+Olayları ciddiyet derecesine göre sınıflandırmak, kuruluşların müdahale
+önceliklerini belirlemesine yardımcı olur.
+2. Olay Ciddiyet Seviyeleri
+Her siber güvenlik uyarısı acil müdahale gerektirmez. Olayları ciddiyet
+seviyelerine göre sınıflandırmak, kaynakların verimli bir şekilde tahsis edilmesini
+ve müdahale eylemlerinin etkiye orantılı olmasını sağlar.
+HAFTA 12: Siber Tehditler ve Acil Durum Yönetimi
+
+--- Sayfa 19 ---
+Aşama 1: Kapsamlı Bir Olay
+Müdahale Planı (IRP) Geliştirme
+3. İletişim Protokolleri
+Siber güvenlik krizi sırasında net iletişim çok önemlidir. İç iletişim, ekip üyelerinin uyum
+içinde olmasını sağlarken, paydaşlar, müşteriler ve düzenleyicilerle yapılan dış iletişim
+güvenin korunmasına yardımcı olur.
+4. Yayılmayı Önleme Stratejileri
+Bir tehdit doğrulandıktan sonra, daha fazla hasarı önlemek için saldırıyı hızla kontrol
+altına almak çok önemlidir.
+5. Yok Etme ve İyileşme
+Tehditlerin ortadan kaldırılması, kötü amaçlı kodların kaldırılmasını, virüslü dosyaların
+silinmesini ve yamaların uygulanmasını içerir.
+HAFTA 12: Siber Tehditler ve Acil Durum Yönetimi
+
+--- Sayfa 20 ---
+Aşama 2: Olay Tespiti ve Analizi
+1. Bir Güvenlik Olayının Başlıca Göstergeleri
+• Olağandışı giriş denemeleri veya yetkisiz erişim
+• Yüksek giden ağ trafiği
+• Beklenmeyen system davranışı veya yavaşlamalar
+2. Olay Tespitinde YZ ve Otomasyondan Yararlanma
+• Yapay zeka destekli Güvenlik Bilgi ve Olay Yönetimi (SIEM) çözümleri, tehditleri
+gerçek zamanlı olarak tespit etmek için güçlü bir yol sunuyor.
+3. Etkin Tespit ve Analiz:İnsan Hatasını Azaltma
+• İyi tanımlanmış bir olay müdahale kılavuzu ile ekibiniz, verileri verimli bir şekilde
+analiz etmek, insan hatası riskini azaltmak ve her adımın doğru sırayla atılmasını
+sağlamak için önceden tanımlanmış protokolleri izleyebilir.
+HAFTA 12: Siber Tehditler ve Acil Durum Yönetimi
+
+--- Sayfa 21 ---
+Aşama 3: Olayın Kontrol Altına
+Alınması ve Ortadan Kaldırılması
+1. Bir Saldırıyı Kontrol Altına Almak İçin Acil Adımlar
+• Etkilenen sistemlerin bağlantısını kesme
+• Güvenlik duvarı kurallarını uygulama
+• Ele geçirilen kimlik bilgilerini sıfırlama
+2. Salgını Kontrol Altına Alma Stratejileri
+• Kısa vadeli stratejiler: saldırıyı durdumak için önemlidir.
+• Uzun vadeli stratejiler:odak noktası güvenlik açıklarını gidermeye ve gelecekteki saldırıları önlemek
+için kuruluşun savunmasını güçlendirmeye kayar.
+3. Yok Etme: Tehdidi Ortadan Kaldırmak
+• Zararlı kodu kaldırma
+• Etkilenen sistemlere yama uygulama
+• Ağ altyapısının temizlenmesi
+HAFTA 12: Siber Tehditler ve Acil Durum Yönetimi
+
+--- Sayfa 22 ---
+Aşama 4: Olay Sonrası İyileşme
+ve Öğrenilen Dersler
+1. Kurtarma Adımları
+• Adli analiz
+• Güenlik yamalarının uygulanması
+• Verileri temiz yedeklerden geri yükleme
+2. Yansıma ve Sürekli Gelişim
+• Olay müdahale sürecindeki, altyapıdaki veya çalışan eğitimindeki zayıf noktaların belirlenmesi .
+• Olay müdahale kılavuzunun güncellenmesi : Güvenlik ihlalinden çıkarılan dersler, gelecekteki
+hazırlığı iyileştirmek için olay müdahale planına (IRP) entegre edilmelidir.
+• Savunmayı güçlendirme : Geçmiş olaylardan ders çıkararak güvenlik durumlarını sürekli iyileştiren
+kuruluşlar, gelecekteki saldırı riskini azaltırlar.
+HAFTA 12: Siber Tehditler ve Acil Durum Yönetimi
+
+--- Sayfa 23 ---
+Düzenli Güncellemelerin
+Önemi
+HAFTA 12: Siber Tehditler ve Acil Durum Yönetimi
+
+--- Sayfa 24 ---
+Düzenli Güncellemelerin Önemi
+Kurtarma, tek seferlik bir olay değil; sürekli devam eden bir
+iyileştirme sürecidir. Her olaydan öğrenilen derslere dayanarak
+IRP'nizi güncellemek, gelişen siber güvenlik ortamına uyum sağlamak
+için çok önemlidir. Dinamik, düzenli olarak güncellenen bir kurtarma
+planı, kuruluşunuzun çevik kalmasını ve gelecekteki siber tehditlere
+hızlı ve etkili bir şekilde yanıt vermeye hazır olmasını sağlar.
+HAFTA 12: Siber Tehditler ve Acil Durum Yönetimi
+
+--- Sayfa 25 ---
+Etkin Olay Müdahalesi
+için Araçlar ve
+Teknolojiler
+HAFTA 12: Siber Tehditler ve Acil Durum Yönetimi
+
+--- Sayfa 26 ---
+Etkin Olay Müdahalesi için
+Araçlar ve Teknolojiler
+Olay Tespit Araçları
+•Saldırı Tespit Sistemleri (IDS) ve Güvenlik Bilgi ve Olay Yönetimi (SIEM) araçları, kayıtları bir araya getirerek
+ve olağandışı faaliyetleri belirleyerek önemli bir rol oynar.
+•CrowdStrikeFalcon ve SentinelOne uç nokta etkinliklerine görünürlük sağlayarak proaktif izleme olanağı
+sunar.
+•Darktrace , ağ trafiği anormalliklerini tespit etmek için kendi kendine öğrenen yapay zekâ kullanıyor ve
+tespit sürelerini önemli ölçüde kısaltıyor.
+Adli Analiz Araçları
+•EnCase ve FTK gibi adli bilişim araçları , orijinal verilere zarar vermeden saldırganın adımlarını izlemek için
+günlükleri, dosyaları ve sistem kalıntılarını analiz eder.
+•Volatility gibi bellek analiz araçları, tamamen bellekte çalışan ve geleneksel tespit yöntemlerinden kaçan
+dosyasız kötü amaçlı yazılımlar gibi gelişmiş saldırıları tespit etmek için kullanılır.
+HAFTA 12: Siber Tehditler ve Acil Durum Yönetimi
+
+--- Sayfa 27 ---
+Soru & Cevap
+Gelecek Hafta: Güncel Siber Güvenlik Trendleri ve Gelecek Perspektifi
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri

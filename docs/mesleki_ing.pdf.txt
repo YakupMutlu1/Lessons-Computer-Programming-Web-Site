@@ -1,0 +1,126 @@
+--- Page 1 ---
+22.05.2026 18:36 Mesleki İngilizce - AKTS Bilgi Sistemi | KTO Karatay Üniversitesi
+KTO KARATAY ÜNİVERSİTESİ
+Ticaret ve Sanayi Meslek Yüksekokulu
+Bilgisayar Programcılığı Programı
+Ders Bolognaları
+Ders Kodu Ders Adı Yıl Dönem Yarıyıl T+U+L Kredi AKTS
+03840104 Mesleki İngilizce 2024 Bahar 4 2+0+0 3 3
+Dersin Türü Zorunlu
+Dersin Düzeyi Önlisans (TYYÇ: 5. Düzey / QF-EHEA: Kısa Düzey / EQF-LLL: 5. Düzey)
+Dersin Dili İngilizce
+Yöntem ve Teknikler Sınıf içi dersler, eşli çalışma tartışmaları
+Dersin Veriliş Şekli Yüz Yüze
+Ön Koşullar -
+Dersin Koordinatörü -
+Dersi Veren(ler) Öğr.Gör. İsmail PİŞER
+Yardımcı(lar) -
+Dersin Öğretim Eleman(lar)ı
+Adı Soyadı Oda No. E-Posta Adresi Dahili Görüşme Saatleri
+Cuma
+Öğr.Gör. İsmail PİŞER K-Z02 ismail.piser@karatay.edu.tr 7820
+10:20-12:20
+Dersin İçeriği
+Kelime alıştırmaları, okuma parçaları ve aktiviteleri etkinlikleri, yazma bölümleri ve dil kullanım uygulamaları
+Dersin Amacı
+Öğrencileri bilgisayar ve internet İngilizcesini iş, ev veya eğitim için kullanmaya hazırlamak.
+Dersin Alan Öğretimini Sağlamaya Yönelik Katkısı
+Temel Meslek Dersleri X
+Uzmanlık / Alan Dersleri
+Destek Dersleri X
+Aktarılabilir Beceri Dersleri
+Beşeri, İletişim ve Yönetim Becerileri Dersleri X
+Dersin Öğrenim Kazanımlarının Program Kazanımları ile Olan İlişkileri
+İlişki Düzeyleri
+En Düşük Düşük Orta Yüksek En Yüksek
+1 2 3 4 5
+# Program Yeterlilikleri Düzey
+P5 Mesleki problemleri ve konuları bağımsız olarak analitik ve eleştirel bir yaklaşımla değerlendirme ve çözüm önerisini sunabilme becerisine sahiptir. 2
+P10 Bir yabancı dili kullanarak alanındaki bilgileri takip eder ve meslektaşları ile iletişim kurar. 5
+Dersin Öğrenim Kazanımları
+https://bologna.karatay.edu.tr/tr/ders/ticaret-ve-sanayi-meslek-yuksekokulu/bilgisayar-programciligi/03840104/mesleki-ingilizce 1/3
+
+--- Page 2 ---
+22.05.2026 18:36 Mesleki İngilizce - AKTS Bilgi Sistemi | KTO Karatay Üniversitesi
+Bu dersin başarılı bir şekilde tamamlanmasıyla öğrenciler şunları yapabileceklerdir:
+No Öğrenme Çıktıları Prog. Yet. İlişkisi Ölçme Yöntemi **
+Ö1 Sorunların çözümü için gerekli yetileri belirler ve yöntem geliştirir. P.8.1 1,6
+Ö2 En az bir Avrupa Birliği yabancı dilinde iyi derecede sözlü ve yazılı ifade yeteneği kazanmalı P.10.1 1,3,6
+Ö3 Gündelik hayata yönelik basit düzeydeki temel ifadeleri kullanabilme. P.15.1 1
+Ö4 Dinleme ve okuma metinlerinde geçen, sık kullanılan ifade ve cümleleri kavrayabilme. P.15.2 1
+Ö5 Sosyal ortamlarda kendini tanıtabilme, kişisel bilgiler ile ilgili soru sorabilme ve cevap verebilme. P.15.3 1
+Ö6 Kendi geçmişini, yakın çevresini ve olayları basit düzeyde yazılı ve sözlü olarak ifade edebilme. P.15.4 1
+Ö7 Günlük hayatta karşılaşılan basit formları doldurabilme, kısa ve basit notlar oluşturabilme. P.15.5 1
+Ö8 Kısa ve basit düzeydeki metinleri okuyabilme, ilan ve afiş gibi yazılı metinlerdeki basit içerikleri kavrayabilme. P.15.6 1
+** Yazılı Sınav: 1, Sözlü Sınav: 2, Ev Ödevi: 3, Lab./Sınav: 4, Seminer/Sunum: 5, Dönem Ödevi: 6, Uygulama: 7
+Dersin Haftalık İçeriği
+Hafta Konu
+1 DERS TANITIMI
+2 Bilişim sektöründe çalışmak. Kelime, Dinleme ve konuşma çalışmaları
+3 Bilişim sektöründeki meslekler. Dinleme, yazma, okuma ve konuşma aktiviteleri.
+4 Zaman çizelgesi. Saati, günü sormak, cevaplamak. Dnleme, gramer ve konuşma çalışmaları.
+5 İmla, kısaltmalar, dinleme ve konuşma etkinliği.
+6 Bilgisayar sistemleri. Bilgisayar Bileşenleri. Dilbilgisi: Karşılaştırmalar. Dinleme ve konuşma etkinliği.
+7 Bilgisayar yazılımı. Dilbilgisi: Üstünlükler. ABD ve Birleşik Krallık varyasyonları var/var (var). Dinleme ve yazma etkinlikleri
+8 Ara Sinav
+9 Bilgisayarlarla çalışmak. Gramer: Şimdi hakkında konuşmak için şimdiki zaman. Dinleme ve konuşma egzersizi
+10 Bilgisayar kullanımı: modals: can, must, have to, don't have to: . Yazma alıştırması
+11 Web siteleri. Web siteleri ve işlevleri hakkında konuşma etkinliği. Web sitesi türleri hakkında
+12 Websites. Speaking activity about websites and their functions. Reading about website
+13 how much, how many, büyük sayıların kullanımı. Web sitesi geliştirme hakkında dinleme ve konuşma alıştırması.
+14 Final Sinav
+Ders Kitabı veya Malzemesi
+Kaynaklar Oxford EAP: A course in English for academic purposes (Elementary A2)
+Değerlendirme Yöntemi ve Geçme Kriterleri
+Yarıyıl Çalışmaları Sayısı Katkı (%)
+Devam - -
+Laboratuvar - -
+Uygulama - -
+Alan Çalışması - -
+Derse Özgü Staj (Varsa) - -
+Ödev 1 10 (%)
+Sunum - -
+Projeler - -
+Seminer - -
+Kısa sınav (Quiz) - -
+Dinleme - -
+Ara Sınavlar 1 40 (%)
+Yarıyıl Sonu Sınavı 1 50 (%)
+https://bologna.karatay.edu.tr/tr/ders/ticaret-ve-sanayi-meslek-yuksekokulu/bilgisayar-programciligi/03840104/mesleki-ingilizce 2/3
+
+--- Page 3 ---
+22.05.2026 18:36 Mesleki İngilizce - AKTS Bilgi Sistemi | KTO Karatay Üniversitesi
+Yarıyıl Çalışmaları Sayısı Katkı (%)
+Toplam 100 (%)
+AKTS / Çalışma Yükü Tablosu
+Etkinlik Sayı Süre Toplam İş Yükü (Saat)
+Ders Hafta Sayısı ve Saati 14 2 28
+Sınıf Dışı Ders Çalışma Süresi (Ön çalışma, Kütüphane, Pekiştirme) 14 2 28
+Ara Sınav 1 10 10
+Kısa Sınav 0 0 0
+Ödev 10 1 10
+Uygulama 0 0 0
+Laboratuvar 0 0 0
+Proje 0 0 0
+Atölye 0 0 0
+Sunum/Seminer Hazırlama 0 0 0
+Alan Çalışması 0 0 0
+Dönem Sonu Sınavı 1 14 14
+Diğer 0 0 0
+Toplam İş Yükü: 90
+Toplam Yük / 30 3
+Dersin AKTS Kredisi: 3
+Ders - Öğrenme Çıktıları İlişkisi
+İlişki Düzeyleri
+En Düşük Düşük Orta Yüksek En Yüksek
+1 2 3 4 5
+# Öğrenme Çıktıları P8 P10 P15
+Ö1 Sorunların çözümü için gerekli yetileri belirler ve yöntem geliştirir. 3 - -
+Ö2 En az bir Avrupa Birliği yabancı dilinde iyi derecede sözlü ve yazılı ifade yeteneği kazanmalı - 5 -
+Ö3 Gündelik hayata yönelik basit düzeydeki temel ifadeleri kullanabilme. - - -
+Ö4 Dinleme ve okuma metinlerinde geçen, sık kullanılan ifade ve cümleleri kavrayabilme. - - -
+Ö5 Sosyal ortamlarda kendini tanıtabilme, kişisel bilgiler ile ilgili soru sorabilme ve cevap verebilme. - - -
+Ö6 Kendi geçmişini, yakın çevresini ve olayları basit düzeyde yazılı ve sözlü olarak ifade edebilme. - - -
+Ö7 Günlük hayatta karşılaşılan basit formları doldurabilme, kısa ve basit notlar oluşturabilme. - - -
+Ö8 Kısa ve basit düzeydeki metinleri okuyabilme, ilan ve afiş gibi yazılı metinlerdeki basit içerikleri kavrayabilme. - - -
+https://bologna.karatay.edu.tr/tr/ders/ticaret-ve-sanayi-meslek-yuksekokulu/bilgisayar-programciligi/03840104/mesleki-ingilizce 3/3

@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bilişimde Güncel Teknolojiler — Ders Notları ve Final Hazırlık</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .hero-bilisim { background: linear-gradient(135deg, #312e81 0%, #1e1b4b 45%, var(--bg) 100%); }
+    .hero-bilisim .badge {
+      background: rgba(99, 102, 241, 0.25);
+      border-color: rgba(129, 140, 248, 0.5);
+      color: #c7d2fe;
+    }
+    .sidebar-header { background: linear-gradient(135deg, #312e81 0%, var(--surface) 100%); }
+    .module-num { background: #6366f1; }
+    .section h3 { border-left-color: #818cf8; }
+    .nav-module-title { color: #a5b4fc; }
+    .nav-links a.active { border-left-color: #818cf8; }
+    .hub-link { display: block; text-align: center; padding: 0.5rem; margin-bottom: 0.4rem; background: rgba(255,255,255,0.06); border: 1px solid var(--border); border-radius: 6px; color: var(--muted); text-decoration: none; font-size: 0.82rem; }
+    .hub-link:hover { color: var(--text); border-color: #818cf8; }
+    .btn-quiz-side { display: block; text-align: center; padding: 0.55rem; background: rgba(99, 102, 241, 0.25); border: 1px solid rgba(129, 140, 248, 0.55); border-radius: 6px; color: #c7d2fe; text-decoration: none; font-size: 0.85rem; font-weight: 600; }
+    .btn-quiz-side:hover { background: rgba(99, 102, 241, 0.4); }
+    .hero-bilisim a.cta-quiz { display: inline-block; padding: 0.6rem 1.2rem; background: #6366f1; color: #fff; text-decoration: none; border-radius: 8px; font-weight: 600; margin-top: 1rem; }
+    .hero-bilisim a.cta-quiz:hover { background: #4f46e5; }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1>Bilişimde Güncel Teknolojiler</h1>
+        <p>14 modül · Dijital dönüşüm, AI, bulut, IoT, siber güvenlik</p>
+      </div>
+      <div class="search-box">
+        <input type="search" id="search" placeholder="Konu ara (ör. GDPR, Scrum, Hadoop, 5G)...">
+      </div>
+      <div style="padding:0.5rem 1rem 0.75rem">
+        <a href="../index.html" class="hub-link">← Ders Platformu Ana Sayfa</a>
+        <a href="sorular.html" class="btn-quiz-side">📝 Soru Bankası (220 test sorusu)</a>
+      </div>
+      <nav>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 1 — Dijital Dönüşüm <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#dijital-giris">Dijital Dönüşüm Nedir?</a>
+            <a href="#dijital-endustri4">Endüstri 4.0</a>
+            <a href="#dijital-ikiz">Dijital İkiz</a>
+            <a href="#dijital-api">API Ekonomisi</a>
+            <a href="#dijital-gdpr">Veri ve GDPR</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 2 — Proje Yönetimi <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#proje-yontemler">Waterfall ve Agile</a>
+            <a href="#proje-scrum-kanban">Scrum ve Kanban</a>
+            <a href="#proje-wbs-gantt">WBS ve Gantt</a>
+            <a href="#proje-risk">Risk Yönetimi</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 3 — Yapay Zeka <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#yz-ogrenme-turleri">Denetimli / Denetimsiz</a>
+            <a href="#yz-derin">Derin Öğrenme</a>
+            <a href="#yz-nlp-gan">NLP ve GAN</a>
+            <a href="#yz-etik">AI Etiği</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 4 — Büyük Veri <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#bd-3v">3V ve Veri Yaşam Döngüsü</a>
+            <a href="#bd-hadoop-spark">Hadoop ve Spark</a>
+            <a href="#bd-etl-warehouse">ETL, Warehouse, Lake</a>
+            <a href="#bd-gorsel">Görselleştirme</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 5 — Bulut <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#bulut-iaas-paas">IaaS PaaS SaaS</a>
+            <a href="#bulut-turler">Dağıtım Modelleri</a>
+            <a href="#bulut-konteyner">Konteynerler</a>
+            <a href="#bulut-k8s">Kubernetes</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 6 — IoT <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#iot-mimari">IoT Mimarisi</a>
+            <a href="#iot-mqtt">MQTT ve Protokoller</a>
+            <a href="#iot-lpwan">LPWAN ve Edge</a>
+            <a href="#iot-guvenlik">Akıllı Şehir ve Güvenlik</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 7 — Blockchain <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#bc-temel">Temel Kavramlar</a>
+            <a href="#bc-konsensus">PoW ve PoS</a>
+            <a href="#bc-smart">Akıllı Sözleşme</a>
+            <a href="#bc-nft">NFT ve Kripto</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 8 — Siber Güvenlik <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#sib-tehdit">Phishing ve Ransomware</a>
+            <a href="#sib-savunma">MFA ve Zero-Day</a>
+            <a href="#sib-web">XSS ve OWASP</a>
+            <a href="#sib-gdpr">GDPR ve Uyumluluk</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 9 — AR / VR / MR <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#arvr-tanim">AR VR MR Farkları</a>
+            <a href="#arvr-donanim">Donanım ve Gecikme</a>
+            <a href="#arvr-kullanim">Kullanım Alanları</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 10 — 5G / 6G <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#5g-ozellik">5G Özellikleri</a>
+            <a href="#5g-4g-karsilastirma">4G ile Karşılaştırma</a>
+            <a href="#5g-edge-nfv">Edge, NFV, Dilimleme</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 11 — Robotik <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#rob-otomasyon">RPA ve Otonom Sistemler</a>
+            <a href="#rob-slam">SLAM ve Dronlar</a>
+            <a href="#rob-endustri4">Endüstri 4.0 Bağlantısı</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 12 — Biyoinformatik <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#biyo-genomik">Genomik ve Veri</a>
+            <a href="#biyo-crispr">CRISPR</a>
+            <a href="#biyo-saglik">Sağlık Bilişimi</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 13 — Yeşil Bilişim <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#yesil-pue">PUE ve Veri Merkezi</a>
+            <a href="#yesil-ewaste">E-Atık</a>
+            <a href="#yesil-karbon">Karbon Ayak İzi</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 14 — Gelecek Trendleri <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#gel-kuantum">Kuantum Bilişim</a>
+            <a href="#gel-web3-meta">Web3 ve Metaverse</a>
+            <a href="#gel-etik-trend">AI Trendleri ve Etik</a>
+          </div>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <header class="hero hero-bilisim">
+        <h2>Bilişimde Güncel Teknolojiler — Final Hazırlık Rehberi</h2>
+        <p>Müfredattaki 14 modülü kapsayan Türkçe ders notları: dijital dönüşümden kuantum ve Web3 trendlerine. Sol menüden konuya atlayın; arama kutusu ile GDPR, Scrum, Hadoop, 5G gibi anahtar kelimeleri filtreleyin.</p>
+        <a href="sorular.html" class="cta-quiz">📝 Soru Bankasına Git (220 test sorusu) →</a>
+        <div class="badges">
+          <span class="badge">AI</span>
+          <span class="badge">Bulut</span>
+          <span class="badge">IoT</span>
+          <span class="badge">Blockchain</span>
+          <span class="badge">5G</span>
+        </div>
+      </header>
+
+      <div class="content">
+
+        <article class="module" id="modul-dijital">
+          <div class="module-header">
+            <span class="module-num">1</span>
+            <h2>Giriş ve Dijital Dönüşüm</h2>
+          </div>
+
+          <section class="section" id="dijital-giris">
+            <h3>Dijital Dönüşüm Nedir?</h3>
+            <p><strong>Dijital dönüşüm (digital transformation)</strong>, kurumların iş modellerini, süreçlerini ve müşteri deneyimini dijital teknolojilerle yeniden tasarlamasıdır. Sadece web sitesi açmak veya Excel’den buluta geçmek dönüşüm değildir; veriye dayalı karar, otomasyon ve yeni gelir kanalları hedeflenir.</p>
+            <p>Bilişim öğrencisi açısından üç katman önemlidir: <strong>teknoloji</strong> (bulut, API, veri platformları), <strong>süreç</strong> (çevik proje yönetimi, DevOps) ve <strong>kültür</strong> (deneme-yanılma, veri okuryazarlığı). Başarısız dönüşüm projelerinin çoğu yalnızca yazılım alımına odaklanır; insan ve organizasyon değişmez.</p>
+            <table>
+              <tr><th>Kavram</th><th>Açıklama</th></tr>
+              <tr><td>Dijitalleşme</td><td>Mevcut işin dijital araçlarla yapılması (ör. PDF fatura)</td></tr>
+              <tr><td>Dijital dönüşüm</td><td>İş modelinin ve değer zincirinin yeniden kurgulanması</td></tr>
+              <tr><td>Dijital olgunluk</td><td>Kurumun veri, güvenlik ve inovasyon seviyesi</td></tr>
+            </table>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>Dijitalleşme ≠ dijital dönüşüm. Dönüşüm iş modeli ve müşteri deneyimini değiştirir.</div>
+          </section>
+
+          <section class="section" id="dijital-endustri4">
+            <h3>Endüstri 4.0 ve Akıllı Üretim</h3>
+            <p><strong>Endüstri 4.0 (Industry 4.0)</strong>, üretimde siber-fiziksel sistemler, IoT sensörleri, büyük veri analitiği ve yapay zekânın bir arada kullanıldığı dördüncü sanayi devrimidir. Önceki dalgalar: buhar (1.0), elektrik ve seri üretim (2.0), bilgisayar ve otomasyon (3.0).</p>
+            <p>Fabrikada makine verisi gerçek zamanlı toplanır; kestirimci bakım (predictive maintenance) arıza olmadan önce müdahale sağlar. SCADA/MES sistemleri ile ERP entegrasyonu tipik mimaridir. Öğrenci olarak OPC-UA, MQTT ve edge gateway kavramlarını bilmek yeterlidir; detay mühendislik derslerinde derinleşilir.</p>
+            <ul>
+              <li><strong>Cyber-physical system (CPS):</strong> fiziksel süreç + dijital kontrol</li>
+              <li><strong>Horizontal/vertical integration:</strong> tedarik zinciri ve katmanlar arası veri akışı</li>
+              <li><strong>Modüler fabrika:</strong> esnek üretim hatları</li>
+            </ul>
+            <div class="tip"><strong>İpucu</strong>Endüstri 4.0 = IoT + Big Data + AI + bulut; gömülü sistemler dersindeki sensör/protokol bilgisi burada pratik değer kazanır.</div>
+          </section>
+
+          <section class="section" id="dijital-ikiz">
+            <h3>Dijital İkiz (Digital Twin)</h3>
+            <p><strong>Dijital ikiz</strong>, fiziksel bir varlığın (uçak motoru, şehir trafiği, hastane yatağı) sürekli güncellenen sanal kopyasıdır. Sensör verisi ikizi besler; simülasyon ve optimizasyon sanal ortamda yapılır, risk fiziksel dünyada azalır.</p>
+            <p>Şehir planlamada trafik, enerji ve su ağları birleşik modellenir. Sağlıkta hasta “ikizi” tedavi senaryolarını test etmek için kullanılabilir (etik ve regülasyon şart). Gerçek zamanlı senkronizasyon için yüksek bant genişliği ve güvenilir veri hattı gerekir.</p>
+            <pre><code>// Kavramsal akış (pseudocode)
+while (production_running) {
+  sensorData = readMachines();
+  digitalTwin.update(sensorData);
+  simulationResult = digitalTwin.runWhatIf(scenario);
+  if (simulationResult.risk &gt; threshold)
+    alertOperator();
+}</code></pre>
+            <div class="warn"><strong>Dikkat</strong>Dijital ikiz için yeterli veri kalitesi yoksa simülasyon yanıltıcı olur — “çöp girer, çöp çıkar” (GIGO).</div>
+          </section>
+
+          <section class="section" id="dijital-api">
+            <h3>API Ekonomisi ve Mikro Hizmetler</h3>
+            <p><strong>API (Application Programming Interface)</strong>, yazılımların birbirleriyle konuşmasını sağlayan sözleşmedir. REST (JSON/HTTP), GraphQL ve gRPC yaygın türlerdir. <strong>API economy</strong>, şirketlerin gelirini üçüncü tarafların API üzerinden entegrasyonundan elde etmesidir (ödeme, harita, kimlik doğrulama).</p>
+            <p><strong>Mikro hizmet mimarisi</strong> monolitik uygulamayı küçük, bağımsız deploy edilebilir servislere böler. Her servisin kendi veritabanı olabilir; API gateway dış dünyaya tek giriş sunar. Dezavantaj: dağıtık izleme, güvenlik ve versiyon uyumu karmaşıklaşır.</p>
+            <pre><code>// Örnek REST yanıtı (JSON)
+GET /api/v1/orders/42
+{
+  "id": 42,
+  "status": "shipped",
+  "items": [{"sku": "A1", "qty": 2}]
+}</code></pre>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>REST çoğunlukla stateless; HTTP metodları: GET okuma, POST oluşturma, PUT/PATCH güncelleme, DELETE silme.</div>
+          </section>
+
+          <section class="section" id="dijital-gdpr">
+            <h3>Veri Yönetişimi ve GDPR</h3>
+            <p>Dijital dönüşümde <strong>kişisel veri</strong> merkezdedir. AB <strong>GDPR (General Data Protection Regulation)</strong> kişisel verinin işlenmesi, açık rıza, unutulma hakkı ve veri ihlali bildirimini (72 saat) düzenler. Türkiye’de <strong>KVKK</strong> benzer ilkeler taşır.</p>
+            <p>Kurumlar veri envanteri (ROPA), DPIA (yüksek riskli işlemlerde etki analizi) ve privacy by design uygular. Bilişim uzmanı olarak minimum veri toplama, şifreleme ve erişim logları beklenir.</p>
+            <table>
+              <tr><th>İlke</th><th>Özet</th></tr>
+              <tr><td>Lawfulness</td><td>Hukuki dayanak veya rıza</td></tr>
+              <tr><td>Purpose limitation</td><td>Toplandığı amaç dışında kullanmama</td></tr>
+              <tr><td>Data minimization</td><td>Gerektiği kadar veri</td></tr>
+              <tr><td>Right to erasure</td><td>Silme talebi (koşullu)</td></tr>
+            </table>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>GDPR ihlalinde yüksek para cezası; veri sorumlusu ile veri işleyen farkını bilin.</div>
+          </section>
+        </article>
+
+        <article class="module" id="modul-proje">
+          <div class="module-header">
+            <span class="module-num">2</span>
+            <h2>Proje Yönetimi</h2>
+          </div>
+
+          <section class="section" id="proje-yontemler">
+            <h3>Waterfall ve Agile Karşılaştırması</h3>
+            <p><strong>Waterfall (şelale)</strong> modelinde gereksinim → tasarım → geliştirme → test → bakım sırası katıdır; her aşama bitmeden sonrakine geçilmez. Savunma, inşaat ve regülasyonlu yazılımda hâlâ tercih edilir. Değişim maliyeti geç safhalarda çok yüksektir.</p>
+            <p><strong>Agile (çevik)</strong> kısa iterasyonlarda çalışan yazılım teslim eder; müşteri geri bildirimi sürekli alınır. Belirsiz gereksinimli web/mobil ve startup projelerinde yaygındır. Manifesto vurguları: bireyler ve etkileşim, çalışan yazılım, müşteri iş birliği, değişime yanıt.</p>
+            <table>
+              <tr><th></th><th>Waterfall</th><th>Agile</th></tr>
+              <tr><td>Dokümantasyon</td><td>Ağır, başta sabit</td><td>Hafif, yaşayan</td></tr>
+              <tr><td>Değişim</td><td>Zor, pahalı</td><td>Planlanan</td></tr>
+              <tr><td>Teslimat</td><td>Proje sonunda</td><td>Her sprint/iterasyon</td></tr>
+            </table>
+          </section>
+
+          <section class="section" id="proje-scrum-kanban">
+            <h3>Scrum ve Kanban</h3>
+            <p><strong>Scrum</strong> çerçevesinde roller: <strong>Product Owner</strong> (öncelik ve backlog), <strong>Scrum Master</strong> (süreç engellerini kaldırma), <strong>Development Team</strong>. Zaman kutusu <strong>sprint</strong> (genelde 2 hafta); törenler: sprint planning, daily standup, review, retrospective.</p>
+            <p><strong>Kanban</strong> görsel tahta (To Do → Doing → Done) ve <strong>WIP limiti</strong> ile akışı sınırlar; sürekli teslimat, sprint zorunluluğu yoktur. Bakım ve destek ekipleri için uygundur.</p>
+            <ul>
+              <li><strong>Product Backlog:</strong> önceliklendirilmiş iş listesi</li>
+              <li><strong>Sprint Backlog:</strong> sprintte yapılacaklar</li>
+              <li><strong>Definition of Done:</strong> “bitti” kriterleri</li>
+            </ul>
+            <div class="tip"><strong>İpucu</strong>Scrum = zaman kutulu iterasyon; Kanban = akış ve WIP. Hibrit Scrumban da kullanılır.</div>
+          </section>
+
+          <section class="section" id="proje-wbs-gantt">
+            <h3>WBS ve Gantt Şeması</h3>
+            <p><strong>WBS (Work Breakdown Structure)</strong> projeyi teslim edilebilir alt parçalara böler; maliyet ve süre tahmini için temel oluşturur. Kök → fazlar → iş paketleri hiyerarşisi ağaç yapısındadır.</p>
+            <p><strong>Gantt şeması</strong> görevleri zaman çizelgesinde çubuklarla gösterir; bağımlılıklar (finish-to-start vb.) ve kritik yol görselleştirilir. MS Project, Jira timeline veya açık kaynak araçlarla hazırlanır.</p>
+            <pre><code>WBS örneği (kavramsal)
+1.0 Web Uygulaması
+  1.1 Gereksinim Analizi
+  1.2 Tasarım (UI/UX)
+  1.3 Backend API
+  1.4 Frontend
+  1.5 Test ve Devreye Alma</code></pre>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>Kritik yol = en uzun bağımlı görev zinciri; gecikme tüm proje süresini uzatır.</div>
+          </section>
+
+          <section class="section" id="proje-risk">
+            <h3>Risk Yönetimi</h3>
+            <p><strong>Risk</strong> = olasılık × etki. Tanımlama, analiz (nicel/nitel), planlama (kaçınma, azaltma, transfer, kabul) ve izleme döngüsüdür. Yazılım projelerinde tipik riskler: kapsam kayması (scope creep), anahtar personel ayrılığı, üçüncü parti API kesintisi, güvenlik açığı.</p>
+            <p>Risk kaydı (risk register) her risk için sahip, tetikleyici ve karşı önlem içerir. Çevik ekiplerde riskler sprint retrospective’de de gündeme gelir.</p>
+            <table>
+              <tr><th>Strateji</th><th>Örnek</th></tr>
+              <tr><td>Kaçınma</td><td>Riskli özelliği kapsam dışı bırakma</td></tr>
+              <tr><td>Azaltma</td><td>Ek test, yedekleme</td></tr>
+              <tr><td>Transfer</td><td>Sigorta, SLA ile tedarikçi</td></tr>
+              <tr><td>Kabul</td><td>Planlı yedek bütçe</td></tr>
+            </table>
+          </section>
+        </article>
+
+        <article class="module" id="modul-yapayzeka">
+          <div class="module-header">
+            <span class="module-num">3</span>
+            <h2>Yapay Zeka ve Makine Öğrenmesi</h2>
+          </div>
+
+          <section class="section" id="yz-ogrenme-turleri">
+            <h3>Denetimli ve Denetimsiz Öğrenme</h3>
+            <p><strong>Makine öğrenmesi (ML)</strong>, veriden örüntü çıkararak tahmin veya sınıflandırma yapan algoritmalar bütünüdür. <strong>Denetimli öğrenme (supervised)</strong> etiketli veri kullanır: e-posta spam mı değil mi, ev fiyatı tahmini. Algoritmalar: lineer regresyon, karar ağaçları, SVM, rastgele orman.</p>
+            <p><strong>Denetimsiz öğrenme (unsupervised)</strong> etiket yoktur; kümeleme (K-means), boyut indirgeme (PCA) ve anomali tespiti örnektir. <strong>Pekiştirmeli öğrenme</strong> ajanın ödül/ceza ile politika öğrenmesidir (oyun, robot navigasyon).</p>
+            <table>
+              <tr><th>Tür</th><th>Veri</th><th>Örnek görev</th></tr>
+              <tr><td>Supervised</td><td>Etiketli</td><td>Sınıflandırma, regresyon</td></tr>
+              <tr><td>Unsupervised</td><td>Etiketsiz</td><td>Kümeleme, ilişki</td></tr>
+              <tr><td>Reinforcement</td><td>Etkileşim</td><td>Politika optimizasyonu</td></tr>
+            </table>
+          </section>
+
+          <section class="section" id="yz-derin">
+            <h3>Derin Öğrenme (Deep Learning)</h3>
+            <p><strong>Derin öğrenme</strong>, çok katmanlı yapay sinir ağlarıdır; GPU ile büyük veri ve görüntü/ses/NLP’de devrim yaratmıştır. <strong>CNN</strong> görüntü, <strong>RNN/LSTM/Transformer</strong> dizi ve metin için kullanılır.</p>
+            <p>Eğitim süreci: veri bölme (train/validation/test), kayıp fonksiyonu, optimizasyon (SGD, Adam), overfitting’e karşı dropout ve early stopping. Transfer learning önceden eğitilmiş modeli yeni göreve uyarlar — az veriyle iyi sonuç.</p>
+            <pre><code>// Basit sinir ağı katmanı (kavramsal)
+output = activation( W * input + b )
+// Çok katman = derin ağ; W ağırlık matrisi</code></pre>
+            <div class="warn"><strong>Dikkat</strong>AI = geniş alan; ML alt küme; derin öğrenme ML’nin alt dalı. Her problem için derin ağ şart değildir.</div>
+          </section>
+
+          <section class="section" id="yz-nlp-gan">
+            <h3>NLP, GAN ve Üretken AI</h3>
+            <p><strong>Doğal dil işleme (NLP)</strong> metin anlama, çeviri, özetleme ve sohbet botlarıdır. Tokenization, embedding ve <strong>Transformer</strong> mimarisi (BERT, GPT ailesi) günümüz standardıdır. Büyük dil modelleri (LLM) prompt ile görev yapar.</p>
+            <p><strong>GAN (Generative Adversarial Network)</strong> üretici ve ayırt edici ağın yarışmasıyla sentetik görüntü üretir. Deepfake ve sanat üretiminde bilinir; etik ve telif tartışmalıdır.</p>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>Transformer self-attention kullanır; RNN’e göre uzun bağlamda daha verimli ölçeklenir.</div>
+          </section>
+
+          <section class="section" id="yz-etik">
+            <h3>Yapay Zeka Etiği</h3>
+            <p>Önyargılı veri → ayrımcı model (işe alım, kredi). <strong>Explainable AI (XAI)</strong> kararın nedenini açıklamaya çalışır. Otonom silah, gözetim kamerası yüz tanıma ve iş kaybı toplumsal tartışmalardır.</p>
+            <p>AB AI Act risk sınıflarına göre yüksek riskli sistemlere ek yükümlülük getirir. Geliştiricide adillik, şeffaflık, hesap verebilirlik ve insan denetimi ilkeleri beklenir.</p>
+            <ul>
+              <li>Veri temsiliyeti ve önyargı denetimi</li>
+              <li>Model kartı ve dokümantasyon</li>
+              <li>Kişisel veri ve GDPR uyumu eğitimde</li>
+            </ul>
+          </section>
+        </article>
+
+        <article class="module" id="modul-bigdata">
+          <div class="module-header">
+            <span class="module-num">4</span>
+            <h2>Büyük Veri (Big Data)</h2>
+          </div>
+
+          <section class="section" id="bd-3v">
+            <h3>3V ve Veri Yaşam Döngüsü</h3>
+            <p>Klasik <strong>3V</strong>: <strong>Volume</strong> (petabyte ölçeği), <strong>Velocity</strong> (gerçek zamanlı akış), <strong>Variety</strong> (yapılandırılmış JSON, video, log). Sonradan <strong>Veracity</strong> (doğruluk) ve <strong>Value</strong> (iş değeri) eklendi.</p>
+            <p>Yaşam döngüsü: toplama → depolama → işleme → analiz → görselleştirme → karar. IoT ve sosyal medya sürekli veri üretir; batch ve stream işleme birlikte kullanılır.</p>
+            <div class="tip"><strong>İpucu</strong>“Büyük veri” sadece boyut değil; geleneksel RDBMS’in yetmediği hız/çeşitlilik kombinasyonudur.</div>
+          </section>
+
+          <section class="section" id="bd-hadoop-spark">
+            <h3>Hadoop Ekosistemi ve Apache Spark</h3>
+            <p><strong>Hadoop</strong> HDFS (dağıtık dosya) ve MapReduce (disk üzerinde batch) ile başladı. YARN kaynak yöneticisi; Hive SQL benzeri sorgu, HBase NoSQL tablodur.</p>
+            <p><strong>Apache Spark</strong> bellek içi hesaplama ile MapReduce’tan genelde daha hızlıdır; batch (Spark SQL), stream (Structured Streaming), MLlib ve GraphX sunar. Scala, Python (PySpark), Java API’leri vardır.</p>
+            <table>
+              <tr><th>Bileşen</th><th>Rol</th></tr>
+              <tr><td>HDFS</td><td>Dağıtık depolama, replikasyon</td></tr>
+              <tr><td>Spark</td><td>Hızlı analitik motor</td></tr>
+              <tr><td>Kafka</td><td>Olay akışı (sık birlikte)</td></tr>
+            </table>
+          </section>
+
+          <section class="section" id="bd-etl-warehouse">
+            <h3>ETL, Veri Ambarı ve Veri Gölü</h3>
+            <p><strong>ETL (Extract, Transform, Load)</strong> kaynak sistemlerden veri çeker, temizler/dönüştürür ve hedefe yükler. Modern <strong>ELT</strong> önce ham yükler, dönüşümü hedef platformda (bulut warehouse) yapar.</p>
+            <p><strong>Data Warehouse</strong> (Snowflake, BigQuery, Redshift) yapılandırılmış iş zekâsı için optimize şemadır (yıldız/kar topu). <strong>Data Lake</strong> ham ve çok formatlı veriyi ucuz depolar; üzerinde Spark/SQL ile analiz yapılır. <strong>Data Lakehouse</strong> ikisinin birleşimi trendidir.</p>
+            <pre><code>-- Örnek analitik sorgu (SQL)
+SELECT region, SUM(revenue) AS total
+FROM sales_fact
+WHERE year = 2025
+GROUP BY region
+ORDER BY total DESC;</code></pre>
+          </section>
+
+          <section class="section" id="bd-gorsel">
+            <h3>Görselleştirme ve BI</h3>
+            <p><strong>Business Intelligence (BI)</strong> araçları (Power BI, Tableau, Looker) dashboard ve KPI sunar. İyi görselleştirme: doğru grafik türü (zaman serisi → çizgi, kategori → çubuk), renk körlüğüne duyarlı palet, yanıltıcı eksen kullanmama.</p>
+            <p>Self-service BI iş biriminin IT’ye bağımlılığını azaltır; veri yönetişimi ve tek doğruluk kaynağı (single source of truth) şarttır.</p>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>Data warehouse OLAP odaklı; operasyonel OLTP veritabanından ayrı tutulur.</div>
+          </section>
+        </article>
+
+        <article class="module" id="modul-bulut">
+          <div class="module-header">
+            <span class="module-num">5</span>
+            <h2>Bulut Bilişim (Cloud Computing)</h2>
+          </div>
+
+          <section class="section" id="bulut-iaas-paas">
+            <h3>IaaS, PaaS ve SaaS</h3>
+            <p><strong>IaaS (Infrastructure as a Service):</strong> sanal makine, ağ, depolama — OS ve üstü sizin sorumluluğunuz (AWS EC2, Azure VM). <strong>PaaS:</strong> uygulama çalıştırma ortamı; runtime ve DB yönetimi sağlayıcıda (Heroku, App Service). <strong>SaaS:</strong> hazır uygulama (Gmail, Salesforce).</p>
+            <table>
+              <tr><th>Model</th><th>Yönetilen</th><th>Örnek</th></tr>
+              <tr><td>IaaS</td><td>OS, middleware, app</td><td>EC2</td></tr>
+              <tr><td>PaaS</td><td>Uygulama ve veri</td><td>Azure App Service</td></tr>
+              <tr><td>SaaS</td><td>Sadece kullanım/config</td><td>Office 365</td></tr>
+            </table>
+            <p>Pay-as-you-go ve ölçeklenebilirlik (scale out/in) bulutun ekonomik avantajıdır; kapasite planlama esnekliği artar.</p>
+          </section>
+
+          <section class="section" id="bulut-turler">
+            <h3>Public, Private ve Hybrid Bulut</h3>
+            <p><strong>Public cloud:</strong> çok kiracılı paylaşılan altyapı (AWS, GCP, Azure). <strong>Private cloud:</strong> tek kuruma özel (on-prem OpenStack veya dedicated region). <strong>Hybrid:</strong> kritik veri şirket içi, burst iş yükü public’te. <strong>Multi-cloud:</strong> birden fazla sağlayıcı — vendor lock-in riskini dağıtma.</p>
+            <div class="warn"><strong>Dikkat</strong>Paylaşılan sorumluluk modeli: sağlayıcı altyapı güvenliği, müşteri OS ve uygulama güvenliği (IaaS’ta).</div>
+          </section>
+
+          <section class="section" id="bulut-konteyner">
+            <h3>Konteynerler ve Docker</h3>
+            <p><strong>Konteyner</strong> uygulamayı bağımlılıklarıyla paketler; VM’den hafif çünkü OS kernel paylaşılır. <strong>Docker</strong> image (salt okunur şablon) ve container (çalışan örnek) kavramları standarttır. Mikro hizmetlerde her servis ayrı image olabilir.</p>
+            <pre><code># Kavramsal Dockerfile adımları
+FROM node:20-alpine
+WORKDIR /app
+COPY package.json .
+RUN npm install
+COPY . .
+CMD ["node", "server.js"]</code></pre>
+          </section>
+
+          <section class="section" id="bulut-k8s">
+            <h3>Kubernetes (K8s) Orkestrasyon</h3>
+            <p><strong>Kubernetes</strong> konteynerleri cluster’da dağıtır, ölçekler, self-healing ve service discovery sağlar. Pod (en küçük birim), Deployment (replika), Service (ağ erişimi), Ingress (HTTP yönlendirme) temel nesnelerdir.</p>
+            <p>DevOps’ta CI/CD pipeline image build → registry push → K8s rollout akışı yaygındır. Helm chart paket yönetimi için kullanılır.</p>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>Docker = paketleme; Kubernetes = çok makinede çalıştırma ve yönetim.</div>
+          </section>
+        </article>
+
+        <article class="module" id="modul-iot">
+          <div class="module-header">
+            <span class="module-num">6</span>
+            <h2>Nesnelerin İnterneti (IoT)</h2>
+          </div>
+
+          <section class="section" id="iot-mimari">
+            <h3>IoT Mimarisi ve Sensörler</h3>
+            <p>Tipik katmanlar: <strong>cihaz</strong> (sensör/aktüatör, MCU), <strong>ağ</strong> (WiFi, LoRa, 5G), <strong>edge gateway</strong>, <strong>bulut</strong> (depolama, analitik), <strong>uygulama</strong> (dashboard, alarm). Sensörler sıcaklık, nem, hareket, titreşim, GPS gibi fiziksel büyüklüğü elektroniğe çevirir.</p>
+            <p>Protokol seçimi menzil, güç ve bant genişliğine bağlıdır. Gömülü sistemler dersindeki GPIO ve MQTT bilgisi IoT modülüyle doğrudan örtüşür.</p>
+          </section>
+
+          <section class="section" id="iot-mqtt">
+            <h3>MQTT ve Haberleşme</h3>
+            <p><strong>MQTT</strong> hafif publish/subscribe protokolüdür; düşük bant genişliği ve kopuk bağlantıya toleranslıdır. <strong>Broker</strong> (Mosquitto, HiveMQ) mesajları topic’lere yönlendirir. QoS 0/1/2 teslim garantisi seviyeleridir.</p>
+            <pre><code>// Topic örneği
+smartbuilding/floor3/room12/temperature → 24.5
+// Client publish eder; aboneler subscribe ile alır</code></pre>
+            <p>HTTP REST IoT’de de kullanılır; gerçek zamanlı sensör akışında MQTT/CoAP tercih edilir.</p>
+          </section>
+
+          <section class="section" id="iot-lpwan">
+            <h3>LPWAN, Edge ve 5G IoT</h3>
+            <p><strong>LPWAN (Low Power Wide Area Network):</strong> LoRaWAN, Sigfox, NB-IoT — uzun menzil, düşük güç, düşük veri hızı. Akıllı sayaç ve tarım sensörleri için idealdir.</p>
+            <p><strong>Edge computing</strong> veriyi cihaza yakın işler; gecikme ve bant tasarrufu sağlar. 5G URLLC ve mMTC büyük IoT bağlantısı ve düşük gecikme vaat eder.</p>
+            <table>
+              <tr><th>Teknoloji</th><th>Özellik</th></tr>
+              <tr><td>LoRaWAN</td><td>Açık ekosistem, yerel ağ</td></tr>
+              <tr><td>NB-IoT</td><td>Hücresel operatör altyapısı</td></tr>
+              <tr><td>Edge</td><td>Yerel filtreleme ve ML</td></tr>
+            </table>
+          </section>
+
+          <section class="section" id="iot-guvenlik">
+            <h3>Akıllı Şehir ve IoT Güvenliği</h3>
+            <p>Akıllı şehir: trafik ışığı, aydınlatma, atık yönetimi, hava kalitesi sensörleri entegre platformda birleşir. <strong>IoT güvenlik</strong> zayıf varsayılan şifreler, firmware güncellememe ve botnet (Mirai) ile kritiktir.</p>
+            <p>Önlemler: cihaz kimlik doğrulama, TLS, segmentasyon, OTA imzalı güncelleme, minimum açık port. KVKK/GDPR kapsamında sensör verisi kişisel olabilir (kamera, konum).</p>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>MQTT broker güvenliği: kimlik doğrulama, ACL topic bazlı, TLS şifreleme.</div>
+          </section>
+        </article>
+
+        <article class="module" id="modul-blockchain">
+          <div class="module-header">
+            <span class="module-num">7</span>
+            <h2>Blockchain ve Dağıtık Defter</h2>
+          </div>
+
+          <section class="section" id="bc-temel">
+            <h3>Blockchain Temelleri</h3>
+            <p><strong>Blockchain</strong> işlemlerin kriptografik hash zinciriyle bağlandığı, dağıtık ve çoğunlukla değiştirilemez defterdir. Merkezi otorite yerine <strong>konsensüs</strong> ve düğüm (node) ağı güvenir. Bitcoin ilk başarılı uygulama; Ethereum programlanabilir platformdur.</p>
+            <p>Blok yapısı: önceki blok hash’i, zaman damgası, işlem listesi, nonce. Değiştirme geçmiş blokları yeniden hesaplatır — maliyetli.</p>
+            <ul>
+              <li><strong>Public chain:</strong> herkes okuyabilir/katılabilir</li>
+              <li><strong>Private/consortium:</strong> kurumsal tedarik zinciri</li>
+            </ul>
+          </section>
+
+          <section class="section" id="bc-konsensus">
+            <h3>PoW, PoS ve Kripto</h3>
+            <p><strong>Proof of Work (PoW):</strong> madenciler hash yarışması yapar; enerji tüketimi yüksektir (Bitcoin). <strong>Proof of Stake (PoS):</strong> stake eden doğrulayıcılar seçilir; enerji daha düşük (Ethereum Merge sonrası PoS).</p>
+            <p><strong>Kripto para</strong> dijital varlık ve değer transferi; volatilite ve regülasyon (MiCA AB) gündemdedir. Stablecoin fiat’a peg’li alternatif sunar.</p>
+            <div class="warn"><strong>Dikkat</strong>Blockchain her veri problemi için uygun değildir; düşük işlem hacmi ve gizlilik ihtiyacında klasik DB daha iyidir.</div>
+          </section>
+
+          <section class="section" id="bc-smart">
+            <h3>Akıllı Sözleşme (Smart Contract)</h3>
+            <p><strong>Smart contract</strong> kod olarak yazılmış, koşul sağlanınca otomatik çalışan sözleşmedir (Ethereum Solidity). Tedarik zincirinde otomatik ödeme, sigortada parametric payout örneklenir.</p>
+            <pre><code>// Kavramsal Solidity benzeri
+if (deliveryConfirmed == true) {
+  transferPayment(seller, amount);
+}</code></pre>
+            <p>Hata ve exploit (reentrancy) milyon dolar kaybettirmiştir; denetim (audit) ve test şarttır.</p>
+          </section>
+
+          <section class="section" id="bc-nft">
+            <h3>NFT ve Dijital Sahiplik</h3>
+            <p><strong>NFT (Non-Fungible Token)</strong> benzersiz dijital varlık kaydıdır; sanat, oyun eşyası, tapu denemeleri. Metadata genelde IPFS veya merkezi URL’de; token zincirde sahiplik kanıtı.</p>
+            <p>Spekülasyon ve telif tartışmaları vardır; sınavda teknik olarak ERC-721 standardı ve fungible (BTC) vs non-fungible ayrımı sorulabilir.</p>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>PoW vs PoS: enerji, güvenlik modeli, doğrulayıcı seçimi farkları.</div>
+          </section>
+        </article>
+
+        <article class="module" id="modul-siber">
+          <div class="module-header">
+            <span class="module-num">8</span>
+            <h2>Siber Güvenlik (Cybersecurity)</h2>
+          </div>
+
+          <section class="section" id="sib-tehdit">
+            <h3>Phishing, Ransomware ve Sosyal Mühendislik</h3>
+            <p><strong>Phishing</strong> sahte e-posta/site ile kimlik bilgisi çalmadır; spear phishing hedefli, whaling üst yönetime yöneliktir. <strong>Ransomware</strong> veriyi şifreleyip fidye ister; çift fidye (sızdırma tehdidi) yaygınlaştı.</p>
+            <p>CIA üçlemesi: <strong>Confidentiality</strong> (gizlilik), <strong>Integrity</strong> (bütünlük), <strong>Availability</strong> (erişilebilirlik). İnsan faktörü zayıf halkadır — eğitim ve simülasyon önemlidir.</p>
+            <table>
+              <tr><th>Saldırı</th><th>Korunma özeti</th></tr>
+              <tr><td>Phishing</td><td>URL kontrolü, 2FA, eğitim</td></tr>
+              <tr><td>Ransomware</td><td>Yedekleme, segmentasyon, patch</td></tr>
+              <tr><td>Malware</td><td>Antivirus, EDR, least privilege</td></tr>
+            </table>
+          </section>
+
+          <section class="section" id="sib-savunma">
+            <h3>MFA, Zero-Day ve Savunma Katmanları</h3>
+            <p><strong>MFA (Multi-Factor Authentication)</strong> şifreye ek kanal (TOTP uygulaması, FIDO2 anahtar) ekler. <strong>Zero-day</strong> henüz yaması olmayan açıktır; IDS/IPS ve davranış analizi ile sınırlanır.</p>
+            <p>Derinlemesine savunma: firewall, WAF, endpoint koruma, SIEM (log korelasyonu), olay müdahale planı (IRP). Zero Trust: “ağ içi güvenilir” varsayımını reddeder, sürekli doğrulama.</p>
+            <div class="tip"><strong>İpucu</strong>Parola yerine passphrase + password manager; MFA’yı kritik hesaplarda zorunlu tutun.</div>
+          </section>
+
+          <section class="section" id="sib-web">
+            <h3>XSS, SQL Injection ve OWASP</h3>
+            <p><strong>XSS (Cross-Site Scripting):</strong> kötü niyetli script tarayıcıda çalışır; stored/reflected/DOM türleri. Çözüm: çıktı encoding, CSP header, input sanitization.</p>
+            <p><strong>SQL Injection:</strong> girdi ile sorgu manipülasyonu. Parametreli sorgu kullanın:</p>
+            <pre><code>-- Güvensiz (kavramsal hata)
+"SELECT * FROM users WHERE id = " + userInput
+
+-- Güvenli: parametreli
+PreparedStatement: WHERE id = ?</code></pre>
+            <p><strong>OWASP Top 10</strong> web risklerinin referans listesidir (broken access control, cryptographic failures vb.).</p>
+          </section>
+
+          <section class="section" id="sib-gdpr">
+            <h3>GDPR, Veri İhlali ve Uyumluluk</h3>
+            <p>Siber olay kişisel veriyi etkilerse <strong>GDPR madde 33</strong> uyarınca denetleyici kuruma 72 saat içinde bildirim gerekebilir; veri sahiplerine de bilgi verilir (yüksek risk). Teknik önlem: şifreleme, pseudonymization, erişim logu.</p>
+            <p>Penetrasyon testi ve zafiyet taraması proaktif güvenliktir; sertifikasyonlar (ISO 27001) kurumsal güven için referanstır.</p>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>XSS istemci tarafı; SQLi sunucu/veritabanı. Her ikisi de girdi doğrulama ile azaltılır.</div>
+          </section>
+        </article>
+
+        <article class="module" id="modul-arvr">
+          <div class="module-header">
+            <span class="module-num">9</span>
+            <h2>Artırılmış ve Sanal Gerçeklik (AR / VR / MR)</h2>
+          </div>
+
+          <section class="section" id="arvr-tanim">
+            <h3>AR, VR ve MR Farkları</h3>
+            <p><strong>VR (Virtual Reality):</strong> tamamen sanal ortam; headset (Meta Quest, PS VR) ile kullanıcı gerçek dünyadan izole edilir. <strong>AR (Augmented Reality):</strong> gerçek dünyaya dijital katman (Pokémon GO, endüstriyel bakım talimatı). <strong>MR (Mixed Reality):</strong> sanal nesneler fiziksel ortamla etkileşir (HoloLens).</p>
+            <table>
+              <tr><th></th><th>VR</th><th>AR</th></tr>
+              <tr><td>Ortam</td><td>Tam sanal</td><td>Gerçek + overlay</td></tr>
+              <tr><td>Donanım</td><td>Kapalı headset</td><td>Telefon, cam, headset</td></tr>
+              <tr><td>Motion sickness</td><td>Daha yüksek risk</td><td>Genelde daha az</td></tr>
+            </table>
+          </section>
+
+          <section class="section" id="arvr-donanim">
+            <h3>Donanım, Gecikme (Latency) ve Konfor</h3>
+            <p>VR için ekran çözünürlüğü, yenileme hızı (90 Hz+), tracking (6DoF) ve hand controller önemlidir. <strong>Motion-to-photon latency</strong> 20 ms altında tutulmazsa bulantı artar. AR’da SLAM ile konum takibi yapılır.</p>
+            <p>GPU/CPU yükü yüksektir; kablosuz headset’ler edge/bulut render (split rendering) denemektedir. Pil ömrü ve ergonomi ticari kabul için kritiktir.</p>
+            <div class="warn"><strong>Dikkat</strong>Uzun VR seansları göz yorgunluğu ve düşme riski; güvenli oyun alanı şart.</div>
+          </section>
+
+          <section class="section" id="arvr-kullanim">
+            <h3>Kullanım Alanları</h3>
+            <ul>
+              <li><strong>Eğitim:</strong> cerrahi simülasyon, tehlikeli senaryo eğitimi</li>
+              <li><strong>Perakende:</strong> sanal deneme (gözlük, mobilya)</li>
+              <li><strong>Endüstri:</strong> uzaktan uzman desteği (AR gözlük)</li>
+              <li><strong>Eğlence:</strong> oyun, konser, sanal tur</li>
+            </ul>
+            <p>WebXR ile tarayıcı tabanlı deneyimler yaygınlaşıyor; metaverse tartışması VR/AR altyapısına bağlıdır.</p>
+          </section>
+        </article>
+
+        <article class="module" id="modul-5g">
+          <div class="module-header">
+            <span class="module-num">10</span>
+            <h2>5G, Edge ve 6G Yol Haritası</h2>
+          </div>
+
+          <section class="section" id="5g-ozellik">
+            <h3>5G Temel Özellikleri</h3>
+            <p>ITU/3GPP beklentileri: <strong>eMBB</strong> (yüksek hızlı mobil geniş bant), <strong>URLLC</strong> (ultra güvenilir düşük gecikme), <strong>mMTC</strong> (büyük makine tipi iletişim). Milimetre dalga (mmWave) yüksek hız, kısa menzil; sub-6 GHz daha dengeli kapsama.</p>
+            <p>Endüstriyel 5G özel ağ (private 5G) fabrika ve limanlarda WiFi alternatifi olarak büyür. Network slicing operatörün sanal ağ dilimleri sunmasıdır.</p>
+          </section>
+
+          <section class="section" id="5g-4g-karsilastirma">
+            <h3>4G LTE ile Karşılaştırma</h3>
+            <table>
+              <tr><th>Özellik</th><th>4G LTE</th><th>5G</th></tr>
+              <tr><td>Teorik hız</td><td>~1 Gbps sınıfı</td><td>10+ Gbps hedef</td></tr>
+              <tr><td>Gecikme</td><td>~30–50 ms</td><td>~1 ms hedef (URLLC)</td></tr>
+              <tr><td>IoT yoğunluğu</td><td>Sınırlı</td><td>Çok yüksek cihaz/km²</td></tr>
+              <tr><td>Mimari</td><td>Monolitik çekirdek</td><td>SDN/NFV, bulut-native çekirdek</td></tr>
+            </table>
+            <p>4G hâlâ tüketici mobilde yaygın; 5G NSA (Non-Standalone) 4G altyapısına dayanır, SA (Standalone) tam 5G çekirdektir.</p>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>5G üç kullanım senaryosu: eMBB, URLLC, mMTC — örnek uygulama eşleştirin.</div>
+          </section>
+
+          <section class="section" id="5g-edge-nfv">
+            <h3>Edge Computing, NFV ve 6G</h3>
+            <p><strong>MEC (Multi-access Edge Computing)</strong> iş yükünü baz istasyonuna yakın çalıştırır; AR oyun ve otonom araç için gecikme düşer. <strong>NFV (Network Functions Virtualization)</strong> firewall, EPC gibi fonksiyonları yazılıma taşır.</p>
+            <p><strong>6G</strong> araştırma aşamasında (2030 sonrası hedef): THz bant, AI-native ağ, holografik iletişim vizyonları. 5G’yi “daha hızlı 4G” sanmak eksik kalır — dikey endüstri entegrasyonu asıl farktır.</p>
+          </section>
+        </article>
+
+        <article class="module" id="modul-robotik">
+          <div class="module-header">
+            <span class="module-num">11</span>
+            <h2>Robotik ve Otonom Sistemler</h2>
+          </div>
+
+          <section class="section" id="rob-otomasyon">
+            <h3>RPA ve Otonom Sistemler</h3>
+            <p><strong>RPA (Robotic Process Automation)</strong> yazılım botlarının tekrarlayan ofis işlerini (fatura kopyalama, form doldurma) UI üzerinden yapmasıdır; fiziksel robot değildir. Hızlı ROI, düşük kod platformları (UiPath vb.) ile yaygınlaştı.</p>
+            <p><strong>Otonom sistemler</strong> çevreyi algılayıp karar verir: otonom araç, depo robotu, insansız hava aracı (İHA). Sensör füzyonu, planlama ve kontrol döngüsü esastır.</p>
+            <div class="tip"><strong>İpucu</strong>RPA = iş süreci otomasyonu; endüstriyel robot = fiziksel manipülatör — sınavda karıştırmayın.</div>
+          </section>
+
+          <section class="section" id="rob-slam">
+            <h3>SLAM, Dronlar ve Navigasyon</h3>
+            <p><strong>SLAM (Simultaneous Localization and Mapping)</strong> bilinmeyen ortamda harita çıkarırken konum tahmini yapar. Lidar, kamera, IMU verisi birleştirilir. Drone’larda rota planlama, engelden kaçınma ve regülasyon (uçuş izni) önemlidir.</p>
+            <pre><code>// Basit navigasyon döngüsü (pseudocode)
+perceive = readSensors()
+map.update(perceive)
+pose = localize(map)
+path = planner.nextStep(pose, goal)
+actuators.execute(path)</code></pre>
+          </section>
+
+          <section class="section" id="rob-endustri4">
+            <h3>Endüstri 4.0 ve İnsan-Robot İş Birliği</h3>
+            <p>Kollaboratif robotlar (cobot) güvenlik sensörleriyle insanla aynı hatta çalışır. Dijital ikiz fabrika simülasyonu robot yollarını test eder. 5G düşük gecikme ile uzaktan teleoperation mümkün olur.</p>
+            <p>İş gücü etkisi: tekrarlayan işler azalır; bakım, programlama ve veri analizi becerileri öne çıkar.</p>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>SLAM eşzamanlı konum + harita; GPS’siz kapalı alanda kritik.</div>
+          </section>
+        </article>
+
+        <article class="module" id="modul-biyo">
+          <div class="module-header">
+            <span class="module-num">12</span>
+            <h2>Biyoinformatik ve Sağlık Bilişimi</h2>
+          </div>
+
+          <section class="section" id="biyo-genomik">
+            <h3>Genomik ve Biyolojik Veri</h3>
+            <p><strong>Biyoinformatik</strong> biyolojik veriyi (DNA/RNA/protein dizileri) bilgisayarla analiz eder. İnsan genomu ~3 milyar baz çifti; <strong>NGS (Next-Generation Sequencing)</strong> veri patlaması yarattı. FASTA/FASTQ formatları, BLAST benzerlik araması temel araçlardır.</p>
+            <p>Depolama ve işlem bulut/HPC gerektirir; etik onay ve anonimleştirme (KVKK/HIPAA) zorunludur. Kişiselleştirilmiş tıp genetik profile dayalı tedavi seçimidir.</p>
+            <table>
+              <tr><th>Veri türü</th><th>Kullanım</th></tr>
+              <tr><td>Genom</td><td>Kalıtsal hastalık riski</td></tr>
+              <tr><td>Transkriptom</td><td>Gen ekspresyonu</td></tr>
+              <tr><td>Proteom</td><td>Protein etkileşimleri</td></tr>
+            </table>
+          </section>
+
+          <section class="section" id="biyo-crispr">
+            <h3>CRISPR ve Gen Düzenleme</h3>
+            <p><strong>CRISPR-Cas9</strong> hedefli DNA kesimi ve onarımı sağlar; tarım, araştırma ve tedavi alanında devrim tartışılır. Off-target (yanlış bölge) etkiler ve germline düzenleme etiği (gelecek nesillere aktarım) sıcak konulardır.</p>
+            <p>Bilişimci rolü: dizin tasarımı yazılımı, veri tabanları, klinik trial veri yönetimi — biyoloji + kod birlikte çalışır.</p>
+            <div class="warn"><strong>Dikkat</strong>Genetik veri özel nitelikli kişisel veri sayılabilir; açık rıza ve güvenlik üst düzeyde tutulmalıdır.</div>
+          </section>
+
+          <section class="section" id="biyo-saglik">
+            <h3>Sağlık Bilişimi (Health Informatics)</h3>
+            <p><strong>EHR/EMR</strong> elektronik hasta kaydı; HL7 FHIR modern API standardıdır. Tele-tıp, giyilebilir cihaz (nabız, glukoz) ve AI destekli radyoloji görüntü sınıflandırması örnekleri.</p>
+            <pre><code>// FHIR Patient özeti (JSON kavramsal)
+{
+  "resourceType": "Patient",
+  "id": "example",
+  "name": [{"family": "Yilmaz", "given": ["Ayse"]}]
+}</code></pre>
+            <p>Veri birleştirme hastaneler arası interoperability zorluğu; güvenlik ve hasta mahremiyeti önceliklidir.</p>
+          </section>
+        </article>
+
+        <article class="module" id="modul-yesil">
+          <div class="module-header">
+            <span class="module-num">13</span>
+            <h2>Yeşil Bilişim (Green IT)</h2>
+          </div>
+
+          <section class="section" id="yesil-pue">
+            <h3>PUE ve Veri Merkezi Verimliliği</h3>
+            <p><strong>PUE (Power Usage Effectiveness)</strong> = toplam tesis gücü / IT ekipman gücü. İdeal 1.0’a yakın; tipik 1.2–1.8. Soğutma (free cooling, sıvı soğutma), yenilenebilir enerji ve sunucu sanallaştırma PUE’yi düşürür.</p>
+            <p>Hyperscale veri merkezleri yenilenebilir sözleşmeleri ve karbon nötr hedefleri duyurur; ancak AI eğitimi enerji tüketimini hızla artırmaktadır.</p>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>PUE = tesis/IT oranı; düşük daha verimli. Sadece sunucu değil soğutma da dahil.</div>
+          </section>
+
+          <section class="section" id="yesil-ewaste">
+            <h3>E-Atık ve Döngüsel Ekonomi</h3>
+            <p><strong>E-waste</strong> telefon, PC, sunucu hurdaları; zehirli metaller ve düşük geri dönüşüm oranı küresel sorundur. WEEE direktifi AB’de toplama/hedef koyar. Kurumsal IT’de donanım yenileme döngüsü ve sertifikalı geri dönüşüm politikası gerekir.</p>
+            <ul>
+              <li>Refurbish ve ikinci el cihaz programları</li>
+              <li>Modüler tasarım ve onarılabilirlik (right to repair)</li>
+              <li>Bulutta paylaşımlı kaynak = daha iyi kullanım oranı</li>
+            </ul>
+          </section>
+
+          <section class="section" id="yesil-karbon">
+            <h3>Karbon Ayak İzi ve Yenilenebilir Enerji</h3>
+            <p><strong>Carbon footprint</strong> Scope 1 (doğrudan), Scope 2 (satın alınan enerji), Scope 3 (tedarik zinciri) olarak raporlanır. Yazılım mühendisliğinde <strong>green coding</strong> verimsiz algoritma ve gereksiz bulut kaynağını azaltmayı hedefler.</p>
+            <p>Renewable energy sertifikaları ve bölgesel bulut seçimi (karbon yoğunluğu düşük bölge) kurumsal sürdürülebilirlik raporlarında yer alır.</p>
+            <div class="tip"><strong>İpucu</strong>Green IT sadece donanım değil; gereksiz veri replikasyonu ve gece çalışan test cluster’ları da enerji tüketir.</div>
+          </section>
+        </article>
+
+        <article class="module" id="modul-gelecek">
+          <div class="module-header">
+            <span class="module-num">14</span>
+            <h2>Gelecek Teknolojileri ve Etik</h2>
+          </div>
+
+          <section class="section" id="gel-kuantum">
+            <h3>Kuantum Bilişim</h3>
+            <p><strong>Kubit (qubit)</strong> süperpozisyon ve dolanıklık ile klasik bitten fazla bilgi taşır (ölçümde çöker). <strong>Shor algoritması</strong> büyük sayıları çarpanlarına ayırır — RSA şifrelemeyi tehdit eder. <strong>Grover</strong> arama hızlandırır.</p>
+            <p>Bugün NISQ (gürültülü orta ölçekli) cihazlar; hata düzeltme ve ölçek henüz sınırlı. <strong>Post-quantum cryptography (PQC)</strong> kuantum sonrası güvenli algoritmalar standartlaşıyor.</p>
+            <pre><code>// Klasik vs kuantum (kavramsal)
+classical_bit ∈ {0, 1}
+qubit state = α|0⟩ + β|1⟩  // |α|²+|β|²=1</code></pre>
+          </section>
+
+          <section class="section" id="gel-web3-meta">
+            <h3>Web3, Metaverse ve Dijital Kimlik</h3>
+            <p><strong>Web3</strong> merkeziyetsiz internet vizyonu: cüzdan kimliği, DAO yönetimi, token ekonomisi. <strong>Metaverse</strong> kalıcı 3D sosyal/ekonomik alanlar; VR/AR, blockchain ve AI birleşir — henüz olgun ekosistem değil.</p>
+            <p>Interop, dijital mülkiyet, moderasyon ve çocuk güvenliği tartışmalıdır. Merkezi platformlar (oyun motorları) ile açık standartlar rekabet eder.</p>
+            <table>
+              <tr><th>Kavram</th><th>Özet</th></tr>
+              <tr><td>Web1</td><td>Statik okuma</td></tr>
+              <tr><td>Web2</td><td>Kullanıcı içeriği, platformlar</td></tr>
+              <tr><td>Web3</td><td>Token, sahiplik iddiası</td></tr>
+            </table>
+          </section>
+
+          <section class="section" id="gel-etik-trend">
+            <h3>AI Trendleri, Etik ve Ders Özeti</h3>
+            <p>Güncel trendler: üretken AI (LLM, görüntü), edge AI, otonom sistemler, sürdürülebilir bilişim, siber dayanıklılık. Etik çerçeve: şeffaflık, adillik, gizlilik, insan gözetimi, hesap verebilirlik.</p>
+            <p>14 modül birbirine bağlıdır: dijital dönüşüm stratejisi → çevik proje → veri/AI → bulut/IoT altyapı → güvenlik ve regülasyon → gelecek teknolojileri. Final öncesi <a href="sorular.html" style="color:#a5b4fc">soru bankası</a>ndaki modül etiketli soruları çözün.</p>
+            <ol>
+              <li>Dijital dönüşüm ve Endüstri 4.0</li>
+              <li>Proje yönetimi metodolojileri</li>
+              <li>AI/ML ve etik</li>
+              <li>Big Data ve BI</li>
+              <li>Bulut ve K8s</li>
+              <li>IoT ve akıllı şehir</li>
+              <li>Blockchain</li>
+              <li>Siber güvenlik</li>
+              <li>AR/VR/MR</li>
+              <li>5G/6G</li>
+              <li>Robotik/RPA</li>
+              <li>Biyoinformatik</li>
+              <li>Green IT</li>
+              <li>Kuantum, Web3, trendler</li>
+            </ol>
+            <div class="exam"><strong>Genel final ipucu</strong>Kavram tanımı + karşılaştırma tablosu + örnek senaryo üçlüsüyle çalışın; kısaltmaların açılımını (GDPR, MFA, PUE, SLAM) ezberleyin.</div>
+            <div class="tip"><strong>İpucu</strong>Arama kutusuna “Scrum”, “PoS”, “ETL”, “URLLC” yazarak ilgili bölüme hızlıca gidin.</div>
+          </section>
+        </article>
+
+      </div>
+    </main>
+  </div>
+
+  <button class="menu-toggle" aria-label="Menü">☰</button>
+  <script src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,813 @@
+--- Sayfa 1 ---
+Görsel
+Programlama II
+Ders 1
+Öğrentim Gör. Abubakar MAYANJA
+
+--- Sayfa 2 ---
+Kurs İçeriği:
+Java Script ES6
+Belge Nesnesi Modeli (
+Document Object Model(DOM))
+JQuery
+Unix Komut Satırı(The Unix Command Line)
+Backend Web Geliştirme
+(Backend WebDevelopment)
+Node.Js
+Express.Js Node.Js ile
+Gömülü JavaScript
+(Embdeded JavaScript (EJS))
+
+--- Sayfa 3 ---
+1.
+Kurs İçeriği:
+Uygulama Programlama Arayüzü (APIs)
+Veri Tabanlar ((SQL & PostgreSQL))
+Kimlik Doğrulama ve Güvenlik Yönetimi
+(Authentication and Security Handling)
+Git, GitHub ve Sürüm Kontrolü
+(Version Control)
+React.JS
+
+--- Sayfa 4 ---
+Bir Web Devi'nin Doğuşu
+JavaScript: Web'e Güç Veren Dil
+Alt Başlık: 90'lara Kısa Bir Yolculuk
+Temel İçerik:
+Kıvılcım: 90'ların ortasında, web siteleri (HTML)
+"görünüme sahip ancak işlevden yoksun" durumdaydı.
+En küçük bir hesaplama bile sunucuya gönderilmeli ve
+geri gelmeliydi.
+Vizyon: Netscape (o dönemin baskın tarayıcısı Netscape
+Navigator'ın yapımcısı), daha dinamik ve etkileşimli bir
+web istiyordu.
+Yaratılış: Brendan Eich'ı, tarayıcı için basit ve erişilebilir
+bir betik dili yaratması için işe aldılar.
+Efsane: İnternet folklorüne göre, JavaScript sadece 10
+günde yaratıldı.
+
+--- Sayfa 5 ---
+Bir Web Devi'nin Doğuşu
+● Başlık: JS'siz Bir Dünya: Web Çöker
+Alt Başlık: JavaScript'in Her Yerde Oluşunun Kanıtı
+Temel İçerik:
+● Deney: Tarayıcınızda JavaScript'i devre dışı
+bırakmak, modern web'in ona ne kadar bağımlı
+olduğunu açıkça gösterir.
+• Çalışmayan Özellikler:
+• YouTube/Netflix: Genellikle hiç yüklenmez.
+• Beklenmeyen Bir Fayda: Bazı siteler (örneğin
+haber siteleri) reklamsız hale gelir, çünkü pek çok
+reklam çalışmak için JS'e ihtiyaç duyar.
+• Sonuç: Bildiğimiz modern, etkileşimli web, temel
+olarak JavaScript'e bağımlıdır.
+
+--- Sayfa 6 ---
+Bir Web Devi'nin Doğuşu
+●
+İsmin Ardında Ne Var? Betikler ve Standartlar
+•
+"Betik" Metaforu: Tıpkı bir senaryonun oyunculara (HTML
+öğeleri) ne yapmaları gerektiğini ve ne zaman yapmaları
+gerektiğini söylemesi gibi, JavaScript de web sayfalarına nasıl
+davranacaklarını söyler.
+•
+Kafa Karıştırıcı Bir Tarih: İlk olarak Livescript adıyla anıldı.
+Microsoft'un tersine mühendislikle geliştirdiği sürümüne
+ise JScript adı verildi.
+•
+Standart: Karmaşayı önlemek için, Avrupa Bilgisayar Üreticileri
+Birliği (ECMA) dili ECMAScript (ES) olarak standartlaştırdı.
+Neden önemli? ES6, ES7 gibi sürüm isimleri buradan gelir.
+•
+Java ve JavaScript: Bunlar tamamen farklı dillerdir. Klasik bir
+benzetme: "Java ile JavaScript'in ilişkisi, araba ile halının
+ilişkisi gibidir." "JavaScript" ismi, 90'larda Java'nın
+popülaritesinden yararlanmak için kullanılan bir pazarlama
+taktiğiydi.
+
+--- Sayfa 7 ---
+Bir Web Devi'nin Doğuşu
+●
+JavaScript Nasıl Çalışır ve Neden Kazandı?
+•
+Temel Teknik Fark: JavaScript bir yorumlanan
+dildir (tarayıcı tarafından satır satır yürütülür). Java ise
+bir derlenen dildir (önceden makine koduna çevrilir).
+•
+Geçmişteki Bakış: Yorumlanan diller daha yavaş
+"oyuncak" diller olarak görülüyordu.
+•
+Modern Gerçeklik: JavaScript motorları inanılmaz
+derecede hızlı ve güçlüdür.
+•
+Evrim: JavaScript ön uçta animasyonlar için bir "oyuncak"
+olarak başladı. Şimdi, tam kapsamlı bir güç merkezidir.
+•
+Evrensel Destek: Tüm büyük tarayıcılar tarafından yerel
+olarak desteklenen tek programlama dilidir.
+•
+Popülerlik Kanıtı: Geliştirici anketlerinde (ör. RedMonk,
+Stack Overflow) tutarlı bir şekilde en popüler
+programlama dili olarak bir numarada sıralanır.
+
+--- Sayfa 8 ---
+Bir Web Devi'nin Doğuşu
+● JavaScript Konsolu ile Başlarken
+Chrome'u açın ve şu yolu izleyin: Görünüm →
+Geliştirici → JavaScript Konsolu
+Konsolun işlevi: JavaScript kodunu anında
+çalıştırmanıza olanak tanır.
+• İlk komutunuzu deneyin:
+alert("Merhaba");
+Çalıştırmak için Enter'a basın
+Ekranda "Merhaba" yazan bir açılır pencere
+belirecek
+• Temel Kavram: Konsol, tek satırlık kodları
+anında test etmek içindir.
+
+--- Sayfa 9 ---
+Bir Web Devi'nin Doğuşu
+Konsolda Çok Satırlı Kod Yazma Chrome Snippet Düzenleyicisini Kullanma
+Başlık: Daha İyi Bir Yöntem: Chrome
+Başlık: Birden Fazla Talimat Yazmak
+Snippets
+İçerik:
+Problem: Konsola iki alert yazmak:
+•Snippets'a Erişim:
+alert("Merhaba");
+• Chrome Geliştirici Araçları'nı açın
+alert("workd"); (F12 veya Ctrl+Shift+I)
+Çözüm: Çalıştırmadan yeni satır eklemek • Sources (Kaynaklar) sekmesine
+gidin
+için Shift + Enter kullanın.
+• Ok simgesine tıklayın → Snippets'ı
+Not: Daha uzun betikler için bu yöntem
+seçin
+zahmetli olabilir.
+• + New snippet (+ Yeni snippet)
+butonuna tıklayın
+• Bir isim verin (örneğin, index.js)
+
+--- Sayfa 10 ---
+JavaScript Sözdizimini Anlamak
+Başlık: Kodu Parçalara Ayırmak
+alert("Merhaba");
+Bileşenler:
+alert - Anahtar kelime / fonksiyon (tarayıcıya ne yapacağını söyler)
+("Merhaba") - Parantezler içindeki mesaj
+"Merhaba" - String (görüntülenecek metin)
+; - Noktalı virgül (talimatı sonlandırır)
+Turkçe ile Benzetme:
+alert = komut ("söyle" gibi)
+("Merhaba") = ne söyleneceği
+; = nokta (cümle sonu)
+
+--- Sayfa 11 ---
+Pratik Alıştırma:
+1. Chrome Snippets'ı açın
+2. practice.js adında yeni bir snippet oluşturun
+3. 3 farklı uyarı mesajı yazın
+4. Kodunuzu çalıştırın
+5. Hata olup olmadığını kontrol etmek için konsolu inceleyin
+
+--- Sayfa 12 ---
+JavaScript veri Tipleri
+// Temel matematik (Number işlemleri)
+2 + 3 // 5 döndürür
+String Veri Türü
+10 / 2 // 5 döndürür
+String = bir karakter dizisi (tıpkı bir inci dizisi
+3 * 4 // 12 döndürür /
+gibi)
+alert(2 + 3); // Açılır pencerede "5" gösterir
+"Merhaba Dünya"
+// String işlemleri
+"JavaScript"
+"Merhaba" + " Dünya" // "Merhaba Dünya"
+"123" // Tırnak işaretleri içindeki sayılar bile
+Önemli: Farkına dikkat edin:
+string olur!
+2 + 3 → Sayı toplama = 5
+Diğer Temel Veri Türleri: "2" + "3" → String birleştirme = "23"
+Number — Sayısal veri (42, 3.14, -7) // Not: Herhangi bir değerin veri türünü kontrol
+Boolean — Doğru/Yanlış değerleri (true, false) etmek için typeof() kullanın:
+Veri Türleriyle Uygulama typeof(23) // "number"
+döndürür
+Konsolu Açın: Görünüm → Geliştirici →
+typeof("Merhaba") // "string" döndürür
+JavaScript Konsolu
+typeof("42") // "string" döndürür (number
+değil!)
+
+--- Sayfa 13 ---
+JavaScript: Değişkenleri Tanıyalım
+prompt() ile Kullanıcı Girdisi Alma
+●
+Programlama Karşılığı:
+Başlık: Kullanıcıdan Girdi Almak
+Değişkenler, verileri bilgisayar belleğinde depolar.
+İçerik:
+Veriyi tekrar tekrar yazmak yerine, değişken adını
+prompt() fonksiyonu:
+kullanarak ona başvurabilirsiniz.
+•alert()'e benzer ancak kullanıcı girdisine izin
+●
+Temel Kavram:
+verir
+Değişkenler = Veri değerlerini saklamak
+•Bir mesaj ve girdi alanı içeren bir iletişim
+için kaplar (kutular)
+kutusu gösterir
+Snippets'ta Deneyin:
+var isim = "Abubakar";
+1.Chrome Geliştirici Araçları'nı açın → Sources
+(Kaynaklar) → Snippets
+2.index.js dosyasını oluşturun/açın
+3.Şunu yazın:
+prompt("Isimin nedir?");
+Problem: Girdi kayboldu! Bunu kaydetmemiz
+gerekiyor...
+(Çözüm için bir değişkene ihtiyacımız var.)
+
+--- Sayfa 14 ---
+JavaScript: Değişkenleri Tanıyalım
+prompt() ile Kullanıcı GirdisiAlma
+Programlama Karşılığı:
+Başlık: KullanıcıdanGirdi Almak
+Değişkenler, verileri bilgisayar belleğinde saklar. İçerik:
+prompt() fonksiyonu:
+Veriyi sürekli tekrar etmek yerine, değişken adına
+•alert()'e benzer ancak kullanıcı girdisine izin verir.
+başvurabilirsiniz.
+•Bir mesaj ve giriş alanı içeren bir iletişim kutusu gösterir.
+Temel Kavram: Snippets'taDeneyin:
+Değişkenler = Veri değerlerini saklamak 1.Chrome Geliştirici Araçları'nı açın → Sources (Kaynaklar)
+→ Snippets
+için kaplar
+2.index.js dosyasını oluşturun/açın
+3.Şunu yazın:
+var isim = "Abubakar";
+prompt("Isimin nedir?");
+Problem: Girdi kayboluyor! Onu kaydetmemiz
+gerekiyor...
+var isimin = prompt("Isimin nedir?");
+
+--- Sayfa 15 ---
+JavaScript: Değişkenleri Tanıyalım
+CEVAP
+var favoraytYemek = "Etliekemek";
+var yas = prompt("Kaç Yaşındasın?");
+var isStudent = true;
+alert(favoriteYemek +"Seviyorum " + age + " Yaşındayım " + isStudent+ " öğreciyim ");
+Görev:
+1. Kullanıcıdan favori rengini sorun
+2. Bunu bir değişkende saklayın
+3. "Favori renginiz [renk] çok güzel!" yazan bir uyarı oluşturun
+
+--- Sayfa 16 ---
+Konsol ve Önbelleği Temizleme
+Yeniden Başlamak - Çalışma Alanınızı Temizleme
+Konsolu Temizleme:
+Mac: Command + K
+Windows: Ctrl + K
+Yalnızca görünen mesajları temizler, saklanan değişkenleri değil.
+Tam Veri Sıfırlama (Zorlu Yeniden Yükleme):
+Mac: Yeniden yükle butonuna tıklayıp basılı tutun → "Empty Cache and Hard Reload" (Önbelleği Boşalt ve Zorla
+Yeniden Yükle)
+Windows: Yeniden yükle butonuna sağ tıklayın → "Empty Cache and Hard Reload" (Önbelleği Boşalt ve Zorla
+Yeniden Yükle)
+Bu, TÜM saklanan değişkenleri ve verileri temizler.
+Neden Önemli?
+Eski değişken değerlerinin işinize karışmasını önler.
+Size temiz bir test ortamı sağlar.
+Hata ayıklarken veya yeni alıştırmalara başlarken çok önemlidir.
+Deneyin: Şimdi kısayolları kullanarak konsolunuzu temizleyin!
+
+--- Sayfa 17 ---
+Altın Kural: Anlamlı Değişken İsimleri
+BAD Example:
+Neden Önemli:
+var gfhdfhd = "Abubakar";
+var xyz123 = 25; Tuhaf isimlerin ne anlama geldiğini
+unutacaksınız.
+var a = true;
+Diğer programcıların kodunuzu anlaması
+GOOD Example:
+gerekir.
+var isim = "Abubakar";
+Unutmayın: Kodunuzu sürdürecek bir
+var yas = 25;
+sonraki kişi... anlaşılırlık konusunda
+var isLoggedIn = true;
+oldukça tutkulu olabilir!
+
+--- Sayfa 18 ---
+JavaScript'in İsimlendirme Kuralları (YAPAMAYACAKLARINIZ)
+Değişken İsimleri için Sözdizim Kuralları Kural 4: Sınırlı Özel Karakterler
+Kural 1: Rezerve Anahtar Kelimeler Kullanılamaz
+var benim-adim = "Ebü";
+// HATA -tire (-) kullanılamaz
+var var = "Ebü"; // HATA -'var' biranahtarkelimedir
+var benim_adim = "Ebü";
+// GEÇERLİ -alt çizgi(_)
+var function = "test"; // HATA - 'function' bir anahtar kelimedir
+kullanılabilir
+var alert = "hi"; // GEÇERLİ (ama kafakarıştırıcı!)
+var $isim = "Ebü";
+// GEÇERLİ -dolarişareti($)
+Kural 2: Rakamla Başlayamaz
+kullanılabilir
+var 123isim = "Ebü"; // HATA
+var isim@ = "Ebü";
+// HATA -@ kullanılamaz
+var isim123 = "Ebü"; // GEÇERLİ -ilk karakterdensonrarakam
+kullanılabilir
+Kural 3: Boşluk İçeremez
+var benim isim = "Ebü"; // HATA -'benim' ve'isim' arasındaboşluk
+var benimIsim = "Ebü"; // GEÇERLİ
+
+--- Sayfa 19 ---
+JavaScript'in İsimlendirme Kuralları (YAPAMAYACAKLARINIZ)
+CamelCase Kuralını Kullanmanız Tavsiye
+// Bu tarzlardan kaçının:
+Edilir
+var firstname = "Abubakar"; // okuması zor
+CamelCase nedir?
+var first_name = "Abubakar"; // snake_case (Python'da
+İlk kelime küçük harf
+Sonraki kelimeler büyük harfle başlar yaygın)
+Deve hörgücüne benzer: camelCaseÖrneği
+var FirstName = "Abubakar"; // PascalCase (sınıflar
+İyi camelCase örnekleri:
+için)
+var FIRSTNAME = "Abubakar"; // SCREAMING_CASE
+var firstName = "Abubakar";
+(sabitler için)
+var favoriteFood = "sushi";
+var ogrenciSayis = 42;
+var isUserLoggedIn = true;
+/
+
+--- Sayfa 20 ---
+JavaScript'in İsimlendirme Kuralları (YAPAMAYACAKLARINIZ)
+YAPMAYIN:
+● Özet ve En İyi Uygulamalar
+•Rezerve anahtar kelimeler kullanmayın: var,
+Kontrol Listesi function, if
+•Rakamla başlamayın: 1stPlace
+● YAPIN:
+•Boşluk içermesin: user name
+• camelCase kullanın: userName,
+•Özel karakterler kullanmayın: user-name,
+name@email
+gameScore, isActive
+•Kafa karıştırıcı kısaltmalar oluşturmayın: usrnm
+• Anlamlı isimler seçin: age (a
+(userName yerine)
+değil), emailAddress (e değil)
+• Kodunuz boyunca tutarlı olun
+• Küçük harfle başlayın
+• Sadece harf, rakam, $ ve _
+kullanın
+
+--- Sayfa 21 ---
+Javascript String .length Özelliği
+var name = "Abubakar";
+Mesaj Karakter Sayacı Oluşturun
+Amaç: Şunları yapan bir program oluşturun:
+console.log(name.length);
+1.Kullanıcıdan bir mesaj yazmasını ister
+● Nasıl çalışır:
+2.Kullanılan karakterleri sayar
+• Her karakter sayılır (harfler, boşluklar,
+3.Kalan karakterleri gösterir (maksimum 140)
+noktalama işaretleri)
+• "Abubakar" → 8 karakter
+• "Merhaba Dünya" → 14 karakter (boşluk
+da sayılır!)
+• "123" → 3 karakter (sayı gibi görünse bile)
+
+--- Sayfa 22 ---
+Javascript String .length Özelliği
+Beklenen Çıktı:
+●
+182 karakter yazdınız, -42 karakter kaldı.
+●
+İhtiyacınız olanlar:
+●
+prompt() - Kullanıcının tweet'ini almak için
+•
+.length - Karakterleri saymak için
+•
+alert() - Sonuçları göstermek için
+•
+Matematik: 140 - message.length
+•
+
+--- Sayfa 23 ---
+CEVAP:
+var mesaj1 = prompt(”Mesajiniz yazin:");
+var mesaj = mesaj1.length;
+alert(mesaj.length + " karakter yazdınız, " + (140 - mesaj.length) +
+" karakter kaldı.");
+
+--- Sayfa 24 ---
+.slice() Fonksiyonunu Tanıyalım
+var name = "Abubakar";
+●
+Mesajlarımızı 140 karakterde kesebiliriz. Bunu
+console.log(name.slice(0, 1));
+nasıl uygularız?
+●
+Çözüm:String'lerin parçalarını çıkarmak
+console.log(name.slice(5, 6));
+için .slice() kullanın
+● console.log(name.slice(0, 3));
+string.slice(baslangicIndeksi, bitisIndeksi)
+.slice() Nasıl Çalışır?
+Position: 0 1 2 3 4 5 6 7
+Karakter: A b u b a k a r
+var mesaj = prompt(”Mesaj Yazin:");
+var mesaj140 = mesaj.slice(0, 140);
+alert(mesaj140);
+
+--- Sayfa 25 ---
+JavaScript Matematik Operatörleri
+JavaScript Math: +, -, *, /, %
+Artırma ve Azaltma Operatörleri:
+++ ve --: Değerleri 1 Değiştirme
+console.log(2 + 3); // 5
+Birleşik Atama Operatörleri
++=, -=, *=, /=: Herhangi Bir Miktarda
+console.log(10 - 7); // 3
+Değiştirme
+console.log(4 * 6); // 24 javascript
+Copy
+console.log(15 / 3); // 5 Download
+var x = 5; x += 2; // x = x + 2 → x 7
+console.log(10 % 3); // 1
+var x = 5; x -= 3; // x = x - 3 → x 2
+● Anahtar Çıkarımlar:
+Özet:
+• Temel matematik için + - * / kullanılır •x += y = x = x + y
+• Kalanları bulmak için % kullanılır (çift/tek kontrolü için •x -= y = x = x - y
+kullanışlı) •x *= y = x = x * y
+• Parantezler () hesaplama sırasını kontrol eder •x /= y = x = x / y
+• Kesinlikle gerekli olmasa bile netlik için parantez kullanın
+
+--- Sayfa 26 ---
+JavaScript Matematik Operatörleri
+Anahtar Çıkarımlar:
+Alıştırma ve Yaygın Kalıplar
+•x++ ve x-- değeri tam olarak 1 değiştirir
+var a = 10;
+•+=, -=, *=, /= herhangi bir miktarda değiştirir
+a += 5; // a = ?
+•Bunlar yaygın işlemler için kısayollardır
+a *= 2; // a = ?
+•Kodu daha kısa ve temiz yapar
+a -= 8; // a = ?
+•Döngülerde ve sayaçlarda çok yaygındır (yakında
+a /= 3; // a = ?
+öğreneceğiz)
+a++; // a = ?
+
+--- Sayfa 27 ---
+Fonksiyonlara Giriş
+Fonksiyon Nedir?
+Kısaca, bir fonksiyon belirli bir görevi gerçekleştirmek için bir dizi talimat paketidir.
+Benzetme:
+Bir ev robotuna bir kez öğretmek, sonra sadece "git süt al" demek.
+Fonksiyonun Faydaları:
+Tekrardan kaçınmak
+Yazma işinden tasarruf etmek
+Kodu DRY tutmak
+(Kendini Tekrar Etme - Don't Repeat Yourself)
+Güncellemesi kolay (bir yerde değişiklik, her yeri etkiler)
+
+--- Sayfa 28 ---
+JavaScript Fanksiyonu Giriş
+function SutAl() {
+alert(”evdencik");
+Faksiyonu Oluşturma
+alert(" Sağa Git ");
+alert(" Sağa Git ");
+function fanksiyonuİsimi() {
+alert(”Sut Al");
+// ... daha fazla talimat
+// Şunu yap
+}
+// Bunu yap Fonksiyonu ÇAĞIRMAK (Kullanmak)
+getMilk(); // getMilk() içindekiTÜM talimatlarıyürütür
+}
+Praktik icin:
+https://stanford.edu/~cpiech/karel/ide.html
+Parçalarına ayıralım: (5x5) maze
+•
+function→ Anahtarkelime(yeni birfonksiyonoluşturur)
+•
+functionName→ Fonksiyonaverdiğinizisim
+•
+()→ Parantezler(şimdilikboş)
+•
+{}→ Süslüparantezler(talimatlarıiçerir)
+•
+{}içi→ Yürütülecekkod
+
+--- Sayfa 29 ---
+Parametreli (Girdili) Fonksiyonlar
+Nasıl çalışır:
+Fonksiyonlar üç türe ayrılır:
+•bottles = Parametre (yer tutucu isim)
+1.
+Temel fonksiyonlar (girdi/çıktısız)
+•2, 5, 12 = Argümanlar (gerçek değerler)
+2. Girdili fonksiyonlar (parametreli) •Parametre, fonksiyon içinde bir değişken
+gibi davranır
+3.
+Hem girdili hem çıktılı fonksiyonlar
+Parametreli Fonksiyon:
+function functionName(parameter) {
+// Parametreyi bir değişken gibi kulan
+function getMilk(sise) {
+}
+console.log(sise + " şişe süt al"); }
+getMilk(2); // "2 şişe süt al”
+getMilk(5); // ”5 şişe süt al"
+
+--- Sayfa 30 ---
+Functions with Parameters (Inputs)
+Math.floor() ile Aşağı Yuvarlama
+Görev Değişikliği:
+function getMilk(para) {
+var siseSayisi = para / 1.5;
+getMilk(bottles)'dan getMilk(money)'e
+var gercekSiseSayisi = Math.floor(siseSayisi); //
+AŞAĞI yuvarlar
+Amaç: Verilen para ile kaç şişe satın
+console.log(gercekSiseSayisi + " şişe al"); }
+alınabileceğini hesaplayın getMilk(5); // 3 şişe
+getMilk(10); // 6 şişe (10/1.5=6.666→6)
+function getMilk(para) {
+getMilk(4.5); // 3 şişe (4.5/1.5=3→3)
+var siseSayisi = para / 1.5; // Kaç şişe?
+Anahtar Çıkarımlar:
+console.log(siseSayisi + " şişe al"); •Parametreler fonksiyonları esnek yapar
+•Parametre = yer tutucu, Argüman = gerçek değer
+}
+•Parametreleri fonksiyon içinde değişken gibi
+kullanın
+getMilk(5); // 3.333... şişe (sorun!)
+•Math.floor() en yakın tam sayıya AŞAĞI yuvarlar
+Sorun: 0.333 şişe satın alınamaz!
+
+--- Sayfa 31 ---
+Parametreli (Girdili) ve Çıktılı (Sonuçlu) Fonksiyonlar
+Return Kavramı: function siseHesapla(baslangicParasi, siseFiyati) {
+var siseSayisi = Math.floor(baslangicParasi / siseFiyati);
+Fonksiyonlar bir değer "geri verebilir"
+return siseSayisi; // Çıktı: şişe sayısı }
+return anahtar kelimesini kullanın
+Çıktı değişkenlerde saklanabilir
+function paraUstuHesapla(baslangicMiktari, siseFiyati) {
+var paraUstu = baslangicMiktari % siseFiyati;
+function getMilk(para) {
+return paraUstu; // Çıktı: kalan para üstü }
+var paraUstu = para % 1.5; // Kalanı hesapla
+function sütAl(para) {
+return paraUstu; // Para üstünü geri ver
+var siseSayisi = siseHesapla(para, 1.5); // İlk fonksiyonu
+kullanır
+}
+var paraUstu = paraUstuHesapla(para, 1.5); // İkinci
+var benimParaUstum = getMilk(4); // fonksiyonu kullanır
+benimParaUstum = 1 console.log(siseSayisi + " şişe al");
+return paraUstu;
+}
+
+--- Sayfa 32 ---
+BMI Hesaplayıcı - Etkileşimli Görev
+Başlık: BMI Hesaplayıcı - Etkileşimli Görev
+İçerik:
+BMI Nedir?
+Vücut Kitle İndeksi
+Boy ve kiloya göre vücut yağını ölçer
+Formül: BMI = kilo / (boy²)
+Göreviniz:
+bmiCalculator adında bir fonksiyon oluşturun ki:
+Kilo (kg) ve boy (m) değerlerini girdi olarak alsın
+Formülü kullanarak BMI'yi hesaplasın
+BMI değerini geri döndürsün (return etsin)
+
+--- Sayfa 33 ---
+Rastgele Sayılara Giriş
+Başlık: Math.random()—Rastgelelik Üretme
+Math.random() rastgele sayılar üreten bir fonksiyondur.
+0 ile 0.999999... arasında ondalık bir sayı döndürür (asla 1 değil)
+Konsolda deneyelim:
+console.log(Math.random());
+console.log(Math.random());
+console.log(Math.random());
+Rastgele Sayıları Ölçeklendirme (Rastgele Sayıları Kullanışlı Hale Getirme)
+Problem: Math.random() 0-0.999... veriyor ama biz 1-6 arasında (zar) istiyoruz.
+
+--- Sayfa 34 ---
+Rastgele Sayılara Giriş
+Aşk Hesaplayıcı Görevi
+Çözüm: Çarp ve ayarla! (Aşağı yuvarla)
+Başlık: 90'lar Tarzı Bir 'Aşk Hesaplayıcı'
+Oluşturun
+n = Math.floor(n); // En yakın tam sayıya
+AŞAĞI yuvarlar
+İçerik:
+Amaç: Şunları yapan bir program oluşturun:
+console.log(n); // 0-5 (asla 6 değil!)
+İki isim sorar (sadece gösteriş için!)
+Aralığı kaydır:
+Rastgele bir "aşk yüzdesi" üretir (1-100)
+n = n + 1; // Şimdi 1-6!
+Sonucu gösterir
+console.log(n); // Örn., 3 var yuzdelik = Math.floor(Math.random() *
+Tek satırda zar kodu: 100) + 1;
+var dice = Math.floor(Math.random() * 6) + 1;
+
+--- Sayfa 35 ---
+Rastgele Sayılara Giriş
+Çözüm:
+prompt("Senin adın ne?");
+prompt("Onun adı ne?");
+var askPuani = Math.floor(Math.random() * 100) + 1;
+alert("Aşk puanınız %" + askPuani);
+Anahtar Çıkarımlar:
+Math.random() 0-0.999... arasında bir değer verir (asla 1 değil)
+Aralığı artırmak için çarpın
+Math.floor() ondalık kısmı atar
+Aralığı yukarı kaydırmak için 1 ekleyin
+Formül: Math.floor(Math.random() * aralık) + başlangıçSayısı
+
+--- Sayfa 36 ---
+Koşullu İfadeler (If/Else)
+Başlık: Kodda Karar Verme
+Problem: Aşk hesaplayıcısı tüm puanlar için aynı
+mesajı veriyor.
+Çözüm: Puana göre özelleştirilmiş mesajlar!
+Gerçek hayat benzetmesi: Tren rayları
+EĞER ray açıksa → düz git
+DEĞİLSE (ray kapalıysa) → sağa dön
+if (koşul) { // Koşul DOĞRU ise bunu yap
+}
+else { // Koşul YANLIŞ ise bunu yap
+}
+
+--- Sayfa 37 ---
+Koşullu İfadeler (If/Else)
+Karşılaştırma Operatörleri:
+Başlık: KoddaKarar Verme
+1. === eşittir
+2. !== eşit değildir
+if (loveScore === 100)
+3. > büyüktür
+{ alert("Mükemmel uyum! Birbirinizi Kanye'nin Kanye'yi sevdiği
+4. < küçüktür
+gibi seviyorsunuz!"); } else
+5. >= büyük veya eşit
+6. <= küçük veya eşit
+{ alert("Aşk puanınız %" + loveScore); }
+Sözdizim Kuralları:
+if anahtar kelimesi
+Koşul parantez içinde ()
+Kodbloğu süslü parantez içinde {}
+else anahtar kelimesi (isteğe bağlı)
+if() veya else'den sonra noktalı virgül yok
+
+--- Sayfa 38 ---
+Karşılaştırma Operatörlerine Giriş
+Eşitlik Karşılaştırmaları:
+Karşılaştırma operatörleri nedir?
+5 === 5 // true (katı eşitlik)
+İki değeri karşılaştıran semboller
+5 !== 3 // true (katı eşitsizlik)
+5 == "5" // true (gevşek eşitlik—dikkat!)
+true veya false döndürürler
+5 === "5" // false (farklı türler!)
+Karar vermek için if ifadelerinde
+console.log(10 > 5);
+kullanılırlar
+console.log(10 === 10);
+Temel Karşılaştırmalar:
+console.log("merhaba" === "merhaba");
+5 > 3 // true (büyüktür)
+Anahtar Çıkarımlar:
+5 < 3 // false (küçüktür)
+Her zaman === ve !== kullanın (katı karşılaştırma)
+&& tüm koşulların doğru olmasını gerektirir
+5 >= 5 // true (büyük veya eşit)
+|| herhangi bir koşulun doğru olmasını gerektirir
+5 <= 3 // false (küçük veya eşit)
+
+--- Sayfa 39 ---
+Dizilere (Arrays) Neden İhtiyaç Duyarız:
+Veri KoleksiyonlarınaNedenİhtiyaç Çözüm: Diziler (Arrays)
+Duyarız? •Bir değişkende birden fazla değer saklayın
+•Tıpkı bir yumurta kartonunun birden fazla yumurta tutması gibi
+Problem: Bir davetli listesi yönettiğinizi hayal
+•Öğelere konumlarına (indeks) göre erişin
+edin.
+if (guestName === "Angela")
+Yumurta (Array): [ , , , , ]
+{ alert("Hoş geldin!"); } Indeksiler : 0 1 2 3 4
+var yumurta =["kahve","beyaz","mavi","yeşli","kırmızı"];
+else if (guestName === "Jack")
+{ alert("Hoş geldin!"); }
+var musafirler = ["Elif", "Efe", "Eda", "Musa", "Rana"];
+else if (guestName === "Pam")
+{ alert("Hoş geldin!"); }
+Accessing array items:
+else if (guestName === "James")
+console.log(musafirler[0]);
+{
+console.log(musafirler[1]);
+alert("Hoş geldin!");
+console.log(musafiler[4]);
+} // ... ve böylece 100+ davetli için devam
+console.log(musafiler.length);
+eder
+console.log(yumurta.length);
+
+--- Sayfa 40 ---
+.includes() Metodu
+Başlık: Dizide Bir Öğe Olup Olmadığını KontrolEtme
+if (musafirler.includes(”Efe")) {
+Problem:Bir ismin davetli listesinde olup olmadığı
+console.log(”Hosgeldeniz!");
+nasıl kontrol edilir?
+Çözüm:.includes() metodu
+}
+Öğe dizide varsa true döndürür
+else {
+Öğe dizide yoksa false döndürür
+Büyük/küçük harfe duyarlıdır! console.log(”Isimin Liste’de
+yoktur");
+Syntax:
+}
+dizi.includes(kontrolEdilecekOge)
+AnahtarÇıkarımlar:
+Diziler birden fazla değer saklar [deger1, deger2, deger3]
+console.log(musafirler.includes("Efe"));
+Öğelere dizi[indeks] ile erişilir (0'dan başlar)
+.includes() bir öğenin var olup olmadığını kontrol eder
+console.log(musafirler.includes("Apo"));
+.length öğe sayısını verir
+Diziler + koşullu ifadeler = güçlü kombinasyonlar!
+
+--- Sayfa 41 ---
+Alıştırma (Öğle Yemeğini Kim Ödeyecek? Kod Mücadelesi)
+●
+Adlar listesinden rastgele bir isim seçecek bir fonksiyon yazacaksınız. Seçilen kişi herkesin yemek hesabını
+ödeyecek.
+●
+Önemli: Çıktı fonksiyondan döndürülmelidir, alert, prompt veya console.log kullanmanıza gerek yok. Çıktı,
+büyük/küçük harf ve noktalama işaretleri dahil olmak üzere örnek çıktıyla tam olarak eşleşmelidir.
+.
+Örnek: ["Musa", "Ben", "Jenny", "Ela", "Ilayda"]
+Örnek Çıktı:
+Ela bugun Öğlen yemek satin alacak !
+İpucu
+1. Array.length'i düşünmeniz gerekebilir.
+2. Dizilerin 0. pozisyondan başladığını unutmayın!
+
+--- Sayfa 42 ---
+While Loops
+var count = 1;
+Neden Döngülere İhtiyaç Duyarız?
+while (count <= 5) {
+Başlık: Tekrarlayan Görevleri console.log(count);
+count = count + 1; // ÖNEMLİ: Koşulu değiştir
+Otomatikleştirme
+}
+While Döngüsü Yapısı:
+// Çıktı: 1 2 3 4 5
+while (koşul) { // Tekrarlanacak kod // koşul count = 1
+↓
+DOĞRU olduğu sürece }
+while (count <= 5?) → TRUE
+●
+Nasılçalışır: ↓
+1. Koşulukontrolet (doğru/yanlış?) console.log(1)
+2. count = 2
+DOĞRU ise→{}içindekikoduçalıştır
+↓
+1. adımageridön while (count <= 5?) → TRUE
+3.
+YANLIŞ ise→ döngüyüatla ↓
+console.log(2)
+count = 3
+... count = 6 olana kadar devam eder
+↓
+while (count <= 5?) → FALSE → EXIT LOOP
+
+--- Sayfa 43 ---
+THANK YOU
+43
+Email: abubakar.mayanja@karatay.edu.tr

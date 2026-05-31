@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Görsel Programlama II - Final Sınavı Çalışma Rehberi</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1>Görsel Programlama II</h1>
+        <p>Final sınavı çalışma rehberi — Modül 1-9</p>
+        <p style="margin-top:0.5rem"><a href="index.html" style="font-size:0.78rem;color:#93c5fd">← Tüm dersler</a></p>
+      </div>
+      <div class="search-box">
+        <input type="search" id="search" placeholder="Konu ara (ör. middleware, bcrypt)...">
+      </div>
+      <div style="padding:0.5rem 1rem 0.75rem">
+        <a href="sorular.html" style="display:block;text-align:center;padding:0.55rem;background:rgba(59,130,246,0.2);border:1px solid rgba(59,130,246,0.5);border-radius:6px;color:#93c5fd;text-decoration:none;font-size:0.85rem;font-weight:600">📝 Soru Bankası</a>
+      </div>
+      <nav>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 1 — JavaScript <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#js-tarih">JavaScript Tarihi</a>
+            <a href="#js-konsol">Konsol ve Snippets</a>
+            <a href="#js-sozdizim">Sözdizimi</a>
+            <a href="#js-veri-tipleri">Veri Tipleri</a>
+            <a href="#js-degiskenler">Değişkenler</a>
+            <a href="#js-isimlendirme">İsimlendirme</a>
+            <a href="#js-string">String İşlemleri</a>
+            <a href="#js-matematik">Matematik</a>
+            <a href="#js-fonksiyonlar">Fonksiyonlar</a>
+            <a href="#js-random">Rastgele Sayı</a>
+            <a href="#js-if-else">if / else</a>
+            <a href="#js-diziler">Diziler</a>
+            <a href="#js-while">while Döngüsü</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 2 — DOM <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#js-ekleme">JS Ekleme Yolları</a>
+            <a href="#dom-giris">DOM Ağacı</a>
+            <a href="#dom-secim">Öğe Seçimi</a>
+            <a href="#dom-manipulasyon">Manipülasyon</a>
+            <a href="#event-listener">addEventListener</a>
+            <a href="#switch-this">switch ve this</a>
+            <a href="#nesneler">Nesneler</a>
+            <a href="#klavye-event">Klavye Olayları</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 3 — jQuery <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#jquery-giris">jQuery Giriş</a>
+            <a href="#jquery-css">.css() ve Sınıflar</a>
+            <a href="#jquery-attr">.attr()</a>
+            <a href="#jquery-dom">DOM Ekleme</a>
+            <a href="#jquery-anim">Animasyonlar</a>
+            <a href="#git-bash">Git Bash</a>
+            <a href="#terminal-komutlar">Terminal Komutları</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 4 — Express/EJS <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#middleware">Middleware</a>
+            <a href="#body-parser">body-parser</a>
+            <a href="#ejs-temel">EJS Temel</a>
+            <a href="#ejs-gelismis">EJS Gelişmiş</a>
+            <a href="#ejs-veri">EJS Veri Aktarımı</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 5 — Veritabanları <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#veri-kalicilik">Veri Kalıcılığı</a>
+            <a href="#sql-nosql">SQL vs NoSQL</a>
+            <a href="#sql-crud">SQL CRUD</a>
+            <a href="#sql-join">JOIN</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 6 — PostgreSQL <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#postgres-kurulum">Kurulum</a>
+            <a href="#pg-node">pg ve Node.js</a>
+            <a href="#csv-import">CSV İçe Aktarma</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 7 — Güvenlik <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#auth-neden">Kimlik Doğrulama</a>
+            <a href="#guvenlik-seviyeleri">Güvenlik Seviyeleri</a>
+            <a href="#sifreleme-hash">Şifreleme ve Hash</a>
+            <a href="#saldirilar">Saldırı Türleri</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 8 — Oturum <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#cookies">Çerezler</a>
+            <a href="#sessions">Oturumlar</a>
+            <a href="#passport">Passport</a>
+            <a href="#dotenv">dotenv</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 9 — API/REST <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#api-giris">API Giriş</a>
+            <a href="#rest-api">REST API</a>
+            <a href="#json">JSON</a>
+            <a href="#axios">Axios</a>
+          </div>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <header class="hero">
+        <h2>Görsel Programlama II — Final Hazırlık</h2>
+        <p>Bu site, 2. sınıf bilgisayar programcılığı öğrencileri için ders notlarından derlenmiş kapsamlı bir çalışma rehberidir. Sol menüden modüllere geçin; arama kutusu ile konu filtreleyin.</p>
+        <p style="margin-top:1rem"><a href="sorular.html" style="display:inline-block;padding:0.6rem 1.2rem;background:#3b82f6;color:#fff;text-decoration:none;border-radius:8px;font-weight:600">📝 Final Soru Bankası (260+ soru) →</a></p>
+        <div class="badges">
+          <span class="badge">JavaScript &amp; DOM</span>
+          <span class="badge">Node.js &amp; Express</span>
+          <span class="badge">PostgreSQL</span>
+          <span class="badge">Auth &amp; REST</span>
+        </div>
+      </header>
+
+      <div class="content">
+        <article class="module" id="modul-1">
+          <div class="module-header">
+            <span class="module-num">1</span>
+            <h2>JavaScript Temelleri (Ders 1)</h2>
+          </div>
+
+      <section class="section" id="js-tarih">
+        <h3>JavaScript'in Tarihi ve Web'deki Yeri</h3>
+        <p>1990'ların ortasında web sayfaları çoğunlukla statik HTML'den oluşuyordu; her etkileşim sunucuya gidip geri gelmek zorundaydı. Netscape, tarayıcıda çalışan hafif bir betik dili istedi ve Brendan Eich kısa sürede JavaScript'i geliştirdi. Dil önce <code>LiveScript</code>, sonra pazarlama nedeniyle <code>JavaScript</code> adını aldı; Java ile ilişkisi yoktur — tamamen farklı dillerdir.</p>
+        <p>ECMA, dili standartlaştırarak <strong>ECMAScript (ES)</strong> adını verdi. Bugün duyduğumuz ES6, ES2020 gibi sürüm numaraları bu standarttan gelir. JavaScript yorumlanan bir dildir: tarayıcı veya Node.js kodu satır satır çalıştırır. Modern motorlar (V8, SpiderMonkey) sayesinde performans çok yüksektir.</p>
+        <ul>
+          <li>Tüm büyük tarayıcılar JavaScript'i yerel destekler.</li>
+          <li>Ön yüzden backend'e (Node.js) kadar tek dilde uçtan uca geliştirme mümkündür.</li>
+          <li>YouTube, Gmail, Netflix gibi siteler JS kapalıyken çoğu özelliği kaybeder.</li>
+        </ul>
+        <div class="tip"><strong>İpucu</strong>Tarayıcıda JS'i geçici kapatıp bir haber sitesine girerek reklamların çoğunun JS ile yüklendiğini gözlemleyebilirsiniz — ders notlarındaki "deney" örneğidir.</div>
+        <div class="exam"><strong>Sınavda sorulabilir</strong>JavaScript'in yorumlanan dil olması, ECMAScript ile ilişkisi ve Java'dan farkı kısa tanım sorularında çıkar.</div>
+      </section>
+
+      <section class="section" id="js-konsol">
+        <h3>JavaScript Konsolu ve Chrome Snippets</h3>
+        <p>Geliştirici araçlarını açın: <code>F12</code> veya <code>Ctrl+Shift+I</code>. <strong>Console</strong> sekmesinde tek satırlık ifadeleri anında test edersiniz. Çok satırlı kod için konsolda <code>Shift+Enter</code> yeni satır ekler; normal <code>Enter</code> kodu çalıştırır.</p>
+        <p>Uzun betikler için <strong>Sources → Snippets</strong> kullanın: yeni snippet oluşturup adlandırın, kodu yazın, sağ tık → Run veya <code>Ctrl+Enter</code> ile çalıştırın.</p>
+        <pre><code>alert("Merhaba");
+console.log("Konsola yazı");
+console.error("Hata mesajı");
+console.warn("Uyarı");</code></pre>
+        <table>
+          <tr><th>Yöntem</th><th>Ne zaman?</th></tr>
+          <tr><td>Console</td><td>Hızlı deneme, değişken kontrolü</td></tr>
+          <tr><td>Snippets</td><td>10+ satırlık tekrar kullanılan kod</td></tr>
+          <tr><td>.js dosyası</td><td>Gerçek projeler, HTML'e bağlı script</td></tr>
+        </table>
+        <div class="warn"><strong>Dikkat</strong><code>alert()</code> üretim kodunda kullanılmaz; kullanıcı deneyimini keser. Öğrenme aşamasında ve sınav örneklerinde görülebilir.</div>
+      </section>
+
+      <section class="section" id="js-sozdizim">
+        <h3>JavaScript Sözdizimi Temelleri</h3>
+        <p>JavaScript'te her ifade genelde noktalı virgülle biter (otomatik noktalı virgül ekleme de vardır). Bloklar süslü parantez <code>{ }</code> ile tanımlanır. Yorum satırları: tek satır <code>//</code>, çok satır <code>/* */</code>.</p>
+        <p>Dil büyük/küçük harfe duyarlıdır: <code>myVar</code> ile <code>myvar</code> farklı değişkenlerdir. String'ler tek veya çift tırnakla yazılabilir; template literal için backtick <code>`</code> kullanılır.</p>
+        <pre><code>// Değişken ve sabit
+let sayac = 0;
+const PI = 3.14;
+
+/* Çok satırlı yorum */
+let mesaj = `Merhaba ${sayac}`;</code></pre>
+        <div class="tip"><strong>İpucu</strong>Konsolda tanımsız değişken kullanırsanız <code>ReferenceError</code> alırsınız — bu, ismin yanlış yazıldığını veya kapsam dışı olduğunu gösterir.</div>
+      </section>
+
+      <section class="section" id="js-veri-tipleri">
+        <h3>Veri Tipleri: String, Number, Boolean</h3>
+        <p>JavaScript dinamik tipli bir dildir; aynı değişkene farklı tipte değer atanabilir (modern projelerde <code>let</code>/<code>const</code> ile tutarlı kullanım tercih edilir). Temel primitif tipler:</p>
+        <table>
+          <tr><th>Tip</th><th>Örnek</th><th>Açıklama</th></tr>
+          <tr><td>String</td><td><code>"Merhaba"</code></td><td>Metin</td></tr>
+          <tr><td>Number</td><td><code>42</code>, <code>3.14</code></td><td>Tam ve ondalıklı sayılar</td></tr>
+          <tr><td>Boolean</td><td><code>true</code>, <code>false</code></td><td>Mantıksal değer</td></tr>
+        </table>
+        <p><code>typeof</code> operatörü bir değerin tipini string olarak döndürür:</p>
+        <pre><code>typeof "abc";      // "string"
+typeof 10;         // "number"
+typeof true;       // "boolean"
+typeof undefined;  // "undefined"</code></pre>
+        <div class="exam"><strong>Sınavda sorulabilir</strong><code>typeof null</code> sonucu tarihsel bir hata nedeniyle <code>"object"</code> döner — bunu ezberleyin.</div>
+      </section>
+
+      <section class="section" id="js-degiskenler">
+        <h3>Değişkenler: var, let, const ve prompt</h3>
+        <p>Eskiden yalnızca <code>var</code> vardı; fonksiyon kapsamına sahiptir ve hoisting davranışı kafa karıştırıcıdır. ES6 ile <code>let</code> (blok kapsamlı, yeniden atanabilir) ve <code>const</code> (blok kapsamlı, yeniden atama yok) geldi. Sınav ve projelerde <code>let</code>/<code>const</code> tercih edin.</p>
+        <p><code>prompt()</code> tarayıcıda kullanıcıdan metin alır; dönüş her zaman <strong>string</strong> veya iptalde <code>null</code>'dur. Sayıya çevirmek için <code>Number()</code> veya <code>parseInt()</code> gerekir.</p>
+        <pre><code>let ad = prompt("Adınız?");
+console.log(ad);
+
+const yas = 20;
+// yas = 21;  // Hata: Assignment to constant variable
+
+var eski = 1;  // Hâlâ çalışır ama önerilmez</code></pre>
+        <div class="warn"><strong>Dikkat</strong><code>prompt</code> Node.js ortamında yoktur; yalnızca tarayıcı API'sidir.</div>
+      </section>
+
+      <section class="section" id="js-isimlendirme">
+        <h3>İsimlendirme Kuralları ve camelCase</h3>
+        <p>Değişken ve fonksiyon adları harf, <code>_</code>, <code>$</code> ile başlayabilir; rakamla başlayamaz. Rezerve kelimeler (<code>if</code>, <code>class</code>, <code>return</code>) kullanılamaz.</p>
+        <p>JavaScript topluluğunda çok kelimeli isimlerde <strong>camelCase</strong> standarttır: ilk kelime küçük, sonrakiler büyük harfle başlar — örn. <code>ogrenciSayisi</code>, <code>getUserName</code>.</p>
+        <table>
+          <tr><th>Geçerli</th><th>Geçersiz</th></tr>
+          <tr><td><code>toplamFiyat</code></td><td><code>2toplam</code></td></tr>
+          <tr><td><code>_gecici</code></td><td><code>let</code> (anahtar kelime)</td></tr>
+          <tr><td><code>$element</code></td><td><code>toplam-fiyat</code> (tire)</td></tr>
+        </table>
+        <div class="tip"><strong>İpucu</strong>Anlamlı isimler hem sınavda hem projede puan kazandırır: <code>x</code> yerine <code>zarSonucu</code> yazın.</div>
+      </section>
+
+      <section class="section" id="js-string">
+        <h3>String İşlemleri: length, slice, birleştirme</h3>
+        <p>String'ler karakter dizisidir. <code>.length</code> karakter sayısını verir (boşluklar dahil). <code>.slice(baslangic, bitis)</code> bitiş indeksini <strong>dahil etmez</strong>; negatif indeks sondan sayar.</p>
+        <pre><code>let metin = "JavaScript";
+metin.length;           // 10
+metin.slice(0, 4);      // "Java"
+metin.slice(-6);        // "Script"
+metin.toUpperCase();
+metin.includes("Script"); // true</code></pre>
+        <p>İki string <code>+</code> ile birleştirilir; template literal ile değişken gömülür:</p>
+        <pre><code>let ad = "Ayşe";
+let selam = "Merhaba " + ad;
+let selam2 = `Merhaba ${ad}, hoş geldin!`;</code></pre>
+      </section>
+
+      <section class="section" id="js-matematik">
+        <h3>Matematik Operatörleri ve Öncelik</h3>
+        <p>Aritmetik: <code>+ - * / %</code> (mod/kalan). <code>++</code> ve <code>--</code> bir artırır/azaltır. Karşılaştırma: <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>. Eşitlik için <code>==</code> (tip dönüşümü yapar) ve <strong>===</strong> (tip + değer) kullanılır; sınavda <code>===</code> tercih edin.</p>
+        <pre><code>let a = 10, b = 3;
+a + b;   // 13
+a % b;   // 1
+a === "10";  // false
+a == "10";   // true (tip dönüşümü!)</code></pre>
+        <table>
+          <tr><th>Operatör</th><th>===</th><th>==</th></tr>
+          <tr><td>5 === "5"</td><td>false</td><td>true</td></tr>
+          <tr><td>null == undefined</td><td>false</td><td>true</td></tr>
+        </table>
+        <div class="exam"><strong>Sınavda sorulabilir</strong><code>===</code> ile <code>==</code> farkını örnekli açıklayın; tip dönüşümü tuzakları sık sorulur.</div>
+      </section>
+
+      <section class="section" id="js-fonksiyonlar">
+        <h3>Fonksiyonlar: Tanım, Parametre ve return</h3>
+        <p>Fonksiyonlar tekrar kullanılabilir kod bloklarıdır. Parametreler parantez içinde, <code>return</code> sonucu çağırana döndürür; <code>return</code> yoksa <code>undefined</code> döner.</p>
+        <pre><code>function topla(a, b) {
+  return a + b;
+}
+let sonuc = topla(3, 5);  // 8
+
+// Ok fonksiyonu (ES6)
+const carp = (x, y) => x * y;</code></pre>
+        <p>Fonksiyon ifadesi ve ok fonksiyonu farklı <code>this</code> davranışına sahiptir; DOM modülünde tekrar ele alınacaktır.</p>
+        <div class="tip"><strong>İpucu</strong>Parametre sayısı fazla verilirse fazlalar yok sayılır; az verilirse eksikler <code>undefined</code> olur.</div>
+      </section>
+
+      <section class="section" id="js-random">
+        <h3>Math.random ve Zar Simülasyonu</h3>
+        <p><code>Math.random()</code> 0 ile 1 arasında (1 hariç) ondalıklı sayı üretir. Tam sayı aralığı için <code>Math.floor</code> kullanılır:</p>
+        <pre><code>// 1 ile 6 arası zar (dahil)
+let zar = Math.floor(Math.random() * 6) + 1;
+
+// 0 ile 9 arası
+let rakam = Math.floor(Math.random() * 10);</code></pre>
+        <p>Formül: <code>Math.floor(Math.random() * (max - min + 1)) + min</code> hem min hem max dahil tam sayı verir.</p>
+        <div class="flow">Math.random() → 0.0 .. 0.999...
+  × 6 → 0 .. 5.999...
+  floor → 0 .. 5
+  + 1 → 1 .. 6  (zar)</div>
+        <div class="exam"><strong>Sınavda sorulabilir</strong>1-6 zar kodunu satır satır açıklama sorusu olarak gelebilir.</div>
+      </section>
+
+      <section class="section" id="js-if-else">
+        <h3>Koşullar: if, else if, else</h3>
+        <p>Program akışı koşullara göre dallanır. Koşul ifadesi truthy/falsy değerlere indirgenir: <code>0</code>, <code>""</code>, <code>null</code>, <code>undefined</code>, <code>NaN</code> falsy kabul edilir.</p>
+        <pre><code>let puan = 85;
+if (puan >= 90) {
+  console.log("AA");
+} else if (puan >= 70) {
+  console.log("Geçti");
+} else {
+  console.log("Kaldı");
+}</code></pre>
+        <p>Mantıksal operatörler: <code>&amp;&amp;</code> (ve), <code>||</code> (veya), <code>!</code> (değil).</p>
+        <div class="warn"><strong>Dikkat</strong><code>if (x = 5)</code> atama yapar, karşılaştırma değil! Karşılaştırma <code>===</code> olmalı.</div>
+      </section>
+
+      <section class="section" id="js-diziler">
+        <h3>Diziler (Arrays) ve includes</h3>
+        <p>Dizi köşeli parantezle oluşturulur; indeks 0'dan başlar. <code>.length</code>, <code>.push()</code>, <code>.pop()</code>, <code>.includes(deger)</code> sık kullanılır.</p>
+        <pre><code>let renkler = ["kırmızı", "yeşil", "mavi"];
+renkler[0];              // "kırmızı"
+renkler.push("sarı");
+renkler.includes("mavi"); // true
+
+let sayilar = [1, 2, 3];
+for (let i = 0; i &lt; sayilar.length; i++) {
+  console.log(sayilar[i]);
+}</code></pre>
+        <div class="tip"><strong>İpucu</strong>Drum Kit projesinde tuş listesi dizi olarak tutulup <code>includes</code> ile kontrol edilebilir.</div>
+      </section>
+
+      <section class="section" id="js-while">
+        <h3>while Döngüsü</h3>
+        <p><code>while (koşul)</code> koşul true olduğu sürece blok çalışır. Sonsuz döngüden kaçınmak için döngü içinde koşulu değiştiren bir adım olmalıdır.</p>
+        <pre><code>let i = 0;
+while (i &lt; 5) {
+  console.log(i);
+  i++;  // i = i + 1
+}</code></pre>
+        <table>
+          <tr><th>Döngü</th><th>Ne zaman?</th></tr>
+          <tr><td>while</td><td>Tekrar sayısı önceden bilinmiyorsa</td></tr>
+          <tr><td>for</td><td>İndeks ile sabit aralık taraması</td></tr>
+        </table>
+        <div class="exam"><strong>Sınavda sorulabilir</strong>1'den N'e kadar toplamı <code>while</code> ile yazdırma klasik alıştırmadır.</div>
+      </section>
+        </article>
+
+        <article class="module" id="modul-2">
+          <div class="module-header">
+            <span class="module-num">2</span>
+            <h2>DOM ve Olaylar (Ders 2)</h2>
+          </div>
+
+      <section class="section" id="js-ekleme">
+        <h3>JavaScript'i HTML'e Ekleme — 3 Yol</h3>
+        <p>Harici dosya en temiz yöntemdir; HTML'in sonunda <code>&lt;/body&gt;</code> öncesine yazılır ki DOM yüklensin. Satır içi ve dahili yöntemler küçük örnekler içindir.</p>
+        <ol>
+          <li><strong>Harici:</strong> <code>&lt;script src="app.js"&gt;&lt;/script&gt;</code></li>
+          <li><strong>Dahili:</strong> <code>&lt;script&gt; ... kod ... &lt;/script&gt;</code> head veya body içinde</li>
+          <li><strong>Satır içi:</strong> <code>onclick="..."</code> gibi HTML özniteliğinde (önerilmez)</li>
+        </ol>
+        <pre><code>&lt;!-- En iyi uygulama --&gt;
+&lt;body&gt;
+  &lt;h1 id="baslik"&gt;Merhaba&lt;/h1&gt;
+  &lt;script src="js/app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;</code></pre>
+        <div class="warn"><strong>Dikkat</strong>Script'i <code>&lt;head&gt;</code>'e koyarsanız DOM henüz oluşmamış olabilir; <code>DOMContentLoaded</code> dinleyin veya script'i alta alın.</div>
+      </section>
+
+      <section class="section" id="dom-giris">
+        <h3>DOM Ağacı (Document Object Model)</h3>
+        <p>Tarayıcı HTML'i ağaç yapısına çevirir: <code>document</code> kök, altında <code>html</code>, <code>head</code>, <code>body</code>, elementler ve metin düğümleri. JavaScript bu ağaca erişip içerik ve stil değiştirir — sayfa yenilenmeden etkileşim sağlanır.</p>
+        <div class="flow">document
+ └── html
+      ├── head (meta, title, link)
+      └── body
+           ├── h1, p, div ...
+           └── script</div>
+        <p>Her element bir <strong>node</strong>'dur; ebeveyn-çocuk ilişkisi vardır. <code>parentNode</code>, <code>children</code>, <code>firstElementChild</code> ile gezilir.</p>
+        <div class="exam"><strong>Sınavda sorulabilir</strong>DOM'un ne olduğu: HTML'in programatik temsili, API ile erişim.</div>
+      </section>
+
+      <section class="section" id="dom-secim">
+        <h3>Öğe Seçimi: querySelector ve querySelectorAll</h3>
+        <p>CSS seçicileri ile aynı sözdizimi kullanılır. <code>querySelector</code> ilk eşleşeni, <code>querySelectorAll</code> NodeList döndürür.</p>
+        <pre><code>document.querySelector("h1");
+document.querySelector(".btn-primary");
+document.querySelector("#liste");
+document.querySelectorAll("li");  // tüm li öğeleri
+
+// Eski yöntemler (hâlâ bilin)
+document.getElementById("baslik");
+document.getElementsByClassName("kart");</code></pre>
+        <table>
+          <tr><th>Seçici</th><th>Anlam</th></tr>
+          <tr><td><code>#id</code></td><td>id ile tek öğe</td></tr>
+          <tr><td><code>.sinif</code></td><td>class ile öğeler</td></tr>
+          <tr><td><code>div p</code></td><td>div içindeki p'ler</td></tr>
+        </table>
+      </section>
+
+      <section class="section" id="dom-manipulasyon">
+        <h3>DOM Manipülasyonu: innerHTML, textContent, style</h3>
+        <p><code>textContent</code> yalnızca metin ekler (XSS daha güvenli). <code>innerHTML</code> HTML parse eder; kullanıcı girdisiyle dikkatli olun. Stil için <code>element.style.ozellik</code> veya classList tercih edilir.</p>
+        <pre><code>let baslik = document.querySelector("h1");
+baslik.textContent = "Yeni başlık";
+baslik.style.color = "blue";
+baslik.classList.add("vurgulu");
+
+let kutu = document.querySelector("#icerik");
+kutu.innerHTML = "&lt;p&gt;Paragraf eklendi&lt;/p&gt;";</code></pre>
+        <div class="warn"><strong>Dikkat</strong>innerHTML ile kullanıcı verisi basmak XSS saldırısına açıktır; backend'de sanitize gerekir.</div>
+      </section>
+
+      <section class="section" id="event-listener">
+        <h3>addEventListener ve Zar Oyunu Mantığı</h3>
+        <p>Olay dinleyici, kullanıcı eylemini (tıklama, klavye) fonksiyona bağlar. İkinci parametre callback, üçüncü opsiyonel <code>{ capture, once }</code>.</p>
+        <pre><code>let btn = document.querySelector(".roll");
+btn.addEventListener("click", function () {
+  let r = Math.floor(Math.random() * 6) + 1;
+  document.querySelector(".dice-img").setAttribute("src", "dice" + r + ".png");
+});</code></pre>
+        <p>Drum Kit örneğinde her tuşa <code>click</code> ve <code>keydown</code> bağlanır; ses dosyası <code>new Audio(url)</code> ile çalınır.</p>
+        <div class="tip"><strong>İpucu</strong><code>addEventListener</code> aynı olaya birden fazla handler ekleyebilir; <code>onclick=</code> tek handler'ı ezer.</div>
+      </section>
+
+      <section class="section" id="switch-this">
+        <h3>switch Yapısı ve this Anahtar Kelimesi</h3>
+        <p><code>switch</code> bir değeri çoklu <code>case</code> ile karşılaştırır; <code>break</code> unutulursa fall-through olur. Drum Kit'te tuş harfine göre ses seçimi yapılır.</p>
+        <pre><code>switch (tuş) {
+  case "w":
+    sesCal("tom-1");
+    break;
+  case "a":
+    sesCal("kick");
+    break;
+  default:
+    console.log("Tanınmayan tuş");
+}</code></pre>
+        <p><code>this</code>, olay dinleyicisinde genelde olayı tetikleyen DOM öğesini gösterir (klasik <code>function</code> ile). Ok fonksiyonunda <code>this</code> lexical kapsamdadır — Drum Kit'te <code>this.classList.add("pressed")</code> tıklanan butona class ekler.</p>
+        <pre><code>document.querySelectorAll(".drum").forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    this.classList.add("pressed");
+    let key = this.textContent;
+  });
+});</code></pre>
+      </section>
+
+      <section class="section" id="nesneler">
+        <h3>JavaScript Nesneleri (Objects)</h3>
+        <p>Nesne süslü parantezle tanımlanır; özellikler anahtar-değer çiftidir. Nokta veya köşeli parantez ile erişilir.</p>
+        <pre><code>let kullanici = {
+  ad: "Mehmet",
+  yas: 22,
+  selamla: function () {
+    return "Merhaba " + this.ad;
+  }
+};
+kullanici.ad;
+kullanici["yas"];</code></pre>
+        <p>Dizi aslında özel bir nesnedir; fonksiyon da nesne sayılır. JSON veri alışverişinde nesne gösterimini kullanır.</p>
+        <div class="exam"><strong>Sınavda sorulabilir</strong>Nesne ile dizi farkı: dizide indeks 0,1,2...; nesnede isimli anahtarlar.</div>
+      </section>
+
+      <section class="section" id="klavye-event">
+        <h3>Klavye Olayları: keypress, keydown, keyup</h3>
+        <p><code>keydown</code> tuşa basıldığında, <code>keyup</code> bırakıldığında tetiklenir. <code>event.key</code> hangi tuş olduğunu verir (ör. <code>"w"</code>, <code>"Enter"</code>).</p>
+        <pre><code>document.addEventListener("keydown", function (e) {
+  console.log(e.key);
+  playSound(e.key);
+});</code></pre>
+        <p>Drum Kit: hem tıklama hem klavye aynı <code>playSound</code> fonksiyonunu çağırarak kod tekrarını azaltır.</p>
+      </section>
+        </article>
+
+        <article class="module" id="modul-3">
+          <div class="module-header">
+            <span class="module-num">3</span>
+            <h2>jQuery ve Terminal (Ders 3)</h2>
+          </div>
+
+      <section class="section" id="jquery-giris">
+        <h3>jQuery Giriş: $() ve Seçiciler</h3>
+        <p>jQuery, DOM ve olay işlemlerini kısaltan bir kütüphanedir. <code>$</code> veya <code>jQuery</code> ile başlar; CSS seçicisi ile öğe seçilir, jQuery nesnesi döner.</p>
+        <pre><code>// CDN veya npm ile dahil edin
+$(document).ready(function () {
+  $("h1").css("color", "red");
+});
+
+// Kısa yazım
+$(function () {
+  $(".btn").click(function () { alert("Tıklandı"); });
+});</code></pre>
+        <p>Modern projelerde Vanilla JS ve React yaygın olsa da ders müfredatında jQuery seçicileri ve zincirleme (chaining) öğretilir.</p>
+        <div class="tip"><strong>İpucu</strong><code>$(selector)</code> ≈ <code>document.querySelectorAll</code> ama jQuery koleksiyon API'si sunar.</div>
+      </section>
+
+      <section class="section" id="jquery-css">
+        <h3>.css(), .addClass(), .removeClass(), .toggleClass()</h3>
+        <p>Stil ve sınıf yönetimi jQuery ile tek satıra iner. Birden fazla özellik nesne olarak verilebilir.</p>
+        <pre><code>$("h1").css("color", "blue");
+$("h1").css({ color: "blue", fontSize: "24px" });
+
+$(".kutu").addClass("aktif");
+$(".kutu").removeClass("gizli");
+$(".kutu").toggleClass("genis");</code></pre>
+        <table>
+          <tr><th>jQuery</th><th>Vanilla JS</th></tr>
+          <tr><td>.addClass("x")</td><td>.classList.add("x")</td></tr>
+          <tr><td>.css("color","r")</td><td>.style.color = "r"</td></tr>
+        </table>
+      </section>
+
+      <section class="section" id="jquery-attr">
+        <h3>.attr() — Öznitelik Okuma ve Yazma</h3>
+        <p><code>.attr("isim")</code> okur, <code>.attr("isim", "deger")</code> yazar. Drum Kit'te <code>data-sound</code> özel özniteliği ses dosyası yolunu tutar.</p>
+        <pre><code>let yol = $("button.drum").attr("data-sound");
+$("img").attr("src", "images/dice6.png");
+$("a").attr("href", "https://example.com");</code></pre>
+        <div class="exam"><strong>Sınavda sorulabilir</strong><code>attr</code> ile <code>prop</code> farkı: boolean özniteliklerde prop tercih edilir (ör. checked).</div>
+      </section>
+
+      <section class="section" id="jquery-dom">
+        <h3>DOM Ekleme: before, after, prepend, append</h3>
+        <p>Seçilen öğenin içine veya dışına içerik eklenir. <code>append</code> son çocuk, <code>prepend</code> ilk çocuk olarak ekler.</p>
+        <pre><code>$("ul").append("&lt;li&gt;Yeni madde&lt;/li&gt;");
+$("ul").prepend("&lt;li&gt;En üst&lt;/li&gt;");
+$(".kutu").before("&lt;p&gt;Önce&lt;/p&gt;");
+$(".kutu").after("&lt;p&gt;Sonra&lt;/p&gt;");
+
+// Öğe klonlama
+let kopya = $("#satir").clone();
+$("#liste").append(kopya);</code></pre>
+      </section>
+
+      <section class="section" id="jquery-anim">
+        <h3>jQuery Animasyonları: fade, slide, animate</h3>
+        <p>Hazır efektler: <code>fadeIn</code>, <code>fadeOut</code>, <code>slideToggle</code>. <code>animate()</code> sayısal CSS özelliklerini süreye yayar.</p>
+        <pre><code>$("div").hide();
+$("div").fadeIn(1000);
+$("#panel").slideToggle();
+
+$("div").animate({ opacity: 0.5, left: "200px" }, 500);</code></pre>
+        <div class="warn"><strong>Dikkat</strong>Aşırı animasyon erişilebilirlik sorunları yaratır; CSS transitions modern alternatiftir.</div>
+      </section>
+
+      <section class="section" id="git-bash">
+        <h3>Git Bash ve Unix Komut Satırı</h3>
+        <p>Windows'ta Git Bash, Linux benzeri bir kabuk sağlar. Node.js projelerinde terminal komutları (<code>npm install</code>, <code>node app.js</code>) burada çalıştırılır. Proje klasörüne <code>cd</code> ile girilir.</p>
+        <p>Git ile sürüm kontrolü: <code>git init</code>, <code>git add</code>, <code>git commit</code>, <code>git push</code> dersin ilerleyen kısımlarında detaylandırılır; terminal temeli tüm backend çalışması için şarttır.</p>
+        <div class="tip"><strong>İpucu</strong>VS Code entegre terminali de aynı komutları çalıştırır; Bash, PowerShell veya CMD seçilebilir.</div>
+      </section>
+
+      <section class="section" id="terminal-komutlar">
+        <h3>Temel Terminal Komutları</h3>
+        <table>
+          <tr><th>Komut</th><th>Görev</th><th>Örnek</th></tr>
+          <tr><td><code>pwd</code></td><td>Bulunulan dizin</td><td>/c/Users/...</td></tr>
+          <tr><td><code>ls</code></td><td>Dosyaları listele</td><td>ls -la</td></tr>
+          <tr><td><code>cd</code></td><td>Dizin değiştir</td><td>cd Desktop/ders</td></tr>
+          <tr><td><code>mkdir</code></td><td>Klasör oluştur</td><td>mkdir views</td></tr>
+          <tr><td><code>touch</code></td><td>Boş dosya</td><td>touch app.js</td></tr>
+          <tr><td><code>rm</code></td><td>Sil</td><td>rm dosya.txt</td></tr>
+        </table>
+        <pre><code>cd Desktop/ders
+mkdir public css js
+touch index.js
+ls
+rm eski.txt</code></pre>
+        <div class="warn"><strong>Dikkat</strong><code>rm -rf</code> geri alınamaz silme yapar; yanlış dizinde çalıştırmayın.</div>
+        <div class="exam"><strong>Sınavda sorulabilir</strong>Komut-eşleştirme veya "yeni Node projesi klasör yapısı oluştur" senaryosu.</div>
+      </section>
+        </article>
+
+        <article class="module" id="modul-4">
+          <div class="module-header">
+            <span class="module-num">4</span>
+            <h2>Express Middleware ve EJS (Ders 5)</h2>
+          </div>
+
+      <section class="section" id="middleware">
+        <h3>Express Middleware Zinciri</h3>
+        <p>Express'te gelen her istek bir middleware zincirinden geçer. Middleware, <code>(req, res, next)</code> imzalı fonksiyondur; iş bitince <code>next()</code> çağrılmazsa istek asılı kalır.</p>
+        <div class="flow">İstek → middleware 1 → middleware 2 → route handler → Yanıt
+         (log)     (body parse)   (GET /)</div>
+        <pre><code>const express = require("express");
+const app = express();
+
+app.use((req, res, next) => {
+  console.log(req.method, req.url);
+  next();
+});
+
+app.use(express.static("public"));
+
+app.get("/", (req, res) => {
+  res.send("Ana sayfa");
+});</code></pre>
+        <p><code>express.static</code> de bir middleware'dir; <code>public</code> klasöründeki CSS, resim dosyalarını doğrudan sunar.</p>
+        <div class="exam"><strong>Sınavda sorulabilir</strong>Middleware sırasının önemi: body-parser route'tan önce olmalı.</div>
+      </section>
+
+      <section class="section" id="body-parser">
+        <h3>body-parser ve Form Verisi</h3>
+        <p>HTML formları <code>application/x-www-form-urlencoded</code> gönderir. Express 4.16+ için gömülü:</p>
+        <pre><code>app.use(express.urlencoded({ extended: true }));
+app.use(express.json());  // JSON API için
+
+app.post("/kayit", (req, res) => {
+  console.log(req.body);  // { ad: "...", email: "..." }
+  res.redirect("/");
+});</code></pre>
+        <p>Eski ders notlarında ayrı <code>body-parser</code> paketi gösterilir; mantık aynıdır — gövde ayrıştırılır, <code>req.body</code> dolar.</p>
+        <div class="warn"><strong>Dikkat</strong><code>extended: true</code> qs kütüphanesi ile karmaşık nesneleri parse eder; basit formlarda false da kullanılabilir.</div>
+      </section>
+
+      <section class="section" id="ejs-temel">
+        <h3>EJS Temel Sözdizimi</h3>
+        <p>EJS (Embedded JavaScript), HTML içine sunucu verisi gömmenizi sağlar. Express'te view engine olarak ayarlanır.</p>
+        <pre><code>app.set("view engine", "ejs");
+
+// views/index.ejs
+&lt;h1&gt;&lt;%= baslik %&gt;&lt;/h1&gt;
+&lt;p&gt;Bugün: &lt;%= new Date().toLocaleDateString("tr") %&gt;&lt;/p&gt;</code></pre>
+        <table>
+          <tr><th>Etiket</th><th>Anlam</th></tr>
+          <tr><td><code>&lt;%= %&gt;</code></td><td>Değeri HTML'e escape ederek yaz</td></tr>
+          <tr><td><code>&lt;% %&gt;</code></td><td>Kontrol akışı (if, for), çıktı yok</td></tr>
+          <tr><td><code>&lt;%- %&gt;</code></td><td>Escape etmeden ham HTML</td></tr>
+        </table>
+      </section>
+
+      <section class="section" id="ejs-gelismis">
+        <h3>EJS Gelişmiş: include ve partial</h3>
+        <p>Tekrarlayan header/footer parçaları ayrı dosyada tutulur:</p>
+        <pre><code>&lt;%- include("partials/header") %&gt;
+&lt;main&gt;
+  &lt;% if (kullanici) { %&gt;
+    &lt;p&gt;Hoş geldin, &lt;%= kullanici.ad %&gt;&lt;/p&gt;
+  &lt;% } else { %&gt;
+    &lt;p&gt;Lütfen giriş yapın.&lt;/p&gt;
+  &lt;% } %&gt;
+&lt;/main&gt;
+&lt;%- include("partials/footer") %&gt;</code></pre>
+        <p><code>include</code> yolu <code>views</code> klasörüne göredir. Her sayfa aynı iskeleti paylaşır — bakım kolaylaşır.</p>
+      </section>
+
+      <section class="section" id="ejs-veri">
+        <h3>EJS'e Veri Aktarımı: res.render ve locals</h3>
+        <p>Route handler <code>res.render("sablon", veriNesnesi)</code> ile şablonu doldurur. İkinci argümandaki anahtarlar şablonda değişken olur.</p>
+        <pre><code>const urunler = [
+  { ad: "Kitap", fiyat: 50 },
+  { ad: "Kalem", fiyat: 10 }
+];
+
+app.get("/urunler", (req, res) => {
+  res.render("urunler", {
+    baslik: "Ürün Listesi",
+    urunler: urunler
+  });
+});
+
+// urunler.ejs
+&lt;% urunler.forEach(function(u) { %&gt;
+  &lt;li&gt;&lt;%= u.ad %&gt; - &lt;%= u.fiyat %&gt; TL&lt;/li&gt;
+&lt;% }); %&gt;</code></pre>
+        <div class="tip"><strong>İpucu</strong><code>app.locals</code> tüm şablonlara ortak değişken verir (site adı gibi).</div>
+      </section>
+        </article>
+
+        <article class="module" id="modul-5">
+          <div class="module-header">
+            <span class="module-num">5</span>
+            <h2>Veritabanları (Ders 7)</h2>
+          </div>
+
+      <section class="section" id="veri-kalicilik">
+        <h3>Veri Kalıcılığı (Data Persistence)</h3>
+        <p>Değişkenler ve diziler program kapandığında kaybolur. Kalıcı veri dosya, veritabanı veya bulut depolamada tutulur. Web uygulamalarında kullanıcı kayıtları, siparişler, oturum bilgisi veritabanında saklanır.</p>
+        <ul>
+          <li><strong>Geçici:</strong> RAM, oturum (session store hariç kalıcı backend)</li>
+          <li><strong>Kalıcı:</strong> PostgreSQL, dosya sistemi</li>
+        </ul>
+        <p>Node.js + Express + PostgreSQL üçlüsü dersin backend omurgasıdır: istek → route → SQL sorgusu → sonuç → EJS veya JSON yanıt.</p>
+        <div class="exam"><strong>Sınavda sorulabilir</strong>Neden sunucu tarafı depolama? Çok kullanıcı, güvenlik, tutarlılık.</div>
+      </section>
+
+      <section class="section" id="sql-nosql">
+        <h3>SQL vs NoSQL</h3>
+        <table>
+          <tr><th>Özellik</th><th>SQL (PostgreSQL)</th><th>NoSQL (MongoDB vb.)</th></tr>
+          <tr><td>Yapı</td><td>Tablolar, sabit şema</td><td>Doküman, esnek şema</td></tr>
+          <tr><td>İlişki</td><td>PK, FK, JOIN güçlü</td><td>Gömülü veya uygulama tarafı</td></tr>
+          <tr><td>Dil</td><td>SQL sorguları</td><td>API / sorgu nesnesi</td></tr>
+          <tr><td>Örnek</td><td>Banka, e-ticaret sipariş</td><td>Log, sosyal akış</td></tr>
+        </table>
+        <p>Dersinizde PostgreSQL (ilişkisel) odaklıdır. Tablo satır-sütun mantığıyla Excel'e benzer ama çok kullanıcılı ve eşzamanlı erişime uygundur.</p>
+      </section>
+
+      <section class="section" id="sql-crud">
+        <h3>SQL CRUD: CREATE, INSERT, SELECT, WHERE</h3>
+        <pre><code>CREATE TABLE ogrenci (
+  id SERIAL PRIMARY KEY,
+  ad VARCHAR(100) NOT NULL,
+  bolum_id INTEGER REFERENCES bolum(id)
+);
+
+INSERT INTO ogrenci (ad, bolum_id) VALUES ('Ali', 1);
+
+SELECT * FROM ogrenci WHERE bolum_id = 1;
+
+UPDATE ogrenci SET ad = 'Ali Veli' WHERE id = 1;
+DELETE FROM ogrenci WHERE id = 1;</code></pre>
+        <p><strong>PRIMARY KEY (PK):</strong> Satırı benzersiz tanımlar. <strong>FOREIGN KEY (FK):</strong> Başka tablodaki PK'ya referans; bütünlük sağlar.</p>
+        <div class="tip"><strong>İpucu</strong><code>SELECT *</code> öğrenmede iyidir; üretimde yalnızca gerekli sütunları seçin.</div>
+      </section>
+
+      <section class="section" id="sql-join">
+        <h3>INNER JOIN ile Tablo Birleştirme</h3>
+        <p>İlişkili veriyi tek sorguda çekmek için tablolar birleştirilir. INNER JOIN yalnızca her iki tabloda eşleşen satırları döndürür.</p>
+        <pre><code>SELECT ogrenci.ad, bolum.bolum_adi
+FROM ogrenci
+INNER JOIN bolum ON ogrenci.bolum_id = bolum.id
+WHERE bolum.id = 2;</code></pre>
+        <div class="flow">ogrenci tablosu          bolum tablosu
+ id | ad  | bolum_id     id | bolum_adi
+ 1  | Ali | 1      ←→    1  | Bilgisayar</div>
+        <div class="exam"><strong>Sınavda sorulabilir</strong>JOIN'li sorgu yazma veya FK mantığını açıklama.</div>
+      </section>
+        </article>
+
+        <article class="module" id="modul-6">
+          <div class="module-header">
+            <span class="module-num">6</span>
+            <h2>PostgreSQL</h2>
+          </div>
+
+      <section class="section" id="postgres-kurulum">
+        <h3>PostgreSQL Kurulum ve pgAdmin</h3>
+        <p>PostgreSQL açık kaynak ilişkisel veritabanıdır. Windows'ta resmi installer ile kurulur; servis arka planda çalışır. <strong>pgAdmin</strong> grafik arayüz: veritabanı oluşturma, tablo tasarımı, sorgu çalıştırma.</p>
+        <ol>
+          <li>PostgreSQL indir ve kur (port varsayılan 5432).</li>
+          <li>pgAdmin'de sunucuya bağlan (postgres kullanıcısı + şifre).</li>
+          <li>Yeni Database → tablolar → Query Tool ile SQL.</li>
+        </ol>
+        <p>Node projesinde bağlantı bilgileri <code>.env</code> dosyasında tutulur; şifre repoya yazılmaz.</p>
+      </section>
+
+      <section class="section" id="pg-node">
+        <h3>Node.js pg Paketi ve dotenv</h3>
+        <pre><code>// npm install pg dotenv
+require("dotenv").config();
+const { Client } = require("pg");
+
+const client = new Client({
+  user: process.env.DB_USER,
+  host: process.env.DB_HOST,
+  database: process.env.DB_NAME,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT,
+});
+
+async function listele() {
+  await client.connect();
+  const sonuc = await client.query("SELECT * FROM sehirler");
+  console.log(sonuc.rows);
+  await client.end();
+}</code></pre>
+        <p><code>process.env</code> ortam değişkenlerini okur; <code>dotenv</code> <code>.env</code> dosyasını yükler. Her istekte connect/end pahalıdır — havuz (pool) üretimde kullanılır.</p>
+        <div class="warn"><strong>Dikkat</strong><code>.env</code> dosyasını <code>.gitignore</code>'a ekleyin.</div>
+      </section>
+
+      <section class="section" id="csv-import">
+        <h3>CSV İçe Aktarma</h3>
+        <p>Toplu veri CSV ile aktarılır: pgAdmin Import/Export veya Node'da <code>COPY</code> / satır satır <code>INSERT</code>. Başlık satırı sütun adlarıyla eşleşmeli.</p>
+        <pre><code>-- pgAdmin veya psql
+COPY ulkeler FROM 'C:/data/ulkeler.csv'
+DELIMITER ','
+CSV HEADER;</code></pre>
+        <p>Node tarafında <code>fs</code> + <code>csv-parse</code> ile okuyup parametreli INSERT döngüsü de kurulabilir — SQL injection'a karşı parametreli sorgu şart.</p>
+        <div class="exam"><strong>Sınavda sorulabilir</strong>Client yaşam döngüsü: connect → query → end ve .env kullanımı.</div>
+      </section>
+        </article>
+
+        <article class="module" id="modul-7">
+          <div class="module-header">
+            <span class="module-num">7</span>
+            <h2>Kimlik Doğrulama ve Şifre Güvenliği</h2>
+          </div>
+
+      <section class="section" id="auth-neden">
+        <h3>Kimlik Doğrulama Neden Gerekli?</h3>
+        <p>Authentication (AuthN), kullanıcının iddia ettiği kişi olduğunu doğrular. Authorization (AuthZ) ise neye erişebileceğini belirler. Kayıt olan herkesin admin paneline girmesi güvenlik felaketidir.</p>
+        <ul>
+          <li>Kişisel veri (notlar, profil) korunur.</li>
+          <li>İş kuralları (sadece kendi siparişlerim) uygulanır.</li>
+          <li>Yasal uyumluluk (KVKK) için hesap sahipliği kanıtlanır.</li>
+        </ul>
+        <p>Ders akışı: düz metin şifre → hash (bcrypt) → oturum (session/cookie) → Passport stratejileri.</p>
+      </section>
+
+      <section class="section" id="guvenlik-seviyeleri">
+        <h3>Güvenlik Seviyeleri</h3>
+        <table>
+          <tr><th>Seviye</th><th>Yöntem</th><th>Değerlendirme</th></tr>
+          <tr><td>Düşük</td><td>Şifre veritabanında düz metin</td><td>Asla kullanılmamalı</td></tr>
+          <tr><td>Orta</td><td>MD5/SHA1 hash (tuzsuz)</td><td>Kırılabilir, eski</td></tr>
+          <tr><td>Yüksek</td><td>bcrypt / scrypt + salt</td><td>Ders standardı</td></tr>
+          <tr><td>İletişim</td><td>HTTPS (TLS)</td><td>Ağda dinlemeyi önler</td></tr>
+        </table>
+        <p>Şifre doğrulama asla "hash'i çöz" değil, girilen şifreyi hash'leyip veritabanındaki hash ile karşılaştırmaktır.</p>
+        <div class="exam"><strong>Sınavda sorulabilir</strong>AuthN vs AuthZ tanımı ve güvenlik seviyesi tablosu.</div>
+      </section>
+
+      <section class="section" id="sifreleme-hash">
+        <h3>Şifreleme vs Hash ve bcrypt</h3>
+        <p><strong>Şifreleme (encryption):</strong> Anahtarla çözülebilir (AES). <strong>Hash:</strong> Tek yönlü; aynı girdi aynı çıktı (tuz ile değişir). Parolalar hash'lenir, şifrelenmez.</p>
+        <pre><code>const bcrypt = require("bcrypt");
+const saltRounds = 10;
+
+// Kayıt
+const hash = await bcrypt.hash(sifre, saltRounds);
+// DB'ye hash kaydet
+
+// Giriş
+const eslesme = await bcrypt.compare(girilenSifre, dbHash);
+if (eslesme) { /* oturum aç */ }</code></pre>
+        <p>Hash tablosu (rainbow table) saldırısına karşı <strong>salt</strong> her kullanıcıya özgü rastgele veridir; bcrypt bunu gömülü yönetir.</p>
+        <div class="warn"><strong>Dikkat</strong>Hash'lenmiş şifreyi geri alamazsınız; "şifremi unuttum" akışı sıfırlama linki gerektirir.</div>
+      </section>
+
+      <section class="section" id="saldirilar">
+        <h3>Yaygın Saldırı Türleri</h3>
+        <table>
+          <tr><th>Saldırı</th><th>Açıklama</th><th>Önlem</th></tr>
+          <tr><td>SQL Injection</td><td>Kötü SQL parçası gönderme</td><td>Parametreli sorgu ($1, ?)</td></tr>
+          <tr><td>XSS</td><td>Sayfaya zararlı script</td><td>Escape, CSP, innerHTML'den kaçın</td></tr>
+          <tr><td>CSRF</td><td>Başka siteden istek</td><td>Token, SameSite cookie</td></tr>
+          <tr><td>Brute force</td><td>Şifre deneme</td><td>bcrypt yavaşlatma, rate limit</td></tr>
+        </table>
+        <pre><code>// Güvensiz
+client.query("SELECT * FROM users WHERE email = '" + email + "'");
+
+// Güvenli
+client.query("SELECT * FROM users WHERE email = $1", [email]);</code></pre>
+      </section>
+        </article>
+
+        <article class="module" id="modul-8">
+          <div class="module-header">
+            <span class="module-num">8</span>
+            <h2>Çerezler, Oturum, Passport ve dotenv</h2>
+          </div>
+
+      <section class="section" id="cookies">
+        <h3>HTTP Çerezleri (Cookies)</h3>
+        <p>Tarayıcı, sunucunun gönderdiği küçük anahtar-değer çiftlerini saklar ve sonraki isteklerde <code>Cookie</code> başlığıyla geri gönderir. <code>httpOnly</code> JavaScript'in okumasını engeller (XSS koruması). <code>secure</code> yalnızca HTTPS'te gönderilir.</p>
+        <pre><code>res.cookie("dil", "tr", { maxAge: 900000, httpOnly: true });
+
+// Okuma
+console.log(req.cookies.dil);  // cookie-parser gerekir</code></pre>
+        <div class="tip"><strong>İpucu</strong>Hassas veriyi çerezde saklamayın; oturum kimliği (session id) yeterlidir.</div>
+      </section>
+
+      <section class="section" id="sessions">
+        <h3>Oturum Yönetimi (express-session)</h3>
+        <p>Session sunucu tarafında kullanıcı durumunu tutar; istemciye yalnızca session ID çerezi gider. Giriş sonrası <code>req.session.userId</code> gibi alanlar set edilir.</p>
+        <pre><code>const session = require("express-session");
+
+app.use(session({
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: false,
+  cookie: { maxAge: 1000 * 60 * 60 }  // 1 saat
+}));
+
+app.post("/login", (req, res) => {
+  // doğrulama başarılı
+  req.session.userId = kullanici.id;
+  res.redirect("/dashboard");
+});</code></pre>
+        <p>Çıkış: <code>req.session.destroy()</code>. Oturum verisi varsayılan bellekte tutulur; üretimde Redis/PostgreSQL store kullanılır.</p>
+      </section>
+
+      <section class="section" id="passport">
+        <h3>Passport.js: serialize, deserialize, req.user</h3>
+        <p>Passport kimlik doğrulama middleware'idir. Yerel strateji (kullanıcı adı/şifre) veya OAuth (Google) eklenebilir.</p>
+        <pre><code>passport.use(new LocalStrategy(async (username, password, done) => {
+  const user = await findUser(username);
+  if (!user || !(await bcrypt.compare(password, user.hash)))
+    return done(null, false);
+  return done(null, user);
+}));
+
+passport.serializeUser((user, done) => {
+  done(null, user.id);  // oturumda yalnızca id
+});
+
+passport.deserializeUser(async (id, done) => {
+  const user = await findUserById(id);
+  done(null, user);  // req.user dolar
+});
+
+app.post("/login", passport.authenticate("local", {
+  successRedirect: "/dashboard",
+  failureRedirect: "/login"
+}));</code></pre>
+        <p><code>req.user</code> deserialize sonrası her istekte kullanılabilir. <code>req.isAuthenticated()</code> giriş kontrolü için kullanılır.</p>
+        <div class="exam"><strong>Sınavda sorulabilir</strong>serialize vs deserialize: hangisi oturuma ne yazar, hangisi DB'den kullanıcı yükler.</div>
+      </section>
+
+      <section class="section" id="dotenv">
+        <h3>dotenv ve process.env</h3>
+        <p>Gizli anahtarlar kod içinde değil ortam değişkenlerindedir. <code>.env</code> örneği:</p>
+        <pre><code>DB_USER=postgres
+DB_PASSWORD=gizli123
+SESSION_SECRET=uzun_rastgele_string
+PORT=3000</code></pre>
+        <pre><code>require("dotenv").config();
+const port = process.env.PORT || 3000;
+app.listen(port);</code></pre>
+        <div class="warn"><strong>Dikkat</strong>Örnek için <code>.env.example</code> paylaşın; gerçek <code>.env</code> asla commit edilmez.</div>
+      </section>
+        </article>
+
+        <article class="module" id="modul-9">
+          <div class="module-header">
+            <span class="module-num">9</span>
+            <h2>API ve REST</h2>
+          </div>
+
+      <section class="section" id="api-giris">
+        <h3>API (Application Programming Interface) Giriş</h3>
+        <p>API, yazılım bileşenlerinin konuşma sözleşmesidir. Web API'leri HTTP üzerinden JSON/XML döner. Ön yüz (React) ile backend (Express) ayrıldığında frontend yalnızca API çağırır.</p>
+        <ul>
+          <li><strong>Public API:</strong> Hava durumu, harita servisleri</li>
+          <li><strong>Kendi API'niz:</strong> Mobil uygulama + aynı sunucu</li>
+        </ul>
+        <p>Endpoint = URL + HTTP metodu + isteğe bağlı gövde/parametreler.</p>
+      </section>
+
+      <section class="section" id="rest-api">
+        <h3>REST API ve HTTP Metodları</h3>
+        <p>REST, kaynakları URL ile tanımlar ve standart HTTP fiilleri kullanır. Stateless: her istek gerekli bilgiyi taşır (oturum token hariç sunucu hafızası yok).</p>
+        <table>
+          <tr><th>Metod</th><th>İşlem</th><th>Örnek</th></tr>
+          <tr><td>GET</td><td>Okuma</td><td>GET /api/urunler</td></tr>
+          <tr><td>POST</td><td>Oluşturma</td><td>POST /api/urunler</td></tr>
+          <tr><td>PUT</td><td>Güncelleme (tam)</td><td>PUT /api/urunler/5</td></tr>
+          <tr><td>DELETE</td><td>Silme</td><td>DELETE /api/urunler/5</td></tr>
+        </table>
+        <h4>Query params vs Path params</h4>
+        <pre><code>// Path param: /api/urunler/42  → req.params.id
+app.get("/api/urunler/:id", (req, res) => {
+  res.json({ id: req.params.id });
+});
+
+// Query: /api/urunler?kategori=kitap&amp;limit=10
+app.get("/api/urunler", (req, res) => {
+  const { kategori, limit } = req.query;
+});</code></pre>
+        <div class="exam"><strong>Sınavda sorulabilir</strong>RESTful route tasarlama ve GET/POST farkı (GET gövde taşımaz, önbelleklenir).</div>
+      </section>
+
+      <section class="section" id="json">
+        <h3>JSON: stringify ve parse</h3>
+        <p>JSON metin tabanlı veri formatıdır; JavaScript nesnelerine çok benzer. API'lerde standarttır.</p>
+        <pre><code>const nesne = { ad: "Zeynep", notlar: [85, 90] };
+const metin = JSON.stringify(nesne);
+// '{"ad":"Zeynep","notlar":[85,90]}'
+
+const geri = JSON.parse(metin);
+console.log(geri.ad);
+
+// Express JSON yanıt
+res.json({ basarili: true, veri: geri });</code></pre>
+        <p><code>express.json()</code> middleware gelen JSON gövdesini <code>req.body</code>'ye parse eder.</p>
+        <div class="warn"><strong>Dikkat</strong>JSON.parse hatalı metinde exception fırlatır; try/catch kullanın.</div>
+      </section>
+
+      <section class="section" id="axios">
+        <h3>Axios ile İstemci Tarafı İstek</h3>
+        <p>Axios tarayıcı ve Node'da HTTP isteği yapar; Promise tabanlıdır, JSON otomatik işlenir.</p>
+        <pre><code>// npm install axios  veya CDN
+const axios = require("axios");
+
+async function urunleriGetir() {
+  const yanit = await axios.get("http://localhost:3000/api/urunler");
+  console.log(yanit.data);
+}
+
+axios.post("/api/kayit", { ad: "Can", email: "can@mail.com" })
+  .then(res => console.log(res.status))
+  .catch(err => console.error(err.response?.data));</code></pre>
+        <p>Fetch API yerel alternatiftir; Axios interceptors ve hata yapısı ile projelerde sık tercih edilir.</p>
+        <div class="tip"><strong>Final özeti</strong>Modül 1-3 ön yüz; 4-6 backend+veri; 7-8 güvenlik; 9 entegrasyon. Sınavda kod parçası yorumlama ve kavram tanımı bir arada gelir — bu rehberdeki mavi kutulara dikkat edin.</div>
+      </section>
+        </article>
+
+      </div>
+    </main>
+  </div>
+
+  <button class="menu-toggle" type="button" aria-label="Menü">☰</button>
+  <script src="js/app.js"></script>
+</body>
+</html>

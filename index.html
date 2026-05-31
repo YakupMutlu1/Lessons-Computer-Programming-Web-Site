@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ders Çalışma Platformu</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .hub { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; text-align: center; }
+    .hub h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    .hub > p { color: var(--muted); max-width: 520px; margin-bottom: 2.5rem; }
+    .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; max-width: 1200px; width: 100%; }
+    .course-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.75rem; text-align: left; transition: border-color 0.2s, transform 0.2s; }
+    .course-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .course-card h2 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+    .course-card p { font-size: 0.9rem; color: var(--muted); margin-bottom: 1.25rem; line-height: 1.5; }
+    .course-card .links { display: flex; flex-direction: column; gap: 0.5rem; }
+    .course-card a { display: block; padding: 0.55rem 1rem; border-radius: 8px; text-decoration: none; font-size: 0.88rem; font-weight: 600; text-align: center; }
+    .btn-notes { background: rgba(59, 130, 246, 0.2); border: 1px solid rgba(59, 130, 246, 0.5); color: #93c5fd; }
+    .btn-quiz { background: rgba(34, 197, 94, 0.15); border: 1px solid rgba(34, 197, 94, 0.4); color: #86efac; }
+    .course-card.gomulu { border-color: rgba(245, 158, 11, 0.35); }
+    .course-card.gomulu:hover { border-color: #f59e0b; }
+    .course-card.gomulu .btn-notes { background: rgba(245, 158, 11, 0.15); border-color: rgba(245, 158, 11, 0.5); color: #fcd34d; }
+    .course-card.bilisim { border-color: rgba(99, 102, 241, 0.35); }
+    .course-card.bilisim:hover { border-color: #6366f1; }
+    .course-card.bilisim .btn-notes { background: rgba(99, 102, 241, 0.15); border-color: rgba(99, 102, 241, 0.5); color: #c7d2fe; }
+    .course-card.mesleki { border-color: rgba(5, 150, 105, 0.35); }
+    .course-card.mesleki:hover { border-color: #059669; }
+    .course-card.mesleki .btn-notes { background: rgba(5, 150, 105, 0.15); border-color: rgba(52, 211, 153, 0.5); color: #a7f3d0; }
+    .course-card.guvenlik { border-color: rgba(220, 38, 38, 0.35); }
+    .course-card.guvenlik:hover { border-color: #dc2626; }
+    .course-card.guvenlik .btn-notes { background: rgba(220, 38, 38, 0.15); border-color: rgba(248, 113, 113, 0.5); color: #fecaca; }
+    .tag { font-size: 0.72rem; color: var(--muted); margin-top: 0.75rem; }
+  </style>
+</head>
+<body>
+  <div class="hub">
+    <h1>Ders Çalışma Platformu</h1>
+    <p>Final sınavına hazırlık için ders notları ve soru bankaları. Bir ders seçerek çalışmaya başlayın.</p>
+    <div class="course-grid">
+      <article class="course-card">
+        <h2>Görsel Programlama II</h2>
+        <p>JavaScript, DOM, Express, PostgreSQL, API ve kimlik doğrulama konularını kapsayan detaylı ders notları ve 260+ soru.</p>
+        <div class="links">
+          <a href="home.html" class="btn-notes">📚 Ders Notları</a>
+          <a href="sorular.html" class="btn-quiz">📝 Soru Bankası</a>
+        </div>
+        <p class="tag">9 modül · 52 konu başlığı</p>
+      </article>
+      <article class="course-card gomulu">
+        <h2>Gömülü Sistemler</h2>
+        <p>NodeMCU, devre prototipleme, GPIO, UART/SPI/I2C/MQTT, sensörler, bellek, RTOS, güç yönetimi ve hata ayıklama.</p>
+        <div class="links">
+          <a href="gomulu/index.html" class="btn-notes">📚 Ders Notları</a>
+          <a href="gomulu/sorular.html" class="btn-quiz">📝 Soru Bankası</a>
+        </div>
+        <p class="tag">11 modül · 223 çoktan seçmeli</p>
+      </article>
+      <article class="course-card bilisim">
+        <h2>Bilişimde Güncel Teknolojiler</h2>
+        <p>Yapay zeka, bulut, büyük veri, IoT, blockchain, siber güvenlik, 5G, AR/VR, robotik ve gelecek trendleri.</p>
+        <div class="links">
+          <a href="bilisim/index.html" class="btn-notes">📚 Ders Notları</a>
+          <a href="bilisim/sorular.html" class="btn-quiz">📝 Soru Bankası</a>
+        </div>
+        <p class="tag">14 modül · 220 çoktan seçmeli</p>
+      </article>
+      <article class="course-card mesleki">
+        <h2>Mesleki İngilizce</h2>
+        <p>Bilişim sektörü İngilizcesi: IT meslekleri, donanım/yazılım, gramer (Present Continuous, modals), web siteleri. Oxford EAP A2.</p>
+        <div class="links">
+          <a href="mesleki/index.html" class="btn-notes">📚 Ders Notları</a>
+          <a href="mesleki/sorular.html" class="btn-quiz">📝 Soru Bankası</a>
+        </div>
+        <p class="tag">11 modül · 220 çoktan seçmeli</p>
+      </article>
+      <article class="course-card guvenlik">
+        <h2>İnternet Güvenliği</h2>
+        <p>CIA, ağ güvenliği, kriptografi, kimlik doğrulama, malware, sosyal mühendislik, IoT, TLS/ISO 27001, olay müdahalesi.</p>
+        <div class="links">
+          <a href="guvenlik/index.html" class="btn-notes">📚 Ders Notları</a>
+          <a href="guvenlik/sorular.html" class="btn-quiz">📝 Soru Bankası</a>
+        </div>
+        <p class="tag">11 modül · 220 çoktan seçmeli</p>
+      </article>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,356 @@
+--- Sayfa 1 ---
+PostgreSQL'e Giriş
+Postgres Mimari İçinde Nerede Yer Alır?
+
+--- Sayfa 2 ---
+Tam Web
+Uygulama
+Mimarisi
+
+--- Sayfa 3 ---
+Her Bileşenin Sorumluluğu:
+
+--- Sayfa 4 ---
+PostgreSQL Kurulumu (Windows PC — Adım adım rehber)
+
+--- Sayfa 5 ---
+Node'u PostgreSQL'e Bağlama
+pg Paketi
+npm install pg
+Temel Bağlantı Kodu:
+import pg from 'pg';
+// Veritabanı bağlantı yapılandırması
+const db = new pg.Client({
+user: 'postgres',
+host: 'localhost',
+database: 'benimvt',
+password: 'gizli',
+port: 5432,
+});
+db.connect();
+
+--- Sayfa 6 ---
+Node'u PostgreSQL'e Bağlama
+Metod Amaç
+// Bağlan ve sorgula (Örnek bir fonksiyonu)
+async function kullanicilariAl() {
+db.connect() Veritabanına bağlantı kur
+await db.connect();
+const sonuc = await db.query('SELECT * FROM kullanicilar'); SQL sorgusu çalıştır (SELECT, INSERT,
+db.query(SQL)
+UPDATE, DELETE)
+console.log(sonuc.rows); // Tüm kullanıcılar
+await db.end();
+db.end() Veritabanı bağlantısını kapat
+}
+kullanicilariAl();
+
+--- Sayfa 7 ---
+CSV Verilerini Tabloya İçe Aktarma
+İki’tane başlancı .csv dosyaları bu linkten
+Verileri İçe Aktarma (Import) indir:
+capitals tablosuna sağ tık → Import/Export Data Bir dosyada tüm ülkeler ve başkentileri var.
+İkincide ülkeler ve bayrakları var.
+Ayar Değer Açıklama
+https://drive.google.com/drive/folders/1lzdtmRnX8OnEfb5DE
+L3a1XEX73FI4xV0?usp=sharing
+Import/Export Import'u seç Veri içe aktarıyoruz
+İçe Aktarma Adımları:
+capitals.csv dosyasını Daha önce indirdiğiniz 1. bayraklar tablosuna sağ tık → Import/Export Data
+Filename
+seç dosya
+2. bayraklar.csv dosyasını seç
+3. Header'ı Evet olarak işaretle
+Virgülle ayrılmış
+Format csv
+değerler 4. Sütunları kontrol et (id, name, flag)
+5. İçe aktarmayı çalıştır
+
+--- Sayfa 8 ---
+Node Backend'de PostgreSQL Kullanma
+Dünya Başkentleri Quiz Projesi Node Backend'de Veritabanı Kullanma Adımları:
+Veritabanımızla Bir Quiz Uygulaması Oluşturma • pg paketini yükle
+Proje Açıklaması:
+• Veritabanı bağlantısını yapılandır
+• Bir ülke sorulur, kullanıcı başkentini girer
+• Bağlan (db.connect())
+• Doğru cevap → Puan artar
+• Sorguyu çalıştır (db.query() )
+• Yanlış cevap → Oyun biter, en yüksek puan gösterilir
+• Verileri al (result.rows)
+Başlangıç dosyaları bu linkten indir
+• Bağlantıyı kapat ( db.end() )
+
+--- Sayfa 9 ---
+Kimlik Doğrulamaya
+Sebep Açıklama
+(Authentication) Giriş
+Kullanıcıların oluşturduğu verileri onlara
+Veri Sahipliği
+atayın
+Neden Kimlik Doğrulamaya İhtiyacımız
+Var?
+Gizlilik Özel mesajları ve verileri gizli tutun
+Temel Neden:
+• Kullanıcılar web sitemizde veri oluşturur Kullanıcıların hesaplarına tekrar giriş
+Tekrar Erişim
+yapmasına izin verin
+• Beğeniler, mesajlar, gönderiler, tarifler
+• Bu verileri belirli kullanıcılarla
+Ödeme durumuna göre belirli alanları
+Erişim Kısıtlama
+ilişkilendirmemiz gerekir
+kısıtlayın (Netflix, Spotify)
+Neden Kimlik Doğrulama?
+
+--- Sayfa 10 ---
+Kimlik Doğrulamaya (Authentication) Giriş
+Örnek - Özel Mesajlar:
+
+--- Sayfa 11 ---
+Güvenlik Seviyeleri
+Amature'dan Endüstri Standardına :
+Seviye Açıklama Güvenlik
+Kullanıcı adı/şifre kaydet
+Seviye 1 ❌ Çok Düşük
+(düz metin)
+Şifreleri veritabanında
+Seviye 2 ⚠️ Düşük-Orta
+şifreleme
+Seviye 3 Şifreleri hashleme (bcrypt) ✅ Yüksek
+Cookie'ler ve Oturumlar
+Seviye 4 ✅ Yüksek
+(Session)
+Seviye 5 OAuth 2.0 ve Sosyal Giriş ✅✅ En Yüksek
+Temel Auth—kullanıcı adı ve şifre doğrudan iletilir, genellikle Base64 ile kodlanmış ama şifrelenmemiş. HTTPS olmadan ağ trafiğinde açıkça
+görünür.Şifrehashleme(bcrypt/argon2)
+şifre veritabanınadüz metin olarak kaydedilmez; tek yönlü bir hashfonksiyonundan geçirilir ve rastgele bir "tuz" eklenir. Veritabanı sızsa bile
+şifreler doğrudan okunamaz.
+OAuth/ Sosyal giriş —uygulamanız hiç şifre saklamaz. Kimlik doğrulama sorumluluğu Google veya Facebook gibi güvenilir bir sağlayıcıya
+devredilir; uygulamanız yalnızca kısa ömürlü bir tokenalır.
+
+--- Sayfa 12 ---
+Güvenlik Seviyeleri
+Bir deneme proje yapalım: Önemli Çıkarımlar:
+Not: Öncelikle bir kullancı tablo oluşturla lım: 1. Kimlik doğrulama kullanıcı verilerini korumak ve
+sahiplenmek için gereklidir
+sonra başlangıç dosyaları bu link’ten indirelim:
+2. Farklı güvenlik seviyeleri vardır - temelden başlayıp
+https://drive.google.com/drive/folders/1Ekvn8URPOadC_TJBdvnr
+ilerleyeceğiz
+A9JFBlV9Cg0I?usp=sharing
+3. Sırlar uygulaması (Sirlar app) boyunca örnek olarak
+Önceden Oluşturulmuş Rotlar:
+kullanılacak
+4. Başlangıç dosyaları kimlik doğrulama mantığına
+odaklanmamızı sağlar
+GET / Ana sayfa (anasayfa.ejs)
+5. Tüm güvenlik seviyelerini öğrenmenizi şiddetle tavsiye
+ederim
+GET /giris Giriş sayfası (girs.ejs)
+6. Atlayabilirsiniz, ancak temelleri anlamak uzun vadede çok
+GET /kayit Kayıt sayfası (kayit.ejs) değerlidir
+7. Her seviyeyi sırayla inşa edeceğiz - başlangıçta güvensiz,
+GET /sirlar Sırlar sayfası (sırlar.ejs) sonunda güvenli
+
+--- Sayfa 13 ---
+Şifre Güvenliği - Şifreleme ve Hashleme
+Düz Metin Şifrelerin Tehlikeleri: Şifrelemeye Giriş(Bilgiyi Kodlara Dönüştürme)
+Neden Düz Metin Şifreleri Asla Saklamamalıyız?
+Şifreleme Tanımı:
+Sonuç Açıklama "Bilgiyi veya veriyi bir koda dönüştürme işlemi"
+Amaç: Yetkisiz erişimi önlemek
+Kullanıcı Güveni Kaybı Kullanıcılar artık siteye güvenmez
+Çıktıya "şifreli metin" (ciphertext) denir
+Şirketler veri ihlalleri nedeniyle para Sezar Şifresi (Basit Örnek):
+Yasal Cezalar
+cezası öder
+Düz Metin Anahtar Şifreli Metin
+Marka imajı geri dönülemez şekilde
+İtibar Hasarı ABC 4 EFG
+zarar görebilir
+HELLO 4 LIPPS
+Kimlik Hırsızlığı Kullanıcı şifreleri çalınabilir
+qwerty 1 rxfgsz
+Sezar Şifresi Nasıl Çalışır:
+Alfabe: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+Anahtar 4 ile: A → E, B → F, C → G, vb.
+Cryptiiile Deneyin: https://cryptii.com adresinde şifrelemeyi test
+edebilirsiniz
+
+--- Sayfa 14 ---
+Şifre Güvenliği - Şifreleme ve Hashleme
+Modern Şifreleme - AES 256(Simetrik Şifreleme)
+AES 256 Nedir?
+• Gelişmiş Şifreleme Standardı (Advanced
+Encryption Standard)
+• Günümüzde kullanılan en güvenli şifreleme
+yöntemlerinden biri
+• ABD hükümeti tarafından onaylanmıştır
+Sorun: Eğer bir hacker şifreleme ANAHTARINI ele
+geçirirse
+1. Veritabanındaki TÜM şifreleri çözebilirler
+2. Tüm kullanıcı hesapları tehlikeye girer
+3. Tek bir hata her şeyi mahvedebili
+
+--- Sayfa 15 ---
+Şifre Güvenliği - Şifreleme ve Hashleme
+Hashleme - Oyunun Kurallarını Değiştiren Kayıt Süreci:
+Anahtara İhtiyaç Duymamak
+zellik Şifreleme Hashleme
+Anahtar gerekli mi? Evet Hayır
+Hayır (neredeyse
+Tersine çevrilebilir mi? Evet (anahtarla)
+imkansız)
+Veri
+Amaç Veri gizliliği
+bütünlüğü/doğrulama
+Hash Fonksiyonunun Basit Örneği:
+İleri yön (kolay): 13 × 29 = 377
+Geri yön (zor): 377'in çarpanları? (13 ve 29)
+Gerçek Hash Fonksiyonları:
+İleri yön hesaplaması: 1 milisaniye
+Geri yön hesaplaması: 2+ yıl (mevcut bilgisayar gücüyle)
+
+--- Sayfa 16 ---
+Şifre Güvenliği - Şifreleme ve Hashleme
+Hashleme ile Giriş Süreci(Hash'leri Karşılaştırma, Şifreleri Kayıt Süreci:
+Değil)
+1. Kullanıcı şifre seçer: "mySecret123"
+2. Hash fonksiyonu uygulanır: hash("mySecret123") = "a1b2c3d
+4..."
+3. SADECE hash veritabanında saklanır
+4. Orijinal şifre ASLA saklanmaz
+Önemli Noktalar:
+1. Kullanıcının şifresini asla bilmeyiz
+2. Orijinal şifreyi geri alamayız
+3. Yalnızca hash'leri karşılaştırabiliriz
+4. Veritabanı ele geçirilse bile şifreler güvende kalır
+5. Kitap Önerisi: "The Code Book" - Simon Singh (şifreleme ve
+kriptografi tarihi hakkında harika hikayeler)
+
+--- Sayfa 17 ---
+Şifre Güvenliği - Şifreleme ve Hashleme
+// ZAYIF - Düz metin şifreler Önemli Çıkarımlar:
+INSERT INTO users (email, password) VALUES
+1. Düz metin şifreler asla kabul edilemez (yasal riskler!)
+('alice@email.com', 'qwerty123');
+2. Şifreleme bir anahtar gerektirir - ele geçirilirse her şey
+// ORTA - Şifreleme (simetrik anahtar gerekli)
+tehlikeye girer
+const encrypted = encrypt('qwerty123', encryptionKey);
+3. Sezar Şifresi ve zayıf şifreleme sistemleri felaketle
+INSERT INTO users (email, password) VALUES
+sonuçlanabilir (Mary Stuart'ın hikayesi)
+('alice@email.com', encrypted);
+4. Hashleme anahtar gerektirmez - ileri yön kolay, geri yön
+// GÜÇLÜ - Hashleme (anahtar gerekmez)
+neredeyse imkansızdır
+const hashed = bcrypt.hashSync('qwerty123’, saltRounds);
+5. Hash'leri karşılaştırırız, asla şifreleri çözmeyiz
+INSERT INTO users (email, password) VALUES
+6. Kullanıcının şifresini asla bilemeyiz - sadece
+('alice@email.com', hashed);
+doğrulayabiliriz
+// Giriş kontrolü
+7. Modern hash fonksiyonları tersine mühendislik için 2+
+yıl alacak şekilde tasarlanmıştır
+const userInput = 'qwerty123';
+const isValid = bcrypt.compareSync(userInput,
+storedHash);
+
+--- Sayfa 18 ---
+Şifre Güvenliği - Hash Tabloları ve Sözlük Saldırıları
+Bilmediğinizden Daha Fazlasını Biliyorsunuz Büyük Şirketler Nasıl Saldırıya Uğradı( Gerçek Dünya Veri İhlalleri )
+Web Sitelerinin Hala Yaptığı Korkunç
+Şirket Yıl Etki
+Şeyler:
+1. Kullanıcılara şifrelerini düz metin olarak göndermek Adobe Creative Cloud 2013 153 milyon hesap
+2. Bu, şifrelerin ya düz metin olarak saklandığı ya da şifre
+LinkedIn 2012 167 milyon hesap
+çözme anahtarıyla şifrelendiği anlamına gelir
+3. Bu, web güvenliğinde KESİNLİKLE kabul edilemez Ashley Madison 2015 32 milyon hesap
+Örnek - Düz Metin Şifre E-postası:
+Equifax 2017 147 milyon hesap
+Konu: Şifre Sıfırlama İsteğiniz
+Hack Sonrası Ne Olur:
+Mesaj: "Merhaba, işte şifreniz: qwerty123"
+1. Hacker veritabanını ele geçirir
+↑ Bu ASLA olmamalı!
+2. Kullanıcı e-postaları ve hash'lenmiş şifreler çalınır
+Not: Bu uygulama birçok ülkede YASALARA
+AYKIRIDIR! 3. Hacker hash'leri kırmaya çalışır
+4. Kırılan şifreler çevrimiçi satılır
+5. Kullanıcılar diğer sitelerde (PayPal, bankacılık) tehlikeye girer
+
+--- Sayfa 19 ---
+Şifre Güvenliği - Hash Tabloları ve Sözlük Saldırıları
+Hash Tablosu Zafiyeti: En Yaygın Şifreler:
+1. 123456
+2. password
+3. 123456789
+4. 12345
+5. 12345678
+6. qwerty
+7. 111111
+Sözlük Saldırısı:
+Adım 1: Sözlükteki TÜM kelimeleri hash'le (150.000+ kelime)
+Adım 2: Telefon rehberlerindeki sayıları hash'le
+Adım 3: Tüm 6 karakterli kombinasyonları hash'le
+Toplam: ~19,8 milyar kombinasyon
+Problem: ↑ Aynı hash → Aynı şifre → ZAFİYET!
+Donanım Gücü:
+Yaygın Şifreler Nasıl Kırılır
+Modern GPU (Grafik Kartı): Saniyede 20 milyar MD5 hash
+Hash Tablosu Nedir?
+19,8 milyar kombinasyon → 0,9 saniye
+Yaygın şifrelerin önceden hesaplanmış hash'lerinin listesi
+http://password-checker.online-domain-tools.com/
+Hacker'ların hash'leri hızla eşleştirmesini sağlar.
+
+--- Sayfa 20 ---
+Şifre Güvenliği - Hash Tabloları ve Sözlük Saldırıları
+Google Bir Hash Tablosudur
+MD5 Hash'leriHızla Kırılabilir:
+MD5 hash'leriiçin önceden oluşturulmuş hashtabloları mevcuttur
+En yaygın 10.000 şifre için tablolar hazır
+Deneyin:
+1. "5f4dcc3b5aa765d61d8327deb882cf99" hash'inikopyalayın
+2. Google'da arayın
+3. Sonuç: password
+Önemli: Popüler hash algoritmaları (MD5, SHA1) artık güvensiz kabul ediliyor!
+Daha Hızlı Kırılanlar:
+Hash Türü Kırılma Kolaylığı
+MD5 Çok Kolay
+SHA1 Kolay
+bcrypt (10 tur) Zor
+bcrypt (12+ tur) Çok Zor
+
+--- Sayfa 21 ---
+Şifre Güvenliği - Hash Tabloları ve Sözlük Saldırıları
+Güçlü Şifre İpuçları:
+
+--- Sayfa 22 ---
+Şifre Güvenliği - Hash Tabloları ve Sözlük Saldırıları
+Hızlı Referans: Önemli Çıkarımlar:
+// Kırılması KOLAY (MD5, SHA1) 1. Birçok şirket hâlâ şifreleri güvensiz bir şekilde
+saklıyor
+const hash =
+crypto.createHash('md5').update('qwerty123').digest('hex');
+2. Hash tabloları yaygın şifreleri anında kırabilir
+// Çıktı: 5f4dcc3b5aa765d61d8327deb882cf99
+3. Sözlük saldırıları tüm sözlük kelimelerini dener
+// Kırılması ZOR (bcrypt - yavaş tasarlanmış)
+4. Modern GPU'lar saniyede milyarlarca hash
+const bcrypt = require('bcrypt');
+hesaplayabilir
+const hash = await bcrypt.hash('qwerty123', 12);
+5. Google bir hash tablosu olarak kullanılabilir
+// Çıktı: $2b$12$K9kY9kY9kY9kY9kY9kY9k... (uzun, rastgele)
+(MD5/SHA1 için)
+// Şifre uzunluğu kontrolü
+6. Şifre uzunluğu, şifre gücü için en önemli faktördür
+function isStrongPassword(password) {
+7. 12 karakterli şifrelerin kırılması 31 yıl sürer
+return password.length >= 12;
+}

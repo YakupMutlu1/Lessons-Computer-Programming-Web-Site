@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gömülü Sistemler — Ders Notları ve Final Hazırlık</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .hero-gomulu { background: linear-gradient(135deg, #422006 0%, #1a2332 50%, var(--bg)); }
+    .hero-gomulu .badge {
+      background: rgba(245, 158, 11, 0.2);
+      border-color: rgba(245, 158, 11, 0.45);
+      color: #fcd34d;
+    }
+    .sidebar-header { background: linear-gradient(135deg, #422006 0%, var(--surface) 100%); }
+    .module-num { background: #d97706; }
+    .section h3 { border-left-color: #f59e0b; }
+    .nav-module-title { color: #fbbf24; }
+    .nav-links a.active { border-left-color: #f59e0b; }
+    .hub-link { display: block; text-align: center; padding: 0.5rem; margin-bottom: 0.4rem; background: rgba(255,255,255,0.06); border: 1px solid var(--border); border-radius: 6px; color: var(--muted); text-decoration: none; font-size: 0.82rem; }
+    .hub-link:hover { color: var(--text); border-color: #f59e0b; }
+    .btn-quiz-side { display: block; text-align: center; padding: 0.55rem; background: rgba(245, 158, 11, 0.2); border: 1px solid rgba(245, 158, 11, 0.5); border-radius: 6px; color: #fcd34d; text-decoration: none; font-size: 0.85rem; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1>Gömülü Sistemler</h1>
+        <p>11 modül · NodeMCU, GPIO, protokoller, RTOS</p>
+      </div>
+      <div class="search-box">
+        <input type="search" id="search" placeholder="Konu ara (ör. MQTT, pull-up, FreeRTOS)...">
+      </div>
+      <div style="padding:0.5rem 1rem 0.75rem">
+        <a href="../index.html" class="hub-link">← Ders Platformu Ana Sayfa</a>
+        <a href="sorular.html" class="btn-quiz-side">📝 Soru Bankası (223 test sorusu)</a>
+      </div>
+      <nav>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 1 — Giriş <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#giris-tanim">Gömülü Sistem Tanımı</a>
+            <a href="#giris-mcu-mpu">MCU ve MPU</a>
+            <a href="#giris-firmware">Firmware</a>
+            <a href="#giris-kisitlar">Kısıtlar</a>
+            <a href="#giris-ornekler">Uygulama Örnekleri</a>
+            <a href="#giris-harvard">Harvard Mimarisi</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 2 — NodeMCU <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#nodemcu-esp8266">ESP8266 Özellikleri</a>
+            <a href="#nodemcu-voltaj">3.3V Mantık Seviyesi</a>
+            <a href="#nodemcu-wifi">WiFi ve IoT</a>
+            <a href="#nodemcu-ide">Arduino IDE Kurulum</a>
+            <a href="#nodemcu-blink">İlk Blink Örneği</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 3 — Devre <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#devre-breadboard">Breadboard Kullanımı</a>
+            <a href="#devre-led-direnc">LED ve Direnç Hesabı</a>
+            <a href="#devre-pull">Pull-up / Pull-down</a>
+            <a href="#devre-bilesenler">Kapasitör, Diyot, Transistör</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 4 — GPIO <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#gpio-pinmode">pinMode Temelleri</a>
+            <a href="#gpio-digital">digitalRead / Write</a>
+            <a href="#gpio-analog">analogRead</a>
+            <a href="#gpio-pwm">PWM Çıkışı</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 5 — Protokoller <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#protokol-uart">UART / Serial</a>
+            <a href="#protokol-spi">SPI</a>
+            <a href="#protokol-i2c">I2C</a>
+            <a href="#protokol-mqtt">MQTT</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 6 — Sensörler <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#sensor-dht">DHT11 / DHT22</a>
+            <a href="#sensor-pir-hcsr">PIR ve HC-SR04</a>
+            <a href="#sensor-ldr">LDR Işık Sensörü</a>
+            <a href="#sensor-aktuator">Servo, Röle, Motor</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 7 — Bellek <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#bellek-flash-ram">Flash ve RAM</a>
+            <a href="#bellek-eeprom">EEPROM</a>
+            <a href="#bellek-stack-heap">Stack ve Heap</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 8 — RTOS <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#rtos-freertos">FreeRTOS Görevleri</a>
+            <a href="#rtos-mutex">Mutex ve Semaphore</a>
+            <a href="#rtos-isr">Kesme (ISR)</a>
+            <a href="#rtos-baremetal">Bare-metal Karşılaştırma</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 9 — Güç <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#guc-sleep">Sleep Modları</a>
+            <a href="#guc-watchdog">Watchdog Timer</a>
+            <a href="#guc-batarya">Pil ve Düşük Güç</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 10 — Debug <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#debug-serial">Serial Monitor</a>
+            <a href="#debug-analyzer">Logic Analyzer / Osiloskop</a>
+            <a href="#debug-floating">Floating Pin Sorunu</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 11 — Proje <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#proje-gereksinim">Proje Gereksinimleri</a>
+            <a href="#proje-prototip">Prototip ve Dokümantasyon</a>
+            <a href="#proje-sunum">Sunum Kriterleri</a>
+          </div>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <header class="hero hero-gomulu">
+        <h2>Gömülü Sistemler — Final Hazırlık Rehberi</h2>
+        <p>Hafta 1–2 birleştirilmiş giriş modülünden dönem projesine kadar müfredatı kapsayan Türkçe ders notları. Sol menüden konuya atlayın; arama kutusu ile GPIO, MQTT, RTOS gibi anahtar kelimeleri filtreleyin.</p>
+        <p style="margin-top:1rem"><a href="../gomulu/sorular.html" style="display:inline-block;padding:0.6rem 1.2rem;background:#d97706;color:#fff;text-decoration:none;border-radius:8px;font-weight:600">📝 Soru Bankasına Git →</a></p>
+        <div class="badges">
+          <span class="badge">NodeMCU</span>
+          <span class="badge">GPIO</span>
+          <span class="badge">UART / SPI / I2C</span>
+          <span class="badge">MQTT</span>
+          <span class="badge">RTOS</span>
+        </div>
+      </header>
+
+      <div class="content">
+
+        <article class="module" id="modul-giris">
+          <div class="module-header">
+            <span class="module-num">1</span>
+            <h2>Gömülü Sistemlere Giriş ve Temel Kavramlar (Hafta 1–2)</h2>
+          </div>
+
+          <section class="section" id="giris-tanim">
+            <h3>Gömülü Sistem Nedir?</h3>
+            <p><strong>Gömülü sistem (embedded system)</strong>, belirli bir görevi yerine getirmek için tasarlanmış, genellikle kullanıcı fark etmeden çalışan bilgisayar sistemidir. Masaüstü PC gibi genel amaçlı değildir; örneğin çamaşır makinesi kontrol kartı, araç ABS ünitesi, akıllı termostat veya NodeMCU tabanlı sıcaklık istasyonu gömülü sistem örneğidir.</p>
+            <p>Bu sistemlerde yazılım (<strong>firmware</strong>) donanıma sıkı bağlıdır; güncelleme nadiren OTA (over-the-air) veya USB ile yapılır. Donanım maliyeti, güç tüketimi ve fiziksel boyut genelde önceliklidir.</p>
+            <ul>
+              <li><strong>Girdi:</strong> sensörler, düğmeler, haberleşme hatları</li>
+              <li><strong>İşleme:</strong> MCU/MPU üzerinde çalışan program</li>
+              <li><strong>Çıktı:</strong> motor, röle, ekran, ağ üzerinden veri</li>
+            </ul>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>Gömülü sistem = belirli görev + gömülü yazılım + kısıtlı kaynaklar. Genel amaçlı PC tanımı yanlıştır.</div>
+          </section>
+
+          <section class="section" id="giris-mcu-mpu">
+            <h3>Mikrodenetleyici (MCU) ve Mikroişlemci (MPU)</h3>
+            <p><strong>MCU (Microcontroller):</strong> CPU, RAM, Flash program belleği, zamanlayıcılar, ADC, UART/SPI/I2C gibi çevre birimleri tek entegrede toplanır. Arduino Uno (ATmega328P), ESP8266, STM32 gömülü projelerde yaygındır.</p>
+            <p><strong>MPU (Microprocessor):</strong> Odak CPU’dur; bellek ve çevre birimleri genelde harici çiptir. Raspberry Pi, telefon işlemcileri MPU ailesine yakındır; işletim sistemi ve daha yüksek kaynak tüketimi beklenir.</p>
+            <table>
+              <tr><th>Özellik</th><th>MCU</th><th>MPU</th></tr>
+              <tr><td>Bellek</td><td>Çoğunlukla çipte</td><td>Harici RAM/depolama</td></tr>
+              <tr><td>Güç</td><td>mW–W seviyesi</td><td>W–onlarca W</td></tr>
+              <tr><td>RTOS / OS</td><td>İsteğe bağlı, hafif</td><td>Linux/Android sık</td></tr>
+              <tr><td>Örnek</td><td>ESP8266, ATmega</td><td>Broadcom BCM (RPi)</td></tr>
+            </table>
+            <div class="tip"><strong>İpucu</strong>IoT dersinde NodeMCU aslında ESP8266 tabanlı bir <em>geliştirme kartı</em>dır; MCU çipinin etrafına USB, regülatör ve pin başlıkları eklenmiştir.</div>
+          </section>
+
+          <section class="section" id="giris-firmware">
+            <h3>Firmware Kavramı</h3>
+            <p><strong>Firmware</strong>, cihazın Flash belleğine yazılan ve güç kesilse bile kalan programdır. İşletim sistemi kurulumu gibi kullanıcı tarafından sık değiştirilmez; bootloader üzerinden yeni sürüm yüklenir.</p>
+            <p>Arduino IDE’de derlediğiniz <code>.ino</code> dosyası, derleme sonrası makine koduna dönüşür ve kartınıza <strong>upload</strong> ile firmware olarak yazılır. ESP8266’da ayrıca WiFi stack ve AT firmware varyantları vardır; derslerde genelde Arduino core kullanılır.</p>
+            <pre><code>// setup() ve loop() — tipik Arduino firmware yapısı
+void setup() {
+  Serial.begin(115200);
+  Serial.println("Firmware basladi");
+}
+void loop() {
+  // Ana görev dongusu
+}</code></pre>
+            <div class="warn"><strong>Dikkat</strong>Firmware güncellemesi yarım kalırsa cihaz açılmayabilir; yükleme sırasında kabloyu çıkarmayın ve doğru kart/port seçin.</div>
+          </section>
+
+          <section class="section" id="giris-kisitlar">
+            <h3>Gömülü Sistem Kısıtları</h3>
+            <p>Tasarım kararları aşağıdaki sınırlar içinde verilir:</p>
+            <ol>
+              <li><strong>Gerçek zamanlılık:</strong> Bazı olaylar belirli süre içinde yanıtlanmalıdır (ör. motor frenleme, alarm).</li>
+              <li><strong>Bellek:</strong> ESP8266’da KB–MB düzeyi RAM; büyük buffer’lar heap taşmasına yol açar.</li>
+              <li><strong>Güç:</strong> Pil ile çalışan cihazlarda mA altı tüketim hedeflenir.</li>
+              <li><strong>Maliyet ve boyut:</strong> Tek katmanlı PCB, az bileşen.</li>
+              <li><strong>Güvenilirlik:</strong> Sıcaklık, EMI, watchdog ile kilitlenmeye karşı koruma.</li>
+            </ol>
+            <p>4K oyun grafikleri veya sınırsız bulut depolama gömülü kısıt listesine girmez; bu tür işler MPU + OS tarafına kayar.</p>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>Kritik kısıtlar: gerçek zamanlılık, düşük güç, sınırlı bellek — “yüksek çözünürlüklü oyun” değil.</div>
+          </section>
+
+          <section class="section" id="giris-ornekler">
+            <h3>Günlük Hayattan Gömülü Örnekler</h3>
+            <table>
+              <tr><th>Cihaz</th><th>Gömülü görev</th><th>Tipik donanım</th></tr>
+              <tr><td>Çamaşır makinesi</td><td>Program, sıcaklık, motor</td><td>MCU + sensör</td></tr>
+              <tr><td>ABS</td><td>Teker kayma algılama</td><td>MCU, kesme süresi kritik</td></tr>
+              <tr><td>Akıllı priz</td><td>WiFi, röle kontrol</td><td>ESP8266/ESP32</td></tr>
+              <tr><td>Drone IMU</td><td>Denge, PID</td><td>STM32 + RTOS</td></tr>
+            </table>
+            <p>Ders projelerinde genelde <strong>sensör oku → işle → aktüatör / MQTT yayınla</strong> döngüsü bu örneklerin sadeleştirilmiş modelidir.</p>
+          </section>
+
+          <section class="section" id="giris-harvard">
+            <h3>Harvard ve Von Neumann Mimarisi</h3>
+            <p><strong>Von Neumann:</strong> Program ve veri aynı bellek yolunu paylaşır; modern PC’ler buna yakındır.</p>
+            <p><strong>Harvard:</strong> Program belleği (Flash) ile veri belleği (RAM) için ayrı veri yolları; birçok MCU aynı anda komut fetch ve veri erişimini hızlandırır.</p>
+            <div class="flow">Harvard (özet)
+  CPU ----&gt; Program Bus ----&gt; Flash (kod)
+  CPU ----&gt; Data Bus   ----&gt; RAM (değişkenler, yığın)</div>
+            <p>Arduino’da kod Flash’ta, değişkenler RAM’de tutulur; bu ayrım Harvard fikrine uygundur, fakat çevre birimleri ve önbellek detayları çipe göre değişir.</p>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>Harvard = program ve veri yolu ayrılabilir. Von Neumann = tek bellek alanı paylaşımı.</div>
+          </section>
+        </article>
+
+        <article class="module" id="modul-nodemcu">
+          <div class="module-header">
+            <span class="module-num">2</span>
+            <h2>NodeMCU ve IoT (ESP8266)</h2>
+          </div>
+
+          <section class="section" id="nodemcu-esp8266">
+            <h3>ESP8266 ve NodeMCU Kartı</h3>
+            <p><strong>ESP8266</strong>, WiFi yetenekli, düşük maliyetli bir MCU çözümüdür. <strong>NodeMCU</strong> modülü, ESP8266’yı breadboard dostu pinler, USB–serial dönüştürücü ve 3.3V regülatör ile taşır.</p>
+            <ul>
+              <li>İşlemci: Tensilica L106, 80/160 MHz</li>
+              <li>WiFi: 802.11 b/g/n, istasyon (STA) ve erişim noktası (AP) modları</li>
+              <li>GPIO: D0–D8 (kart etiketleri); bazı pinler boot sırasında özel davranır</li>
+            </ul>
+            <div class="warn"><strong>Dikkat</strong><code>D0</code> (GPIO16) boot modunu etkileyebilir; projede strapping pin kurallarını okuyun.</div>
+          </section>
+
+          <section class="section" id="nodemcu-voltaj">
+            <h3>3.3V Mantık Seviyesi</h3>
+            <p>ESP8266 pinleri <strong>3.3V tolerant</strong> değildir; 5V Arduino çıkışını doğrudan bağlamak çipi bozabilir. 5V sensörler için seviye çevirici (level shifter) veya direnç bölmeci gerekir.</p>
+            <pre><code>// NodeMCU pin etiketi vs GPIO (örnek — board.txt'e gore dogrulayin)
+// D1 -> GPIO5, D2 -> GPIO4, D5 -> GPIO14 ...
+#define LED_PIN D4  // veya 2 (GPIO2) — kart semasina bakin</code></pre>
+            <table>
+              <tr><th>Seviye</th><th>Tipik HIGH</th><th>NodeMCU uyumu</th></tr>
+              <tr><td>3.3V TTL</td><td>~3.3V</td><td>Uyumlu</td></tr>
+              <tr><td>5V TTL</td><td>~5V</td><td>Riskli — çevirici kullan</td></tr>
+            </table>
+          </section>
+
+          <section class="section" id="nodemcu-wifi">
+            <h3>WiFi ve IoT Bağlantısı</h3>
+            <p>ESP8266, ev ağına bağlanarak sensör verisini HTTP/MQTT ile sunucuya gönderebilir. IoT katmanında cihaz <strong>istemci</strong>, bulut veya yerel broker <strong>sunucu</strong> rolündedir.</p>
+            <pre><code>#include &lt;ESP8266WiFi.h&gt;
+
+const char* ssid = "AgAdi";
+const char* pass = "Sifre";
+
+void setup() {
+  Serial.begin(115200);
+  WiFi.mode(WIFI_STA);
+  WiFi.begin(ssid, pass);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+  Serial.println(WiFi.localIP());
+}</code></pre>
+            <div class="tip"><strong>İpucu</strong>WiFi bağlantısı güç çeker; pil projelerinde bağlantıyı gerektiğinde kurup sonra deep sleep düşünün.</div>
+          </section>
+
+          <section class="section" id="nodemcu-ide">
+            <h3>Arduino IDE Kurulum ve Kart Seçimi</h3>
+            <ol>
+              <li>Arduino IDE → Dosya → Tercihler → Ek Kart Yöneticisi URL: <code>http://arduino.esp8266.com/stable/package_esp8266com_index.json</code></li>
+              <li>Araçlar → Kart → Kart Yöneticisi → “esp8266” yükle</li>
+              <li>Kart: <strong>NodeMCU 1.0 (ESP-12E Module)</strong>, doğru COM port</li>
+            </ol>
+            <p>Yanlış kart seçimi pin eşlemesini ve flash boyutunu bozar; upload hatası veya sürekli reset görülebilir.</p>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>NodeMCU = ESP8266 tabanlı. Mantık seviyesi 3.3V. Program yükleme USB–UART üzerinden.</div>
+          </section>
+
+          <section class="section" id="nodemcu-blink">
+            <h3>İlk Proje: Blink (LED Yak–Söndür)</h3>
+            <p>Donanımı doğrulamanın en kısa yolu dahili veya harici LED’i yakıp söndürmektir. NodeMCU’da genelde D4 (GPIO2) üzerinde dahili LED vardır.</p>
+            <pre><code>void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+void loop() {
+  digitalWrite(LED_BUILTIN, LOW);   // Bazı kartlarda LOW = yanik
+  delay(500);
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(500);
+}</code></pre>
+            <div class="tip"><strong>İpucu</strong>LED yanmıyorsa pin tanımını ters deneyin veya harici LED + 220Ω direnç ile 3.3V–GND arası bağlayın.</div>
+          </section>
+        </article>
+
+        <article class="module" id="modul-devre">
+          <div class="module-header">
+            <span class="module-num">3</span>
+            <h2>Devre Prototipleme</h2>
+          </div>
+
+          <section class="section" id="devre-breadboard">
+            <h3>Breadboard (Ekmek Tahtası) Kullanımı</h3>
+            <p>Breadboard, lehim gerektirmeden devre kurmanızı sağlar. Orta bölgede <strong>aynı satırdaki 5 delik</strong> elektriksel olarak kısa devredir; ortadaki kanal iki yarıyı ayırır. Kenar <strong>power rail</strong> (+ / −) genelde uzun şerit halinde bağlıdır.</p>
+            <ul>
+              <li>MCU GND ile breadboard mavi hatta, 3.3V/5V kırmızı hatta ortaklanmalı</li>
+              <li>Uzun bacaklı entegreler kanalın iki yanına oturtulur</li>
+              <li>20 MHz üzeri RF devrelerde breadboard gürültüsü artar; IoT dersleri için yeterlidir</li>
+            </ul>
+          </section>
+
+          <section class="section" id="devre-led-direnc">
+            <h3>LED ve Direnç Hesabı (Ohm Yasası)</h3>
+            <p>LED, polariteli bir diyottur; ters bağlanırsa yanmaz. İleri yönde tipik düşüm <strong>V<sub>LED</sub> ≈ 2V</strong> (kırmızı). Akımı sınırlamak için seri direnç şarttır.</p>
+            <p><strong>Formül:</strong> R = (V<sub>kaynak</sub> − V<sub>LED</sub>) / I</p>
+            <p>Örnek: 3.3V kaynak, 2V LED, hedef 10 mA → R = (3.3 − 2) / 0.01 ≈ 130Ω → standart <strong>220Ω</strong> güvenli seçimdir.</p>
+            <pre><code>// Kabaca hesap — 330 ohm cogu 3.3V LED icin uygundur
+#define LED_PIN 5
+void setup() {
+  pinMode(LED_PIN, OUTPUT);
+}</code></pre>
+            <div class="warn"><strong>Dikkat</strong>Direncsiz LED deneyi çip pininden çok akım çeker; pin ve LED zarar görür.</div>
+          </section>
+
+          <section class="section" id="devre-pull">
+            <h3>Pull-up ve Pull-down Dirençleri</h3>
+            <p>MCU girişi bağlı değilken <strong>floating</strong> kalır; okuma rastgele 0/1 verir. Pull-up: pin boştayken HIGH’a çeker (düğmeye basınca GND ile LOW). Pull-down: boştayken LOW.</p>
+            <pre><code>// Dahili pull-up — harici direnc gerekmeyebilir
+pinMode(BUTTON_PIN, INPUT_PULLUP);
+int okunan = digitalRead(BUTTON_PIN);
+// INPUT_PULLUP: basili degilken HIGH, basinca LOW (GND'ye cekilir)</code></pre>
+            <p>Harici pull-up değeri genelde 4.7kΩ–10kΩ; I2C hatlarında 4.7kΩ tipiktir.</p>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>Pull-up amacı: floating pini tanımlı lojik seviyede tutmak.</div>
+          </section>
+
+          <section class="section" id="devre-bilesenler">
+            <h3>Kapasitör, Diyot, Transistör</h3>
+            <h4>Kapasitör</h4>
+            <p><strong>Decoupling (100nF):</strong> MCU VCC–GND arasına yakın yerleştirilir; ani akım çekiminde voltajı stabilize eder, gürültüyü filtreler.</p>
+            <h4>Diyot</h4>
+            <p>Röle bobini üzerine <strong>flyback diyot</strong> (ör. 1N4007) ters polariteyle bağlanır; kapanırken oluşan ters EMK’yı söndürür, transistörü korur.</p>
+            <h4>Transistör (NPN, örn. 2N2222)</h4>
+            <p>MCU pin akımı (~12–20 mA) röle bobinini sürmek için yetersizdir; transistör anahtar görevi görür.</p>
+            <pre><code>// Röle MCU pininden degil transistör kollektöründen surulur
+// Base direnci ~1k, diyot bobin uzerinde paralel</code></pre>
+            <table>
+              <tr><th>Bileşen</th><th>Rol</th></tr>
+              <tr><td>100nF keramik</td><td>Decoupling, gürültü</td></tr>
+              <tr><td>Flyback diyot</td><td>Endüktif geri EMK</td></tr>
+              <tr><td>NPN transistör</td><td>Düşük akım pin → yüksek akım yük</td></tr>
+            </table>
+          </section>
+        </article>
+
+        <article class="module" id="modul-gpio">
+          <div class="module-header">
+            <span class="module-num">4</span>
+            <h2>Dijital ve Analog Giriş–Çıkış (GPIO)</h2>
+          </div>
+
+          <section class="section" id="gpio-pinmode">
+            <h3>pinMode: INPUT, OUTPUT, INPUT_PULLUP</h3>
+            <p>Her GPIO pini yazılımda yön tanımlanmalıdır. <code>setup()</code> içinde bir kez yapılması yeterlidir.</p>
+            <pre><code>#define PIN_LED 4
+#define PIN_BTN 0
+
+void setup() {
+  pinMode(PIN_LED, OUTPUT);
+  pinMode(PIN_BTN, INPUT_PULLUP);
+}</code></pre>
+            <table>
+              <tr><th>Mod</th><th>Anlam</th></tr>
+              <tr><td>OUTPUT</td><td>Pin sürer (LED, röle tetik)</td></tr>
+              <tr><td>INPUT</td><td>Okuma; harici pull gerekebilir</td></tr>
+              <tr><td>INPUT_PULLUP</td><td>Dahili direnç ile varsayılan HIGH</td></tr>
+            </table>
+          </section>
+
+          <section class="section" id="gpio-digital">
+            <h3>digitalRead ve digitalWrite</h3>
+            <p>Dijital değerler <code>LOW (0)</code> ve <code>HIGH (1)</code>’dir. <code>digitalWrite(pin, HIGH)</code> çıkışı lojik 1 yapar; röle modülünde tetik mantığı ters olabilir (active-low).</p>
+            <pre><code>void loop() {
+  if (digitalRead(PIN_BTN) == LOW) {
+    digitalWrite(PIN_LED, HIGH);
+  } else {
+    digitalWrite(PIN_LED, LOW);
+  }
+}</code></pre>
+            <div class="tip"><strong>İpucu</strong>Buton debounce için yazılımda 20–50 ms gecikme veya <code>millis()</code> ile kenar algılama kullanın.</div>
+          </section>
+
+          <section class="section" id="gpio-analog">
+            <h3>analogRead ve ADC</h3>
+            <p>Arduino Uno’da ADC <strong>10 bit</strong> (0–1023) çözünürlük verir; referans genelde 5V (kartına göre 3.3V). NodeMCU’da tek ADC pini (A0) vardır.</p>
+            <pre><code>int ham = analogRead(A0);
+float voltaj = ham * (3.3 / 1023.0);  // ESP8266 A0 icin ornek olcek
+Serial.println(voltaj);</code></pre>
+            <p>LDR veya potansiyometre ile voltaj bölücü kurulur; analog değer ortam ışığına göre değişir.</p>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>Uno analogRead: 10 bit → 0–1023. INPUT_PULLUP boşta HIGH sağlar.</div>
+          </section>
+
+          <section class="section" id="gpio-pwm">
+            <h3>PWM (analogWrite)</h3>
+            <p><strong>PWM</strong> hızlı aç–kapa ile ortalama voltajı ayarlar; LED parlaklığı, DC motor hızı, <strong>servo</strong> açısı (1–2 ms darbe) için kullanılır. ESP8266’da <code>analogWrite</code> frekansı sınırlıdır; servo için <code>ESP8266Servo</code> kütüphanesi tercih edilir.</p>
+            <pre><code>// LED parlakligi — 0-1023 (ESP) veya 0-255 (Uno PWM)
+analogWrite(LED_PIN, 512);</code></pre>
+            <p>Servo sinyali genelde 50 Hz, darbe genişliği 1000–2000 µs aralığında açıyı belirler.</p>
+          </section>
+        </article>
+
+        <article class="module" id="modul-protokol">
+          <div class="module-header">
+            <span class="module-num">5</span>
+            <h2>UART, SPI, I2C ve MQTT</h2>
+          </div>
+
+          <section class="section" id="protokol-uart">
+            <h3>UART (Seri Haberleşme)</h3>
+            <p><strong>UART</strong> asenkron, noktadan noktaya iletişimdir. Minimum iki hat: <strong>TX</strong> (gönder), <strong>RX</strong> (al). Baud rate saniyedeki sembol hızıdır (ör. 115200).</p>
+            <pre><code>void setup() {
+  Serial.begin(115200);  // USB-UART uzerinden PC ile
+}
+void loop() {
+  if (Serial.available()) {
+    char c = Serial.read();
+    Serial.print("Gelen: ");
+    Serial.println(c);
+  }
+}</code></pre>
+            <p>NodeMCU program yükleme ve debug aynı UART üzerinden yapılır; ek modül ile GPS (NEMA cümleleri) bağlanabilir.</p>
+            <table>
+              <tr><th>Parametre</th><th>Örnek</th></tr>
+              <tr><td>Baud</td><td>9600, 115200</td></tr>
+              <tr><td>Veri bit</td><td>8</td></tr>
+              <tr><td>Eşlik</td><td>None (N)</td></tr>
+            </table>
+          </section>
+
+          <section class="section" id="protokol-spi">
+            <h3>SPI (Serial Peripheral Interface)</h3>
+            <p><strong>SPI</strong> senkron, yüksek hızlı; birden fazla slave için <strong>CS (Chip Select)</strong> hatları kullanılır.</p>
+            <ul>
+              <li><strong>MOSI:</strong> Master Out Slave In</li>
+              <li><strong>MISO:</strong> Master In Slave Out</li>
+              <li><strong>SCK:</strong> Saat</li>
+              <li><strong>CS/SS:</strong> Hangi cihazın seçili olduğu</li>
+            </ul>
+            <pre><code>#include &lt;SPI.h&gt;
+// SD kart veya NRF24 — CS pinine gore slave secilir
+digitalWrite(CS_PIN, LOW);   // Slave aktif (cipe gore)
+SPI.transfer(0xFF);          // Bir byte veri
+digitalWrite(CS_PIN, HIGH);</code></pre>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>SPI hatları: MOSI, MISO, SCK, CS. UART: TX, RX.</div>
+          </section>
+
+          <section class="section" id="protokol-i2c">
+            <h3>I2C (I²C, TWI)</h3>
+            <p>İki hat: <strong>SDA</strong> (veri), <strong>SCL</strong> (saat). Her slave’nin 7-bit adresi vardır; aynı hatta birden fazla cihaz (adres çakışmaması şartıyla).</p>
+            <p>Arduino Uno: SDA = A4, SCL = A5. NodeMCU: D1 (GPIO5) SCL, D2 (GPIO4) SDA tipik.</p>
+            <pre><code>#include &lt;Wire.h&gt;
+#define I2C_ADDR 0x3C  // OLED ornek
+
+void setup() {
+  Wire.begin();
+  Wire.beginTransmission(I2C_ADDR);
+  Wire.write(0x00);
+  Wire.endTransmission();
+}</code></pre>
+            <p>Pull-up dirençleri (4.7kΩ) SDA ve SCL üzerinde gereklidir; bazı modüllerde hazır gelir.</p>
+          </section>
+
+          <section class="section" id="protokol-mqtt">
+            <h3>MQTT ve IoT Mesajlaşma</h3>
+            <p><strong>MQTT</strong> hafif yayınla–abone ol (publish/subscribe) protokolüdür. <strong>Broker</strong> (ör. Mosquitto, HiveMQ) mesajları topic adlarına göre yönlendirir.</p>
+            <pre><code>// PubSubClient + ESP8266WiFi — kavramsal akis
+// WiFi.begin() ...
+// client.setServer("broker.hivemq.com", 1883);
+// client.connect("NodeMCU_ClientID");
+// client.publish("sinif/sicaklik", "24.5");
+// client.subscribe("sinif/komut");</code></pre>
+            <table>
+              <tr><th>Kavram</th><th>Açıklama</th></tr>
+              <tr><td>Topic</td><td>Kanal adı (ör. ev/oda1/sicaklik)</td></tr>
+              <tr><td>QoS 0/1/2</td><td>Teslimat garantisi seviyeleri</td></tr>
+              <tr><td>Retain</td><td>Son mesajın yeni abonelere iletilmesi</td></tr>
+            </table>
+            <div class="tip"><strong>İpucu</strong>Üretimde broker’a şifresiz bağlanmayın; TLS ve kullanıcı/parola kullanın.</div>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>MQTT modeli: Publish/Subscribe, merkezi broker. HTTP GET ile karıştırılmamalı.</div>
+          </section>
+        </article>
+
+        <article class="module" id="modul-sensor">
+          <div class="module-header">
+            <span class="module-num">6</span>
+            <h2>Sensörler ve Aktüatörler</h2>
+          </div>
+
+          <section class="section" id="sensor-dht">
+            <h3>DHT11 / DHT22 Sıcaklık ve Nem</h3>
+            <p>DHT tek hat üzerinden dijital protokolle sıcaklık ve nem gönderir. Zamanlama kritiktir; hazır kütüphane kullanmak pratiktir.</p>
+            <pre><code>#include &lt;DHT.h&gt;
+#define DHT_PIN 14
+#define DHT_TYPE DHT11
+DHT dht(DHT_PIN, DHT_TYPE);
+
+void setup() {
+  Serial.begin(115200);
+  dht.begin();
+}
+void loop() {
+  float t = dht.readTemperature();
+  float h = dht.readHumidity();
+  if (isnan(t)) Serial.println("DHT okuma hatasi!");
+  else Serial.printf("T=%.1f H=%.1f\n", t, h);
+  delay(2000);
+}</code></pre>
+            <div class="warn"><strong>Dikkat</strong>DHT okumaları arasında en az 1–2 saniye bekleyin; çok sık okuma hatalı sonuç verir.</div>
+          </section>
+
+          <section class="section" id="sensor-pir-hcsr">
+            <h3>PIR Hareket ve HC-SR04 Mesafe</h3>
+            <h4>PIR</h4>
+            <p>Pasif kızılötesi hareket algılar; çıkış dijital HIGH/LOW verir. Alarm ve otomatik lamba projelerinde kullanılır.</p>
+            <pre><code>pinMode(PIR_PIN, INPUT);
+if (digitalRead(PIR_PIN) == HIGH)
+  Serial.println("Hareket algilandi");</code></pre>
+            <h4>HC-SR04 ultrasonik</h4>
+            <p>Trig’e kısa pulse, Echo süresinden mesafe: <strong>d = (süre × ses hızı) / 2</strong>. Ses hızı ~343 m/s.</p>
+            <pre><code>digitalWrite(TRIG, HIGH);
+delayMicroseconds(10);
+digitalWrite(TRIG, LOW);
+long sure = pulseIn(ECHO, HIGH);
+float cm = sure * 0.034 / 2;</code></pre>
+          </section>
+
+          <section class="section" id="sensor-ldr">
+            <h3>LDR (Işık Bağımlı Direnç)</h3>
+            <p>LDR direnci ışık arttıkça düşer. Voltaj bölücü ile analog pine bağlanır; gece gündüz algılama ve otomatik aydınlatma için uygundur.</p>
+            <pre><code>int isik = analogRead(A0);
+if (isik &lt; 300) digitalWrite(LAMP_PIN, HIGH);
+else digitalWrite(LAMP_PIN, LOW);</code></pre>
+          </section>
+
+          <section class="section" id="sensor-aktuator">
+            <h3>Servo, Röle ve Motor</h3>
+            <table>
+              <tr><th>Aktüatör</th><th>Kontrol</th><th>Not</th></tr>
+              <tr><td>Servo</td><td>PWM darbe</td><td>5V servo için harici besleme, ortak GND</td></tr>
+              <tr><td>Röle modülü</td><td>Dijital OUT</td><td>Opto izolasyonlu modül tercih</td></tr>
+              <tr><td>DC motor</td><td>PWM + sürücü (L298N)</td><td>MCU pini doğrudan motor sürmesin</td></tr>
+            </table>
+            <pre><code>#include &lt;Servo.h&gt;
+Servo kapak;
+void setup() {
+  kapak.attach(13);
+  kapak.write(90);  // Orta aci
+}</code></pre>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>Aktüatör = çıkış etkileyici (röle, motor). Sensör = ortam ölçer (DHT, LDR).</div>
+          </section>
+        </article>
+
+        <article class="module" id="modul-bellek">
+          <div class="module-header">
+            <span class="module-num">7</span>
+            <h2>Bellek Yönetimi</h2>
+          </div>
+
+          <section class="section" id="bellek-flash-ram">
+            <h3>Flash ve RAM</h3>
+            <p><strong>Flash:</strong> Program kodu ve sabit veriler (PROGMEM). Güç kesilince kalır. ESP8266’da genelde 4 MB dış flash (karttan karta değişir).</p>
+            <p><strong>RAM:</strong> Çalışma zamanı değişkenleri, heap, stack. Güç kesilince silinir. String birleştirme ve büyük buffer’lar RAM’i hızla doldurur.</p>
+            <pre><code>// ESP8266 heap kontrolu
+Serial.printf("Free heap: %u\n", ESP.getFreeHeap());</code></pre>
+            <div class="warn"><strong>Dikkat</strong><code>String</code> sınıfı parça parça büyüyerek heap fragmantasyonu yapabilir; <code>char[]</code> veya <code>snprintf</code> tercih edin.</div>
+          </section>
+
+          <section class="section" id="bellek-eeprom">
+            <h3>EEPROM</h3>
+            <p><strong>EEPROM</strong> byte düzeyinde silinebilir/yazılabilir kalıcı alandır; WiFi ayarı, kalibrasyon, sayaç saklamak için kullanılır. Yazma döngüsü sınırlıdır (yüz binler–milyonlar); sık yazılan log için uygun değildir.</p>
+            <pre><code>#include &lt;EEPROM.h&gt;
+void setup() {
+  EEPROM.begin(512);
+  int sayac = EEPROM.read(0);
+  sayac++;
+  EEPROM.write(0, sayac % 256);
+  EEPROM.commit();  // ESP8266'da commit gerekir
+}</code></pre>
+            <p>Flash ile fark: EEPROM daha çok küçük parametre güncellemesi; Flash tam program imajı içindir.</p>
+          </section>
+
+          <section class="section" id="bellek-stack-heap">
+            <h3>Stack ve Heap</h3>
+            <p><strong>Stack:</strong> Fonksiyon çağrıları, yerel değişkenler; LIFO. Derin özyineleme veya büyük yerel dizi stack taşmasına (crash) yol açar.</p>
+            <p><strong>Heap:</strong> <code>malloc</code>, <code>new</code>, <code>String</code> için dinamik alan. Serbest bırakılmazsa sızıntı olur.</p>
+            <div class="flow">Bellek ozeti (ESP8266)
+  Flash  -> sketch + OTA partition
+  RAM    -> stack (asagi) + heap (yukari) + static</div>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>Stack = fonksiyon/yerel. Flash = program kodu. Heap = dinamik ayırma.</div>
+          </section>
+        </article>
+
+        <article class="module" id="modul-rtos">
+          <div class="module-header">
+            <span class="module-num">8</span>
+            <h2>Gömülü İşletim Sistemleri ve Gerçek Zamanlılık</h2>
+          </div>
+
+          <section class="section" id="rtos-freertos">
+            <h3>FreeRTOS ve Görev (Task) Kavramı</h3>
+            <p><strong>RTOS</strong>, çoklu görevi zaman dilimleriyle yönetir. ESP8266 Arduino core’da arka planda FreeRTOS benzeri scheduler çalışır; ESP32’de açıkça task oluşturmak yaygındır.</p>
+            <pre><code>// ESP32 ornek — xTaskCreate
+void gorevA(void* p) {
+  for (;;) {
+    Serial.println("A");
+    vTaskDelay(500 / portTICK_PERIOD_MS);
+  }
+}
+void setup() {
+  xTaskCreate(gorevA, "A", 2048, NULL, 1, NULL);
+}</code></pre>
+            <p><strong>Deadline:</strong> Görevin mutlaka tamamlanması gereken son süre. Kaçırılırsa sistem güvenliği bozulabilir (ör. airbag).</p>
+          </section>
+
+          <section class="section" id="rtos-mutex">
+            <h3>Mutex ve Semaphore</h3>
+            <p><strong>Mutex:</strong> Paylaşılan kaynağa (I2C bus, SD dosyası) aynı anda tek task erişsin diye kilit. <strong>Semaphore:</strong> Sayısal sayaç; üretici–tüketici kuyruklarında kullanılır.</p>
+            <p>Mutex alındıktan sonra mutlaka serbest bırakılmalı; aksi halde diğer görevler sonsuza dek bekler (<strong>deadlock</strong>).</p>
+            <div class="tip"><strong>İpucu</strong>Arduino <code>loop()</code> tek görev gibi görünür; WiFi stack arka planda çalışırken uzun <code>delay</code> yerine <code>yield()</code> veya non-blocking kod yazın.</div>
+          </section>
+
+          <section class="section" id="rtos-isr">
+            <h3>Kesme Servis Rutini (ISR)</h3>
+            <p>Donanım olayı (pin kenarı, timer) olduğunda CPU ana akışı durur, <strong>ISR</strong> çalışır. ISR kısa olmalı: bayrak koy, asıl işi <code>loop</code> veya task’ta yap.</p>
+            <pre><code>volatile bool tetik = false;
+void IRAM_ATTR onKenar() {
+  tetik = true;
+}
+void setup() {
+  attachInterrupt(digitalPinToInterrupt(4), onKenar, RISING);
+}</code></pre>
+            <div class="warn"><strong>Dikkat</strong>ISR içinde <code>delay()</code>, <code>Serial.print</code> veya mutex kullanmayın.</div>
+          </section>
+
+          <section class="section" id="rtos-baremetal">
+            <h3>Bare-metal vs RTOS</h3>
+            <div class="compare-grid">
+              <div class="compare-card">
+                <h4>Bare-metal</h4>
+                <p>Süper döngü + interrupt; minimal bellek, tam kontrol. Küçük LED projeleri.</p>
+              </div>
+              <div class="compare-card">
+                <h4>RTOS</h4>
+                <p>Çoklu görev, öncelik, senkronizasyon. Karmaşık IoT, motor kontrol.</p>
+              </div>
+            </div>
+            <p>Linux çalışan Raspberry Pi “gömülü” sınırında sayılır; ders NodeMCU hattında bare-metal’a yakın Arduino + isteğe bağlı RTOS kavramları işlenir.</p>
+          </section>
+        </article>
+
+        <article class="module" id="modul-guc">
+          <div class="module-header">
+            <span class="module-num">9</span>
+            <h2>Güç Yönetimi</h2>
+          </div>
+
+          <section class="section" id="guc-sleep">
+            <h3>Sleep Modları (Deep / Light)</h3>
+            <p>ESP8266 <strong>deep sleep</strong> ile µA seviyesine iner; uyandırmak için RST veya timer gerekir. Light sleep WiFi bağlantısını daha hızlı geri getirir ama daha çok tüketir.</p>
+            <pre><code>// Deep sleep 30 saniye — ESP8266
+// ESP.deepSleep(30e6);  // mikrosaniye
+// Uyaninca setup() bastan calisir</code></pre>
+            <p>Polling yerine interrupt ile uyumak düşük güç tasarımının temelidir.</p>
+          </section>
+
+          <section class="section" id="guc-watchdog">
+            <h3>Watchdog Timer (WDT)</h3>
+            <p>Yazılım kilitlenirse WDT süresi dolunca MCU’yu resetler. ESP8266’da <code>ESP.wdtFeed()</code> veya düzenli <code>yield()</code> beklenir.</p>
+            <p><strong>Brown-out reset:</strong> Besleme voltajı kritik altına düşünce güvenli reset; flash yazımı sırasında önemlidir.</p>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>WDT amacı: kilitlenmede otomatik reset. Deep sleep amacı: güç tasarrufu.</div>
+          </section>
+
+          <section class="section" id="guc-batarya">
+            <h3>Pil Besleme ve Düşük Güç Tasarımı</h3>
+            <ul>
+              <li>LiPo + şarj modülü + 3.3V regülatör (AMS1117) yaygın kombinasyon</li>
+              <li>Her pin OUTPUT HIGH/LOW tutmak gereksiz akım çeker; kullanılmayan pin INPUT veya uygun mod</li>
+              <li>WiFi’yi sadece veri gönderirken aç; MQTT keep-alive süresini optimize et</li>
+            </ul>
+            <div class="warn"><strong>Dikkat</strong>USB ve pil aynı anda bazı kartlarda çakışma yapar; şema okuyun.</div>
+          </section>
+        </article>
+
+        <article class="module" id="modul-debug">
+          <div class="module-header">
+            <span class="module-num">10</span>
+            <h2>Hata Ayıklama (Debugging)</h2>
+          </div>
+
+          <section class="section" id="debug-serial">
+            <h3>Serial Monitor ile Yazılım Debug</h3>
+            <p>En erişilebilir yöntem: <code>Serial.print</code> ile değişken, durum makinesi ve hata kodlarını izlemek. Baud IDE ile eşleşmeli.</p>
+            <pre><code>#define DEBUG 1
+#if DEBUG
+  #define LOG(x) Serial.println(x)
+#else
+  #define LOG(x)
+#endif
+
+void loop() {
+  LOG("Sensör okunuyor...");
+}</code></pre>
+            <div class="tip"><strong>İpucu</strong>Çok sık print WiFi zamanlamasını bozabilir; kritik döngüde seyrek loglayın.</div>
+          </section>
+
+          <section class="section" id="debug-analyzer">
+            <h3>Logic Analyzer ve Osiloskop</h3>
+            <p><strong>Logic analyzer:</strong> Dijital hatların zamanlamasını yakalar; I2C/SPI decode ile paket görülür. Saat hızı cihaz limitine bağlıdır.</p>
+            <p><strong>Osiloskop:</strong> Analog dalga formu (PWM, gürültü, UART seviyesi). Rise time ve voltaj doğrulanır.</p>
+            <table>
+              <tr><th>Araç</th><th>Ne zaman?</th></tr>
+              <tr><td>Serial</td><td>Mantık hatası, değişken</td></tr>
+              <tr><td>Logic analyzer</td><td>Protokol zamanlaması</td></tr>
+              <tr><td>Osiloskop</td><td>Analog sinyal kalitesi</td></tr>
+            </table>
+          </section>
+
+          <section class="section" id="debug-floating">
+            <h3>Floating Pin ve Gürültü</h3>
+            <p>Bağlanmamış giriş rastgele değer okur; buton “hayalet basma” yapar. Çözüm: pull-up/down, kısa kablo, decoupling kapasitör, motor/röle yakınında opto izolasyon.</p>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>Floating pin = belirsiz okuma, gürültüye açık. Çözüm pull direnci veya INPUT_PULLUP.</div>
+          </section>
+        </article>
+
+        <article class="module" id="modul-proje">
+          <div class="module-header">
+            <span class="module-num">11</span>
+            <h2>Dönem Projesi</h2>
+          </div>
+
+          <section class="section" id="proje-gereksinim">
+            <h3>Proje Gereksinimleri</h3>
+            <p>Tipik dönem projesi en az bir <strong>sensör</strong>, bir <strong>aktüatör veya uzaktan kontrol</strong>, <strong>haberleşme</strong> (Serial/WiFi/MQTT) ve <strong>dokümantasyon</strong> ister.</p>
+            <ol>
+              <li>Problem tanımı (ne ölçülüyor, hangi karar veriliyor)</li>
+              <li>Devre şeması (Fritzing/KiCad veya net foto)</li>
+              <li>Kaynak kod (yorumlu, modüler)</li>
+              <li>Test sonuçları ve sınırlamalar</li>
+            </ol>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>Proje sunumunda: problem, çözüm, canlı demo, sonuç — sadece kod kopyası yeterli değildir.</div>
+          </section>
+
+          <section class="section" id="proje-prototip">
+            <h3>Prototip ve Dokümantasyon</h3>
+            <p><strong>Prototip aşaması:</strong> Breadboard’da parça parça doğrulama (LED → sensör → WiFi → MQTT). Her adımda çalışan ara sürüm tutun.</p>
+            <p>Rapor bölümleri: Giriş, Donanım listesi, Yazılım akış şeması, Kurulum, Sonuç, Kaynakça. README’de pin tablosu ve kütüphane sürümleri yazın.</p>
+            <pre><code>/*
+ * Proje: Akilli Sera
+ * Donanim: NodeMCU, DHT11, röle, LDR
+ * Kutuphane: DHT 1.4.x, PubSubClient 2.8
+ * Pinler: D4 LED, D5 ROLE, D6 DHT
+ */</code></pre>
+          </section>
+
+          <section class="section" id="proje-sunum">
+            <h3>Sunum ve Değerlendirme Kriterleri</h3>
+            <ul>
+              <li>5–10 dakika canlı demo veya video yedek planı</li>
+              <li>Hata durumunda ne yaptığınızı açıklayın (watchdog, sensör hatası mesajı)</li>
+              <li>Güvenlik: MQTT şifresi, röle üzerinden yüksek voltaj uyarısı</li>
+              <li>Takım projesinde görev dağılımı belirtin</li>
+            </ul>
+            <p>Değerlendirme genelde: işlevsellik (%40), teknik derinlik (%30), dokümantasyon (%20), sunum (%10) — öğretim üyesi duyurusuna göre güncelleyin.</p>
+            <div class="tip"><strong>İpucu</strong>Final öncesi <a href="../gomulu/sorular.html" style="color:#fcd34d">soru bankası</a>ndaki çoktan seçmeli soruları modül modül çözün.</div>
+          </section>
+        </article>
+
+      </div>
+    </main>
+  </div>
+
+  <button class="menu-toggle" aria-label="Menü">☰</button>
+  <script src="../js/app.js"></script>
+</body>
+</html>

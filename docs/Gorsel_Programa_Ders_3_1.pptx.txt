@@ -1,0 +1,302 @@
+--- Slayt 1 ---
+Jquery Girişi
+
+--- Slayt 2 ---
+JavaScript Kodunun Karmaşıklığı
+Neden jQuery'ye İhtiyaç Duyduk?
+Saf JavaScript ile Basit Bir İşlem:
+// Tüm butonları seç
+var buttons = document.querySelectorAll("button");
+
+// Her butona tıklama event listener'ı ekle
+for (var i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", function() {
+    // h1'in rengini değiştir
+    document.querySelector("h1").style.color = "red";
+  });
+}
+Bu kadar basit bir iş için çok fazla kod!
+Neden Bu Kadar Kod?
+DOM elementlerini seçmemiz gerek
+Döngülerle birden fazla elemente işlem yapmamız gerek
+Event listener'ları tek tek eklememiz gerek
+Stil değişiklikleri için uzun sözdizimi kullanmamız gerek
+John Resig ve jQuery'nin DoğuşuJavaScript'in web geliştirmedeki karmaşıklığından rahatsızdı
+Kodların gereksiz yere uzun ve karmaşık olduğunu düşünüyordu
+Çoğumuz "keşke daha kolay olsa" deyip unuturken, o bir şey yapmaya karar verdi
+
+// jQuery (kısa ve tatlı)
+$("button").click(function() {
+  $("h1").css("color", "red");
+});
+
+jQuery Nedir?
+Bir JavaScript kütüphanesi
+Başkasının yazdığı, tekrar kullanılabilir kod
+Hayatımızı kolaylaştırmak için var
+Bootstrap gibi, projelerimize dahil edebiliriz
+
+--- Slayt 3 ---
+Saf JavaScript vs jQuery
+Temel jQuery Sözdizimi:
+// Uzun yol
+jQuery("h1")
+// Kısa yol (tercih edilen)
+$("h1")
+
+--- Slayt 4 ---
+jQuery'yi Projeye Dahil Etme
+İndirme Yöntemi:
+jQuery.com adresine git
+En son sürümü indir
+Proje klasörüne ekle
+HTML'e bağla
+<body>
+  <h1>Merhaba jQuery</h1>
+  <button class="btn">Tıkla</button>
+  <!-- jQuery önce yüklenmeli -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Kendi JavaScript'imiz sonra -->
+  <script src="index.js"></script>
+</body>
+Fazla Örnek Kodu: 
+// jQuery ile
+$("button").click(function() {
+ $("h1").css("color", "red"); });
+
+Sınıf Ekleme/Çıkarma
+  $("button").click(function() {
+  $("h1").addClass("highlight");
+  $("h1").removeClass("normal");
+  $("h1").toggleClass("active");
+});
+Metin Değiştirme
+$("h1").text("Yeni Başlık");
+$("h1").html("<em>İtalik Başlık</em>");
+
+--- Slayt 5 ---
+jQuery CSS Manipülasyonu
+jQuery ile Stil Değiştirme
+// CSS özelliği ayarlama
+$("h1").css("özellik", "değer");
+// CSS özelliği alma
+$("h1").css("özellik");
+
+Örnek:
+// Ayarlama: h1 rengini yeşil yap
+$("h1").css("color", "green");
+// Alma: Mevcut renk değerini al
+console.log($("h1").css("color")); // RGB değeri döndürür
+// Yazı boyutunu alma
+console.log($("h1").css("font-size")); // Örn: "32px"
+Önemli Kural:
+Tek parametre → Değeri al
+İki parametre → Değeri ayarla
+.css() ile İlgili Sorun:
+Stili davranışla karıştırır
+Endişelerin ayrımı ilkesini ihlal eder
+Bunun yerine CSS sınıflarını kullanmak daha iyidir
+Sınıflarla Endişelerin Ayrımı
+Stil Dosyasında CSS Sınıfı Oluşturma:
+/* styles.css */
+.buyuk-baslik {
+  font-size: 10rem;
+  color: yellow;
+  font-family: cursive;
+}
+.margin-50 {
+  margin: 50px;
+}
+
+--- Slayt 6 ---
+jQuery CSS Manipülasyonu
+jQuery ile Sınıf Ekleme:
+// Tek sınıf ekle
+$("h1").addClass("buyuk-baslik");
+// Birden fazla sınıf ekle
+$("h1").addClass("buyuk-baslik margin-50");
+// Sınıf çıkar
+$("h1").removeClass("buyuk-baslik");
+// Birden fazla sınıf çıkar
+$("h1").removeClass("buyuk-baslik margin-50");
+
+Neden Bu Daha İyi:
+✅ Stiller CSS dosyasında kalır
+✅ JavaScript sadece davranışı yönetir
+✅ Daha temiz, daha sürdürülebilir kod
+✅ Sınıflar yeniden kullanılabilir
+✅ Stilleri global olarak güncellemek daha kolay
+Önemli Çıkarımlar:
+.css() stilleri alabilir (1 parametre) veya ayarlayabilir (2 parametre)
+Doğrudan CSS manipülasyonu yerine sınıfları kullanmak daha iyidir
+.addClass() ve .removeClass() sınıfları yönetir
+.hasClass() sınıfın var olup olmadığını kontrol eder
+.toggleClass() sınıfı açar/kapatır
+Birden fazla sınıf tırnak içinde boşlukla ayrılır
+Endişelerin ayrımı: Stiller CSS'te, davranış JS'te kalır
+
+--- Slayt 7 ---
+jQuery CSS Manipülasyonu
+jQuery'nin .attr() Metodu
+Temel Sözdizimi:
+// Özellik DEĞERİ ALMA (tek parametre)
+$("seçici").attr("özellikAdı");
+// Özellik DEĞERİ AYARLAMA (iki parametre)
+$("seçici").attr("özellikAdı", "yeniDeğer");
+Alma vs Ayarlama
+// Tüm bağlantıları Google'dan Yahoo'ya çevir
+$("a").attr("href", "https://www.yahoo.com");
+// Görsel kaynağını değiştir
+$("img").attr("src", "yeni-gorsel.jpg");
+// Birden fazla özelliği aynı anda ayarlama (doğrudan mümkün değil)
+// Ancak zincirleme veya ayrı satırlar kullanılabilir
+$("img").attr("src", "foto.jpg").attr("alt", "Benim fotoğrafım");
+Önemli Çıkarımlar:
+.css() stilleri alabilir (1 parametre) veya ayarlayabilir (2 parametre)
+Doğrudan CSS manipülasyonu yerine sınıfları kullanmak daha iyidir
+.addClass() ve .removeClass() sınıfları yönetir
+.hasClass() sınıfın var olup olmadığını kontrol eder
+.toggleClass() sınıfı açar/kapatır
+Birden fazla sınıf tırnak içinde boşlukla ayrılır
+Endişelerin ayrımı: Stiller CSS'te, davranış JS'te kalır
+
+--- Slayt 8 ---
+jQuery CSS Manipülasyonu
+jQuery ile Yeni Element Ekleme
+Başlık: Canlı HTML Elementleri Oluşturma
+Temel Ekleme Metodları:
+.before() - Seçilen elementin ÖNÜNE ekler
+.after() - Seçilen elementin ARKASINA ekler
+.prepend() - Seçilen elementin İÇİNE, başa ekler
+.append() - Seçilen elementin İÇİNE, sona ekler
+Nasıl Çalışıyor:
+.before("içerik")
+$("h1").before("<button>Önce</button>");
+$("h1").after("<button>Sonra</button>");
+$("h1").prepend("<span>Başlık: </span>");
+
+$("#ekleButonu").click(function() {
+  $("ul").append("<li>Yeni öğe</li>");
+});
+Önemli Çıkarımlar:
+.before() ve .after() elementin DIŞINA ekler
+.prepend() ve .append() elementin İÇİNE ekler
+HTML string'i olarak yeni içerik ekleyebilirsiniz
+.remove() ile elementleri sayfadan kaldırabilirsiniz
+Dinamik elementler de normal elementler gibi seçilebilir
+Event delegation dinamik elementler için önemlidir
+Sayfa yenilemeden HTML'i değiştirebilirsiniz
+
+--- Slayt 9 ---
+jQuery Animasyonları ve Efektler
+Temel Göster/Gizle Animasyonları:
+Temel Animasyon Metodları:
+.hide()     // Elementi anında gizler
+.show()     // Elementi anında gösterir
+.toggle()   // Gizle ve göster arasında geçiş yapar
+
+$("button").click(function() {
+  $("h1").hide();  // Butona tıklandığında h1 kaybolur
+});
+
+$("button").click(function() {
+  $("h1").show();   // h1 yeniden görünür
+});
+$("button").click(function() {
+  $("h1").toggle();   // İlk tıkla gizle, ikinci tıkla göster
+});
+Fade (Solma) Animasyonları
+.fadeOut()  // Opaklığı azaltır, sonra gizler
+.fadeIn()  // Opaklığı artırır, sonra gösterir
+.fadeToggle() // fadeOut ve fadeIn arasında geçiş yapar
+
+$("button").click(function() {
+  $("h1").slideUp();     // h1 daralır ve kaybolur
+});
+$("button").click(function() {
+  $("h1").slideDown();   // h1 yeniden genişler
+});
+$("button").click(function() {
+  $("h1").slideToggle(); // slideUp/slideDown arasında geçiş
+});
+
+--- Slayt 10 ---
+jQuery Animasyonları ve Efektler
+Animasyon Zincirleme ve En İyi Uygulamalar:
+$("h1")
+  .slideUp(500)      // Önce, yukarı kaydır (0.5s)
+  .slideDown(500)    // Sonra, aşağı kaydır (0.5s)
+  .animate({ opacity: 0.5 }, 1000); // Son olarak, %50 soluklaştır
+Önemli Çıkarımlar:
+.hide()/.show() görünürlüğü anında değiştirir
+.fadeIn()/.fadeOut() yumuşak opaklık geçişleri sağlar
+.slideUp()/.slideDown() daralma efektleri oluşturur
+.animate() sayısal özelliklerde özel animasyonlara izin verir
+Animasyonları zincirleyerek sıralı efektler oluşturun
+Süre belirterek animasyon hızını kontrol edin
+EZBERLEMEYİN - ne mümkün olduğunu bilin, sözdizimine bakın
+
+--- Slayt 11 ---
+Windows'ta Git Bash Kurulumu
+Git Bash Kurulumuna GirişNeden Git Bash?
+Versiyon kontrolü için komut satırı arayüzü
+Git işlemleri için gereklidir
+Windows'ta Unix tarzı terminal sağlar
+Adımlar:
+gitforwindows.org adresine gidin
+İndirme bağlantısına tıklayın
+İndirmenin tamamlanmasını bekleyin
+İndirilen dosyayı bulun
+Test Etme ve YapılandırmaVS Code'u açın
+Terminali açın: Görünüm → Terminal (veya Ctrl+``)
+Git Bash'i seçin:
+Terminalde + işaretinin yanındaki açılır oka tıklayın
+Listeden "Git Bash"i seçin
+Doğrulayın:
+$ (dolar işareti) içeren bir komut istemi görmelisiniz
+Bu, Git Bash'in çalıştığını gösterir
+VS Code'da Git Bash'i Varsayılan Yapma:
+Komut Paletini Açın: Görünüm → Komut Paleti (veya Ctrl+Shift+P)
+Şunu yazın: "Select Default Profile" (Varsayılan Profili Seç)
+Açılır listeden "Terminal: Select Default Profile"i seçin
+Listeden "Git Bash"i seçin
+
+--- Slayt 12 ---
+Komut Satırı Nedir?
+Geliştirme Sürecinde Yeni En İyi ArkadaşınızNeden Komut Satırı Öğrenmeliyiz?
+Web geliştirme için olmazsa olmaz
+Back-end geliştirme için çok önemli
+Bilgisayarınızı kontrol etmek için güçlü bir araç
+Git ve versiyon kontrolü ile yoğun olarak kullanılır
+Analoji: Komut satırı, grafik arayüzün süslü resimlerini atlayarak bilgisayarınızın beynine doğrudan erişim sağlar.
+Bash Nedir?
+Bourne Again KabuğuBash = Bourne Again SHell
+Adını Stephen Bourne'dan alır 
+(orijinal Bourne kabuğunun yaratıcısı)
+Bir komut dili yorumlayıcısı
+Çoğu Unix/Linux sisteminde varsayılan kabuk
+
+--- Slayt 13 ---
+Komut Satırı Nedir?
+Temel Terminal Gezinme Komutları
+ls 	 Geçerli dizinin içeriğini listele 
+cd klasor_isimi  	# "klasor" içine gir 
+cd .. 	 Bir seviye yukarı çık 
+cd ~ 	Ana dizine git 
+pwd 	 Çalışma dizinini göster (neredeyim?) 
+clear 	Terminal ekranını temizle
+Fare Olmadan Terminal Gezinme
+
+--- Slayt 14 ---
+Dizin ve Dosya Oluşturma ve Yönetme
+mkdir   - Dizin Oluştur
+mkdir klasorAdi
+Örnek:
+mkdir Abubakar
+touch - Boş Dosyalar Oluşturma
+touch dosyaadi.uzanti
+touch Metin2.txt
+Birden Fazla Dosya Oluşturma:
+touch Metin.txt Metin3.txt
+rm - Dosyaları Kaldırma/Silme
+rm dosyaadi

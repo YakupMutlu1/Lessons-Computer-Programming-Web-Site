@@ -1,0 +1,2652 @@
+{
+  "meta": {
+    "title": "Mesleki İngilizce",
+    "course": "mesleki",
+    "testOnly": true,
+    "counts": {
+      "test": 220
+    }
+  },
+  "test": [
+    {
+      "topic": "hardware",
+      "question": "What does CPU stand for?",
+      "options": [
+        "Central Processing Unit",
+        "Computer Personal Utility",
+        "Central Program User",
+        "Core Processing Utility"
+      ],
+      "correct": 0,
+      "id": "MT1"
+    },
+    {
+      "topic": "professions",
+      "question": "Which job installs and maintains networks?",
+      "options": [
+        "Graphic designer",
+        "Network technician",
+        "Content writer",
+        "HR manager"
+      ],
+      "correct": 1,
+      "id": "MT2"
+    },
+    {
+      "topic": "professions",
+      "question": "'I ___ a software developer.' (profession)",
+      "options": [
+        "am",
+        "is",
+        "are",
+        "be"
+      ],
+      "correct": 0,
+      "id": "MT3"
+    },
+    {
+      "topic": "time",
+      "question": "How do you ask the time politely?",
+      "options": [
+        "What time is it?",
+        "How many time?",
+        "What hour are you?",
+        "When clock?"
+      ],
+      "correct": 0,
+      "id": "MT4"
+    },
+    {
+      "topic": "time",
+      "question": "Monday comes after ___",
+      "options": [
+        "Sunday",
+        "Tuesday",
+        "Friday",
+        "Wednesday"
+      ],
+      "correct": 0,
+      "id": "MT5"
+    },
+    {
+      "topic": "software",
+      "question": "Which is correct?",
+      "options": [
+        "He have a laptop.",
+        "He has a laptop.",
+        "He having a laptop.",
+        "He haves a laptop."
+      ],
+      "correct": 1,
+      "id": "MT6"
+    },
+    {
+      "topic": "software",
+      "question": "UK: 'I ___ finished.' / US often: 'I ___ finished.'",
+      "options": [
+        "have / have",
+        "have / got",
+        "has / have",
+        "got / has"
+      ],
+      "correct": 1,
+      "id": "MT7"
+    },
+    {
+      "topic": "grammar",
+      "question": "Present Continuous: 'I ___ code right now.'",
+      "options": [
+        "write",
+        "am writing",
+        "wrote",
+        "written"
+      ],
+      "correct": 1,
+      "id": "MT8"
+    },
+    {
+      "topic": "modals",
+      "question": "Modal for ability:",
+      "options": [
+        "must",
+        "can",
+        "have to",
+        "shouldn't"
+      ],
+      "correct": 1,
+      "id": "MT9"
+    },
+    {
+      "topic": "modals",
+      "question": "Modal for obligation:",
+      "options": [
+        "can",
+        "may",
+        "must",
+        "could"
+      ],
+      "correct": 2,
+      "id": "MT10"
+    },
+    {
+      "topic": "modals",
+      "question": "'You ___ smoke in the server room.' (prohibition)",
+      "options": [
+        "mustn't",
+        "don't have to",
+        "can",
+        "might"
+      ],
+      "correct": 0,
+      "id": "MT11"
+    },
+    {
+      "topic": "modals",
+      "question": "Don't have to means:",
+      "options": [
+        "prohibition",
+        "no obligation",
+        "strong advice",
+        "past habit"
+      ],
+      "correct": 1,
+      "id": "MT12"
+    },
+    {
+      "topic": "hardware",
+      "question": "Comparative: RAM is ___ than ROM (fast).",
+      "options": [
+        "faster",
+        "fastest",
+        "more fast",
+        "fastly"
+      ],
+      "correct": 0,
+      "id": "MT13"
+    },
+    {
+      "topic": "software",
+      "question": "Superlative: This is the ___ processor in the shop.",
+      "options": [
+        "better",
+        "best",
+        "goodest",
+        "more good"
+      ],
+      "correct": 1,
+      "id": "MT14"
+    },
+    {
+      "topic": "websites",
+      "question": "How ___ memory does this PC need? (uncountable)",
+      "options": [
+        "many",
+        "much",
+        "lot",
+        "number"
+      ],
+      "correct": 1,
+      "id": "MT15"
+    },
+    {
+      "topic": "websites",
+      "question": "How ___ USB ports are there? (countable)",
+      "options": [
+        "much",
+        "many",
+        "lot of",
+        "amount"
+      ],
+      "correct": 1,
+      "id": "MT16"
+    },
+    {
+      "topic": "hardware",
+      "question": "Abbreviation for Random Access Memory:",
+      "options": [
+        "ROM",
+        "RAM",
+        "RPM",
+        "RTS"
+      ],
+      "correct": 1,
+      "id": "MT17"
+    },
+    {
+      "topic": "software",
+      "question": "GUI means:",
+      "options": [
+        "Graphical User Interface",
+        "General User Internet",
+        "Global Unified Input",
+        "Graphic Utility Index"
+      ],
+      "correct": 0,
+      "id": "MT18"
+    },
+    {
+      "topic": "professions",
+      "question": "A person who writes code is a:",
+      "options": [
+        "developer",
+        "dentist",
+        "driver",
+        "designer only"
+      ],
+      "correct": 0,
+      "id": "MT19"
+    },
+    {
+      "topic": "software",
+      "question": "OS stands for:",
+      "options": [
+        "Open System",
+        "Operating System",
+        "Online Service",
+        "Output Signal"
+      ],
+      "correct": 1,
+      "id": "MT20"
+    },
+    {
+      "topic": "hardware",
+      "question": "SSD is generally ___ than HDD.",
+      "options": [
+        "slower",
+        "faster",
+        "heavier",
+        "louder"
+      ],
+      "correct": 1,
+      "id": "MT21"
+    },
+    {
+      "topic": "punctuation",
+      "question": "Which punctuation ends a question?",
+      "options": [
+        "period",
+        "question mark",
+        "comma",
+        "semicolon only"
+      ],
+      "correct": 1,
+      "id": "MT22"
+    },
+    {
+      "topic": "punctuation",
+      "question": "e.g. means:",
+      "options": [
+        "for example",
+        "and others",
+        "that is",
+        "as soon as possible"
+      ],
+      "correct": 0,
+      "id": "MT23"
+    },
+    {
+      "topic": "punctuation",
+      "question": "ASAP means:",
+      "options": [
+        "as soon as possible",
+        "at the same office place",
+        "always send a packet",
+        "after system auto patch"
+      ],
+      "correct": 0,
+      "id": "MT24"
+    },
+    {
+      "topic": "it-sector",
+      "question": "IT sector means:",
+      "options": [
+        "Information Technology",
+        "International Trade",
+        "Internet Training",
+        "Input Terminal"
+      ],
+      "correct": 0,
+      "id": "MT25"
+    },
+    {
+      "topic": "it-sector",
+      "question": "Listen and ___ activities improve speaking.",
+      "options": [
+        "speak",
+        "speaking",
+        "spoke",
+        "speech"
+      ],
+      "correct": 1,
+      "id": "MT26"
+    },
+    {
+      "topic": "professions",
+      "question": "A ___ fixes hardware problems.",
+      "options": [
+        "technician",
+        "poet",
+        "chef",
+        "pilot"
+      ],
+      "correct": 0,
+      "id": "MT27"
+    },
+    {
+      "topic": "professions",
+      "question": "UX designer focuses on:",
+      "options": [
+        "user experience",
+        "underground exit",
+        "universal export",
+        "upload extension"
+      ],
+      "correct": 0,
+      "id": "MT28"
+    },
+    {
+      "topic": "time",
+      "question": "'See you ___ Monday.'",
+      "options": [
+        "in",
+        "on",
+        "at",
+        "by"
+      ],
+      "correct": 1,
+      "id": "MT29"
+    },
+    {
+      "topic": "time",
+      "question": "The meeting is ___ 3 p.m.",
+      "options": [
+        "in",
+        "on",
+        "at",
+        "to"
+      ],
+      "correct": 2,
+      "id": "MT30"
+    },
+    {
+      "topic": "writing",
+      "question": "Which is informal?",
+      "options": [
+        "Dear Sir",
+        "Hi team",
+        "Yours faithfully",
+        "Respectfully yours"
+      ],
+      "correct": 1,
+      "id": "MT31"
+    },
+    {
+      "topic": "hardware",
+      "question": "Hardware includes:",
+      "options": [
+        "monitor, keyboard, CPU",
+        "Windows, Linux",
+        "HTML, CSS",
+        "email, chat"
+      ],
+      "correct": 0,
+      "id": "MT32"
+    },
+    {
+      "topic": "software",
+      "question": "Software includes:",
+      "options": [
+        "applications and OS",
+        "cables only",
+        "desk and chair",
+        "electricity"
+      ],
+      "correct": 0,
+      "id": "MT33"
+    },
+    {
+      "topic": "websites",
+      "question": "Browser is used to:",
+      "options": [
+        "browse the web",
+        "cool the CPU",
+        "print hardware",
+        "store RAM"
+      ],
+      "correct": 0,
+      "id": "MT34"
+    },
+    {
+      "topic": "websites",
+      "question": "URL means:",
+      "options": [
+        "Uniform Resource Locator",
+        "Universal Random Link",
+        "User Read Log",
+        "Upload Run Load"
+      ],
+      "correct": 0,
+      "id": "MT35"
+    },
+    {
+      "topic": "websites",
+      "question": "E-commerce site sells:",
+      "options": [
+        "products online",
+        "only news",
+        "weather only",
+        "CPU chips only in factory"
+      ],
+      "correct": 0,
+      "id": "MT36"
+    },
+    {
+      "topic": "websites",
+      "question": "Blog website is mainly for:",
+      "options": [
+        "articles and posts",
+        "banking only",
+        "OS installation",
+        "hardware repair"
+      ],
+      "correct": 0,
+      "id": "MT37"
+    },
+    {
+      "topic": "grammar",
+      "question": "Present Continuous form:",
+      "options": [
+        "verb + -ing with am/is/are",
+        "verb + ed only",
+        "will + verb",
+        "have + past"
+      ],
+      "correct": 0,
+      "id": "MT38"
+    },
+    {
+      "topic": "grammar",
+      "question": "'She is installing the OS now.' Tense?",
+      "options": [
+        "Present Simple",
+        "Present Continuous",
+        "Past Perfect",
+        "Future"
+      ],
+      "correct": 1,
+      "id": "MT39"
+    },
+    {
+      "topic": "modals",
+      "question": "Must vs have to — similar meaning:",
+      "options": [
+        "obligation/necessity",
+        "past ability",
+        "question",
+        "comparison"
+      ],
+      "correct": 0,
+      "id": "MT40"
+    },
+    {
+      "topic": "modals",
+      "question": "Can't in 'I can't attend' often means:",
+      "options": [
+        "unable / cannot",
+        "must not",
+        "don't have to",
+        "should"
+      ],
+      "correct": 0,
+      "id": "MT41"
+    },
+    {
+      "topic": "websites",
+      "question": "1,000,000 in words:",
+      "options": [
+        "one million",
+        "one thousand",
+        "ten hundred",
+        "one billon"
+      ],
+      "correct": 0,
+      "id": "MT42"
+    },
+    {
+      "topic": "hardware",
+      "question": "TB measures:",
+      "options": [
+        "storage capacity",
+        "temperature",
+        "time",
+        "network speed only"
+      ],
+      "correct": 0,
+      "id": "MT43"
+    },
+    {
+      "topic": "it-sector",
+      "question": "LAN means:",
+      "options": [
+        "Local Area Network",
+        "Large Application Node",
+        "Linux Apache Nginx",
+        "Load And Navigate"
+      ],
+      "correct": 0,
+      "id": "MT44"
+    },
+    {
+      "topic": "it-sector",
+      "question": "Phishing is:",
+      "options": [
+        "online fraud trick",
+        "fishing sport",
+        "fast typing",
+        "photo editing"
+      ],
+      "correct": 0,
+      "id": "MT45"
+    },
+    {
+      "topic": "software",
+      "question": "Backup means:",
+      "options": [
+        "copy data for safety",
+        "back to office",
+        "reverse keyboard",
+        "delete files"
+      ],
+      "correct": 0,
+      "id": "MT46"
+    },
+    {
+      "topic": "software",
+      "question": "Debug means:",
+      "options": [
+        "find and fix errors",
+        "remove virus only",
+        "install OS",
+        "format disk always"
+      ],
+      "correct": 0,
+      "id": "MT47"
+    },
+    {
+      "topic": "time",
+      "question": "Which is a question word for time?",
+      "options": [
+        "when",
+        "where",
+        "who",
+        "whose"
+      ],
+      "correct": 0,
+      "id": "MT48"
+    },
+    {
+      "topic": "hardware",
+      "question": "Plural of mouse (device):",
+      "options": [
+        "mouses",
+        "mice",
+        "mousees",
+        "mices"
+      ],
+      "correct": 1,
+      "id": "MT49"
+    },
+    {
+      "topic": "it-sector",
+      "question": "Firewall protects:",
+      "options": [
+        "network security",
+        "screen brightness",
+        "keyboard layout",
+        "printer paper"
+      ],
+      "correct": 0,
+      "id": "MT50"
+    },
+    {
+      "topic": "websites",
+      "question": "API in computing:",
+      "options": [
+        "Application Programming Interface",
+        "Automatic Personal Internet",
+        "Applied Program Input",
+        "Admin Panel Index"
+      ],
+      "correct": 0,
+      "id": "MT51"
+    },
+    {
+      "topic": "tanitim",
+      "question": "Oxford EAP level for this course (syllabus):",
+      "options": [
+        "Elementary A2",
+        "C2 Mastery",
+        "Beginner A0 only",
+        "Native C2"
+      ],
+      "correct": 0,
+      "id": "MT52"
+    },
+    {
+      "topic": "tanitim",
+      "question": "Final exam weight in grading:",
+      "options": [
+        "50%",
+        "10%",
+        "0%",
+        "100% homework only"
+      ],
+      "correct": 0,
+      "id": "MT53"
+    },
+    {
+      "topic": "websites",
+      "question": "'Download' is a common ___ on websites.",
+      "options": [
+        "verb/action",
+        "CPU",
+        "Monday",
+        "punctuation"
+      ],
+      "correct": 0,
+      "id": "MT54"
+    },
+    {
+      "topic": "websites",
+      "question": "'Download' is a common ___ on websites.",
+      "options": [
+        "verb/action",
+        "CPU",
+        "Monday",
+        "punctuation"
+      ],
+      "correct": 0,
+      "id": "MT55"
+    },
+    {
+      "topic": "grammar",
+      "question": "Is the following statement correct?\n«Present Continuous uses am/is/are + verb-ing.»",
+      "options": [
+        "Correct only in some cases",
+        "No, the statement is incorrect",
+        "Not in the course material",
+        "Yes, the statement is correct"
+      ],
+      "correct": 3,
+      "id": "MT56"
+    },
+    {
+      "topic": "software",
+      "question": "Is the following statement correct?\n«'He have a computer' is correct English.»",
+      "options": [
+        "Not in the course material",
+        "Correct only in some cases",
+        "Yes, the statement is correct",
+        "No, the statement is incorrect"
+      ],
+      "correct": 3,
+      "id": "MT57"
+    },
+    {
+      "topic": "hardware",
+      "question": "Is the following statement correct?\n«RAM is volatile memory.»",
+      "options": [
+        "No, the statement is incorrect",
+        "Not in the course material",
+        "Correct only in some cases",
+        "Yes, the statement is correct"
+      ],
+      "correct": 3,
+      "id": "MT58"
+    },
+    {
+      "topic": "hardware",
+      "question": "Is the following statement correct?\n«ROM typically stores firmware/BIOS.»",
+      "options": [
+        "No, the statement is incorrect",
+        "Correct only in some cases",
+        "Yes, the statement is correct",
+        "Not in the course material"
+      ],
+      "correct": 2,
+      "id": "MT59"
+    },
+    {
+      "topic": "modals",
+      "question": "Is the following statement correct?\n«Must and have to can both express obligation.»",
+      "options": [
+        "No, the statement is incorrect",
+        "Correct only in some cases",
+        "Not in the course material",
+        "Yes, the statement is correct"
+      ],
+      "correct": 3,
+      "id": "MT60"
+    },
+    {
+      "topic": "modals",
+      "question": "Is the following statement correct?\n«Don't have to means something is forbidden.»",
+      "options": [
+        "No, the statement is incorrect",
+        "Not in the course material",
+        "Correct only in some cases",
+        "Yes, the statement is correct"
+      ],
+      "correct": 0,
+      "id": "MT61"
+    },
+    {
+      "topic": "websites",
+      "question": "Is the following statement correct?\n«How many is used with countable nouns.»",
+      "options": [
+        "Correct only in some cases",
+        "No, the statement is incorrect",
+        "Yes, the statement is correct",
+        "Not in the course material"
+      ],
+      "correct": 2,
+      "id": "MT62"
+    },
+    {
+      "topic": "websites",
+      "question": "Is the following statement correct?\n«How much is used with uncountable nouns.»",
+      "options": [
+        "No, the statement is incorrect",
+        "Not in the course material",
+        "Yes, the statement is correct",
+        "Correct only in some cases"
+      ],
+      "correct": 2,
+      "id": "MT63"
+    },
+    {
+      "topic": "hardware",
+      "question": "Is the following statement correct?\n«Faster is the comparative of fast.»",
+      "options": [
+        "Yes, the statement is correct",
+        "Correct only in some cases",
+        "No, the statement is incorrect",
+        "Not in the course material"
+      ],
+      "correct": 0,
+      "id": "MT64"
+    },
+    {
+      "topic": "software",
+      "question": "Is the following statement correct?\n«Best is the superlative of good.»",
+      "options": [
+        "Correct only in some cases",
+        "Not in the course material",
+        "Yes, the statement is correct",
+        "No, the statement is incorrect"
+      ],
+      "correct": 2,
+      "id": "MT65"
+    },
+    {
+      "topic": "professions",
+      "question": "Is the following statement correct?\n«A developer writes software.»",
+      "options": [
+        "Correct only in some cases",
+        "No, the statement is incorrect",
+        "Not in the course material",
+        "Yes, the statement is correct"
+      ],
+      "correct": 3,
+      "id": "MT66"
+    },
+    {
+      "topic": "hardware",
+      "question": "Is the following statement correct?\n«GPU stands for Graphics Processing Unit.»",
+      "options": [
+        "Not in the course material",
+        "Correct only in some cases",
+        "No, the statement is incorrect",
+        "Yes, the statement is correct"
+      ],
+      "correct": 3,
+      "id": "MT67"
+    },
+    {
+      "topic": "websites",
+      "question": "Is the following statement correct?\n«URLs identify web page addresses.»",
+      "options": [
+        "Not in the course material",
+        "No, the statement is incorrect",
+        "Yes, the statement is correct",
+        "Correct only in some cases"
+      ],
+      "correct": 2,
+      "id": "MT68"
+    },
+    {
+      "topic": "grammar",
+      "question": "Is the following statement correct?\n«Present Simple is used for habits and facts.»",
+      "options": [
+        "Correct only in some cases",
+        "Not in the course material",
+        "No, the statement is incorrect",
+        "Yes, the statement is correct"
+      ],
+      "correct": 3,
+      "id": "MT69"
+    },
+    {
+      "topic": "grammar",
+      "question": "Is the following statement correct?\n«I am working uses Present Continuous.»",
+      "options": [
+        "Yes, the statement is correct",
+        "No, the statement is incorrect",
+        "Not in the course material",
+        "Correct only in some cases"
+      ],
+      "correct": 0,
+      "id": "MT70"
+    },
+    {
+      "topic": "modals",
+      "question": "Is the following statement correct?\n«Can expresses ability.»",
+      "options": [
+        "Not in the course material",
+        "Yes, the statement is correct",
+        "Correct only in some cases",
+        "No, the statement is incorrect"
+      ],
+      "correct": 1,
+      "id": "MT71"
+    },
+    {
+      "topic": "modals",
+      "question": "Is the following statement correct?\n«Mustn't means prohibition.»",
+      "options": [
+        "No, the statement is incorrect",
+        "Not in the course material",
+        "Correct only in some cases",
+        "Yes, the statement is correct"
+      ],
+      "correct": 3,
+      "id": "MT72"
+    },
+    {
+      "topic": "software",
+      "question": "Is the following statement correct?\n«UK English may use 'have got' where US uses 'have'.»",
+      "options": [
+        "No, the statement is incorrect",
+        "Not in the course material",
+        "Yes, the statement is correct",
+        "Correct only in some cases"
+      ],
+      "correct": 2,
+      "id": "MT73"
+    },
+    {
+      "topic": "hardware",
+      "question": "Is the following statement correct?\n«CPU is a hardware component.»",
+      "options": [
+        "Not in the course material",
+        "Correct only in some cases",
+        "No, the statement is incorrect",
+        "Yes, the statement is correct"
+      ],
+      "correct": 3,
+      "id": "MT74"
+    },
+    {
+      "topic": "websites",
+      "question": "Is the following statement correct?\n«HTML is a programming language only (no markup).»",
+      "options": [
+        "Yes, the statement is correct",
+        "No, the statement is incorrect",
+        "Correct only in some cases",
+        "Not in the course material"
+      ],
+      "correct": 1,
+      "id": "MT75"
+    },
+    {
+      "topic": "time",
+      "question": "Is the following statement correct?\n«Monday is a day of the week.»",
+      "options": [
+        "Yes, the statement is correct",
+        "Correct only in some cases",
+        "Not in the course material",
+        "No, the statement is incorrect"
+      ],
+      "correct": 0,
+      "id": "MT76"
+    },
+    {
+      "topic": "punctuation",
+      "question": "Is the following statement correct?\n«Question mark ends a statement.»",
+      "options": [
+        "Yes, the statement is correct",
+        "Not in the course material",
+        "Correct only in some cases",
+        "No, the statement is incorrect"
+      ],
+      "correct": 3,
+      "id": "MT77"
+    },
+    {
+      "topic": "punctuation",
+      "question": "Is the following statement correct?\n«e.g. introduces an example.»",
+      "options": [
+        "No, the statement is incorrect",
+        "Not in the course material",
+        "Correct only in some cases",
+        "Yes, the statement is correct"
+      ],
+      "correct": 3,
+      "id": "MT78"
+    },
+    {
+      "topic": "it-sector",
+      "question": "Is the following statement correct?\n«IT means Information Technology.»",
+      "options": [
+        "Correct only in some cases",
+        "Not in the course material",
+        "Yes, the statement is correct",
+        "No, the statement is incorrect"
+      ],
+      "correct": 2,
+      "id": "MT79"
+    },
+    {
+      "topic": "tanitim",
+      "question": "Is the following statement correct?\n«A midterm is given in week 8 per syllabus.»",
+      "options": [
+        "Correct only in some cases",
+        "Yes, the statement is correct",
+        "No, the statement is incorrect",
+        "Not in the course material"
+      ],
+      "correct": 1,
+      "id": "MT80"
+    },
+    {
+      "topic": "tanitim",
+      "question": "Is the following statement correct?\n«Homework contributes 10% to grade.»",
+      "options": [
+        "No, the statement is incorrect",
+        "Not in the course material",
+        "Yes, the statement is correct",
+        "Correct only in some cases"
+      ],
+      "correct": 2,
+      "id": "MT81"
+    },
+    {
+      "topic": "it-sector",
+      "question": "Is the following statement correct?\n«Listening skills help professional communication.»",
+      "options": [
+        "Not in the course material",
+        "Correct only in some cases",
+        "No, the statement is incorrect",
+        "Yes, the statement is correct"
+      ],
+      "correct": 3,
+      "id": "MT82"
+    },
+    {
+      "topic": "hardware",
+      "question": "Is the following statement correct?\n«An SSD has moving parts like HDD.»",
+      "options": [
+        "No, the statement is incorrect",
+        "Not in the course material",
+        "Yes, the statement is correct",
+        "Correct only in some cases"
+      ],
+      "correct": 0,
+      "id": "MT83"
+    },
+    {
+      "topic": "hardware",
+      "question": "Is the following statement correct?\n«More fast is correct comparative.»",
+      "options": [
+        "Not in the course material",
+        "No, the statement is incorrect",
+        "Yes, the statement is correct",
+        "Correct only in some cases"
+      ],
+      "correct": 1,
+      "id": "MT84"
+    },
+    {
+      "topic": "professions",
+      "question": "Is the following statement correct?\n«Network technician works with connectivity.»",
+      "options": [
+        "Yes, the statement is correct",
+        "No, the statement is incorrect",
+        "Correct only in some cases",
+        "Not in the course material"
+      ],
+      "correct": 0,
+      "id": "MT85"
+    },
+    {
+      "topic": "professions",
+      "question": "Is the following statement correct?\n«System administrator manages servers/users.»",
+      "options": [
+        "Correct only in some cases",
+        "Yes, the statement is correct",
+        "Not in the course material",
+        "No, the statement is incorrect"
+      ],
+      "correct": 1,
+      "id": "MT86"
+    },
+    {
+      "topic": "time",
+      "question": "Is the following statement correct?\n«At 5 o'clock uses preposition 'at' for time.»",
+      "options": [
+        "Yes, the statement is correct",
+        "Not in the course material",
+        "Correct only in some cases",
+        "No, the statement is incorrect"
+      ],
+      "correct": 0,
+      "id": "MT87"
+    },
+    {
+      "topic": "time",
+      "question": "Is the following statement correct?\n«On Monday uses preposition 'on' for days.»",
+      "options": [
+        "Yes, the statement is correct",
+        "No, the statement is incorrect",
+        "Correct only in some cases",
+        "Not in the course material"
+      ],
+      "correct": 0,
+      "id": "MT88"
+    },
+    {
+      "topic": "websites",
+      "question": "Is the following statement correct?\n«Web portal offers multiple services in one site.»",
+      "options": [
+        "No, the statement is incorrect",
+        "Not in the course material",
+        "Yes, the statement is correct",
+        "Correct only in some cases"
+      ],
+      "correct": 2,
+      "id": "MT89"
+    },
+    {
+      "topic": "websites",
+      "question": "Is the following statement correct?\n«Blog is only for video streaming.»",
+      "options": [
+        "No, the statement is incorrect",
+        "Correct only in some cases",
+        "Yes, the statement is correct",
+        "Not in the course material"
+      ],
+      "correct": 0,
+      "id": "MT90"
+    },
+    {
+      "topic": "websites",
+      "question": "Is the following statement correct?\n«One thousand = 1,000.»",
+      "options": [
+        "No, the statement is incorrect",
+        "Correct only in some cases",
+        "Not in the course material",
+        "Yes, the statement is correct"
+      ],
+      "correct": 3,
+      "id": "MT91"
+    },
+    {
+      "topic": "modals",
+      "question": "Is the following statement correct?\n«Modal 'could' can express past ability.»",
+      "options": [
+        "No, the statement is incorrect",
+        "Yes, the statement is correct",
+        "Correct only in some cases",
+        "Not in the course material"
+      ],
+      "correct": 1,
+      "id": "MT92"
+    },
+    {
+      "topic": "modals",
+      "question": "Is the following statement correct?\n«Have to is only past tense.»",
+      "options": [
+        "Yes, the statement is correct",
+        "Correct only in some cases",
+        "No, the statement is incorrect",
+        "Not in the course material"
+      ],
+      "correct": 2,
+      "id": "MT93"
+    },
+    {
+      "topic": "hardware",
+      "question": "Is the following statement correct?\n«Comparatives often add -er or use more.»",
+      "options": [
+        "No, the statement is incorrect",
+        "Yes, the statement is correct",
+        "Not in the course material",
+        "Correct only in some cases"
+      ],
+      "correct": 1,
+      "id": "MT94"
+    },
+    {
+      "topic": "software",
+      "question": "Is the following statement correct?\n«Superlatives often use -est or most.»",
+      "options": [
+        "Not in the course material",
+        "No, the statement is incorrect",
+        "Correct only in some cases",
+        "Yes, the statement is correct"
+      ],
+      "correct": 3,
+      "id": "MT95"
+    },
+    {
+      "topic": "hardware",
+      "question": "Is the following statement correct?\n«Mouse plural in IT is often 'mice'.»",
+      "options": [
+        "Not in the course material",
+        "No, the statement is incorrect",
+        "Yes, the statement is correct",
+        "Correct only in some cases"
+      ],
+      "correct": 2,
+      "id": "MT96"
+    },
+    {
+      "topic": "hardware",
+      "question": "Is the following statement correct?\n«Keyboard is input device.»",
+      "options": [
+        "Correct only in some cases",
+        "No, the statement is incorrect",
+        "Yes, the statement is correct",
+        "Not in the course material"
+      ],
+      "correct": 2,
+      "id": "MT97"
+    },
+    {
+      "topic": "hardware",
+      "question": "Is the following statement correct?\n«Monitor is output device.»",
+      "options": [
+        "Not in the course material",
+        "No, the statement is incorrect",
+        "Correct only in some cases",
+        "Yes, the statement is correct"
+      ],
+      "correct": 3,
+      "id": "MT98"
+    },
+    {
+      "topic": "software",
+      "question": "Is the following statement correct?\n«Install means put software on system.»",
+      "options": [
+        "Not in the course material",
+        "Yes, the statement is correct",
+        "Correct only in some cases",
+        "No, the statement is incorrect"
+      ],
+      "correct": 1,
+      "id": "MT99"
+    },
+    {
+      "topic": "software",
+      "question": "Is the following statement correct?\n«Update can mean newer version.»",
+      "options": [
+        "No, the statement is incorrect",
+        "Yes, the statement is correct",
+        "Not in the course material",
+        "Correct only in some cases"
+      ],
+      "correct": 1,
+      "id": "MT100"
+    },
+    {
+      "topic": "software",
+      "question": "Is the following statement correct?\n«Crash means program/system failure.»",
+      "options": [
+        "Correct only in some cases",
+        "Yes, the statement is correct",
+        "Not in the course material",
+        "No, the statement is incorrect"
+      ],
+      "correct": 1,
+      "id": "MT101"
+    },
+    {
+      "topic": "websites",
+      "question": "Is the following statement correct?\n«Login means sign in to account.»",
+      "options": [
+        "Not in the course material",
+        "No, the statement is incorrect",
+        "Correct only in some cases",
+        "Yes, the statement is correct"
+      ],
+      "correct": 3,
+      "id": "MT102"
+    },
+    {
+      "topic": "websites",
+      "question": "Is the following statement correct?\n«Homepage is main page of website.»",
+      "options": [
+        "No, the statement is incorrect",
+        "Correct only in some cases",
+        "Yes, the statement is correct",
+        "Not in the course material"
+      ],
+      "correct": 2,
+      "id": "MT103"
+    },
+    {
+      "topic": "websites",
+      "question": "Is the following statement correct?\n«Link connects to another page.»",
+      "options": [
+        "Not in the course material",
+        "Yes, the statement is correct",
+        "No, the statement is incorrect",
+        "Correct only in some cases"
+      ],
+      "correct": 1,
+      "id": "MT104"
+    },
+    {
+      "topic": "websites",
+      "question": "Is the following statement correct?\n«Server hosts websites/data.»",
+      "options": [
+        "No, the statement is incorrect",
+        "Correct only in some cases",
+        "Not in the course material",
+        "Yes, the statement is correct"
+      ],
+      "correct": 3,
+      "id": "MT105"
+    },
+    {
+      "topic": "it-sector",
+      "question": "Is the following statement correct?\n«Client requests service from server.»",
+      "options": [
+        "Not in the course material",
+        "No, the statement is incorrect",
+        "Correct only in some cases",
+        "Yes, the statement is correct"
+      ],
+      "correct": 3,
+      "id": "MT106"
+    },
+    {
+      "topic": "writing",
+      "question": "Is the following statement correct?\n«Email is electronic mail.»",
+      "options": [
+        "No, the statement is incorrect",
+        "Not in the course material",
+        "Correct only in some cases",
+        "Yes, the statement is correct"
+      ],
+      "correct": 3,
+      "id": "MT107"
+    },
+    {
+      "topic": "writing",
+      "question": "Is the following statement correct?\n«Dear Team is email greeting.»",
+      "options": [
+        "Yes, the statement is correct",
+        "Not in the course material",
+        "Correct only in some cases",
+        "No, the statement is incorrect"
+      ],
+      "correct": 0,
+      "id": "MT108"
+    },
+    {
+      "topic": "grammar",
+      "question": "Is the following statement correct?\n«Present Continuous for action happening now.»",
+      "options": [
+        "Yes, the statement is correct",
+        "Correct only in some cases",
+        "Not in the course material",
+        "No, the statement is incorrect"
+      ],
+      "correct": 0,
+      "id": "MT109"
+    },
+    {
+      "topic": "tanitim",
+      "question": "Is the following statement correct?\n«Final exam is week 14.»",
+      "options": [
+        "Not in the course material",
+        "Yes, the statement is correct",
+        "Correct only in some cases",
+        "No, the statement is incorrect"
+      ],
+      "correct": 1,
+      "id": "MT110"
+    },
+    {
+      "topic": "hardware",
+      "question": "Which word best fills the blank?\nCPU: Central ……… Unit",
+      "options": [
+        "Processing",
+        "monitor",
+        "router",
+        "keyboard"
+      ],
+      "correct": 0,
+      "id": "MT111"
+    },
+    {
+      "topic": "hardware",
+      "question": "Which word best fills the blank?\nRAM: Random Access ………",
+      "options": [
+        "Memory",
+        "router",
+        "keyboard",
+        "monitor"
+      ],
+      "correct": 0,
+      "id": "MT112"
+    },
+    {
+      "topic": "professions",
+      "question": "Which word best fills the blank?\nA person who develops software is a ………",
+      "options": [
+        "router",
+        "keyboard",
+        "monitor",
+        "developer"
+      ],
+      "correct": 3,
+      "id": "MT113"
+    },
+    {
+      "topic": "professions",
+      "question": "Which word best fills the blank?\n……… technician maintains networks.",
+      "options": [
+        "keyboard",
+        "monitor",
+        "router",
+        "Network"
+      ],
+      "correct": 3,
+      "id": "MT114"
+    },
+    {
+      "topic": "time",
+      "question": "Which word best fills the blank?\nWhat ……… is it? (asking time)",
+      "options": [
+        "monitor",
+        "time",
+        "keyboard",
+        "router"
+      ],
+      "correct": 1,
+      "id": "MT115"
+    },
+    {
+      "topic": "time",
+      "question": "Which word best fills the blank?\nSee you ……… Monday. (day preposition)",
+      "options": [
+        "router",
+        "keyboard",
+        "monitor",
+        "on"
+      ],
+      "correct": 3,
+      "id": "MT116"
+    },
+    {
+      "topic": "time",
+      "question": "Which word best fills the blank?\nThe class starts ……… 9 a.m.",
+      "options": [
+        "monitor",
+        "keyboard",
+        "at",
+        "router"
+      ],
+      "correct": 2,
+      "id": "MT117"
+    },
+    {
+      "topic": "hardware",
+      "question": "Which word best fills the blank?\nComparative of fast: ………",
+      "options": [
+        "router",
+        "monitor",
+        "faster",
+        "keyboard"
+      ],
+      "correct": 2,
+      "id": "MT118"
+    },
+    {
+      "topic": "software",
+      "question": "Which word best fills the blank?\nSuperlative of good: ………",
+      "options": [
+        "best",
+        "router",
+        "monitor",
+        "keyboard"
+      ],
+      "correct": 0,
+      "id": "MT119"
+    },
+    {
+      "topic": "grammar",
+      "question": "Which word best fills the blank?\nPresent Continuous: I ……… working. (am/is/are)",
+      "options": [
+        "monitor",
+        "am",
+        "keyboard",
+        "router"
+      ],
+      "correct": 1,
+      "id": "MT120"
+    },
+    {
+      "topic": "modals",
+      "question": "Which word best fills the blank?\nModal for ability: I ……… use Python.",
+      "options": [
+        "keyboard",
+        "router",
+        "can",
+        "monitor"
+      ],
+      "correct": 2,
+      "id": "MT121"
+    },
+    {
+      "topic": "modals",
+      "question": "Which word best fills the blank?\nStrong obligation: You ……… wear safety gear.",
+      "options": [
+        "router",
+        "keyboard",
+        "must",
+        "monitor"
+      ],
+      "correct": 2,
+      "id": "MT122"
+    },
+    {
+      "topic": "modals",
+      "question": "Which word best fills the blank?\nNo obligation: You ……… come if busy. (don't have to)",
+      "options": [
+        "monitor",
+        "router",
+        "keyboard",
+        "don't"
+      ],
+      "correct": 3,
+      "id": "MT123"
+    },
+    {
+      "topic": "websites",
+      "question": "Which word best fills the blank?\nHow ……… RAM do you need? (uncountable)",
+      "options": [
+        "much",
+        "monitor",
+        "router",
+        "keyboard"
+      ],
+      "correct": 0,
+      "id": "MT124"
+    },
+    {
+      "topic": "websites",
+      "question": "Which word best fills the blank?\nHow ……… cores does the CPU have?",
+      "options": [
+        "router",
+        "many",
+        "keyboard",
+        "monitor"
+      ],
+      "correct": 1,
+      "id": "MT125"
+    },
+    {
+      "topic": "software",
+      "question": "Which word best fills the blank?\nOperating System abbreviation: ………",
+      "options": [
+        "keyboard",
+        "router",
+        "monitor",
+        "OS"
+      ],
+      "correct": 3,
+      "id": "MT126"
+    },
+    {
+      "topic": "software",
+      "question": "Which word best fills the blank?\nGraphical User Interface: ………",
+      "options": [
+        "router",
+        "monitor",
+        "GUI",
+        "keyboard"
+      ],
+      "correct": 2,
+      "id": "MT127"
+    },
+    {
+      "topic": "websites",
+      "question": "Which word best fills the blank?\nUniform Resource Locator: ………",
+      "options": [
+        "keyboard",
+        "monitor",
+        "URL",
+        "router"
+      ],
+      "correct": 2,
+      "id": "MT128"
+    },
+    {
+      "topic": "it-sector",
+      "question": "Which word best fills the blank?\nInformation Technology: ………",
+      "options": [
+        "keyboard",
+        "IT",
+        "monitor",
+        "router"
+      ],
+      "correct": 1,
+      "id": "MT129"
+    },
+    {
+      "topic": "punctuation",
+      "question": "Which word best fills the blank?\nfor example abbreviation: ………",
+      "options": [
+        "monitor",
+        "e.g.",
+        "router",
+        "keyboard"
+      ],
+      "correct": 1,
+      "id": "MT130"
+    },
+    {
+      "topic": "punctuation",
+      "question": "Which word best fills the blank?\nas soon as possible: ………",
+      "options": [
+        "keyboard",
+        "monitor",
+        "router",
+        "ASAP"
+      ],
+      "correct": 3,
+      "id": "MT131"
+    },
+    {
+      "topic": "it-sector",
+      "question": "Which word best fills the blank?\nLocal Area Network: ………",
+      "options": [
+        "router",
+        "monitor",
+        "keyboard",
+        "LAN"
+      ],
+      "correct": 3,
+      "id": "MT132"
+    },
+    {
+      "topic": "hardware",
+      "question": "Which word best fills the blank?\nSolid State Drive: ………",
+      "options": [
+        "router",
+        "keyboard",
+        "monitor",
+        "SSD"
+      ],
+      "correct": 3,
+      "id": "MT133"
+    },
+    {
+      "topic": "hardware",
+      "question": "Which word best fills the blank?\nHard Disk Drive: ………",
+      "options": [
+        "HDD",
+        "keyboard",
+        "router",
+        "monitor"
+      ],
+      "correct": 0,
+      "id": "MT134"
+    },
+    {
+      "topic": "hardware",
+      "question": "Which word best fills the blank?\nInput device example: ………",
+      "options": [
+        "monitor",
+        "keyboard",
+        "printer",
+        "router"
+      ],
+      "correct": 1,
+      "id": "MT135"
+    },
+    {
+      "topic": "hardware",
+      "question": "Which word best fills the blank?\nOutput device example: ………",
+      "options": [
+        "keyboard",
+        "monitor",
+        "browser",
+        "router"
+      ],
+      "correct": 1,
+      "id": "MT136"
+    },
+    {
+      "topic": "websites",
+      "question": "Which word best fills the blank?\nBrowse the web with a ………",
+      "options": [
+        "browser",
+        "keyboard",
+        "router",
+        "monitor"
+      ],
+      "correct": 0,
+      "id": "MT137"
+    },
+    {
+      "topic": "websites",
+      "question": "Which word best fills the blank?\nMain page of a site: ……… page",
+      "options": [
+        "home",
+        "monitor",
+        "router",
+        "keyboard"
+      ],
+      "correct": 0,
+      "id": "MT138"
+    },
+    {
+      "topic": "websites",
+      "question": "Which word best fills the blank?\nSign in to account: ………",
+      "options": [
+        "keyboard",
+        "monitor",
+        "login",
+        "router"
+      ],
+      "correct": 2,
+      "id": "MT139"
+    },
+    {
+      "topic": "software",
+      "question": "Which word best fills the blank?\nFind and fix code errors: ………",
+      "options": [
+        "monitor",
+        "keyboard",
+        "debug",
+        "router"
+      ],
+      "correct": 2,
+      "id": "MT140"
+    },
+    {
+      "topic": "software",
+      "question": "Which word best fills the blank?\nCopy data for safety: ………",
+      "options": [
+        "router",
+        "monitor",
+        "backup",
+        "keyboard"
+      ],
+      "correct": 2,
+      "id": "MT141"
+    },
+    {
+      "topic": "software",
+      "question": "Which word best fills the blank?\nUK: I ……… got a meeting. (have)",
+      "options": [
+        "router",
+        "have",
+        "keyboard",
+        "monitor"
+      ],
+      "correct": 1,
+      "id": "MT142"
+    },
+    {
+      "topic": "grammar",
+      "question": "Which word best fills the blank?\nShe ……… installing Windows now. (is/are + ing)",
+      "options": [
+        "router",
+        "monitor",
+        "keyboard",
+        "is"
+      ],
+      "correct": 3,
+      "id": "MT143"
+    },
+    {
+      "topic": "modals",
+      "question": "Which word best fills the blank?\nProhibition modal: You ……… smoke here.",
+      "options": [
+        "monitor",
+        "keyboard",
+        "mustn't",
+        "router"
+      ],
+      "correct": 2,
+      "id": "MT144"
+    },
+    {
+      "topic": "websites",
+      "question": "Which word best fills the blank?\nOne million: 1,………",
+      "options": [
+        "keyboard",
+        "000,000",
+        "monitor",
+        "router"
+      ],
+      "correct": 1,
+      "id": "MT145"
+    },
+    {
+      "topic": "hardware",
+      "question": "Which word best fills the blank?\nGraphics Processing Unit: ………",
+      "options": [
+        "monitor",
+        "GPU",
+        "keyboard",
+        "router"
+      ],
+      "correct": 1,
+      "id": "MT146"
+    },
+    {
+      "topic": "websites",
+      "question": "Which word best fills the blank?\nApplication Programming Interface: ………",
+      "options": [
+        "monitor",
+        "keyboard",
+        "router",
+        "API"
+      ],
+      "correct": 3,
+      "id": "MT147"
+    },
+    {
+      "topic": "professions",
+      "question": "Which word best fills the blank?\nUser Experience designer: ………",
+      "options": [
+        "monitor",
+        "router",
+        "UX",
+        "keyboard"
+      ],
+      "correct": 2,
+      "id": "MT148"
+    },
+    {
+      "topic": "software",
+      "question": "Which word best fills the blank?\nWrite code in a ……… language.",
+      "options": [
+        "programming",
+        "keyboard",
+        "monitor",
+        "router"
+      ],
+      "correct": 0,
+      "id": "MT149"
+    },
+    {
+      "topic": "websites",
+      "question": "Which word best fills the blank?\nServer ……… websites for users.",
+      "options": [
+        "hosts",
+        "monitor",
+        "keyboard",
+        "router"
+      ],
+      "correct": 0,
+      "id": "MT150"
+    },
+    {
+      "topic": "writing",
+      "question": "Which word best fills the blank?\nEmail opening: ……… Sir/Madam",
+      "options": [
+        "keyboard",
+        "Dear",
+        "router",
+        "monitor"
+      ],
+      "correct": 1,
+      "id": "MT151"
+    },
+    {
+      "topic": "hardware",
+      "question": "Which word best fills the blank?\nPlural of mouse (device): ………",
+      "options": [
+        "keyboard",
+        "monitor",
+        "router",
+        "mice"
+      ],
+      "correct": 3,
+      "id": "MT152"
+    },
+    {
+      "topic": "hardware",
+      "question": "Which word best fills the blank?\nFaster, ………, fastest (comparison chain)",
+      "options": [
+        "router",
+        "monitor",
+        "keyboard",
+        "faster"
+      ],
+      "correct": 3,
+      "id": "MT153"
+    },
+    {
+      "topic": "software",
+      "question": "Which word best fills the blank?\nPresent Simple: He ……… a laptop.",
+      "options": [
+        "monitor",
+        "router",
+        "has",
+        "keyboard"
+      ],
+      "correct": 2,
+      "id": "MT154"
+    },
+    {
+      "topic": "grammar",
+      "question": "Which word best fills the blank?\nI ……… to the meeting yesterday. (go - past)",
+      "options": [
+        "keyboard",
+        "router",
+        "monitor",
+        "went"
+      ],
+      "correct": 3,
+      "id": "MT155"
+    },
+    {
+      "topic": "websites",
+      "question": "Which word best fills the blank?\nWebsite that sells online: e-………",
+      "options": [
+        "monitor",
+        "router",
+        "commerce",
+        "keyboard"
+      ],
+      "correct": 2,
+      "id": "MT156"
+    },
+    {
+      "topic": "websites",
+      "question": "Which word best fills the blank?\nOnline journal posts: ………",
+      "options": [
+        "router",
+        "blog",
+        "monitor",
+        "keyboard"
+      ],
+      "correct": 1,
+      "id": "MT157"
+    },
+    {
+      "topic": "punctuation",
+      "question": "Which word best fills the blank?\nQuestion mark ends a ………",
+      "options": [
+        "router",
+        "question",
+        "monitor",
+        "keyboard"
+      ],
+      "correct": 1,
+      "id": "MT158"
+    },
+    {
+      "topic": "punctuation",
+      "question": "Which word best fills the blank?\nComma separates items in a ………",
+      "options": [
+        "keyboard",
+        "list",
+        "monitor",
+        "router"
+      ],
+      "correct": 1,
+      "id": "MT159"
+    },
+    {
+      "topic": "it-sector",
+      "question": "Which word best fills the blank?\nListen and ……… (skill pair)",
+      "options": [
+        "router",
+        "monitor",
+        "keyboard",
+        "speak"
+      ],
+      "correct": 3,
+      "id": "MT160"
+    },
+    {
+      "topic": "tanitim",
+      "question": "Which word best fills the blank?\nMidterm is in week ……… per syllabus.",
+      "options": [
+        "monitor",
+        "8",
+        "router",
+        "keyboard"
+      ],
+      "correct": 1,
+      "id": "MT161"
+    },
+    {
+      "topic": "tanitim",
+      "question": "Which word best fills the blank?\nFinal contributes ……… percent.",
+      "options": [
+        "monitor",
+        "router",
+        "50",
+        "keyboard"
+      ],
+      "correct": 2,
+      "id": "MT162"
+    },
+    {
+      "topic": "tanitim",
+      "question": "Which word best fills the blank?\nOxford EAP level: Elementary ………",
+      "options": [
+        "keyboard",
+        "A2",
+        "router",
+        "monitor"
+      ],
+      "correct": 1,
+      "id": "MT163"
+    },
+    {
+      "topic": "it-sector",
+      "question": "Which word best fills the blank?\nPhishing is online ………",
+      "options": [
+        "monitor",
+        "router",
+        "keyboard",
+        "fraud"
+      ],
+      "correct": 3,
+      "id": "MT164"
+    },
+    {
+      "topic": "it-sector",
+      "question": "Which word best fills the blank?\nFirewall improves network ………",
+      "options": [
+        "router",
+        "monitor",
+        "security",
+        "keyboard"
+      ],
+      "correct": 2,
+      "id": "MT165"
+    },
+    {
+      "topic": "writing",
+      "question": "Which is the correct short form / explanation?\n\nI am not able to attend the meeting tomorrow because I have a scheduled deployment.",
+      "options": [
+        "Deployment am.",
+        "I attending no.",
+        "I can't attend tomorrow — deployment.",
+        "Tomorrow meeting I."
+      ],
+      "correct": 2,
+      "id": "MT166"
+    },
+    {
+      "topic": "writing",
+      "question": "Which is the correct long form / explanation?\n\nCan't fix bug.",
+      "options": [
+        "I cannot fix the bug.",
+        "Can't fix bug.",
+        "Bug fix no.",
+        "I am not able to fix the bug at the moment."
+      ],
+      "correct": 3,
+      "id": "MT167"
+    },
+    {
+      "topic": "software",
+      "question": "Which is the correct short form / explanation?\n\nHe have got a faster CPU than me.",
+      "options": [
+        "He have faster CPU.",
+        "He has a faster CPU than me.",
+        "CPU he fast.",
+        "Me slower."
+      ],
+      "correct": 1,
+      "id": "MT168"
+    },
+    {
+      "topic": "hardware",
+      "question": "Which is the correct long form / explanation?\n\nRAM > ROM speed.",
+      "options": [
+        "Random Access Memory is typically faster than Read-Only Memory.",
+        "RAM > ROM speed.",
+        "Speed RAM ROM",
+        "RAM is usually faster than ROM."
+      ],
+      "correct": 0,
+      "id": "MT169"
+    },
+    {
+      "topic": "time",
+      "question": "Which is the correct short form / explanation?\n\nWhat time is it?",
+      "options": [
+        "It is time.",
+        "When clock",
+        "Time what?",
+        "Could you tell me the time, please?"
+      ],
+      "correct": 3,
+      "id": "MT170"
+    },
+    {
+      "topic": "software",
+      "question": "Which is the correct long form / explanation?\n\nInstall OS.",
+      "options": [
+        "You need to install the operating system on the machine.",
+        "Install OS.",
+        "Please install the operating system.",
+        "OS go"
+      ],
+      "correct": 0,
+      "id": "MT171"
+    },
+    {
+      "topic": "modals",
+      "question": "Which is the correct short form / explanation?\n\nYou must not share your password.",
+      "options": [
+        "Must share password",
+        "Don't share your password.",
+        "Password share you must not.",
+        "Share password OK."
+      ],
+      "correct": 1,
+      "id": "MT172"
+    },
+    {
+      "topic": "grammar",
+      "question": "Which is the correct long form / explanation?\n\nShe coding.",
+      "options": [
+        "She is writing code right now.",
+        "Code she",
+        "She is coding.",
+        "She coding."
+      ],
+      "correct": 0,
+      "id": "MT173"
+    },
+    {
+      "topic": "websites",
+      "question": "Which is the correct short form / explanation?\n\nHow many memory?",
+      "options": [
+        "Memory how",
+        "Much memory how?",
+        "How many memory?",
+        "How much memory?"
+      ],
+      "correct": 3,
+      "id": "MT174"
+    },
+    {
+      "topic": "software",
+      "question": "Which is the correct long form / explanation?\n\nbest fast processor",
+      "options": [
+        "processor best",
+        "best fast processor",
+        "the fastest processor",
+        "the best and fastest processor"
+      ],
+      "correct": 2,
+      "id": "MT175"
+    },
+    {
+      "topic": "writing",
+      "question": "Which is the correct short form / explanation?\n\nDear Sir, I write about the network issue. The issue start yesterday.",
+      "options": [
+        "Issue network write.",
+        "Dear Sir, I am writing about a network issue that started yesterday.",
+        "Yesterday start",
+        "Sir dear network."
+      ],
+      "correct": 1,
+      "id": "MT176"
+    },
+    {
+      "topic": "websites",
+      "question": "Which is the correct long form / explanation?\n\nLogin.",
+      "options": [
+        "Please log in to your account.",
+        "Log",
+        "Login.",
+        "Click here to log in."
+      ],
+      "correct": 0,
+      "id": "MT177"
+    },
+    {
+      "topic": "punctuation",
+      "question": "Which is the correct short form / explanation?\n\ne.g. CPU, RAM",
+      "options": [
+        "example CPU RAM",
+        "for example: CPU, RAM",
+        "CPU RAM only",
+        "i.e. CPU"
+      ],
+      "correct": 1,
+      "id": "MT178"
+    },
+    {
+      "topic": "punctuation",
+      "question": "Which is the correct long form / explanation?\n\nASAP",
+      "options": [
+        "at the soonest available time",
+        "quickly soon",
+        "as soon as possible",
+        "ASAP"
+      ],
+      "correct": 2,
+      "id": "MT179"
+    },
+    {
+      "topic": "grammar",
+      "question": "Which is the correct long form / explanation?\n\nfaster CPU",
+      "options": [
+        "faster CPU",
+        "a CPU that is faster",
+        "a faster CPU",
+        "CPU more fast"
+      ],
+      "correct": 2,
+      "id": "MT180"
+    },
+    {
+      "topic": "modals",
+      "question": "Which is the correct short form / explanation?\n\nWhat day is today?",
+      "options": [
+        "Today day.",
+        "What today",
+        "Could you tell me what day it is today?",
+        "Day today what?"
+      ],
+      "correct": 2,
+      "id": "MT181"
+    },
+    {
+      "topic": "hardware",
+      "question": "Which is the correct long form / explanation?\n\nmust update",
+      "options": [
+        "update must you",
+        "You must update the system.",
+        "It is necessary to update.",
+        "must update"
+      ],
+      "correct": 1,
+      "id": "MT182"
+    },
+    {
+      "topic": "websites",
+      "question": "Which is the correct short form / explanation?\n\nI am work on the server now.",
+      "options": [
+        "Now working",
+        "Server work I.",
+        "I am working on the server now.",
+        "I work server."
+      ],
+      "correct": 2,
+      "id": "MT183"
+    },
+    {
+      "topic": "writing",
+      "question": "Which is the correct long form / explanation?\n\nI can code.",
+      "options": [
+        "I am able to write code.",
+        "I can code.",
+        "I can program / I know how to code.",
+        "Code I can"
+      ],
+      "correct": 2,
+      "id": "MT184"
+    },
+    {
+      "topic": "time",
+      "question": "Which is the correct short form / explanation?\n\nThe website have many pages.",
+      "options": [
+        "Have pages many",
+        "Pages website.",
+        "Website many pages.",
+        "The website has many pages."
+      ],
+      "correct": 3,
+      "id": "MT185"
+    },
+    {
+      "topic": "software",
+      "question": "Which is the correct long form / explanation?\n\nfaster CPU",
+      "options": [
+        "a faster CPU",
+        "a CPU that is faster",
+        "faster CPU",
+        "CPU more fast"
+      ],
+      "correct": 0,
+      "id": "MT186"
+    },
+    {
+      "topic": "grammar",
+      "question": "Which is the correct short form / explanation?\n\nWhat day is today?",
+      "options": [
+        "Today day.",
+        "Day today what?",
+        "What today",
+        "Could you tell me what day it is today?"
+      ],
+      "correct": 3,
+      "id": "MT187"
+    },
+    {
+      "topic": "modals",
+      "question": "Which is the correct long form / explanation?\n\nmust update",
+      "options": [
+        "You must update the system.",
+        "update must you",
+        "must update",
+        "It is necessary to update."
+      ],
+      "correct": 0,
+      "id": "MT188"
+    },
+    {
+      "topic": "hardware",
+      "question": "Which is the correct short form / explanation?\n\nI am work on the server now.",
+      "options": [
+        "Server work I.",
+        "I work server.",
+        "Now working",
+        "I am working on the server now."
+      ],
+      "correct": 3,
+      "id": "MT189"
+    },
+    {
+      "topic": "websites",
+      "question": "Which is the correct long form / explanation?\n\nI can code.",
+      "options": [
+        "I am able to write code.",
+        "I can program / I know how to code.",
+        "Code I can",
+        "I can code."
+      ],
+      "correct": 1,
+      "id": "MT190"
+    },
+    {
+      "topic": "writing",
+      "question": "Which is the correct short form / explanation?\n\nThe website have many pages.",
+      "options": [
+        "Website many pages.",
+        "The website has many pages.",
+        "Pages website.",
+        "Have pages many"
+      ],
+      "correct": 1,
+      "id": "MT191"
+    },
+    {
+      "topic": "time",
+      "question": "Which is the correct long form / explanation?\n\nfaster CPU",
+      "options": [
+        "a CPU that is faster",
+        "a faster CPU",
+        "faster CPU",
+        "CPU more fast"
+      ],
+      "correct": 1,
+      "id": "MT192"
+    },
+    {
+      "topic": "software",
+      "question": "Which is the correct short form / explanation?\n\nWhat day is today?",
+      "options": [
+        "What today",
+        "Day today what?",
+        "Could you tell me what day it is today?",
+        "Today day."
+      ],
+      "correct": 2,
+      "id": "MT193"
+    },
+    {
+      "topic": "grammar",
+      "question": "Which is the correct long form / explanation?\n\nmust update",
+      "options": [
+        "It is necessary to update.",
+        "update must you",
+        "must update",
+        "You must update the system."
+      ],
+      "correct": 3,
+      "id": "MT194"
+    },
+    {
+      "topic": "modals",
+      "question": "Which is the correct short form / explanation?\n\nI am work on the server now.",
+      "options": [
+        "Now working",
+        "I am working on the server now.",
+        "I work server.",
+        "Server work I."
+      ],
+      "correct": 1,
+      "id": "MT195"
+    },
+    {
+      "topic": "hardware",
+      "question": "Which is the correct long form / explanation?\n\nI can code.",
+      "options": [
+        "I am able to write code.",
+        "I can program / I know how to code.",
+        "Code I can",
+        "I can code."
+      ],
+      "correct": 1,
+      "id": "MT196"
+    },
+    {
+      "topic": "websites",
+      "question": "Which is the correct short form / explanation?\n\nThe website have many pages.",
+      "options": [
+        "Have pages many",
+        "Website many pages.",
+        "Pages website.",
+        "The website has many pages."
+      ],
+      "correct": 3,
+      "id": "MT197"
+    },
+    {
+      "topic": "writing",
+      "question": "Which is the correct long form / explanation?\n\nfaster CPU",
+      "options": [
+        "a faster CPU",
+        "a CPU that is faster",
+        "CPU more fast",
+        "faster CPU"
+      ],
+      "correct": 0,
+      "id": "MT198"
+    },
+    {
+      "topic": "time",
+      "question": "Which is the correct short form / explanation?\n\nWhat day is today?",
+      "options": [
+        "Could you tell me what day it is today?",
+        "What today",
+        "Day today what?",
+        "Today day."
+      ],
+      "correct": 0,
+      "id": "MT199"
+    },
+    {
+      "topic": "software",
+      "question": "Which is the correct long form / explanation?\n\nmust update",
+      "options": [
+        "must update",
+        "update must you",
+        "You must update the system.",
+        "It is necessary to update."
+      ],
+      "correct": 2,
+      "id": "MT200"
+    },
+    {
+      "topic": "grammar",
+      "question": "Which is the correct short form / explanation?\n\nI am work on the server now.",
+      "options": [
+        "I work server.",
+        "I am working on the server now.",
+        "Server work I.",
+        "Now working"
+      ],
+      "correct": 1,
+      "id": "MT201"
+    },
+    {
+      "topic": "modals",
+      "question": "Which is the correct long form / explanation?\n\nI can code.",
+      "options": [
+        "Code I can",
+        "I am able to write code.",
+        "I can program / I know how to code.",
+        "I can code."
+      ],
+      "correct": 2,
+      "id": "MT202"
+    },
+    {
+      "topic": "hardware",
+      "question": "Which is the correct short form / explanation?\n\nThe website have many pages.",
+      "options": [
+        "Have pages many",
+        "The website has many pages.",
+        "Website many pages.",
+        "Pages website."
+      ],
+      "correct": 1,
+      "id": "MT203"
+    },
+    {
+      "topic": "websites",
+      "question": "Which is the correct long form / explanation?\n\nfaster CPU",
+      "options": [
+        "a faster CPU",
+        "a CPU that is faster",
+        "faster CPU",
+        "CPU more fast"
+      ],
+      "correct": 0,
+      "id": "MT204"
+    },
+    {
+      "topic": "writing",
+      "question": "Which is the correct short form / explanation?\n\nWhat day is today?",
+      "options": [
+        "Could you tell me what day it is today?",
+        "Today day.",
+        "Day today what?",
+        "What today"
+      ],
+      "correct": 0,
+      "id": "MT205"
+    },
+    {
+      "topic": "time",
+      "question": "Which is the correct long form / explanation?\n\nmust update",
+      "options": [
+        "You must update the system.",
+        "update must you",
+        "must update",
+        "It is necessary to update."
+      ],
+      "correct": 0,
+      "id": "MT206"
+    },
+    {
+      "topic": "software",
+      "question": "Which is the correct short form / explanation?\n\nI am work on the server now.",
+      "options": [
+        "Now working",
+        "I am working on the server now.",
+        "Server work I.",
+        "I work server."
+      ],
+      "correct": 1,
+      "id": "MT207"
+    },
+    {
+      "topic": "grammar",
+      "question": "Which is the correct long form / explanation?\n\nI can code.",
+      "options": [
+        "I am able to write code.",
+        "I can program / I know how to code.",
+        "Code I can",
+        "I can code."
+      ],
+      "correct": 1,
+      "id": "MT208"
+    },
+    {
+      "topic": "modals",
+      "question": "Which is the correct short form / explanation?\n\nThe website have many pages.",
+      "options": [
+        "Pages website.",
+        "Website many pages.",
+        "Have pages many",
+        "The website has many pages."
+      ],
+      "correct": 3,
+      "id": "MT209"
+    },
+    {
+      "topic": "hardware",
+      "question": "Which is the correct long form / explanation?\n\nfaster CPU",
+      "options": [
+        "CPU more fast",
+        "faster CPU",
+        "a faster CPU",
+        "a CPU that is faster"
+      ],
+      "correct": 2,
+      "id": "MT210"
+    },
+    {
+      "topic": "websites",
+      "question": "Which is the correct short form / explanation?\n\nWhat day is today?",
+      "options": [
+        "Day today what?",
+        "Today day.",
+        "What today",
+        "Could you tell me what day it is today?"
+      ],
+      "correct": 3,
+      "id": "MT211"
+    },
+    {
+      "topic": "writing",
+      "question": "Which is the correct long form / explanation?\n\nmust update",
+      "options": [
+        "It is necessary to update.",
+        "You must update the system.",
+        "must update",
+        "update must you"
+      ],
+      "correct": 1,
+      "id": "MT212"
+    },
+    {
+      "topic": "time",
+      "question": "Which is the correct short form / explanation?\n\nI am work on the server now.",
+      "options": [
+        "Server work I.",
+        "I am working on the server now.",
+        "I work server.",
+        "Now working"
+      ],
+      "correct": 1,
+      "id": "MT213"
+    },
+    {
+      "topic": "software",
+      "question": "Which is the correct long form / explanation?\n\nI can code.",
+      "options": [
+        "I am able to write code.",
+        "I can code.",
+        "I can program / I know how to code.",
+        "Code I can"
+      ],
+      "correct": 2,
+      "id": "MT214"
+    },
+    {
+      "topic": "grammar",
+      "question": "Which is the correct short form / explanation?\n\nThe website have many pages.",
+      "options": [
+        "Have pages many",
+        "Pages website.",
+        "The website has many pages.",
+        "Website many pages."
+      ],
+      "correct": 2,
+      "id": "MT215"
+    },
+    {
+      "topic": "modals",
+      "question": "Which is the correct long form / explanation?\n\nfaster CPU",
+      "options": [
+        "faster CPU",
+        "CPU more fast",
+        "a CPU that is faster",
+        "a faster CPU"
+      ],
+      "correct": 3,
+      "id": "MT216"
+    },
+    {
+      "topic": "hardware",
+      "question": "Which is the correct short form / explanation?\n\nWhat day is today?",
+      "options": [
+        "Could you tell me what day it is today?",
+        "What today",
+        "Today day.",
+        "Day today what?"
+      ],
+      "correct": 0,
+      "id": "MT217"
+    },
+    {
+      "topic": "websites",
+      "question": "Which is the correct long form / explanation?\n\nmust update",
+      "options": [
+        "It is necessary to update.",
+        "update must you",
+        "must update",
+        "You must update the system."
+      ],
+      "correct": 3,
+      "id": "MT218"
+    },
+    {
+      "topic": "writing",
+      "question": "Which is the correct short form / explanation?\n\nI am work on the server now.",
+      "options": [
+        "Server work I.",
+        "Now working",
+        "I work server.",
+        "I am working on the server now."
+      ],
+      "correct": 3,
+      "id": "MT219"
+    },
+    {
+      "topic": "time",
+      "question": "Which is the correct long form / explanation?\n\nI can code.",
+      "options": [
+        "I am able to write code.",
+        "I can program / I know how to code.",
+        "I can code.",
+        "Code I can"
+      ],
+      "correct": 1,
+      "id": "MT220"
+    }
+  ]
+}

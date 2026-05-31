@@ -1,0 +1,474 @@
+--- Slayt 1 ---
+Express Middleware ve Body-Parser
+
+--- Slayt 2 ---
+Middleware'e Giriş
+Middleware Tanımı:
+Gelen istekler ile rota işleyicileri arasında bulunur
+İstekleri son hedeflerine ulaşmadan önce işler
+"Aradaki adam" olarak görev yapar
+İstemci İsteği → [MIDDLEWARE] → Rota İşleyici (GET/POST/PUT) → Yanıt
+
+--- Slayt 3 ---
+Middleware'e Giriş
+Middleware Neler Yapabilir?
+İstekleri Ön İşleme
+İstek özelliklerini değiştirme
+Yönlendirmeden önce işlevleri gerçekleştirme
+Günlükleme (Logging)
+İstek süresini takip etme
+İstek türünü kaydetme (GET, POST, vb.)
+İstek durumunu izleme
+Kimlik Doğrulama (Authentication)
+Kullanıcı yetkilendirmesini doğrulama
+Yetkisiz istekleri engelleme
+Güvenlik kontrolleri
+Hata İşleme
+İstek hatalarını belirleme
+Hataları işleyicilere ulaşmadan önce ele alma
+HTML Formlarına Genel Bakış
+<form action="/gonder" method="POST">
+  <label for="adi"> Adız:</label>
+  <input type="text" name="isim" required>
+  <label for="yas">Yaşınız yazın:</label>
+  <input type="text" name="yas" required>
+  
+  <input type="submit" value="send">
+</form>
+
+--- Slayt 4 ---
+Middleware'e Giriş
+Form Özelikleri:
+
+--- Slayt 5 ---
+Middleware'e Giriş
+Form Görselleştirme:
+ Adı:	     [______________]  ← metin girişi
+Yaş:	     [______________]  ← metin girişi
+[Gönder]                       ← gönder butonu
+Express ile Statik Dosyaları Sunma
+sendFile() ile HTML Dosyalarını Sunma
+Bir proje oluştururken, JavaScript'te tüm statik dosyaların (HTML dosyaları) public klasörüne konulması önerilir. Bu yüzden bir public klasörü oluşturalım ve HTML dosyalarımızı bu klasöre koyalım.
+Yeni Proje Yapısı:
+proje/
+├── public/
+│   └── index.html
+├── index.js
+├── package.json
+
+--- Slayt 6 ---
+Middleware'e Giriş
+Statik Dosyaları Sunma:
+Bu Her Yerde Neden Çalışır:
+__dirname doğru yolu dinamik olarak bulur
+Yerel makinede VE bulut sunucularında çalışır
+/Kullanıcılar/isim/proje/... gibi yolları kodlamaya gerek yok
+Sonuç: localhost:3000 adresini ziyaret etmek HTML formunuzu gösterir
+
+--- Slayt 7 ---
+Middleware'e Giriş
+Body-Parser Middleware
+Body-Parser ile Form Verilerini AyrıştırmaBody-Parser Nedir?
+Gelen istek gövdelerini ayrıştırır
+İstek nesnelerine body özelliği ekler
+Form verilerini işlemek için gereklidir
+Kurulum:
+npm install body-parser
+
+--- Slayt 8 ---
+Middleware'e Giriş
+URL Kodlu Formlar Açıklaması
+Başlık: x-www-form-urlencoded'ı Anlamaurlencoded Nedir?
+HTML form verileri için standart format
+Veriler URL formatında kodlanır
+Anahtar-değer çiftleri & ile ayrılır
+Örnek Form Gönderimi:
+Form Verileri:
+  sokak: "Atatürk Caddesi"
+  evcil: "Karabaş"
+Kodlanmış Hali:
+  sokak=Atatürk+Caddesi&evcil=Karabaş
+extended Seçeneği:
+app.use(bodyParser.urlencoded({ extended: true }));
+
+
+
+
+
+Ne Zaman Hangisi Kullanılır:
+true - Çoğu durumda, karmaşık form verileri için
+false - Basit anahtar-değer çiftleri olan formlar için
+
+--- Slayt 9 ---
+Middleware'e Giriş
+Ayrıştırılmış Verilere Erişim:
+app.post("/gonder", (req, res) => {
+  const Adi = req.body.adi;
+  const yas = req.body.yas;
+  const AdiYas = Adi + " " + yas;
+  res.send(`Grup adınız: ${AdiYas}`);
+});
+Test Adımları:
+Sunucuyu çalıştır: nodemon index.js
+localhost:3000 adresini ziyaret et
+Sokak ve evcil hayvan adlarını gir
+Gönder'e tıkla
+Konsolda ayrıştırılmış verileri kontrol et
+Oluşturulan grup adını gör!
+Önemli Çıkarımlar:
+Middleware istekleri rota işleyicilerinden önce işler
+Body-Parser isteklere req.body özelliğini ekler
+URL encoded HTML form verileri için standarttır
+extended: true karmaşık veri yapılarını işler
+__dirname dosya yollarını dinamik olarak bulur (yerel + bulut)
+Formlar form verileri için name özniteliğini anahtar olarak kullanır
+POST istekleri form verilerini gövdede taşır, URL'de değil
+
+--- Slayt 10 ---
+EJS(Embedded JavaScript) - Gömülü JavaScript'e Giriş
+EJS'ye Neden İhtiyaç Duyarız?
+Sunucu Verilerini HTML'de Gösterme Sorunu
+Problem: Form verilerini HTML'e nasıl ekleriz?
+Kullanıcı formu doldurur (örn: isim)
+POST isteği sunucuya gider
+Sunucu veriyi alır (req.body.name)
+❓ Veriyi HTML'e nasıl ekleriz?
+Güncellenmiş HTML kullanıcıya gösterilir
+Sorunlar:
+HTML, JavaScript dosyasına gömülüyor
+Kod okunamaz hale geliyor
+Büyük projelerde sürdürülemez
+Endişelerin ayrımı ilkesi ihlal ediliyor
+Kötü Çözüm - res.send() ile:
+app.post("/submit", (req, res) => {
+  const name = req.body.name;
+  res.send(`
+    <!DOCTYPE html>
+    <html>
+      <head><title>Merhaba</title></head>
+      <body>
+        <h1>Merhaba ${name}</h1>  <!-- HTML içinde JS -->
+      </body>
+    </html>
+  `);
+});
+
+--- Slayt 11 ---
+EJS(Embedded JavaScript) - Gömülü JavaScript'e Giriş
+Endişelerin Ayrımı
+HTML ve JavaScript'i Ayırma
+İdeal Durum - Ayrı Dosyalar:
+📁 proje/
+├── 📁 views/
+│   └── index.html        ← SADECE HTML yapısı
+├── index.js              ← SADECE sunucu mantığı
+└── style.css             ← SADECE stiller
+Ancak: Statik HTML dinamik veri gösteremez!
+Çözüm: Şablonlama (Templating)
+Şablonlama Nedir?
+HTML içine dinamik veri ekleme
+Sunucudan veri alıp HTML'de gösterme
+Endişeleri ayrı tutarken dinamik içerik oluşturma
+Popüler Şablonlama Dilleri:
+
+
+
+
+
+
+
+Express ile EJS Kurulumu
+ Yeni proje klasörde : npm init –y  (package.json eklemek için)
+ npm install express ejs
+package.json'a "type": "module" ekle
+
+--- Slayt 12 ---
+EJS(Embedded JavaScript) - Gömülü JavaScript'e Giriş
+Adım 3: Klasör Yapısını Oluştur (BASH’ta)
+mkdir views
+touch views/index.ejs
+touch index.js
+Express'i EJS ile Yapılandır(index.js’te)
+import express from 'express';
+const app = express();
+const port = 3000;
+// Express'e EJS'nin views klasöründe olduğunu söyle
+app.set('view engine', 'ejs');
+app.get("/", (req, res) => {
+  res.render("index", { 
+    mesaj: "Merhaba Dünya!, Benim Adım ",
+    adi: "Mushap",
+  });
+});
+app.listen(port, () => {
+  console.log(`Sunucu ${port} portunda çalışıyor`);
+});
+EJS Sözdizimi
+3 Temel EJS Etiketiler:
+
+--- Slayt 13 ---
+EJS(Embedded JavaScript) - Gömülü JavaScript'e Giriş
+Bu kod index.ejs dosyada ekliyoruz
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hafta İçi Savaşçısı</title>
+</head>
+<body>
+  <h1>
+    Arkadaşar <%= mesaj %>, 
+    <%= adi %>!
+  </h1>
+</body>
+</html>
+Hızlı Referans:
+npm install express ejs    // Express + EJS kurulumu
+mkdir views    // views klasörü oluştur
+touch views/dosya.ejs
+app.set('view engine', 'ejs’);      // index.js'de
+app.get("/", (req, res) => {
+  res.render("dosya", { anahtar: "değer" });});
+// EJS sözdizimi
+<%= değişken %>     // Değer yazdır
+<% if (kosul) { %>  // JS kodu çalıştır        <% } %>          // JS kodu kapat
+<%- html %>         // Ham HTML yazdır
+
+--- Slayt 14 ---
+EJS(Embedded JavaScript) - Gömülü JavaScript'e Giriş
+Pratik İpuçları:
+VS Code eklentisi: "EJS language support" kurun
+res.send() değil, res.render() kullanın
+views klasörü zorunlu - EJS dosyaları burada olmalı
+İsimlendirme önemli: Gönderdiğiniz anahtar, EJS'deki değişken adıyla aynı olmalı
+Hata alırsanız: Konsolu kontrol edin, path'leri kontrol edin
+Önemli Çıkarımlar:
+EJS HTML içinde JavaScript çalıştırmamızı sağlar
+res.render() ile veri göndeririz
+<%= %> değer yazdırır, <% %> kod çalıştırır
+views klasörü EJS dosyalarının yeridir
+Endişelerin ayrımı sayesinde kod daha temiz olur
+getDay() ile haftanın gününü öğrenebiliriz
+Mantığı istediğiniz gibi kurabilirsiniz (if-else, switch, object)
+
+--- Slayt 15 ---
+EJS(Embedded JavaScript) - Gömülü JavaScript'e Giriş
+Gelişmiş EJS Etiketleri ve Sözdizimi
+EJS Etiketlerine Genel Bakış
+
+
+
+
+
+
+
+1. <%= %> - Kaçış Karakterli Çıktı
+<!-- Değişken enterpolasyonu -->
+<h1>Merhaba, <%= isim %>!</h2>
+<!-- Eğer isim = "Abubakar" ise çıktı: Merhaba, Abubakar! -->
+2. <% %> - JavaScript Kodu (Çıktı Yok)
+<% console.log("Bu sunucuda çalışır"); %>
+<% if (kosul) { %>
+  <!-- Koşul doğruysa buradaki HTML gösterilir -->
+<% } %>
+<!-- Bu etiketlerden sayfada hiçbir şey görünmez -->
+3. <%- %> - Kaçış Karakteri Olmayan HTML Çıktısı
+<% let htmlIcerik = "<strong>Kalın metin</strong>" %>
+<%- htmlIcerik %>
+<!-- Çıktı: Kalın metin (kalın, etiketler değil) -->
+<!-- Karşılaştır: <%= %> ile: <strong>Kalın metin</strong> gösterir -->
+
+--- Slayt 16 ---
+EJS(Embedded JavaScript) - Gömülü JavaScript'e Giriş
+4. <%%   %%> - EJS Etiketlerini Kaçış Karakteri Yap
+<%%= isim %%>
+<!-- Sayfada şöyle görünür: <%= isim %> (yorumlanmaz) -->
+<!-- Dokümantasyon/eğitim için kullanışlı -->
+5. <%# %> - Yorumlar
+<%# Bu bir yorumdur - hiçbir yerde görünmez %>
+<%# Karmaşık şablon mantığını açıklamak için harika %>
+6. <%- include('dosya') %> - Parçaları Dahil Et
+<%- include('header') %>      <!-- header.ejs dosyasını ekler -->
+<!-- Sayfa içeriği burada -->
+<%- include('footer') %>       <!-- footer.ejs dosyasını ekler -->
+Gerçek Hayat Örneği - Meyve Listesi
+Sunucu Kodu (index.js): 
+
+
+
+
+
+EJS Şablonu (index.ejs):
+
+--- Slayt 17 ---
+EJS(Embedded JavaScript) - Gömülü JavaScript'e Giriş
+Meydan Okuma Alıştırması
+Başlangıç Dosyaları:
+index.js - app.get() zaten yapılandırılmış
+index.ejs - Değiştirilecek şablon
+Sunucudan Gönderilen Veriler:
+Meydan Okuma Gereksinimleri:
+Başlık - <%= %> kullanarak <h1> içinde göster
+Saniye - Mevcut saniyeleri bir paragrafta göster
+Koşullu Mantık - <% %> etiketlerini kullanarak:
+Saniye çift ise: Ürün listesini göster
+Saniye tek ise: "Gösterilecek ürün yok" yaz
+Liste Gösterimi - <% %> ile ürünlerde döngü yap ve her birini <%= %> ile göster
+HTML İçeriği - htmlIcerik'i <%- %> kullanarak gerçek HTML olarak göster 
+Altbilgi - <%- include('footer') %> kullanarak footer.ejs'i dahil et
+
+--- Slayt 18 ---
+Adım Adım Çözüm
+Meydan Okuma Gereksinimleri:
+Başlık - <%= %> kullanarak <h1> içinde göster
+Saniye - Mevcut saniyeleri bir paragrafta göster
+Koşullu Mantık - <% %> etiketlerini kullanarak:
+Saniye çift ise: Ürün listesini göster
+Saniye tek ise: "Gösterilecek ürün yok" yaz
+Liste Gösterimi - <% %> ile ürünlerde döngü yap ve her birini <%= %> ile göster
+HTML İçeriği - htmlIcerik'i <%- %> kullanarak gerçek HTML olarak göster 
+Altbilgi - <%- include('footer') %> kullanarak footer.ejs'i dahil et
+
+--- Slayt 19 ---
+EJS ile Veri Aktarımı
+Sunucudan İstemciye Veri Aktarımı
+Server → EJS (İleri Düzey)
+Temel Veri Aktarımı:
+// index.js
+app.get("/", (req, res) => {
+  res.render("index.ejs", { 
+    isim: "Angela" 
+  });      });
+<!-- index.ejs -->
+<h1>Merhaba <%= isim %></h1>
+<!-- Çıktı: Merhaba Özge-->
+Karmaşık Veri Aktarımı (Dizi):
+// index.js
+app.get("/", (req, res) => {
+  res.render("index", { 
+    meyveler: ["elma", "muz", "kiraz"] 
+  });    });
+
+<!-- index.ejs -->
+<ul>
+  <% meyveler.forEach(function(meyve) { %>
+    <li><%= meyve %></li>
+  <% }); %>
+</ul>
+<!-- Çıktı: elma, muz, kiraz listelenir -->
+
+--- Slayt 20 ---
+EJS ile Veri Aktarımı
+EJS'de Tanımsız Değişken Sorunu
+Veri Göndermeyi Unuttuğunuzda Ne Olur?
+// index.js - Veri göndermeyi UNUTTUK!
+app.get("/", (req, res) => {
+  res.render("index");  // ⚠️ meyveler gönderilmedi!
+});
+<!-- index.ejs -->
+<ul>
+  <% meyveler.forEach(function(meyve) { %>
+    <li><%= meyve %></li>
+  <% }); %>
+</ul>
+Sonuç: 💥 SAYFA ÇÖKER! 💥
+ReferenceError: meyveler is not defined
+Neden?
+Normal JavaScript'te if (meyveler) çalışırdı
+EJS'de değişken scope'u farklı çalışır
+EJS, değişken var mı diye kontrol etmez, direkt kullanmaya çalışır
+
+--- Slayt 21 ---
+EJS ile Veri Aktarımı
+locals ile Güvenli Veri Kontrolü
+locals Nedir?
+res.render ile gönderilen TÜM değişkenleri içeren özel nesne
+Her EJS dosyasında otomatik olarak bulunur
+Değişkenlerin varlığını güvenle kontrol etmemizi sağlar
+Problemi Çözelim:
+<!-- index.ejs - GÜVENLİ versiyon -->
+<ul>
+  <% if (locals.meyveler) { %>  <!-- ⭐ ÖNCE VAR MI KONTROL ET -->
+    <% meyveler.forEach(function(meyve) { %>
+      <li><%= meyve %></li>
+    <% }); %>
+  <% } else { %>
+    <p>Henüz meyve eklenmemiş.</p>
+  <% } %>
+</ul>
+İstemciden Sunucuya Veri Aktarımı
+Client (EJS) → Server
+HTML Form Yapısı (EJS içinde):
+<!-- index.ejs -->
+<h1>Adınızı girin:</h1>
+<form action="/submit" method="POST">
+  <input type="text" name="fName" placeholder="Ad">
+  <input type="text" name="lName" placeholder="Soyad">
+  <button type="submit">Tamam</button>
+</form>
+
+--- Slayt 22 ---
+EJS ile Veri Aktarımı
+Sunucuda POST İsteğini Yakalama:
+// index.js
+import bodyParser from 'body-parser';
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.post("/submit", (req, res) => {
+  const ad = req.body.fName;      // "fName" input'undan gelen
+  const soyad = req.body.lName;    // "lName" input'undan gelen
+  console.log(ad, soyad);
+  // İşlem yap, sonra tekrar render et
+  res.render("index");
+});
+Önemli Noktalar:
+action="/submit" → POST isteğinin gideceği rota
+method="POST" → İstek türü
+name="fName" → req.body.fName ile erişilecek anahtar
+Body-parser olmazsa req.body = undefined
+
+--- Slayt 23 ---
+EJS ile Veri Aktarımı
+İsim Harf Sayacı Uygulaması(bir Praktik)
+Adım Adım Challenge Çözümü:
+Adım 1: GET Route - Ana Sayfa
+app.get("/", (req, res) => {
+  res.render("index");  // İlk yükleme, veri yok
+});
+Adım 2: EJS'de Koşullu Render
+<!-- index.ejs -->
+<% if (locals.numLetters) { %>
+  <h1>İsminde <%= numLetters %> harf var!</h1>
+<% } else { %>
+  <h1>Aşağıya adını yaz 👇</h1>
+<% } %>
+<form action="/submit" method="POST">
+  <input type="text" name="fName" placeholder="Ad" required>
+  <input type="text" name="lName" placeholder="Soyad" required>
+  <button type="submit">Tamam</button>
+</form>
+
+--- Slayt 24 ---
+EJS ile Veri Aktarımı
+Adım 3: POST Route - Formu İşle
+app.post("/submit", (req, res) => {
+  const ad = req.body.fName;
+  const soyad = req.body.lName;
+  // Harf sayısını hesapla
+  const toplamHarf = ad.length + soyad.length;
+  
+  // VERİYİ GERİ GÖNDER! (İşte sihir burada)
+  res.render("index", { 
+    numLetters: toplamHarf 
+  });
+});
+Önemli Çıkarımlar:
+Server → EJS: res.render() ile veri gönder
+EJS → Server: POST formu ve req.body ile
+locals her zaman var, güvenli kontrol için kullan
+EJS'de değişken yoksa sayfa çöker - locals ile koru
+İki yönlü veri akışı: Server → EJS → Form → Server → EJS
+Her zaman body-parser'ı unutma (POST için)
+name attribute'u form verilerinin anahtarıdır
+
+--- Slayt 25 ---
+Tam Çözüm

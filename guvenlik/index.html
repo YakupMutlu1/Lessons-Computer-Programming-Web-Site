@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İnternet Güvenliği — Ders Notları ve Final Hazırlık</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .hero-guvenlik { background: linear-gradient(135deg, #7f1d1d 0%, #450a0a 45%, var(--bg) 100%); }
+    .hero-guvenlik .badge {
+      background: rgba(220, 38, 38, 0.25);
+      border-color: rgba(248, 113, 113, 0.5);
+      color: #fecaca;
+    }
+    .sidebar-header { background: linear-gradient(135deg, #7f1d1d 0%, var(--surface) 100%); }
+    .module-num { background: #dc2626; }
+    .section h3 { border-left-color: #f87171; }
+    .nav-module-title { color: #fca5a5; }
+    .nav-links a.active { border-left-color: #f87171; }
+    .hub-link { display: block; text-align: center; padding: 0.5rem; margin-bottom: 0.4rem; background: rgba(255,255,255,0.06); border: 1px solid var(--border); border-radius: 6px; color: var(--muted); text-decoration: none; font-size: 0.82rem; }
+    .hub-link:hover { color: var(--text); border-color: #f87171; }
+    .btn-quiz-side { display: block; text-align: center; padding: 0.55rem; background: rgba(220, 38, 38, 0.25); border: 1px solid rgba(248, 113, 113, 0.55); border-radius: 6px; color: #fecaca; text-decoration: none; font-size: 0.85rem; font-weight: 600; }
+    .btn-quiz-side:hover { background: rgba(220, 38, 38, 0.4); }
+    .hero-guvenlik a.cta-quiz { display: inline-block; padding: 0.6rem 1.2rem; background: #dc2626; color: #fff; text-decoration: none; border-radius: 8px; font-weight: 600; margin-top: 1rem; }
+    .hero-guvenlik a.cta-quiz:hover { background: #b91c1c; }
+    .exam { border-color: rgba(248, 113, 113, 0.4); background: rgba(127, 29, 29, 0.25); color: #fecaca; }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1>İnternet Güvenliği</h1>
+        <p>11 modül · Öğr. Gör. Gizem ÇELİK · KTO Karatay</p>
+      </div>
+      <div class="search-box">
+        <input type="search" id="search" placeholder="Konu ara (ör. KVKK, AES, phishing, TLS)...">
+      </div>
+      <div style="padding:0.5rem 1rem 0.75rem">
+        <a href="../index.html" class="hub-link">← Ders Platformu Ana Sayfa</a>
+        <a href="sorular.html" class="btn-quiz-side">📝 Soru Bankası (220 test sorusu)</a>
+      </div>
+      <nav>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 1 — Giriş <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#giris-tanim">İnternet vs Siber Güvenlik</a>
+            <a href="#giris-terminoloji">Terminoloji</a>
+            <a href="#giris-dijital-iz">Dijital İz</a>
+            <a href="#giris-kvkk">KVKK ve Yasal</a>
+            <a href="#giris-ilkeler">Güvenli Kullanım</a>
+            <a href="#giris-cia-tehdit">CIA ve Tehditler</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 2 — Ağ <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#ag-turler">PAN LAN WLAN MAN WAN</a>
+            <a href="#ag-cihazlar">Modem Router Switch</a>
+            <a href="#ag-osi">OSI 7 Katman</a>
+            <a href="#ag-tcpip">TCP/IP</a>
+            <a href="#ag-arp-spoof">ARP Spoofing</a>
+            <a href="#ag-araclar">Ağ Güvenlik Araçları</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 3 — Kripto <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#kripto-giris">Kriptografi Giriş</a>
+            <a href="#kripto-simetrik">AES DES Simetrik</a>
+            <a href="#kripto-asimetrik">RSA ECC</a>
+            <a href="#kripto-hash">SHA MD5 Hash</a>
+            <a href="#kripto-pki-imza">PKI ve Dijital İmza</a>
+            <a href="#kripto-tls">SSL/TLS Handshake</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 4 — Kimlik <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#kimlik-uc-faktor">3 Faktör</a>
+            <a href="#kimlik-sifre">Şifre bcrypt Salt</a>
+            <a href="#kimlik-saldiri">Brute Force Phishing</a>
+            <a href="#kimlik-mfa">MFA 2FA</a>
+            <a href="#kimlik-erisim">RBAC ABAC DAC MAC</a>
+            <a href="#kimlik-oauth">OAuth JWT</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 5 — Malware <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#malware-tanim">Malware Tanım</a>
+            <a href="#malware-turler">Virüs Worm Trojan</a>
+            <a href="#malware-kavramlar">Payload C2 Zero-day</a>
+            <a href="#malware-ornekler">WannaCry Stuxnet</a>
+            <a href="#malware-korunma">Korunma</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 6 — Sosyal Müh. <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#sosyal-tanim">Sosyal Mühendislik</a>
+            <a href="#sosyal-turler">Phishing Vishing Smishing</a>
+            <a href="#sosyal-teknikler">Pretexting Baiting</a>
+            <a href="#sosyal-korunma">Farkındalık</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 7 — IoT / Mobil <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#iot-mobil-risk">Mobil Riskler</a>
+            <a href="#iot-owasp">IoT OWASP</a>
+            <a href="#iot-protokol">MQTT CoAP TLS</a>
+            <a href="#iot-kvkk-gdpr">KVKK GDPR</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 8 — İzleme <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#izleme-wireshark">Wireshark</a>
+            <a href="#izleme-ids-siem">IDS IPS SIEM SOC</a>
+            <a href="#izleme-pentest">Pentest Tarama</a>
+            <a href="#izleme-cia-ddos">CIA ve DDoS</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 9 — Protokol <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#protokol-tls-https">TLS SSL HTTPS</a>
+            <a href="#protokol-ipsec-ssh">IPsec SSH</a>
+            <a href="#protokol-standart">ISO27001 NIST OWASP</a>
+            <a href="#protokol-kablosuz-email">WPA E-posta</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 10 — Olay Yönetimi <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#olay-tanim">Güvenlik Olayı</a>
+            <a href="#olay-fazlar">Müdahale Fazları</a>
+            <a href="#olay-irt-soar">IRT ve SOAR</a>
+            <a href="#olay-post-review">Olay Sonrası</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 11 — Etik <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#etik-vatandaslik">Dijital Vatandaşlık</a>
+            <a href="#etik-telif-siber">Telif ve Siber Zorbalık</a>
+            <a href="#etik-sapkalar">White Black Gray Hat</a>
+            <a href="#etik-mahremiyet">Mahremiyet ve Paylaşım</a>
+          </div>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <header class="hero hero-guvenlik">
+        <h2>İnternet Güvenliği — Final Hazırlık Rehberi</h2>
+        <p>KTO Karatay TSMYO müfredatındaki 11 haftalık konu: ağ güvenliğinden kriptografiye, kimlik doğrulamadan olay müdahalesine ve internet etiğine. Öğr. Gör. Gizem ÇELİK haftalık PDF slaytlarından derlenmiştir.</p>
+        <p>Sol menüden modüle atlayın; arama kutusu ile KVKK, AES, phishing, TLS, ARP, ransomware gibi anahtar kelimeleri filtreleyin. Her bölümde tablo, kod örneği ve sınav ipuçları bulunur.</p>
+        <a href="sorular.html" class="cta-quiz">📝 Soru Bankasına Git (220 test sorusu) →</a>
+        <div class="badges">
+          <span class="badge">CIA</span>
+          <span class="badge">Kriptografi</span>
+          <span class="badge">Malware</span>
+          <span class="badge">Phishing</span>
+          <span class="badge">TLS</span>
+        </div>
+      </header>
+
+      <div class="content">
+
+        <article class="module" id="hafta1-giris">
+          <div class="module-header">
+            <span class="module-num">1</span>
+            <h2>İnternet Güvenliğine Giriş ve Temel Kavramlar</h2>
+          </div>
+
+          <section class="section" id="giris-tanim">
+            <h3>İnternet Güvenliği Nedir? — Siber Güvenlikten Farkı</h3>
+            <p><strong>İnternet güvenliği</strong>, internet üzerinden yapılan tüm faaliyetlerde kullanıcıların, verilerinin ve sistemlerinin korunmasını kapsayan disiplindir. Web tarayıcısı, e-posta, sosyal medya, online işlemler ve dosya indirme gibi günlük kullanım alanlarına odaklanır.</p>
+            <div class="compare-grid">
+              <div class="compare-card">
+                <h4>İnternet Güvenliği</h4>
+                <ul>
+                  <li>Sadece internet aktiviteleri</li>
+                  <li>Bireysel kullanıcı odaklı</li>
+                  <li>Web, e-posta, sosyal medya</li>
+                  <li>Daha dar kapsam</li>
+                </ul>
+              </div>
+              <div class="compare-card">
+                <h4>Siber Güvenlik</h4>
+                <ul>
+                  <li>Tüm dijital dünya</li>
+                  <li>Kurumsal ve endüstriyel</li>
+                  <li>Ağ, sistem, fiziksel güvenlik</li>
+                  <li>Daha geniş kapsam</li>
+                </ul>
+              </div>
+            </div>
+            <p>Kapsam örnekleri: güvenli site (HTTPS), spam/phishing filtreleri, sosyal medya gizlilik ayarları, e-ticaret ve online bankacılık, güvenli indirme ve bulut depolama.</p>
+            <p>2024 istatistikleri (ders materyali): dünyada ~5,44 milyar internet kullanıcısı; günlük ortalama ~6 saat 40 dakika çevrimiçi; trafiğin ~%60’ı mobil. Türkiye’de ~71 milyon kullanıcı, günlük ~7 saat; e-ticaret penetrasyonu ~%77,6. Finansal kayıp, kimlik hırsızlığı, mahremiyet ihlali ve itibar kaybı internet güvenliğinin dört temel motivasyonudur.</p>
+            <table>
+              <tr><th>Dönem</th><th>Olay</th><th>Önem</th></tr>
+              <tr><td>1969</td><td>ARPANET</td><td>İlk ağ; güvenlik düşünülmedi</td></tr>
+              <tr><td>1988</td><td>Morris Worm</td><td>~6000 bilgisayar etkilendi</td></tr>
+              <tr><td>2017</td><td>WannaCry</td><td>230K+ sistem, hastaneler felç</td></tr>
+              <tr><td>2024+</td><td>AI destekli saldırılar</td><td>Deepfake, otomatik phishing</td></tr>
+            </table>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>İnternet güvenliği ⊂ siber güvenlik değildir; kesişir ama odak farklıdır. Bireysel kullanıcı için internet güvenliği yeterli başlangıçtır.</div>
+          </section>
+
+          <section class="section" id="giris-terminoloji">
+            <h3>Temel Kavramlar ve Terminoloji</h3>
+            <table>
+              <tr><th>Kavram</th><th>Türkçe / Açıklama</th></tr>
+              <tr><td>Threat</td><td>Tehdit — potansiyel tehlike kaynağı</td></tr>
+              <tr><td>Vulnerability</td><td>Zafiyet — sistemdeki zayıf nokta</td></tr>
+              <tr><td>Risk</td><td>Tehdidin gerçekleşme olasılığı × etki</td></tr>
+              <tr><td>Attack</td><td>Saldırı — zararlı eylem</td></tr>
+              <tr><td>Firewall</td><td>Güvenlik duvarı — trafik filtreleme</td></tr>
+              <tr><td>Encryption</td><td>Şifreleme — veriyi okunamaz yapma</td></tr>
+              <tr><td>2FA / MFA</td><td>Çok faktörlü kimlik doğrulama</td></tr>
+              <tr><td>VPN</td><td>Sanal özel ağ — tünelleme</td></tr>
+              <tr><td>Malware</td><td>Kötü amaçlı yazılım</td></tr>
+            </table>
+            <p><strong>Güvenlik (Security)</strong> dört aşamada düşünülür: koruma (protection), tespit (detection), yanıt (response), iyileştirme (recovery). <strong>Gizlilik (Privacy)</strong> ise bilgi, iletişim, konum ve davranış gizliliği boyutlarını içerir.</p>
+            <div class="tip"><strong>İpucu</strong>Tehdit ≠ zafiyet: tehdit dış kaynak, zafiyet iç zayıflıktır. Risk = tehdit + zafiyet + varlık değeri.</div>
+          </section>
+
+          <section class="section" id="giris-dijital-iz">
+            <h3>Dijital İz (Digital Footprint)</h3>
+            <p>İnternette bıraktığınız her iz — paylaşım, yorum, çerez, konum, arama geçmişi — <strong>dijital ayak izinizi</strong> oluşturur. İzler <strong>aktif</strong> (bilinçli paylaşım) veya <strong>pasif</strong> (sunucu logları, reklam takibi) olabilir.</p>
+            <ul>
+              <li>Sosyal medya profilleri ve etiketler</li>
+              <li>E-posta ve forum kayıtları</li>
+              <li>Çerezler ve üçüncü taraf izleyiciler</li>
+              <li>IP adresi ve cihaz parmak izi (fingerprint)</li>
+            </ul>
+            <pre><code># Tarayıcıda hangi bilgiler sızdırılabilir? (örnek kontrol listesi)
+- User-Agent, ekran çözünürlüğü, dil
+- Yüklü eklentiler (fingerprint)
+- Konum izni, kamera/mikrofon izinleri
+- Oturum çerezleri (session hijacking riski)</code></pre>
+            <div class="warn"><strong>Dikkat</strong>Eski hesapları kapatın, gizlilik ayarlarını gözden geçirin, “Beni hatırla”yı ortak bilgisayarlarda kullanmayın.</div>
+          </section>
+
+          <section class="section" id="giris-kvkk">
+            <h3>KVKK ve Yasal Düzenlemeler</h3>
+            <p><strong>KVKK (6698)</strong>, kişisel verilerin işlenmesinde veri sorumlusu ve veri işleyen yükümlülüklerini tanımlar. Aydınlatma metni, açık rıza, veri minimizasyonu ve ihlal bildirimi (72 saat içinde Kurul’a) sınavda sık geçer.</p>
+            <table>
+              <tr><th>İlke</th><th>Açıklama</th></tr>
+              <tr><td>Hukuka uygunluk</td><td>Meşru dayanak (rıza, sözleşme, kanuni yükümlülük)</td></tr>
+              <tr><td>Veri minimizasyonu</td><td>Sadece gerekli veriyi toplama</td></tr>
+              <tr><td>Doğruluk</td><td>Güncel ve doğru veri tutma</td></tr>
+              <tr><td>Saklama süresi</td><td>Amaç bitince silme veya anonimleştirme</td></tr>
+            </table>
+            <p>AB’de <strong>GDPR</strong> benzer kapsamdadır; küresel şirketler her iki rejime de uyum sağlar. Türkiye 2023 verilerine göre internet dolandırıcılığı kayıpları milyarlarca TL seviyesindedir — kişisel veri koruma doğrudan finansal güvenlikle bağlantılıdır.</p>
+          </section>
+
+          <section class="section" id="giris-ilkeler">
+            <h3>Güvenli İnternet Kullanım İlkeleri</h3>
+            <ol>
+              <li>Güçlü ve benzersiz parolalar; şifre yöneticisi kullanın.</li>
+              <li>Yazılım ve işletim sistemini güncel tutun.</li>
+              <li>Bilinmeyen ekleri ve linkleri açmayın.</li>
+              <li>HTTPS ve kilit simgesini kontrol edin.</li>
+              <li>Herkese açık Wi-Fi’de hassas işlem yapmayın; VPN düşünün.</li>
+              <li>Düzenli yedekleme (3-2-1 kuralı: 3 kopya, 2 ortam, 1 uzak).</li>
+            </ol>
+            <div class="tip"><strong>İpucu</strong>2FA’yı e-posta, banka ve sosyal medyada zorunlu kılın. SMS yerine uygulama tabanlı OTP (Google Authenticator, Microsoft Authenticator) tercih edin.</div>
+          </section>
+
+          <section class="section" id="giris-cia-tehdit">
+            <h3>CIA Üçlüsü ve Tehditlere Giriş</h3>
+            <table>
+              <tr><th>Bileşen</th><th>Anlam</th><th>İhlal örneği</th></tr>
+              <tr><td>Confidentiality</td><td>Gizlilik</td><td>Veri sızıntısı, dinleme</td></tr>
+              <tr><td>Integrity</td><td>Bütünlük</td><td>Veri değiştirme, sahte site</td></tr>
+              <tr><td>Availability</td><td>Erişilebilirlik</td><td>DDoS, ransomware kilidi</td></tr>
+            </table>
+            <p>Yaygın tehditler: kötü amaçlı yazılım, phishing, sosyal mühendislik, zayıf parola, iç tehdit. Korunma: savunma katmanları (defense in depth), farkındalık eğitimi, yedekleme ve olay müdahale planı.</p>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>CIA + bazen <em>Accountability</em> (hesap verebilirlik) ve <em>Non-repudiation</em> (inkar edememe) eklenir.</div>
+          </section>
+        </article>
+
+        <article class="module" id="hafta2-ag">
+          <div class="module-header">
+            <span class="module-num">2</span>
+            <h2>Ağ Güvenliği ve Ağ Katmanları</h2>
+          </div>
+
+          <section class="section" id="ag-turler">
+            <h3>Ağ Türleri: PAN, LAN, WLAN, MAN, WAN, CAN</h3>
+            <p><strong>Ağ</strong>, birden fazla cihazın veri alışverişi için bağlandığı iletişim yapısıdır. Kapsama alanına göre türler ayrılır.</p>
+            <table>
+              <tr><th>Tür</th><th>Kapsama</th><th>Örnek</th><th>Risk</th></tr>
+              <tr><td>PAN</td><td>1–10 m</td><td>Bluetooth kulaklık</td><td>Yetkisiz eşleşme</td></tr>
+              <tr><td>LAN</td><td>Bina</td><td>Ofis kablolu ağ</td><td>ARP spoofing, iç tehdit</td></tr>
+              <tr><td>WLAN</td><td>Kablosuz LAN</td><td>Ev/kampüs Wi-Fi</td><td>Sahte AP (evil twin)</td></tr>
+              <tr><td>CAN</td><td>Kampüs</td><td>Üniversite fakülteler arası</td><td>Geniş iç yüzey</td></tr>
+              <tr><td>MAN</td><td>Şehir</td><td>Belediye şehir ağı</td><td>Büyük trafik, sabotaj</td></tr>
+              <tr><td>WAN</td><td>Ülke/küresel</td><td>İnternet</td><td>DDoS, IP spoofing</td></tr>
+            </table>
+          </section>
+
+          <section class="section" id="ag-cihazlar">
+            <h3>Temel Ağ Cihazları</h3>
+            <table>
+              <tr><th>Cihaz</th><th>Görev</th><th>Güvenlik riski</th></tr>
+              <tr><td>Modem</td><td>ISP sinyalini dijital veriye çevirir</td><td>Varsayılan admin şifresi</td></tr>
+              <tr><td>Router</td><td>LAN ↔ WAN yönlendirme, DHCP</td><td>Açık port, zayıf NAT</td></tr>
+              <tr><td>Switch</td><td>Aynı ağda MAC ile iletim</td><td>MAC spoofing, VLAN hatası</td></tr>
+              <tr><td>Access Point</td><td>Kablosuz erişim</td><td>Zayıf WPA, sahte AP</td></tr>
+              <tr><td>Firewall</td><td>Trafik filtreleme, log</td><td>Yanlış kural, kapalı log</td></tr>
+              <tr><td>Proxy</td><td>Aracı sunucu, filtreleme</td><td>MITM, SSL inspection hataları</td></tr>
+            </table>
+            <div class="warn"><strong>Dikkat</strong>Ev router’da uzaktan yönetim (WAN admin) kapalı olmalı; firmware güncel tutulmalıdır.</div>
+          </section>
+
+          <section class="section" id="ag-osi">
+            <h3>OSI Referans Modeli — 7 Katman</h3>
+            <table>
+              <tr><th>Katman</th><th>Ad</th><th>PDU</th><th>Örnek</th></tr>
+              <tr><td>7</td><td>Uygulama</td><td>Data</td><td>HTTP, DNS, SMTP</td></tr>
+              <tr><td>6</td><td>Oturum</td><td>Data</td><td>NetBIOS</td></tr>
+              <tr><td>5</td><td>Sunum</td><td>Data</td><td>SSL/TLS (eski yerleşim)</td></tr>
+              <tr><td>4</td><td>Taşıma</td><td>Segment</td><td>TCP, UDP</td></tr>
+              <tr><td>3</td><td>Ağ</td><td>Packet</td><td>IP, ICMP</td></tr>
+              <tr><td>2</td><td>Veri bağı</td><td>Frame</td><td>Ethernet, MAC</td></tr>
+              <tr><td>1</td><td>Fiziksel</td><td>Bit</td><td>Kablo, radyo</td></tr>
+            </table>
+            <p>Güvenlik her katmanda farklıdır: fiziksel erişim kontrolü, MAC filtreleme, firewall (L3/L4), WAF (L7), uçtan uca şifreleme (uygulama).</p>
+          </section>
+
+          <section class="section" id="ag-tcpip">
+            <h3>TCP/IP Modeli</h3>
+            <p>Pratikte kullanılan <strong>4 katmanlı TCP/IP</strong>: Uygulama (OSI 5–7), Taşıma (TCP/UDP), İnternet (IP), Ağ Erişimi (OSI 1–2).</p>
+            <pre><code># TCP üçlü el sıkışması (SYN, SYN-ACK, ACK)
+İstemci ----SYN----> Sunucu
+İstemci <--SYN-ACK-- Sunucu
+İstemci ----ACK----> Sunucu
+
+# UDP: bağlantısız, hızlı; DNS, VoIP — bütünlük uygulama katmanında</code></pre>
+            <p><strong>Portlar:</strong> HTTP 80, HTTPS 443, SSH 22, DNS 53, SMTP 25. Kapalı olmayan gereksiz portlar saldırı yüzeyini artırır.</p>
+          </section>
+
+          <section class="section" id="ag-arp-spoof">
+            <h3>ARP Spoofing (MITM)</h3>
+            <p><strong>ARP</strong>, IP adresini MAC adresine eşler. Önbellek süresi kısadır; LAN’da broadcast ile çözülür. Spoofing saldırısında saldırgan sahte ARP yanıtları göndererek trafiği kendi cihazına yönlendirir — <strong>Man-in-the-Middle</strong>. DNS spoofing ve SSL stripping ile birleştirilebilir; bu yüzden kritik işlemlerde yalnızca HTTPS ve HSTS yeterli değil, sertifika uyarılarını asla yok saymayın.</p>
+            <div class="flow">Kurban A (192.168.1.10)  →  "Router MAC benim"  →  Saldırgan
+Saldırgan  →  trafiği dinler/değiştirir  →  Gerçek router</div>
+            <p>Korunma: statik ARP, Dynamic ARP Inspection (switch), ağ segmentasyonu, şifreli protokoller (HTTPS her zaman).</p>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>ARP spoofing yerel ağ (LAN) saldırısıdır; WAN’da doğrudan ARP kullanılmaz.</div>
+          </section>
+
+          <section class="section" id="ag-araclar">
+            <h3>Ağ Güvenlik Araçları</h3>
+            <ul>
+              <li><strong>Wireshark</strong> — paket analizi</li>
+              <li><strong>Nmap</strong> — port ve servis tarama</li>
+              <li><strong>Snort / Suricata</strong> — IDS/IPS</li>
+              <li><strong>pfSense / iptables</strong> — firewall</li>
+              <li><strong>VPN</strong> — uzaktan güvenli erişim</li>
+            </ul>
+            <pre><code># Nmap örnek (eğitim ortamında, izinli hedefte)
+nmap -sV -p 22,80,443 192.168.1.1</code></pre>
+          </section>
+        </article>
+
+        <article class="module" id="hafta3-kripto">
+          <div class="module-header">
+            <span class="module-num">3</span>
+            <h2>Şifreleme ve Kriptografi Temelleri</h2>
+          </div>
+
+          <section class="section" id="kripto-giris">
+            <h3>Kriptografiye Giriş</h3>
+            <p><strong>Kriptografi</strong> (Yun. kryptos + graphia), bilgiyi yetkisizlere karşı gizler. Hedefler: gizlilik, bütünlük, kimlik doğrulama, inkar edememe.</p>
+            <p><code>Plaintext</code> → algoritma + anahtar → <code>Ciphertext</code>. Sezar şifresi (kaydırma), Enigma, 1976’da açık anahtar kriptografisi, 2001 AES standardı.</p>
+          </section>
+
+          <section class="section" id="kripto-simetrik">
+            <h3>Simetrik Şifreleme: DES, AES</h3>
+            <p>Aynı anahtar şifreler ve çözer. Hızlı; büyük veri için ideal. <strong>Anahtar dağıtım problemi</strong> vardır.</p>
+            <table>
+              <tr><th>Algoritma</th><th>Anahtar</th><th>Durum</th></tr>
+              <tr><td>DES</td><td>56-bit</td><td>Güvensiz — kırıldı</td></tr>
+              <tr><td>3DES</td><td>112/168-bit</td><td>Eski, terk ediliyor</td></tr>
+              <tr><td>AES-128</td><td>128-bit</td><td>Günümüz standardı</td></tr>
+              <tr><td>AES-256</td><td>256-bit</td><td>Yüksek güvenlik</td></tr>
+            </table>
+            <p>Çalışma modları: ECB (zayıf desen), CBC, GCM (AEAD — şifreleme + bütünlük).</p>
+            <pre><code># Kavramsal AES akışı (Python cryptography kütüphanesi ile)
+from cryptography.fernet import Fernet
+key = Fernet.generate_key()
+f = Fernet(key)
+token = f.encrypt(b"Gizli mesaj")</code></pre>
+          </section>
+
+          <section class="section" id="kripto-asimetrik">
+            <h3>Asimetrik Şifreleme: RSA ve ECC</h3>
+            <p><strong>Açık anahtar</strong> herkesle paylaşılır (şifreleme); <strong>gizli anahtar</strong> sadece sahibinde (çözme/imza).</p>
+            <p><strong>RSA:</strong> büyük asal çarpanlarına ayırma zorluğuna dayanır. Yavaş (~1000× simetrikten); genelde anahtar değişimi ve imza için.</p>
+            <p><strong>ECC (Eliptik Eğri):</strong> Daha kısa anahtarla eşdeğer güvenlik (256-bit ECC ≈ 3072-bit RSA). Mobil ve TLS’te yaygın.</p>
+          </section>
+
+          <section class="section" id="kripto-hash">
+            <h3>Hash Fonksiyonları: SHA ve MD5</h3>
+            <p>Tek yönlü özet; geri döndürülemez. Bütünlük ve parola saklama için kullanılır.</p>
+            <table>
+              <tr><th>Algoritma</th><th>Çıktı</th><th>Not</th></tr>
+              <tr><td>MD5</td><td>128-bit</td><td>Çarpışma bulundu — kullanmayın</td></tr>
+              <tr><td>SHA-256</td><td>256-bit</td><td>Güncel standart</td></tr>
+              <tr><td>SHA-3</td><td>Değişken</td><td>Alternatif aile</td></tr>
+            </table>
+            <p>Parola için düz hash değil: <strong>bcrypt</strong>, <strong>scrypt</strong>, <strong>Argon2</strong> + tuz (salt).</p>
+            <pre><code># Parola hash (Node.js bcrypt örneği)
+const bcrypt = require('bcrypt');
+const saltRounds = 12;
+const hash = await bcrypt.hash('KullaniciParolasi', saltRounds);</code></pre>
+          </section>
+
+          <section class="section" id="kripto-pki-imza">
+            <h3>PKI, Sertifikalar ve Dijital İmza</h3>
+            <p><strong>PKI (Public Key Infrastructure)</strong>: CA (Sertifika Otoritesi) kök güveni, ara CA, son kullanıcı sertifikası, CRL/OCSP iptal listesi.</p>
+            <p><strong>Dijital imza:</strong> gönderen gizli anahtarla hash’i imzalar; alıcı açık anahtarla doğrular — inkar edememe sağlar.</p>
+            <div class="flow">Kök CA → Ara CA → sunucu sertifikası (CN=example.com)
+Tarayıcı güven zincirini doğrular → yeşil kilit</div>
+          </section>
+
+          <section class="section" id="kripto-tls">
+            <h3>SSL/TLS El Sıkışması (Handshake)</h3>
+            <ol>
+              <li>Client Hello — desteklenen cipher suite’ler</li>
+              <li>Server Hello — seçilen suite + sertifika</li>
+              <li>Sertifika doğrulama (güven zinciri)</li>
+              <li>Oturum anahtarı (simetrik) üretimi — örn. ECDHE</li>
+              <li>Şifreli kanal — AES-GCM ile veri</li>
+            </ol>
+            <p>Eski <strong>SSL</strong> güvensizdir; yalnızca <strong>TLS 1.2+</strong> (tercihen 1.3) kullanın.</p>
+            <p>TLS 1.3 el sıkışması daha az round-trip ile hızlanır ve zayıf cipher’ları dışlar. Perfect Forward Secrecy (PFS) sayesinde uzun vadeli anahtar sızsa bile geçmiş oturumlar çözülemez.</p>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>HTTPS = HTTP + TLS. Sertifika süresi ve SAN alanları kontrol edilmelidir.</div>
+          </section>
+        </article>
+
+        <article class="module" id="hafta4-kimlik">
+          <div class="module-header">
+            <span class="module-num">4</span>
+            <h2>Kimlik Doğrulama ve Erişim Yönetimi</h2>
+          </div>
+
+          <section class="section" id="kimlik-uc-faktor">
+            <h3>Kimlik Doğrulama ve Üç Faktör</h3>
+            <table>
+              <tr><th>Faktör</th><th>Örnek</th></tr>
+              <tr><td>Bildiğiniz</td><td>Parola, PIN, güvenlik sorusu</td></tr>
+              <tr><td>Sahip olduğunuz</td><td>Telefon OTP, akıllı kart, token</td></tr>
+              <tr><td>Olduğunuz</td><td>Parmak izi, yüz, iris</td></tr>
+            </table>
+            <p><strong>Authentication</strong> (kimlik) ≠ <strong>Authorization</strong> (yetki). Önce kim olduğunuz kanıtlanır, sonra ne yapabileceğiniz belirlenir.</p>
+          </section>
+
+          <section class="section" id="kimlik-sifre">
+            <h3>Şifre Güvenliği: bcrypt ve Tuz (Salt)</h3>
+            <ul>
+              <li>En az 10–12 karakter; passphrase tercih</li>
+              <li>Büyük/küçük harf, rakam, özel karakter</li>
+              <li>Sözlük kelimesi ve kurum+yıl kalıplarından kaçının</li>
+              <li>Her site için benzersiz parola</li>
+            </ul>
+            <p><strong>Salt:</strong> her kullanıcıya rastgele ek; gökkuşağı tablolarını etkisiz kılar. <strong>bcrypt</strong> yavaş hash ile brute force’u zorlaştırır.</p>
+          </section>
+
+          <section class="section" id="kimlik-saldiri">
+            <h3>Parola Saldırıları</h3>
+            <table>
+              <tr><th>Saldırı</th><th>Mekanizma</th><th>Korunma</th></tr>
+              <tr><td>Brute force</td><td>Tüm kombinasyonlar</td><td>Kilitleme, rate limit, CAPTCHA</td></tr>
+              <tr><td>Dictionary</td><td>Wordlist + varyasyon</td><td>Güçlü parola politikası</td></tr>
+              <tr><td>Credential stuffing</td><td>Sızmış çiftleri başka sitelerde dene</td><td>Benzersiz parola, MFA</td></tr>
+              <tr><td>Phishing</td><td>Sahte giriş sayfası</td><td>Farkındalık, FIDO2</td></tr>
+            </table>
+            <div class="warn"><strong>Dikkat</strong>“Karatay2026”, “password!” gibi şifreler dictionary saldırısında dakikalar içinde düşer.</div>
+          </section>
+
+          <section class="section" id="kimlik-mfa">
+            <h3>MFA ve 2FA</h3>
+            <p><strong>2FA</strong> iki faktör; <strong>MFA</strong> ikiden fazla olabilir. SMS OTP SIM swap riski taşır; TOTP uygulaması veya donanım anahtarı (YubiKey) daha güvenlidir.</p>
+            <div class="tip"><strong>İpucu</strong>FIDO2/WebAuthn phishing’e karşı bağlama (domain) içerir; parola + OTP’den güçlü savunma sağlar.</div>
+          </section>
+
+          <section class="section" id="kimlik-erisim">
+            <h3>Erişim Kontrol Modelleri</h3>
+            <table>
+              <tr><th>Model</th><th>Açıklama</th></tr>
+              <tr><td>RBAC</td><td>Rol tabanlı — örn. “Öğrenci”, “Admin”</td></tr>
+              <tr><td>ABAC</td><td>Öznitelik tabanlı — konum, saat, cihaz</td></tr>
+              <tr><td>DAC</td><td>İsteğe bağlı — kaynak sahibi izin verir</td></tr>
+              <tr><td>MAC</td><td>Zorunlu — askeri sınıflandırma seviyeleri</td></tr>
+            </table>
+            <p><strong>En az ayrıcalık (least privilege)</strong>: iş için gereken minimum yetki.</p>
+          </section>
+
+          <section class="section" id="kimlik-oauth">
+            <h3>OAuth 2.0 ve JWT</h3>
+            <p><strong>OAuth 2.0</strong> yetkilendirme çerçevesidir; “Google ile giriş” senaryosunda kimlik sağlayıcıya delegasyon. <strong>OpenID Connect</strong> kimlik katmanı ekler.</p>
+            <pre><code># JWT yapısı (Base64Url)
+header.payload.signature
+
+# Payload örnek claim'ler
+{
+  "sub": "12345",
+  "name": "Ali Veli",
+  "role": "student",
+  "exp": 1710000000
+}</code></pre>
+            <p>JWT imzası doğrulanmazsa token sahteciliği mümkündür. Access token kısa ömürlü, refresh token güvenli saklanmalıdır.</p>
+          </section>
+        </article>
+
+        <article class="module" id="hafta5-malware">
+          <div class="module-header">
+            <span class="module-num">5</span>
+            <h2>Zararlı Yazılımlar (Malware)</h2>
+          </div>
+
+          <section class="section" id="malware-tanim">
+            <h3>Malware Nedir?</h3>
+            <p>Sisteme zarar vermek, veri çalmak veya yetkisiz erişim için tasarlanmış yazılımların genel adıdır. Amaçlar: finansal kazanç, casusluk, sabotaj, botnet.</p>
+            <p>İstatistikler (ders slaytları): yılda milyarlarca malware olayı; veri ihlali maliyeti milyonlarca dolar; saldırılar saniyede bir gerçekleşebilir.</p>
+          </section>
+
+          <section class="section" id="malware-turler">
+            <h3>Malware Türleri</h3>
+            <table>
+              <tr><th>Tür</th><th>Özellik</th></tr>
+              <tr><td>Virüs</td><td>Barındırıcı dosyaya bulaşır, kullanıcı yayar</td></tr>
+              <tr><td>Worm</td><td>Ağ üzerinde kendi kendine yayılır</td></tr>
+              <tr><td>Trojan</td><td>Faydalı gibi görünür, arka kapı açar</td></tr>
+              <tr><td>Ransomware</td><td>Veriyi şifreler, fidye ister</td></tr>
+              <tr><td>Spyware</td><td>Gizlice bilgi toplar, keylogger</td></tr>
+              <tr><td>Adware</td><td>İstenmeyen reklam</td></tr>
+              <tr><td>Rootkit</td><td>Derin gizlenme, kernel seviyesi</td></tr>
+            </table>
+          </section>
+
+          <section class="section" id="malware-kavramlar">
+            <h3>Payload, Exploit, Vektör, C2, Zero-day</h3>
+            <ul>
+              <li><strong>Payload</strong> — asıl zararlı eylem (şifreleme, exfil)</li>
+              <li><strong>Exploit</strong> — zafiyetten yararlanan kod (EternalBlue)</li>
+              <li><strong>Vektör</strong> — giriş yolu (ek, USB, zayıf parola)</li>
+              <li><strong>C2</strong> — komuta kontrol sunucusu</li>
+              <li><strong>Zero-day</strong> — yamasız açık</li>
+              <li><strong>Persistence</strong> — yeniden başlatmada kalma</li>
+              <li><strong>Obfuscation</strong> — AV’dan kaçınma</li>
+            </ul>
+          </section>
+
+          <section class="section" id="malware-ornekler">
+            <h3>Gerçek Dünya Örnekleri</h3>
+            <p><strong>WannaCry (2017):</strong> EternalBlue exploit, SMB yayılımı, Bitcoin fidyesi (~$300), sağlık sektörü ciddi etkilendi.</p>
+            <p><strong>Stuxnet:</strong> endüstriyel SCADA hedefli, 4 zero-day; fiziksel santrifüj hasarı.</p>
+            <p><strong>Mirai:</strong> zayıf IoT parolaları; devasa DDoS botneti.</p>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>Worm ağ ile yayılır; virüs kullanıcı eylemi (dosya çalıştırma) gerektirir.</div>
+          </section>
+
+          <section class="section" id="malware-korunma">
+            <h3>Korunma Yöntemleri</h3>
+            <ol>
+              <li>Güncel işletim sistemi ve uygulamalar</li>
+              <li>Güvenilir antivirüs / EDR</li>
+              <li>E-posta eklerinde dikkat, makroları kapatma</li>
+              <li>Düzenli yedekleme (ransomware’e karşı)</li>
+              <li>Ağ segmentasyonu ve en az ayrıcalık</li>
+              <li>Kullanıcı farkındalık eğitimi</li>
+            </ol>
+            <p><strong>Sandbox</strong> (VirusTotal, Cuckoo): şüpheli dosyayı izole ortamda analiz.</p>
+            <p>EDR (Endpoint Detection and Response) davranışsal analiz ile sıfır gün tehditlerinde imza tabanlı antivirüsten daha etkilidir.</p>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>3-2-1 yedekleme kuralı ransomware sonrası kurtarmanın temelidir.</div>
+            <p>Kurumsal ortamda uygulama allow-listing ve e-posta gateway filtreleri ek savunma katmanı sağlar.</p>
+          </section>
+        </article>
+
+        <article class="module" id="hafta6-sosyal">
+          <div class="module-header">
+            <span class="module-num">6</span>
+            <h2>Sosyal Mühendislik Saldırıları</h2>
+          </div>
+
+          <section class="section" id="sosyal-tanim">
+            <h3>Sosyal Mühendislik Nedir?</h3>
+            <p>İnsan psikolojisini kullanarak güven kazanma ve bilgi/erişim elde etme sanatıdır. Teknik zafiyet yerine <strong>insan zafiyeti</strong> hedeflenir: acelecilik, otoriteye saygı, merak, korku.</p>
+            <p>ILOVEYOU (2000) e-posta konusuyla 45M+ bilgisayar — teknikten çok sosyal mühendislik örneği.</p>
+          </section>
+
+          <section class="section" id="sosyal-turler">
+            <h3>Phishing, Spear Phishing, Vishing, Smishing</h3>
+            <table>
+              <tr><th>Tür</th><th>Kanal</th><th>Özellik</th></tr>
+              <tr><td>Phishing</td><td>E-posta</td><td>Toplu, genel</td></tr>
+              <tr><td>Spear phishing</td><td>E-posta</td><td>Hedefli, kişiselleştirilmiş</td></tr>
+              <tr><td>Vishing</td><td>Telefon</td><td>“Banka görevlisi” araması</td></tr>
+              <tr><td>Smishing</td><td>SMS</td><td>Kısa link, kargo sahtesi</td></tr>
+              <tr><td>Whaling</td><td>E-posta</td><td>Üst yönetim hedefli</td></tr>
+            </table>
+            <pre><code># Sahte e-posta kırmızı bayraklar
+From: banka@güvenli-banka.com.tr  (domain dikkat!)
+Subject: HESABINIZ ASKIYA ALINDI — HEMEN TIKLAYIN
+Link: http://192.168.1.5/login  (IP veya yazım hatası)</code></pre>
+          </section>
+
+          <section class="section" id="sosyal-teknikler">
+            <h3>Pretexting, Baiting, Tailgating</h3>
+            <ul>
+              <li><strong>Pretexting</strong> — sahte senaryo (IT destek, anket)</li>
+              <li><strong>Baiting</strong> — USB bırakma, bedava yazılım</li>
+              <li><strong>Quid pro quo</strong> — karşılık vaadi (şifrenizi verin, yardım edeyim)</li>
+              <li><strong>Tailgating</strong> — yetkisiz fiziksel giriş (kapıdan peşinden girme)</li>
+            </ul>
+          </section>
+
+          <section class="section" id="sosyal-korunma">
+            <h3>Korunma ve Farkındalık</h3>
+            <ol>
+              <li>Şüpheli iletilerde link/ek açmayın; doğrudan resmi siteye gidin</li>
+              <li>Çok faktörlü doğrulama</li>
+              <li>Kurumsal phishing simülasyonları</li>
+              <li>Veri sınıflandırma — “gizli” bilgiyi paylaşmayın</li>
+              <li>Fiziksel güvenlik: yabancıyı refakat etmeden içeri almayın</li>
+            </ol>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>Sosyal mühendislik %90 teknik savunmayı atlayabilir — eğitim kritiktir.</div>
+          </section>
+        </article>
+
+        <article class="module" id="hafta9-iot">
+          <div class="module-header">
+            <span class="module-num">7</span>
+            <h2>Mobil Güvenlik ve IoT Güvenliği</h2>
+          </div>
+
+          <section class="section" id="iot-mobil-risk">
+            <h3>Mobil Güvenlik Riskleri</h3>
+            <ul>
+              <li>Kaynak kodu tersine mühendislik (APK/IPA)</li>
+              <li>Güvensiz veri depolama (SharedPreferences düz metin)</li>
+              <li>Zayıf API iletişimi (TLS doğrulaması kapalı)</li>
+              <li>Jailbreak/root cihazlarda ek risk</li>
+              <li>Sahte uygulamalar (app store dışı)</li>
+            </ul>
+            <p>Mobil trafik dünya internetinin ~%60’ı; güvenlik mobil-first düşünülmelidir.</p>
+          </section>
+
+          <section class="section" id="iot-owasp">
+            <h3>IoT OWASP Top 10 (Özet)</h3>
+            <ol>
+              <li>Zayıf, tahmin edilebilir veya hardcoded parolalar</li>
+              <li>Güvensiz ağ servisleri</li>
+              <li>Güvensiz arayüz (web, mobil, bulut)</li>
+              <li>Güncelleme eksikliği (OTA güvenliği)</li>
+              <li>Güvensiz veri aktarımı ve depolama</li>
+              <li>Yetersiz gizlilik koruması</li>
+            </ol>
+            <div class="warn"><strong>Dikkat</strong>Mirai botneti varsayılan IoT parolalarından doğdu — cihaz başına benzersiz güçlü parola şart.</div>
+          </section>
+
+          <section class="section" id="iot-protokol">
+            <h3>MQTT, CoAP ve TLS</h3>
+            <p><strong>MQTT</strong> (publish/subscribe): hafif, IoT için yaygın; broker güvenliği kritik. <strong>CoAP</strong> UDP tabanlı REST benzeri protokol.</p>
+            <pre><code># MQTT güvenli bağlantı (TLS + kimlik)
+mqtts://broker.example.com:8883
+username: device-001
+password: &lt;güçlü-parola&gt;
+topic: factory/sensor/temp  (ACL ile kısıtla)</code></pre>
+            <p><strong>OTA güncellemeleri</strong> imzalı firmware ile yapılmalı; MITM ile sahte güncelleme engellenmelidir.</p>
+          </section>
+
+          <section class="section" id="iot-kvkk-gdpr">
+            <h3>KVKK ve GDPR — Mobil / IoT</h3>
+            <p>Akıllı saat, ev kamerası, sesli asistan sürekli kişisel veri toplar. Aydınlatma, rıza, veri minimizasyonu ve silme hakkı uygulanmalıdır. GDPR extraterritorial etki — AB kullanıcısına hizmet veren Türk şirketi de uyumlu olmalıdır.</p>
+          </section>
+        </article>
+
+        <article class="module" id="hafta10-izleme">
+          <div class="module-header">
+            <span class="module-num">8</span>
+            <h2>Ağ İzleme ve Güvenlik Testleri</h2>
+          </div>
+
+          <section class="section" id="izleme-wireshark">
+            <h3>Pasif ve Aktif İzleme — Wireshark</h3>
+            <p><strong>Pasif:</strong> trafiği dinleme, paketi değiştirmeden analiz. <strong>Aktif:</strong> probe gönderme, port tarama.</p>
+            <p><strong>Wireshark</strong> filtre örnekleri:</p>
+            <pre><code>tcp.port == 443
+http.request.method == "POST"
+ip.addr == 192.168.1.100
+tls.handshake.type == 1</code></pre>
+            <div class="tip"><strong>İpucu</strong>Şifreli TLS trafiğinde içerik görünmez; yalnızca metadata (SNI, IP, zaman) analiz edilir.</div>
+          </section>
+
+          <section class="section" id="izleme-ids-siem">
+            <h3>IDS, IPS, SIEM ve SOC</h3>
+            <table>
+              <tr><th>Bileşen</th><th>İşlev</th></tr>
+              <tr><td>IDS</td><td>Saldırı tespiti, uyarı (pasif dinleme)</td></tr>
+              <tr><td>IPS</td><td>Tespit + otomatik engelleme (inline)</td></tr>
+              <tr><td>SIEM</td><td>Log toplama, korelasyon, alarm</td></tr>
+              <tr><td>SOC</td><td>7/24 güvenlik operasyon merkezi</td></tr>
+            </table>
+            <p>Korelasyon kuralı örneği: 5 dakikada 50 başarısız giriş + yeni ülke IP → brute force alarmı.</p>
+          </section>
+
+          <section class="section" id="izleme-pentest">
+            <h3>Pentest ve Zafiyet Taraması</h3>
+            <p><strong>Zafiyet taraması</strong> otomatik bilinen açıkları listeler. <strong>Penetrasyon testi</strong> insan + araç ile exploit dener; kapsam ve yazılı izin şarttır.</p>
+            <p>Aşamalar: keşif → tarama → erişim → yükseltme → raporlama.</p>
+            <div class="warn"><strong>Dikkat</strong>İzinsiz tarama Türkiye’de TCK kapsamında suç olabilir — yalnızca yetkili laboratuvar.</div>
+          </section>
+
+          <section class="section" id="izleme-cia-ddos">
+            <h3>CIA Sorusu ve DDoS — Erişilebilirlik</h3>
+            <p><strong>DDoS</strong> binlerce kaynaktan hedefe istek göndererek hizmeti çökertir; <strong>Availability</strong> ihlalidir.</p>
+            <p>Korunma: CDN, rate limiting, anycast, ISP filtreleme, incident response planı.</p>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>Ransomware hem gizlilik (veri) hem erişilebilirlik (kilit) ihlal eder.</div>
+          </section>
+        </article>
+
+        <article class="module" id="hafta11-protokol">
+          <div class="module-header">
+            <span class="module-num">9</span>
+            <h2>Güvenlik Protokolleri ve Standartlar</h2>
+          </div>
+
+          <section class="section" id="protokol-tls-https">
+            <h3>TLS, SSL ve HTTPS</h3>
+            <p>HTTPS = HTTP over TLS. Sertifika, cipher suite, HSTS (tarayıcıyı HTTPS’e zorlama). Eski protokoller (SSLv3, TLS 1.0/1.1) kapatılmalıdır.</p>
+          </section>
+
+          <section class="section" id="protokol-ipsec-ssh">
+            <h3>IPsec ve SSH</h3>
+            <p><strong>IPsec</strong> ağ katmanında VPN tünelleri (AH/ESP). İki mod: <em>Transport</em> (uçtan uca yük şifreleme) ve <em>Tunnel</em> (tüm paketi sarar, site-to-site VPN). <strong>SSH</strong> uzaktan güvenli kabuk ve dosya transferi; anahtar tabanlı kimlik doğrulama tercih edilir. Parola ile giriş kapalı bırakılabilir.</p>
+            <p>Kurumsal uzaktan erişimde SSL VPN (uygulama katmanı) veya IPsec VPN (ağ katmanı) seçimi bant genişliği, cihaz yönetimi ve MFA entegrasyonuna göre yapılır.</p>
+            <pre><code># SSH anahtar üretimi
+ssh-keygen -t ed25519 -C "ders@kto.edu.tr"
+ssh-copy-id kullanici@sunucu</code></pre>
+          </section>
+
+          <section class="section" id="protokol-standart">
+            <h3>Protokol vs Standart — ISO 27001, NIST, OWASP</h3>
+            <table>
+              <tr><th>Kaynak</th><th>Tür</th><th>Odak</th></tr>
+              <tr><td>ISO/IEC 27001</td><td>Standart</td><td>ISMS, risk yönetimi</td></tr>
+              <tr><td>NIST CSF</td><td>Çerçeve</td><td>Identify, Protect, Detect, Respond, Recover</td></tr>
+              <tr><td>OWASP Top 10</td><td>Rehber</td><td>Web uygulama zafiyetleri</td></tr>
+            </table>
+            <p><strong>Protokol</strong> iletişim kuralları (TLS); <strong>standart</strong> organizasyonel uyumluluk çerçevesidir.</p>
+          </section>
+
+          <section class="section" id="protokol-kablosuz-email">
+            <h3>Kablosuz WPA ve E-posta Güvenliği</h3>
+            <p><strong>WEP</strong> kırıldı; <strong>WPA2-PSK</strong> güçlü parola ile kabul edilebilir; <strong>WPA3</strong> tercih. Kurumsal: WPA2-Enterprise (802.1X).</p>
+            <p>E-posta: SPF, DKIM, DMARC ile sahtecilik azaltma; TLS ile aktarım şifreleme; phishing farkındalığı.</p>
+          </section>
+        </article>
+
+        <article class="module" id="hafta12-olay">
+          <div class="module-header">
+            <span class="module-num">10</span>
+            <h2>Güvenlik Olayları ve Olay Müdahalesi</h2>
+          </div>
+
+          <section class="section" id="olay-tanim">
+            <h3>Siber Güvenlik Olayı Nedir?</h3>
+            <p>Gizlilik, bütünlük veya erişilebilirliği tehlikeye atan her olaydır: malware, phishing, DoS, veri ihlali, iç tehdit.</p>
+            <p>Saldırı vektörleri: sosyal mühendislik, ele geçirilmiş kimlik bilgileri, yazılım zafiyetleri.</p>
+          </section>
+
+          <section class="section" id="olay-fazlar">
+            <h3>Olay Müdahale Fazları (NIST)</h3>
+            <ol>
+              <li><strong>Hazırlık (Prepare)</strong> — politika, araç, eğitim, playbook</li>
+              <li><strong>Tespit ve Analiz (Detect)</strong> — SIEM alarmı, log inceleme</li>
+              <li><strong>Sınırlama (Contain)</strong> — ağ segmenti, hesap kilidi</li>
+              <li><strong>Yok etme (Eradicate)</strong> — malware temizliği, patch</li>
+              <li><strong>Kurtarma (Recover)</strong> — yedekten dönüş, hizmet açma</li>
+              <li><strong>Olay sonrası (Post-incident)</strong> — ders çıkarma, rapor</li>
+            </ol>
+            <div class="flow">Prepare → Detect → Contain → Eradicate → Recover → Lessons Learned</div>
+          </section>
+
+          <section class="section" id="olay-irt-soar">
+            <h3>IRT Ekibi ve SOAR</h3>
+            <p><strong>IRT (Incident Response Team)</strong> tespit, analiz, sınırlama ve bertarafından sorumlu uzman grubudur. Roller net olmalı; masa başı tatbikat (tabletop) yapılmalıdır.</p>
+            <p><strong>SOAR</strong> (Security Orchestration, Automation and Response): playbook otomasyonu — örn. kötü IP’yi firewall’da otomatik engelleme, enfekte host izolasyonu.</p>
+            <p>Sık hatalar: belirsiz roller, manuel süreçlere aşırı bağımlılık, iletişim eksikliği, post-mortem atlanması.</p>
+          </section>
+
+          <section class="section" id="olay-post-review">
+            <h3>Olay Sonrası İnceleme (Post-Incident Review)</h3>
+            <ul>
+              <li>Zaman çizelgesi (timeline) oluşturma</li>
+              <li>Kök neden analizi (5 Neden, balık kılçığı)</li>
+              <li>Etkilenen sistemler ve veri kapsamı</li>
+              <li>İyileştirme aksiyonları ve sahiplik</li>
+              <li>Düzenleyici bildirim (KVKK 72 saat)</li>
+            </ul>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>Contain önce yayılımı durdurur; Eradicate kök nedeni temizler.</div>
+          </section>
+        </article>
+
+        <article class="module" id="hafta14-etik">
+          <div class="module-header">
+            <span class="module-num">11</span>
+            <h2>İnternet Etiği ve Dijital Vatandaşlık</h2>
+          </div>
+
+          <section class="section" id="etik-vatandaslik">
+            <h3>Dijital Vatandaşlık</h3>
+            <p>İnternette sorumlu, saygılı ve yasalara uygun davranış. Üç boyut: <strong>dijital ayak izi yönetimi</strong>, <strong>güvenlik bilinci</strong>, <strong>etik iletişim</strong>.</p>
+            <p>Netiquette: caps lock kullanmama, kaynak gösterme, nefret söyleminden kaçınma.</p>
+          </section>
+
+          <section class="section" id="etik-telif-siber">
+            <h3>Telif Hakkı ve Siber Zorbalık</h3>
+            <p><strong>Telif:</strong> eser sahibinin izni olmadan kopyalama/yayma ihlaldir. Creative Commons lisansları istisna tanımlar. <strong>Siber zorbalık (cyberbullying):</strong> tekrarlayan zararlı dijital davranış; mağdur destek hatları ve yasal yollar.</p>
+            <div class="warn"><strong>Dikkat</strong>Paylaşım “özel” sanılsa da ekran görüntüsü kalıcıdır — düşünerek paylaşın.</div>
+          </section>
+
+          <section class="section" id="etik-sapkalar">
+            <h3>White Hat, Black Hat, Gray Hat</h3>
+            <table>
+              <tr><th>Tip</th><th>Etik</th><th>Örnek faaliyet</th></tr>
+              <tr><td>White hat</td><td>Etik, izinli</td><td>Kurumsal pentest, bug bounty</td></tr>
+              <tr><td>Black hat</td><td>Yasadışı</td><td>Çalıntı veri satışı, fidye</td></tr>
+              <tr><td>Gray hat</td><td>Belirsiz</td><td>İzinsiz bulgu, sonra bildirim</td></tr>
+            </table>
+            <p>Beyaz şapkalı hacker topluma ve sektöre katkı sağlar; siyah şapka cezai sorumluluk doğurur.</p>
+          </section>
+
+          <section class="section" id="etik-mahremiyet">
+            <h3>Mahremiyet Etiği ve Sorumlu Paylaşım</h3>
+            <ul>
+              <li>Başkalarının fotoğrafını izinsiz paylaşmayın</li>
+              <li>Konum ve çocuk verisi ekstra hassastır</li>
+              <li>Deepfake ve yapay içerikte şeffaflık</li>
+              <li>Clickbait ve yanlış bilgi yaymayın — doğrulama (fact-check)</li>
+            </ul>
+            <p>Etik, yalnızca yasal minimum değil — güven ve itibar inşasıdır. Finalde “teknik + etik” soruları birlikte gelebilir.</p>
+            <h4>Sorumlu Paylaşım Kontrol Listesi</h4>
+            <table>
+              <tr><th>Soru</th><th>Evet ise paylaş</th></tr>
+              <tr><td>Kaynak güvenilir mi?</td><td>Doğrulanmış bilgi</td></tr>
+              <tr><td>Başkasının hakları ihlal ediliyor mu?</td><td>Hayır ise devam</td></tr>
+              <tr><td>5 yıl sonra pişman olur muyum?</td><td>Hayır ise düşün</td></tr>
+              <tr><td>Çocuk/özel nitelikli veri var mı?</td><td>Ekstra koruma gerekir</td></tr>
+            </table>
+            <p>Hafta 7–8 müfredatta ara sınav / proje haftası olarak geçebilir; notlarınızda bu aralığı atlayıp Modül 7’den (Hafta 9 IoT) devam edin. Hafta 14 etik konusu standart müfredat tamamlayıcısıdır.</p>
+            <div class="tip"><strong>İpucu</strong>Modül sonunda <a href="sorular.html" style="color:#fecaca">soru bankası</a>ndan haftalık konuları test edin.</div>
+          </section>
+        </article>
+
+      </div>
+    </main>
+  </div>
+
+  <button class="menu-toggle" aria-label="Menü">☰</button>
+  <script src="../js/app.js"></script>
+</body>
+</html>
+

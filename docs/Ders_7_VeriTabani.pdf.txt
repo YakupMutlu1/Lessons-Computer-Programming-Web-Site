@@ -1,0 +1,316 @@
+--- Sayfa 1 ---
+VERI KALICILIĞI
+VE VERITABANLARI
+
+--- Sayfa 2 ---
+Veri Kalıcılığına Giriş
+Verilerimiz Neden Kayboluyor?
+1. Değişkenlerde depolanan veriler geçicidir
+2. Sunucu durumu yenilendiğinde veriler sıfırlanır
+3. Orijinal durumuna geri döner
+Neden?
+1. Veriler geçici bellekte (temporary memory) tutulur
+2. Sunucu durduğunda bu bellek boşaltılır
+3. Kalıcı depolama çözümüne ihtiyaç var
+
+--- Sayfa 3 ---
+Geçmişten Bir Bakış:
+◦ Bletchley Park Bilgisayar Müzesi'nde 4 MB'lık dev
+bir bellek diski
+◦ Elektromanyetik polarite ile çalışır
+◦ Teknoloji çok ilerledi ama temel prensipler aynı
+Çözüm: Veritabanları (Databases)
+◦ Verileri kalıcı olarak depolar
+◦ Sunucu yeniden başlasa bile veriler korunur
+
+--- Sayfa 4 ---
+Veritabanı Türleri(SQL vs NoSQL)
+Özellik SQL NoSQL
+Açılımı Structured Query Language Not Only SQL
+Yapı Tablolar (Tables) Belgeler/Dokümanlar
+Şema Önceden tanımlanmış (sabit) Esnek (dinamik)
+İlişkiler Güçlü (ilişkisel) Sınırlı
+Ölçeklenme Dikey (daha fazla kayıt) Yatay (daha fazla alan)
+
+--- Sayfa 5 ---
+Veritabanı Türleri(SQL vs NoSQL)
+SQL Veritabanları (Relational Databases):
+◦ Veriler tablolarda saklanır
+◦ Sütunlar (columns) önceden tanımlanmalıdır
+◦ İlişkiler kurmak çok kolaydır
+◦ Uzun yıllardır var olan teknoloji (OG)
+NoSQL Veritabanları (Non-Relational):
+◦ JSON benzeri belgelerde saklanır
+◦ Esnek yapı (sonradan alan eklenebilir)
+◦ Büyük veri ve hızlı geliştirme için idealdir
+◦ Daha yeni teknoloji (2000'ler sonrası)
+
+--- Sayfa 6 ---
+SQL Veritabanları Derinlemesine
+KULLANCI TABLOSU
+Id Isim email
+1 Efe efe@gmail.com
+2 Eda eda@gmail.com
+3 Zeynep zeynep@kt.com
+POST TABLOSU
+id baslik Kullanci_id
+1 Merhaba Dunya 2
+2 Biz Geldik 1
+3 Ders bitti 2
+
+--- Sayfa 7 ---
+NoSQL Veritabanları Derinlemesine(JSON benzeri)
+// Kullanıcı belgesi // ESNEK yapı - sadece Efe’ye özel alan!
+{ "id” : 1, ”isim": ”Elif", { "id” : 1,
+"email” : ”elif@email.com", ”isim” : ”Zeynep",
+"password” : "gizli123" } "email” : ”zeynep@email.com",
+// AYNI yapıya sahip başka bir kullanıcı "password” : "gizli123",
+{ "id” : 2, "favoriYemek” : "noodles" // Sadece buna
+sahip! }
+”isim” : ”Efe",
+"email” : ”efe@email.com",
+"password” : "sifre456" }
+
+--- Sayfa 8 ---
+SQL vs NoSQL - Hangi Kamp?
+StackOverflow Anketleri (Profesyonel Geliştiriciler):
+NoSQL'in Vaadi:
+Daha esnek yapı
+Daha kolay ölçeklenebilirlik
+Daha hızlı geliştirme
+Zamanla Ortaya Çıkan Gerçekler:
+NoSQL'in vaat ettiği ölçeklenebilirlik sorunlu
+çıkıyor
+Tutarlılık (consistency) sorunları yaşanıyor
+Büyük projelerde SQL'e geri dönüşler oluyor
+
+--- Sayfa 9 ---
+Neden PostgreSQL? (Profesyonellerin Tercihi)
+Özellik Açıklama
+Açık Kaynak Tamamen ücretsiz
+Profesyonel Kullanım Endüstri standardı
+Ölçeklenebilirlik Büyük projeler için uygun
+Güvenilirlik Onlarca yıllık olgun teknoloji
+İlişkisel Yetenekler Karmaşık sorgular için güçlü
+Topluluk Geniş ve aktif kullanıcı tabanı
+
+--- Sayfa 10 ---
+Neden PostgreSQL? (Profesyonellerin Tercihi)
+Bu Derste Öğreneceklerimiz: Önemli Çıkarımlar:
+◦ SQL dili temelleri 1. Veri kalıcılığı için veritabanları şarttır
+2. SQL verileri tablolarda saklar (yapılandırılmış)
+◦ CRUD işlemleri (Create, Read,
+Update, Delete)
+3. NoSQL verileri belgelerde saklar (esnek)
+◦ Temel ilişkiler kurma 4. Her ikisinin de avantajları ve dezavantajları vardır
+◦ PostgreSQL ile pratik uygulamalar 5. Profesyonel geliştiriciler arasında PostgreSQL en popülerdir
+6. SQL'in tutarlılık ve ilişki yetenekleri çok değerlidir
+7. Veri yapısını önceden planlamak iyi kod kalitesi için önemlidir
+
+--- Sayfa 11 ---
+SQL ile Tablo Oluşturma ve Veri Ekleme
+SQL Öğrenmek için Kaynaklar: CRUD Nedir?
+W3Schools ile SQL'e Başlangıç (En İyi Kaynak ve basıt)
+Create (Oluştur)
+w3schools.com/sql
+Read (Oku)
+SQL Nedir?
+Update (Güncelle)
+1. Structured Query Language (Yapılandırılmış Sorgu Dili)
+Delete (Sil)
+2. Veritabanları ile iletişim kurmak için kullanılan dil
+3. Temel bir programlama dili gibidir
+SQL Anahtar Kelimeleri:
+SELECT - Veri seçmek için
+FROM - Hangi tablodan olduğunu belirtmek için
+CREATE - Yeni tablo oluşturmak için
+TABLE - Tablo yapısını tanımlamak için
+Genellikle BÜYÜK HARFLERLE yazılır
+
+--- Sayfa 12 ---
+SQLite Online ile Pratik Ortamı
+SQLite Online: CREATE TABLE urunler (
+https://sqliteonline.com adresinde ücretsiz bir ortam id INT NOT NULL,
+SQL sorgularını denemek için kullanılır isim TEXT,
+SQLite veritabanı kullanır fiyat MONEY,
+PRIMARY KEY (id)
+CREATE TABLE ile Tablo Oluşturma
+);
+CREATE TABLE tablo_adi (
+Önemli Noktalar:
+sutun1_adi veri_tipi,
+NOT NULL - Bu sütun boş olamaz
+sutun2_adi veri_tipi,
+PRIMARY KEY - Her satırı benzersiz şekilde tanımlar
+sutun3_adi veri_tipi
+Her sütun arasında virgül (,) kullanılır
+);
+Son sütundan sonra virgül YOK
+
+--- Sayfa 13 ---
+SQLite Online ile Pratik Ortamı(Yaygın SQL Veri Tipleri)
+Metin Veri Tipleri:
+Tip Açıklama Örnek
+CHAR(n) Sabit uzunluklu metin (n karakter) CHAR(10)
+VARCHAR(n) Değişken uzunluklu metin VARCHAR(255)
+TEXT Uzun metin Açıklamalar, makaleler
+Sayısal Veri Tipleri:
+Tip Açıklama Aralık
+INT Tam sayı -2 milyar ile +2 milyar
+SMALLINT Küçük tam sayı -32.768 ile +32.767
+DECIMAL(p,s) Ondalıklı sayı DECIMAL(10,2) = 10 basamak, 2 ondalık
+MONEY Para birimi Fiyatlar, maaşlar
+
+--- Sayfa 14 ---
+SQLite Online ile Pratik Ortamı
+Tarih/Saat Veri Tipleri: INSERT INTO ile Veri Ekleme(Tablonuza Kayıt Ekleme)
+Tip Açıklama ◦ Tüm Sütunlar için (Sıralı)
+INSERT INTO tablo_adi VALUES (deger1, deger2, deger3);
+DATE Yıl-Ay-Gün
+Örnek - urunler:
+TIME Saat:Dakika:Saniye
+INSERT INTO urunler VALUES (1, 'Kalem', 1.20);
+DATETIME Tarih + Saat
+Belirli Sütunlar için:
+INSERT INTO tablo_adi (sutun1, sutun2) VALUES (deger1,
+deger2);
+Örnek - Fiyatı olmayan ürün:
+INSERT INTO urunler (id, isim) VALUES (2, 'Kurşun Kalem');
+-- Bu HATA VERECEKTİR! (id boş olamaz)
+INSERT INTO urunler (isim, fiyat) VALUES ('Silgi', 1.30);
+-- Hata: NOT NULL constraint failed: urunler.id
+
+--- Sayfa 15 ---
+SQLite Online ile Pratik Ortamı
+SELECT ile Veri Okuma WHERE ile Filtreleme(Belirli Satırları Seçme)
+WHERE Nedir?
+SELECT Nedir?
+Satırları filtreleyen bir arama koşuludur
+En sık kullanılan SQL anahtar kelimesi
+Belirtilen koşulu karşılayan satırları döndürür
+Veritabanından veri okumanızı sağlar
+SELECT, UPDATE, DELETE ifadeleriyle çalışır
+Belirli sütunları veya bir tablodaki tüm sütunları alır
+Temel sözdizimi:
+SELECT sutun1, sutun2 FROM tablo_adi;
+SELECT sutunlar FROM tablo_adi WHERE kosul;
+Tüm Sütunları Seçme (Joker Karakter):
+SELECT * FROM urunler WHERE id = 1;
+SELECT * FROM tablo_adi;
+SELECT isim, fiyat FROM urunler WHERE fiyat > 50;
+Sonuç: Tüm sütunlar (id, isim, fiyat) ve tüm satırlar AND/OR/LIKE ile Koşulları Birleştirme
+-- Sadece belirli sütunları göster SELECT * FROM tablo WHERE kosul1 AND kosul2;
+SELECT * FROM tablo WHERE kosul1 OR kosul2;
+SELECT isim, fiyat FROM urunler;
+SELECT * FROM calisanlar
+WHERE departman = 'BT' AND maas > 50000 AND isim LIKE 'A%';
+
+--- Sayfa 16 ---
+SQL İlişkileri ve JOIN’ler(Veritabanlarını Birbirine Bağlamak)
+Örnek Tablosu:
+Neden İlişkilere İhtiyaç Duyarız?
+Müşteri Siparış Ürün
+1. Veriler farklı tablolarda saklanır
+id (PK) id (PK) id (PK)
+2. Müşteriler, siparişler, ürünler gibi
+ad siparis_no isim
+3. İlişkiler bu tabloları birbirine bağlar
+Temel Kavramlar: soyad musteri_id (FK → customers.id) fiyat
+FOREIGN KEY ile Tablo Oluşturma
+Terim Açıklama adres urun_id (FK → products.id) stok
+Her satırı benzersiz şekilde
+Primary Key(PK) (Birincil Anahtar) CREATE TABLE siparisler(
+tanımlayan sütun
+id INT NOT NULL,
+Başka bir tablodaki Primary siparis_noINT,
+ForeignKey(FK) (Yabancı Anahtar)
+Key'e referans veren sütun
+musteri_idINT,
+urun_idINT,
+PRIMARY KEY (id),
+FOREIGN KEY (musteri_id) REFERENCES musteriler(id),
+FOREIGN KEY (urun_id) REFERENCES urunler(id) );
+
+--- Sayfa 17 ---
+SQL İlişkileri ve JOIN’ler(Veritabanlarını Birbirine Bağlamak)
+İlişkili Tablolara Veri Ekleme INNER JOIN ile Tabloları Birleştirme(
+İlişkili Verileri
+)
+-- musteriler tablosu Tek Sorguda Getirme
+INSERT INTO musteriler VALUES (1, 'Ahmet', 'Yılmaz', INNER JOIN Sözdizimi:
+'İstanbul');
+SELECT sutun1, sutun2
+INSERT INTO musteriler VALUES (2, 'Ayşe', 'Demir',
+FROM tablo1
+'Ankara');
+INNER JOIN tablo2 ON tablo1.yabanci_anahtar =
+-- urunler tablosu
+tablo2.birincil_anahtar;
+INSERT INTO urunler VALUES (1, 'Kalem', 1.20, 32); Örnek - Siparişleri Müşterilerle Birleştirme:
+INSERT INTO urunler VALUES (2, 'Kurşun Kalem', 0.80, SELECT
+12);
+siparisler.siparis_no,
+siparisler Tablosuna Veri Ekleme:
+musteriler.ad,
+-- Ahmet Yılmaz (id=1) Kalem (id=1) sipariş etti
+musteriler.soyad,
+INSERT INTO siparisler VALUES (1, 4362, 1, 1);
+musteriler.adres
+-- Ayşe Demir (id=2) Kurşun Kalem (id=2) sipariş
+FROM siparisler
+etti
+INNER JOIN musteriler ON siparisler.musteri_id =
+INSERT INTO siparisler VALUES (2, 4363, 2, 2);
+musteriler.id;
+
+--- Sayfa 18 ---
+SQL İlişkileri ve JOIN’ler(Veritabanlarını Birbirine Bağlamak)
+Sonuç Tablosu: Sonuç Tablosu:
+siparis_no ad soyad adres siparis_no ad soyad urun_adi fiyat
+4362 Ahmet Yılmaz İstanbul 4362 Ahmet Yılmaz Kalem 1.20
+4363 Ayşe Demir Ankara Kurşun
+4363 Ayşe Demir 0.80
+Kalem
+Birden Fazla JOIN Kullanımı
+Meydan Okuma Çözümü - Siparişleri Ürünlerle Birleştirme:
+SELECT
+SELECT
+siparisler.siparis_no,
+siparisler.siparis_no,
+musteriler.ad,
+urunler.isim,
+musteriler.soyad,
+urunler.isim AS urun_adi, urunler.fiyat,
+urunler.fiyat
+urunler.stok
+FROM siparisler
+FROM siparisler
+INNER JOIN musteriler ON siparisler.musteri_id =
+musteriler.id INNER JOIN urunler ON siparisler.urun_id = urunler.id;
+INNER JOIN urunler ON siparisler.urun_id = urunler.id;
+
+--- Sayfa 19 ---
+SQL İlişkileri ve JOIN’ler(Veritabanlarını Birbirine Bağlamak)
+JOIN Türleri(JOIN Türleri Karşılaştırması)
+Önemli Çıkarımlar:
+JOIN Türü Açıklama Ne Döndürür
+◦ Primary Key her satırı benzersiz şekilde tanımlar
+INNER JOIN Her iki tabloda eşleşen kayıtlar Sadece eşleşenler
+◦ Foreign Key iki tablo arasında ilişki kurar
+Sol tablodaki tüm kayıtlar + sağdaki ◦ INNER JOIN eşleşen kayıtları birleştirir (en yaygın
+LEFT JOIN Sol tablodaki tümü
+eşleşenler kullanılan)
+Sağ tablodaki tüm kayıtlar + soldaki ◦ Foreign Key, başka tabloda VAR OLAN bir değere
+RIGHT JOIN Sağ tablodaki tümü
+eşleşenler referans vermelidir
+◦ JOIN'ler farklı tablolardaki verileri tek sorguda
+FULL OUTER
+Her iki tablodaki tüm kayıtlar Tüm kayıtlar
+birleştirir
+JOIN
+◦ İlişkiler veri tekrarını önler ve veritabanını
+LEFT JOIN: normalleştirir
+SELECT musteriler.ad, musteriler.soyad, siparisler.siparis_no ◦ Doğru ilişkiler kurmak veri bütünlüğü için çok
+önemlidir
+FROM musteriler
+LEFT JOIN siparisler ON musteriler.id = siparisler.musteri_id;

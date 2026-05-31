@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorular — Gömülü Sistemler</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/quiz.css">
+  <style>
+    .quiz-topbar { background: linear-gradient(90deg, #422006, var(--surface)); }
+    .btn-primary { background: #d97706; }
+    .progress-fill { background: linear-gradient(90deg, #d97706, #22c55e); }
+    .quiz-layout-test-only { display: block; max-width: 900px; margin: 0 auto; }
+    .quiz-layout-test-only .quiz-sidebar { display: none; }
+    .quiz-main { padding: 1.5rem 2rem 3rem; }
+    .test-only-badge {
+      display: inline-block;
+      padding: 0.35rem 0.75rem;
+      background: rgba(217, 119, 6, 0.2);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      border-radius: 20px;
+      font-size: 0.8rem;
+      color: #fcd34d;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body class="quiz-app">
+  <header class="quiz-topbar">
+    <div>
+      <h1>Gömülü Sistemler — Soru Bankası</h1>
+      <p class="test-only-badge">📝 Yalnızca çoktan seçmeli (test)</p>
+      <p style="margin-top:0.5rem;font-size:0.88rem">
+        <a href="index.html" style="color:#fcd34d">← Ders notları</a> ·
+        <a href="../index.html" style="color:#fcd34d">Ana sayfa</a>
+      </p>
+    </div>
+    <div class="quiz-stats">
+      <span>Toplam test: <strong id="count-test">—</strong></span>
+    </div>
+  </header>
+  <div class="quiz-layout quiz-layout-test-only">
+    <main class="quiz-main">
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+      <div class="quiz-controls">
+        <label>Konu: <select id="topic-filter"><option value="">Tüm konular</option></select></label>
+        <label><input type="checkbox" id="shuffle"> Soruları karıştır</label>
+        <button type="button" class="btn btn-primary" id="btn-check-page">Bu Sayfayı Kontrol Et</button>
+        <button type="button" class="btn btn-success" id="btn-check-all">Özet Sonuç</button>
+        <button type="button" class="btn btn-outline" id="btn-reset">Sıfırla</button>
+      </div>
+      <div class="score-panel" id="score-panel"></div>
+      <div id="loading" class="loading">Sorular yükleniyor...</div>
+      <div id="questions-container"></div>
+      <nav class="pagination" id="pagination"></nav>
+    </main>
+  </div>
+  <script>
+    window.QUIZ_TEST_ONLY = true;
+  </script>
+  <script src="js/questions-data.js"></script>
+  <script src="../js/quiz.js"></script>
+</body>
+</html>

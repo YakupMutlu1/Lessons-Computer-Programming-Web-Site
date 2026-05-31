@@ -1,0 +1,721 @@
+--- Slayt 1 ---
+Ders 2
+Web Sitelerine JavaScript Ekleme
+
+--- Slayt 2 ---
+JavaScript Eklemek için Üç Yöntem
+HTML'e JavaScript EntegrasyonuCSS'te olduğu gibi, JavaScript'in de 3 yöntemi vardır:
+Satır içi JavaScript (Önerilmez)
+<body onload="alert('Merhaba');"> 
+. Dahili JavaScript
+<script type="text/javascript"> alert("Merhaba"); </script>
+Harici JavaScript (Önerilen)
+<script src="index.js"> </script>
+Dosya Yapısı:web-sitem/├── index.html├── styles.css└── index.jsEn İyi Uygulama: 
+Aşağıdakiler için harici JavaScript dosyaları kullanın:
+Kod düzeni
+Yeniden kullanılabilirlik
+Kolay hata ayıklama
+Takım çalışması
+
+--- Slayt 3 ---
+JavaScript Eklemek için Üç Yöntem
+Satır İçi JavaScript
+Sözdizimi:
+<element event="JavaScript kodu">
+Örnek: 
+<body onload="alert('Hoş geldiniz!');">
+Olay Örnekleri:
+<!-- Tıklama olayı -->
+<button onclick="alert('Tıklandı!')">Bana Tıkla
+</button>
+<!-- Fare üzerine gelme olayı -->
+<h1 onmouseover="console.log('Fare üzerinde!')">Üzerime Gel</h1>
+<!-- Tuşa basma olayı -->
+<input onkeypress="console.log('Tuşa basıldı!')">
+Neden satır içi JavaScript'ten kaçınmalı?
+Bakımı zor
+Kod HTML ile karışık
+Hata ayıklaması zor
+Yeniden kullanılamaz
+
+--- Slayt 4 ---
+JavaScript Eklemek için Üç Yöntem
+Dahili JavaScript
+Temel Sözdizimi:
+<script type="text/javascript">
+  // JavaScript kodu buraya
+</script>
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Web Sitem</title>
+<script type="text/javascript">
+  	alert("Sayfa yükleniyor...");
+</script>
+</head>
+<body>
+	<h1>Merhaba Dünya</h1>
+</body>
+</html>
+Artılar ve Eksiler:
+✅ Satır içinden daha iyi
+❌ Hala HTML/JS karışık
+❌ Sayfalar arasında yeniden kullanılamaz
+
+--- Slayt 5 ---
+JavaScript Eklemek için Üç Yöntem
+Harici JavaScript (En İyi Uygulama)
+Harici .js Dosyalarını Bağlama
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web Sitem</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Merhaba Dünya</h1>
+  
+  <!-- Script BODY'nin ALT kısmında -->
+  <script src="index.js " charset= "utf-8"></script>
+</body>
+</html>
+Neden Harici Dosyalar En İyisi:
+Endişelerin ayrılması - HTML/JS ayrı
+Yeniden kullanılabilirlik - Aynı JS birden çok sayfada
+Önbellekleme - Tarayıcı .js dosyalarını önbelleğe alır
+İşbirliği - Takımlar ayrı ayrı çalışabilir
+Hata ayıklama - Hataları bulmak daha kolay
+Önemli Çıkarımlar:
+Harici JavaScript dosyaları (.js) kullanın
+<script> etiketlerini <body> SONUNA yerleştirin
+HTML özelliklerinde satır içi JavaScript'ten kaçının
+Scriptler karşılaşıldığında hemen çalışır
+Elementler script'lerin değiştirebilmesi için var olmalıdır
+
+--- Slayt 6 ---
+Belge Nesne Modeli (DOM)
+DOM Nedir?
+Statik web siteleri etkileşimli değil
+Kullanıcı tıkladığında değişemiyor
+HTML/CSS'yi canlıda değiştiremeyiz
+DOM (Document Object Model)
+Tarayıcı HTML'yi nesnelere dönüştürür
+Her element seçilebilir ve manipüle edilebilir
+JavaScript ile dinamik değişiklikler yapılabilir
+document
+└── html
+    ├── head
+    │   └── title ("Örnek")
+    └── body
+        ├── h1 ("Merhaba")
+        └── button ("Tıkla")
+
+İlişkiler:
+Ebeveyn/Çocuk: html → head/body
+Kardeşler: head ve body kardeştir
+Soy: h1, body'nin çocuğu, html'nin torunudur
+
+--- Slayt 7 ---
+DOM'da Gezinme
+DOM Nesnelerini Seçme ve Gezinme
+// Tüm belge
+Document
+// HTML elementi
+document.documentElement
+document.firstElementChild
+// Head ve Body
+document.head
+document.body
+// İç içe gezinme
+document.body.firstElementChild  
+// Body'nin ilk çocuğu
+document.body.children[0]        
+// Aynı şey
+// h1'i seç
+var h1 = document.body.firstElementChild;
+// Checkbox'ı seç (body'nin 2. çocuğu)
+var checkbox = document.body.children[1];
+// Button'ı seç
+var button = document.body.children[2];
+DOM Nesnelerini Manipüle Etme
+Özellikleri Değiştirme (Properties):
+// Bir elementi seç
+var heading = document.body.firstElementChild;
+// innerHTML özelliğini değiştir
+heading.innerHTML = "Hoşça Kal!";
+// style özelliğini değiştir
+heading.style.color = "red";
+heading.style.fontSize = "24px";
+
+--- Slayt 8 ---
+DOM'da Gezinme
+Metodları Çağırma (Methods):
+// Checkbox'ı seç ve tıkla
+var checkbox = document.querySelector("input");
+checkbox.click();  
+// Tıklama metodunu çağır
+// Button'a olay dinleyici ekle
+var button = document.querySelector("button");
+button.addEventListener("click", function() {
+  alert("Tıklandı!");
+});
+Özellik vs Metod:
+Özellik: .innerHTML, .style, .className (değer alır/atanır)
+Metod: .click(), .addEventListener() (parantezle çağrılır)
+Özet:
+// Button nesnesi
+var button = document.querySelector("button");
+// Özellikler
+button.innerHTML    // Metin içeriği
+button.style        // Stil özellikleri
+button.disabled     // Devre dışı mı?
+// Metodlar
+button.click()      // Tıklama simülasyonu
+button.focus()      // Odaklanma
+Önemli Çıkarımlar:
+DOM, HTML'in nesne temsili
+Nesnelerin özellikleri ve metodları vardır
+Özellikler değerleri tanımlar (.innerHTML, .style)
+Metodlar nesnenin yapabilecekleridir (.click(), .addEventListener())
+Nokta notasyonu ile erişilir: object.property veya object.method()
+
+--- Slayt 9 ---
+DOM'da Gezinme
+Ödev / Uygulama
+Aşağıdaki görevleri konsol üzerinden gerçekleştiriniz:
+index.html dosyasını oluşturunuz
+"En sevdiğimi filim" başlıklı bir h1 etiketi ekleyiniz
+Tüm zamanların en iyi 5 filminizin sıralı bir listesini ekleyiniz
+Başlık metnini "Web programming" olarak değiştiriniz
+Listedeki üçüncü filmi seçin ve rengini yeşil yapınız
+"Dördüncü" filmin metnini kendi adınızla değiştiriniz
+SADECE konsol kullanınız, HTML'yi doğrudan değiştirmeyiniz!
+
+--- Slayt 10 ---
+DOM Elementlerini Seçmenin Birden Fazla Yolu
+JavaScript ile HTML Elementlerini Seçme
+Problem: Elementleri hassas bir şekilde hedeflemek gerekiyor
+Çözüm: Birden fazla DOM seçim yöntemi
+Dört Ana Yöntem:
+getElementsByTagName() - HTML etiketiyle
+getElementsByClassName() - CSS sınıfıyla
+getElementById() - Benzersiz ID ile
+querySelector() / querySelectorAll() - CSS tarzı seçiciler
+<h1 id="baslik">Merhaba</h1>
+<button class="btn">Bana Tıkla</button>
+<ul id="liste">
+  <li class="oge"><a href="#">Bağlantı 1</a></li>
+  <li class="oge">Öğe 2</li>
+  <li class="oge">Öğe 3</li>
+</ul>
+getElementsByTagName()
+HTML Etiket Adına Göre Seçme
+Sözdizimi:
+document.getElementsByTagName("etiketiadi")
+Dizi benzeri koleksiyon (HTMLCollection) elementleri
+
+--- Slayt 11 ---
+DOM Elementlerini Seçmenin Birden Fazla Yolu
+JavaScript ile HTML Elementlerini Seçme
+// Tüm liste öğelerini al
+var listeOgeleri = document.getElementsByTagName("li");
+console.log(listeOgeleri.length);  // 3
+// Belirli öğeye erişim (dizi indekslemesi kullan)
+listeOgelari[0].style.color = "blue";  // İlk li
+listeOgelari[2].style.color = " purple"; // Üçüncü li
+Önemli:
+Tüm eşleşen elementleri döndürür
+Metod adında "Elements" çoğul
+Belirli öğeye erişmek için indeks kullanmalı
+İndeks 0'dan başlar
+Deneyin:
+var paragraflar = document.getElementsByTagName("p");
+var basliklar = document.getElementsByTagName("h1");
+var dugmeler = document.getElementsByTagName("button");
+getElementsByClassName() ve getElementById()
+Sınıf ve ID'ye Göre Seçme:
+getElementsByClassName():
+// Dizi döndürür (tek element için bile)
+var dugmeler = document.getElementsByClassName("btn");
+dugmeler[0].innerHTML = "Yeni Metin"; // [0] kullanmalı
+getElementById():
+/ TEK element döndürür (dizi değil)
+var baslik = document.getElementById("baslik");
+baslik.innerHTML = "Hoşça Kal";  // [0] gerekmez!
+
+--- Slayt 12 ---
+DOM Elementlerini Seçmenin Birden Fazla Yolu
+JavaScript ile HTML Elementlerini Seçme
+Neden farklı?
+ID'ler benzersiz olmalı (sadece bir element)
+Sınıflar birden fazla elementte olabilir
+Not: getElementById (tekil) vs getElementsByClassName (çoğul) 
+querySelector() ve querySelectorAll()
+CSS Tarzı Seçiciler
+querySelector(): İlk eşleşen elementi döndürür
+querySelectorAll(): Tüm eşleşen elementleri döndürür
+/ Element seçici
+document.querySelector("h1")
+// Sınıf seçici
+document.querySelector(".btn")
+// ID seçici  
+document.querySelector("#baslik")
+// Birleşik seçiciler
+document.querySelector("li.oge")  // "oge" sınıflı li
+document.querySelector("ul#liste")  // "liste" id'li ul
+Hiyerarşik Seçiciler:
+// li içindeki bağlantı
+document.querySelector("li a")
+// "liste" id'li ul içindeki bağlantı
+document.querySelector("#liste a")
+// ul'un ilk li çocuğu
+document.querySelector("ul > li:first-child")
+
+--- Slayt 13 ---
+DOM Elementlerini Seçmenin Birden Fazla Yolu
+Önemli Çıkarımlar:
+DOM seçimi için birden fazla metod
+querySelector() en çok yönlü olanıdır (CSS seçicileri)
+getElementById() benzersiz elementler için en hızlısıdır
+Çoğul metodlar (getElementsBy*) dizi döndürür
+Tekil metodlar tek element döndürür
+Manipülasyondan önce her zaman seçimleri test edin
+
+--- Slayt 14 ---
+JavaScript'te CSS Özellikleri
+
+--- Slayt 15 ---
+Zar Oyunu Alıştırma:
+Aşağıdaki bağlantıdan başlangıç dosyalarını indirin.
+https://drive.google.com/drive/folders/1yunga7VlvDmd1rJ05qWdGwALhrDhyU0I?usp=sharing 
+Zar Alıştırma Adım 1 - Harici Bir Javascript Dosyası Oluşturmaindex.js adında yeni bir Javascript dosyası oluşturun ve bu dosyayı index.html dosyasına bağlayın.
+Adım 2. Dicee projesinde, images adlı bir klasör bulunur, her iki <img> öğesine de kaynak olarak dice6.png resimlerini ekleyin.
+Adım 3: İçinde index.js, rastZar1 adında yeni bir değişken oluşturun, ardından bu değişkenin değerini 1 ile 6 arasında rastgele bir sayı olarak ayarlayın. Beklendiği gibi çalıştığından emin olmak için konsolda test edin.
+Adım 4: Son adımda oluşturduğunuz rastgele sayıyı kullanarak, dice1.png ile dice6.png arasından rastgele bir zar resmi seçin ve bu resmi sol <img> öğesinin içine yerleştirin.
+Adım5: Aynısını sağ taraftaki görsel öğesi için de yapın.
+Adım6: h1 etiketindeki metni (şu anda "Oyunu Yenleyin" yazıyor), oyuncu 1 (sol) ve oyuncu 2 (sağ) için gelen zar değerlerine bağlı olarak hangi oyuncunun kazandığını veya berabere kalındığını gösterecek şekilde değiştirin.
+İpucu: h1'deki metni değiştirmek için bir if ifadesi, querySelector() ve innerHTML özelliğini kullanmanız gerekecek.
+
+--- Slayt 16 ---
+İndex.js Çözümü
+
+--- Slayt 17 ---
+İlk Event Listener Ekleme
+Davul Seti Projesi Kurulumu
+Aşağıdaki bağlantıdan başlangıç dosyalarını indirin.
+https://drive.google.com/drive/folders/1ZbscU5AvCrdSiqd-a41fekCbfL-m6czT?usp=sharing 
+davul-seti/
+├── index.html
+├── styles.css
+└── index.js
+JavaScript Bağlantısı:
+<!-- Body'nin ALT kısmına ekleyin -->
+<script src="index.js"></script>
+Bağlantı Testi:
+
+// index.js
+alert("JavaScript bağlandı!");
+
+Mevcut Durum:
+Düğmeler var ama tıklandığında hiçbir şey yapmıyor
+Etkileşim eklenmesi gerekiyor
+Hedef: Tıklanınca davul sesleri çal
+Bir Düğmeye Tepki VermeAdım 1: Tıklama İşleyici Fonksiyonu Oluştur
+function handleClick() {
+  alert("Tıklandım!");
+}
+Adım 2: Düğmeyi Seç ve Event Listener Ekle
+// İlk düğmeyi seç
+var ilkDugme = document.querySelector("button");
+
+// Tıklama event listener'ını ekle
+ilkDugme.addEventListener("click", handleClick);
+
+function handleClick() {
+  alert("Tıklandım!");
+}
+
+var ilkDugme = document.querySelector("button");
+ilkDugme.addEventListener("click", handleClick);
+
+
+Önemli: handleClick sonra parantez YOK!
+✅ addEventListener("click", handleClick)
+❌ addEventListener("click", handleClick())
+
+Neden? Fonksiyonu hemen çağırmak yerine referans olarak iletiyoruz.
+
+--- Slayt 18 ---
+İlk Event Listener Ekleme
+Event Listener'ları Anlama
+Başlık: Event Listener'lar Nasıl ÇalışırAnaloji: Babanın seni partiden alması
+Babaya talimat verirsin: "Mesaj attığımda beni al"
+Baba mesajını bekler (dinler)
+Sen "Şimdi gel" mesajı atarsın (olay gerçekleşir)
+Baba talimatları uygular (fonksiyon çalışır)
+
+Anonim(Anonymous) Fonksiyon Alternatifi:
+dugme.addEventListener("click", function() {
+  alert("Tıklandım!");
+});
+
+Mevcut Event Türleri:
+"click" - Fare tıklaması
+"mouseover" - Fare üzerine gelme
+"keydown" - Tuşa basma
+"submit" - Form gönderme
+"load" - Sayfa yükleme tamamlandı
+TÜM Düğmelere Listener Ekleme
+Meydan Okuma - Tüm Düğmeler Tepki VermeliProblem: Sadece ilk düğmede event listener var
+Hedef: TÜM davul düğmelerine tıklama listener'ı ekle
+<button class="w drum">w</button>
+<button class="a drum">a</button>
+<button class="s drum">s</button>
+<button class="d drum">d</button>
+<button class="j drum">j</button>
+<button class="k drum">k</button>
+<button class="l drum">l</button>
+Meydan Okuma: 7 düğmenin tümüne tıklama listener'ı ekleyen kod yaz.
+≤ 5 satır olmalı
+Tekrardan kaçınmak için döngü kullan
+Her düğme tıklandığında alert göstermeli
+İpucu: querySelectorAll() ve döngü kullan
+
+--- Slayt 19 ---
+İlk Event Listener Ekleme
+For Döngüsü ile ÇözümAdım 1: Tüm Davul Düğmelerini Seç
+var davulDugmeleri = document.querySelectorAll(".drum");
+
+for (var i = 0; i < davulDugmeleri.length; i++) {
+  // Her düğmeye event listener ekle
+}
+
+
+Tam Çözüm
+// Yöntem 1: İsimli fonksiyonla
+function handleClick() {
+  alert("Tıklandım!");
+}
+var davulDugmeleri = document.querySelectorAll(".drum");
+
+for (var i = 0; i < davulDugmeleri.length; i++) {
+  davulDugmeleri[i].addEventListener("click", handleClick);}
+Anonim fonksiyonla
+var davulDugmeleri = document.querySelectorAll(".drum");
+for (var i = 0; i < davulDugmeleri.length; i++) {
+  davulDugmeleri[i].addEventListener("click", function() {
+    alert("Tıklandım!");
+  });
+}
+
+--- Slayt 20 ---
+İlk Event Listener Ekleme
+Hızlı Referans:
+// Event listener temelleri
+element.addEventListener(eventTuru, fonksiyonAdi);
+// İsimli fonksiyon yaklaşımı
+function benimFonksiyonum() {
+  // kod buraya
+}
+element.addEventListener("click", benimFonksiyonum);
+// Anonim fonksiyon yaklaşımı
+element.addEventListener("click", function() {
+  // kod buraya
+});
+Önemli Çıkarımlar:
+Event listener'lar elementleri etkileşimli yapar
+addEventListener(eventTuru, fonksiyon) kullan
+Fonksiyon adını parantezsiz ilet
+Basit işleyiciler için anonim fonksiyonlar yaygındır
+Birden fazla elemente listener eklemek için döngüler kullan
+querySelectorAll() birden fazla element seçer
+HTML, CSS ve JavaScript sorumluluklarını ayrı tut
+
+--- Slayt 21 ---
+İlk Event Listener Ekleme
+Alert'ten Ses Çalmaya Geçiş
+Problem: Alert gösteriyor ama ses çalmıyor
+Hedef: Butona tıklandığında davul sesi çal
+Ses Dosyaları:
+sounds/
+├── tom-1.mp3
+├── tom-2.mp3
+├── tom-3.mp3
+├── tom-4.mp3
+├── snare.mp3
+├── crash.mp3
+└── kick-bass.mp3
+JavaScript ile Ses Çalma:
+var audio = new Audio("sounds/tom-1.mp3");  
+// Yeni audio nesnesi oluştur
+audio.play();    // Ses çal
+Meydan Okuma: Tüm butonlar tom-1 sesini çalsın
+Eski Kod (Alert):
+button.addEventListener("click", function() {
+  alert("Tıklandım!");
+});
+Yeni Kod (Ses Çalma):
+button.addEventListener("click", function() {
+  var audio = new Audio("sounds/tom-1.mp3");
+  audio.play();
+});
+Tam Çözüm:
+var drumButtons = document.querySelectorAll(".drum");
+for (var i = 0; i < drumButtons.length; i++) {
+ drumButtons[i].addEventListener("click", function() {
+var audio = new Audio("sounds/tom-1.mp3");
+audio.play();}  );
+}
+
+--- Slayt 22 ---
+İlk Event Listener Ekleme
+Butonlara Arkaplan Görselleri Ekleme
+images/
+├── tom1.png
+├── tom2.png
+├── tom3.png
+├── tom4.png
+├── snare.png
+├── crash.png
+└── kick.png
+Her butona uygun davul görseli ekle
+CSS ile Arkaplan Ekleme:
+.w {
+  background-image: url('images/tom1.png');
+}
+.a {
+  background-image: url('images/tom2.png');
+}
+Hangi Butona Tıklandığını Belirleme
+.this Anahtar Kelimesi ile Buton Kimliği
+Problem: Tüm butonlar aynı sesi çalıyor
+Çözüm: Hangi butona tıklandığını belirle
+this = event'i tetikleyen element
+Butonun kendisine referans verir
+Örnek: Buton Kimliğini Görüntüleme
+
+button.addEventListener("click", function() {
+  console.log(this);
+  // Tıklanan butonun HTML'ini gösterir
+});
+
+Buton Özelliklerine Erişim:
+button.addEventListener("click", function() {
+  console.log(this.innerHTML);    // Buton metni (w, a, s...)
+  console.log(this.className);    // Buton sınıfı
+  console.log(this.style);        // Buton stili
+});
+Meydan Okuma: Tıklanan butonun metin rengini beyaz yap
+button.addEventListener("click", function() {
+  this.style.color = "white";
+});
+
+--- Slayt 23 ---
+İlk Event Listener Ekleme
+Buton Özelliklerini Değiştir
+for (var i = 0; i < drumButtons.length; i++) {
+  drumButtons[i].addEventListener("click", function() {
+    this.style.color = "white"; // Metin rengini değiştir
+  });
+}
+Kodun Nasıl Çalıştığı:
+querySelectorAll tüm ".drum" butonlarını seçer
+for döngüsü her butonu tek tek işler
+Her butona addEventListener eklenir
+Kullanıcı butona tıkladığında
+this tıklanan butona referans verir
+Butonun özellikleri değiştirilebilir
+Hızlı Referans:
+var audio = new Audio("dosya-yolu/ses.mp3"); // Ses çalma
+audio.play();
+// this anahtar kelimesi
+element.addEventListener("click", function() {
+  console.log(this);           // Event'i tetikleyen element
+  console.log(this.innerHTML); // Elementin içeriği
+  this.style.color = "red";    // Elementin stilini değiştir
+});
+
+// CSS arkaplan görseli
+.drum {
+  background-image: url('images/gorsel.png');
+  background-size: cover;
+  background-position: center;
+}
+
+--- Slayt 24 ---
+İlk Event Listener Ekleme
+Farklı Sesler için Switch İfadeleri
+Problem: Tüm butonlar aynı sesi çalıyor (tom-1)
+Hedef: Her buton kendi sesini çalmalı
+Buton Karakterleri ve Sesleri:
+w → tom-1.mp3
+a → tom-2.mp3  
+s → tom-3.mp3
+Switch İfadelerine Giriş:
+switch(ifade) {
+  case deger1:
+    // deger1 için kod
+    break;
+  case deger2:
+    // deger2 için kod
+    break;
+  default:
+    // Hiçbir case eşleşmezse çalışacak kod
+}
+
+--- Slayt 25 ---
+İlk Event Listener Ekleme
+Önemli Çıkarımlar:
+Switch ifadeleri birden fazla ayrık koşulu temiz şekilde işler
+case eşleştirilecek değeri belirtir
+break sonraki case'e düşmeyi önler
+default beklenmeyen değerleri işler
+Uzun if-else zincirlerinden daha iyidir (birçok koşul için)
+Net, belirli değerler için kullanın (aralıklar için değil)
+Tüm case'leri test edin default dahil
+
+--- Slayt 26 ---
+İlk Event Listener Ekleme
+Nesneleri Anlamak
+Problem: Bir otelde çok sayıda odacıyı yönetmek
+Her odacı için ayrı değişkenler: bellBoy1Name, bellBoy1Age, vb.
+Kod tekrarı ve düzensizlik
+Eski Yaklaşım (kötü):
+var garson1Isimi = "Timmy";
+var garson1Yas = 19;
+var calismatIzinVar = true;
+var garson1Dilleri = ["English", "Türkçe"];
+Nesne Yaklaşımı (iyi):
+var garson1 = {
+  isim: "Timmy",
+  yas: 19,
+ calismatIzinVar: true,
+  dilleri: ["English", "Türkçe"]
+Merhab:function(){
+ return " Merhaba " + isim+ " hoşgeldeniz "}
+};
+Nesne Nedir?
+İlgili verileri bir arada tutan yapı
+Özellikler (properties) ve metodlardan oluşur
+Gerçek dünya nesnelerini modellemek için
+Constructor Fonksiyonları (Fabrika)
+
+--- Slayt 27 ---
+İlk Event Listener Ekleme
+Klavye Event Listener'ları
+Yeni Gereksinim:
+Kullanıcı w, a, s, d, j, k, l tuşlarına bastığında algıla
+Karşılık gelen davul sesini çal
+Buton tıklamalarıyla aynı mantığı kullan
+Buton Tıklamalarından Farkı:
+Bağlanacak belirli bir HTML elementi yok
+Tüm belgeyi/pencerreyi dinle
+Event türü: "keypress "
+document.addEventListener("keypress", function() {
+  alert("Tuşa basıldı!");
+});
+Event Türleri:
+"keypress" - Karakter tuşuna basıldı (w, a, s...)
+"keydown" - Herhangi bir tuşa basıldı (Shift, Ctrl dahil)
+"keyup" - Tuş bırakıldı
+// Tüm belgeyi hedefle
+document.addEventListener("keypress", function() { });
+
+// Veya belirli elementi hedefle (odaklanmışsa)
+inputElement.addEventListener("keypress", function() { });
+Hangi Tuşa Basıldığını Belirleme
+Altı Başlık: Event Objesi Parametresi
+Problem: Tuşa basıldığını biliyoruz ama hangisi?
+
+
+Kosolda bu kodu yazalım:
+document.addEventListener("keypress", function(event) {
+  // 'event' tuş basımı hakkında bilgi içerir
+  console.log(event);
+});
+
+--- Slayt 28 ---
+İlk Event Listener Ekleme
+Event Objesi Özellikleri:
+event.key - Karakter (w, a, s, d, j, k, l)
+event.keyCode - Tuşun sayısal kodu
+event.code - Fiziksel tuş konum adı
+event.shiftKey - Shift basılı mıydı?
+Tuşu Alma:
+document.addEventListener("keypress", function(event) {
+  console.log("Basılan tuş: " + event.key);
+  console.log("Tuş kodu: " + event.keyCode);
+});
+Fonksiyonla Yeniden Yapılandırma
+Yeniden Kullanılabilir Ses Fonksiyonu Oluşturma
+Problem: Yinelenen switch ifadesi mantığı
+Buton tıklaması: buttonInnerHTML üzerinde switch
+Klavye basımı: event.key üzerinde switch
+Çözüm: Ortak mantığı bir fonksiyona çıkartacağız
+// Tuşa göre ses çalma fonksiyonu
+function sesiVerin(key) {
+  switch(key) {
+    case "w":
+      var tom1 = new Audio("sounds/tom-1.mp3");
+      tom1.play();
+      break;
+    case "a":
+      var tom2 = new Audio("sounds/tom-2.mp3");
+      tom2.play();
+      break;
+    // ... diğer case'ler
+  }
+}
+
+--- Slayt 29 ---
+İlk Event Listener Ekleme
+Şu an iki farklı fonksiyonu Kullananacağız:
+// Buton tıklamaları için
+button.addEventListener("click", function() {
+  sesVerin(this.innerHTML);
+});
+
+// Klavye basımları için
+document.addEventListener("keypress", function(event) {
+  sesVerin(event.key);
+});
+Nasıl Çalışır:
+Buton Tıklaması: this.innerHTML buton metnini alır (w, a, s...)
+Tuş Basımı: event.key klavye tuşu karakterini alır
+Her ikisi de karakterle sesVerin(key) çağırır
+Switch ifadesi o karakter için doğru sesi çalar
+
+Önemli Çıkarımlar:
+document.addEventListener("keypress", ...) klavye girişini dinler
+Event objesi parametresi tuş bilgisini içerir
+event.key basılan karakteri verir
+Yeniden kullanılabilir fonksiyonlar kod tekrarını önler
+Aynı mantık hem buton tıklamalarını hem de klavye basımlarını işleyebilir
+Farklı tuşlarla test et büyük harf, özel karakterler dahil
+
+--- Slayt 30 ---
+İlk Event Listener Ekleme
+Şu an iki farklı fonksiyonu Kullananacağız:
+// Buton tıklamaları için
+button.addEventListener("click", function() {
+  sesVerin(this.innerHTML);
+});
+
+// Klavye basımları için
+document.addEventListener("keypress", function(event) {
+  sesVerin(event.key);
+});
+Nasıl Çalışır:
+Buton Tıklaması: this.innerHTML buton metnini alır (w, a, s...)
+Tuş Basımı: event.key klavye tuşu karakterini alır
+Her ikisi de karakterle sesVerin(key) çağırır
+Switch ifadesi o karakter için doğru sesi çalar
+
+Önemli Çıkarımlar:
+document.addEventListener("keypress", ...) klavye girişini dinler
+Event objesi parametresi tuş bilgisini içerir
+event.key basılan karakteri verir
+Yeniden kullanılabilir fonksiyonlar kod tekrarını önler
+Aynı mantık hem buton tıklamalarını hem de klavye basımlarını işleyebilir
+Farklı tuşlarla test et büyük harf, özel karakterler dahil

@@ -1,0 +1,329 @@
+--- Sayfa 1 ---
+İNTERNET GÜVENLİĞİ
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+TSMYO – Öğr. Gör. Gizem ÇELİK
+“Ağ izleme, dijital dünyanızın nabzını tutmaktır; nabız durursa, sistem ölür.”
+
+--- Sayfa 2 ---
+İÇİNDEKİLER
+Temel Kavramlar
+Ağ İzleme Araçları
+Trafik Analizi
+Güvenlik Testleri
+Sızma Testleri
+Zaafiyet Tarama
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 3 ---
+Temel Kavramlar
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 4 ---
+Ağ Güvenliği Nedir?
+Ağ güvenliği, bir bilgisayar ağını yetkisiz erişim, kötüye kullanım, değiştirme
+veya hizmet dışı bırakma gibi tehditlere karşı koruyan politika, süreç ve
+teknolojiler bütünüdür. Günümüz kurumsal altyapısında ağ izleme ve
+güvenlik testleri, proaktif savunmanın temel taşlarıdır.
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 5 ---
+Temel Kavramlar
+Ağ trafiğini gerçek zamanlı Bir sistemin güvenlik açıklarını Gerçek bir saldırganı simüle Bir sisteme yönelik olası
+veya kayıtlı olarak kontrollü ortamda keşfetmek eden, yetkili ve planlanmış tehditleri belirleme ve
+gözlemleyip analiz etme için gerçekleştirilen güvenlik testidir. Bulgular önceliklendirme sürecidir.
+sürecidir. Anormal sistematik değerlendirmedir. raporlanarak savunma Hangi varlıkların korunması
+davranışlar, performans Saldırgan bakış açısıyla güçlendirilir. gerektiğini ve ne tür
+sorunları ve güvenlik ihlalleri yapılır. saldırıların bekleneceğini
+tespit edilir. tanımlar.
+Güvenlik Penetrasyon Tehdit
+Ağ İzleme
+Testi Testi Modelleme
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 6 ---
+Ağ İzleme Nedir?
+Ağ izleme (network monitoring), ağlar üzerinde gerçekleştirilen tüm trafik verilerini
+toplamak, analiz etmek ve yönetmek için kullanılan bir teknolojidir. Ağ izleme işlemi,
+ağın performansını, güvenliğini, kullanımını ve erişimini izlemek için kullanılır.
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 7 ---
+Ağ İzlemenin Amaçları
+Güvenlik
+Performans
+ihlallerini
+izleme
+tespit etme
+Hizmet
+Ağ hatalarını
+sürekliliğini
+belirleme
+sağlama
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 8 ---
+Ağ İzleme Türleri
+Pasif İzleme (Trafficsniffing)
+• Ağ trafiğine herhangi bir müdahalede bulunmadan, yalnızca veri akışını
+dinleyerek ve analiz ederek gerçekleştirilen izleme yöntemidir.
+• Bu yaklaşımda sistem, ağ üzerinde mevcut olan veri paketlerini yakalar ve
+inceler; ancak ağın çalışma düzenine herhangi bir ek trafik oluşturmaz.
+• Kullanılan Araçlar: Wireshark, Tcpdump
+Aktif İzleme (Ping, SNMP)
+• Ağın durumunu analiz etmek amacıyla sisteme belirli sorgular gönderilerek
+gerçekleştirilen izleme yöntemidir.
+• Bu yöntemde izleme sistemi, ağ cihazlarıyla doğrudan iletişime geçer ve onların
+yanıtlarını analiz ederek ağın performansı ve durumu hakkında bilgi elde eder.
+• Kullanılan Araçlar: ping, traceroute, snmp
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 9 ---
+Önemli Kavramlar
+• IDS/IPS — Saldırı Tespit / Önleme Sistemi. IDS saldırıyı tespit eder ve uyarır; IPS buna ek
+olarak trafiği engeller.
+• SIEM — Güvenlik Bilgisi ve Olay Yönetimi. Merkezi log toplama ve korelasyon analizi yapar.
+• SOC — Güvenlik Operasyon Merkezi. 7/24 ağ ve sistem güvenliğini izleyen ekip/tesis.
+• Zero-Day — Henüz yama çıkmamış, kamuoyuna duyurulmamış güvenlik açığı.
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 10 ---
+Soru: Bir saldırgan, şirketin web sunucusunu aşırı istekle çökertirse CIA
+üçgeninin hangi bileşeni ihlal edilmiş olur?
+Gizlilik (Confidentiality)
+Bütünlük (Integrity)
+Erişilebilirlik (Availability)
+Tüm üçü birden
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 11 ---
+IDS ve IPS
+• IDS (Intrusion Detection System), ağda gerçekleşen şüpheli aktiviteleri tespit eden
+sistemdir. IPS (Intrusion Prevention System) ise bu aktiviteleri yalnızca tespit etmekle
+kalmaz, aynı zamanda engelleyici aksiyonlar da alır.
+• IDS daha çok izleme ve uyarı mekanizması olarak çalışırken, IPS aktif olarak müdahale
+edebilen bir sistemdir.
+Özellik IDS IPS
+Amaç Tespit Engelleme
+Müdahale Yok Var
+Çalışma Pasif Aktif
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 12 ---
+SIEM (Security Information and Event
+Management)
+• Bir kurumun bilgi sistemlerinden elde edilen
+güvenlik olaylarını merkezi bir noktada toplayan,
+analiz eden ve anlamlandıran bütünleşik bir
+güvenlik yönetim sistemidir.
+• Temel amacı, farklı sistemlerden gelen dağınık
+güvenlik verilerini bir araya getirerek, güvenlik
+olaylarını anlamlı hale getirmek ve olası saldırıları
+erken aşamada tespit etmektir.
+• Bu sistemler yalnızca veri toplamakla kalmaz; aynı
+zamanda olaylar arasında ilişki kurar (korelasyon),
+anormallikleri belirler ve güvenlik ekiplerine Patlamış Mısır düz dolguyla
+uyarılar (alert) gönderir.
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 13 ---
+SOC (Security Operations Center)
+• Bir kurumun bilgi sistemlerini ve ağ altyapısını
+siber tehditlere karşı sürekli olarak izleyen, analiz
+eden ve müdahale eden uzman ekip ve
+teknolojilerden oluşan merkezi güvenlik birimidir.
+• Temel amacı, güvenlik olaylarını gerçek zamanlı
+olarak tespit etmek, bu olayları analiz etmek ve
+gerekli durumlarda hızlı bir şekilde müdahale
+ederek kurumun bilgi varlıklarını korumaktır.
+• SOC yapıları genellikle 7/24 çalışan ve kesintisiz
+Patlamış Mısır düz dolguyla
+güvenlik sağlayan organizasyonel birimlerdir.
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 14 ---
+Zero-day (sıfır gün) Zafiyeti
+• Bir yazılım veya sistemde bulunan ve henüz
+geliştirici tarafından bilinmeyen ya da bilinse bile
+henüz bir güvenlik yaması (patch) yayımlanmamış
+olan güvenlik açığını ifade eder.
+• “Zero-day” ifadesi, geliştiricinin bu açığı
+düzeltmek için henüz “0 gün” süresinin olduğu
+anlamına gelir.
+Patlamış Mısır düz dolguyla
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 15 ---
+Ağ İzleme Araçları
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 16 ---
+Temel Araç Kategorileri
+Araç Kategori Kullanım Amacı Lisans
+Wireshark Paket Analizi Ağ trafiğini canlı yakalama ve analiz etme Ücretsiz
+Nmap Port Tarayıcı Ağ keşfi, port/servis/işletim sistemi tespiti Ücretsiz
+Snort/ Suricata IDS/IPS Gerçek zamanlı trafik analizi ve saldırı tespiti Ücretsiz
+Nagios/ Zabbix Sistem İzleme Sunucu/servis uptime takibi ve uyarı sistemi Ücretsiz
+Metasploit Exploit Framework Güvenlik açıklarını test etme ve exploit geliştirme Ücretsiz
+BurpSuite Web Güvenlik Testi Web uygulamalarında güvenlik açığı araştırma Freemium
+tcpdump Komut Satırı Sniffer Terminal üzerinden paket yakalama ve filtreleme Ücretsiz
+ElasticSIEM SIEM Log toplama, korelasyon ve görselleştirme Ücretsiz
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 17 ---
+Wireshark Zabbix Nagios SolarWinds
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 18 ---
+Kapat düz dolguyla
+Wireshark Zabbix Nagios SolarWinds
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 19 ---
+Kapat düz dolguyla
+Wireshark Zabbix Nagios SolarWinds
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 20 ---
+Kapat düz dolguyla
+Wireshark Zabbix Nagios SolarWinds
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 21 ---
+Kapat düz dolguyla
+Wireshark Zabbix Nagios SolarWinds
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 22 ---
+Yasal Uyarı
+Ağ izleme ve port tarama araçlarını yalnızca yetkili olduğunuz ağlarda kullanın.
+İzinsiz port taraması ve trafik yakalama birçok ülkede yasadışıdır. Lab ortamları veya
+yetkili pentest anlaşmaları dışında kullanmayın.
+Nisan 2026 en iyi 9 ağ izleme yazılım aracı
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 23 ---
+Ağ Trafiği Analizi
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 24 ---
+Ağ Trafiği Analizi
+Ağ üzerinden geçen veri paketlerinin incelenmesi ve yorumlanması sürecidir. Bu analiz
+sayesinde, ağ üzerindeki normal ve anormal davranışlar ayırt edilebilir. Özellikle siber
+saldırılar genellikle belirli trafik kalıpları oluşturduğu için, trafik analizi güvenlik
+açısından kritik öneme sahiptir.
+Şüpheli
+Veri sızıntıları
+bağlantılar
+DDoS saldırıları Zararlı trafik
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 25 ---
+OSI Modelini Güvenlik Açısından Anlamak
+Ağ trafiği analizi yaparken OSI modelinin her katmanının hangi güvenlik tehditlerini
+barındırabileceğini bilmek kritik önem taşır.
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 26 ---
+Anormal Trafik Belirtileri
+Şüpheli Port tarama belirtisi: Bir IP'den çok sayıda porta kısa sürede
+Trafik SYN paketi gönderilmesi
+Göstergeleri
+C2 (Command & Control) trafiği: İç ağdan belirli aralıklarla
+tekrarlayan dış bağlantılar (beacon pattern)
+DNS tünelleme: Olağandışı büyük DNS paketleri veya base64
+kodlanmış TXT kayıtları
+Veri sızıntısı (exfiltration): İç ağdan dışarıya ani, büyük veri
+transferleri
+Lateral movement: İç ağda cihazlar arası olağandışı SMB/RDP
+bağlantıları
+ARP poisoning: Aynı MAC adresinin farklı IP'lerle eşleşmesi
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 27 ---
+Güvenlik Testleri
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 28 ---
+Güvenlik Testleri Nedir?
+Bir sistemin veya ağın güvenlik açıklarını belirlemek amacıyla yapılan kontrollü
+analiz ve deneme süreçleridir. Bu testler, sistemdeki zayıf noktaların tespit
+edilmesini ve olası saldırılara karşı önlem alınmasını sağlar.
+Amaç; Zafiyetleri belirlemek
+Saldırıları önlemek
+Sistemi güçlendirmek
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 29 ---
+Güvenlik Testi Türleri
+Testi yapan kişi, hedef sistem Testi yapan kişi, hedef
+hakkında tam bilgiye sahiptir hakkında hiçbir ön bilgiye
+(kaynak kod, ağ sahip değildir. Gerçek bir dış
+diyagramları, kullanıcı saldırganı simüle eder. En
+bilgileri). En kapsamlı ve gerçekçi ama en uzun süren
+verimli test türüdür. test türüdür.
+White Box Black Box
+Test Test
+Red Team
+Gray Box
+/ Blue
+Test
+Team
+RedTeam saldırır, Blue Team Orta düzey bilgiyle yapılan
+savunur. RedTeam test. Örneğin, normal
+tekniklerini ve amacını gizler; kullanıcı erişim hakları verilir
+Blue Team gerçek zamanlı ama dahili altyapı bilinmez.
+tespit ve müdahale Pratik ve yaygın kullanılan
+becerisini ölçer. yaklaşımdır.
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 30 ---
+CVSS — Zafiyet Derecelendirme
+Sistemi
+Common Vulnerability Scoring System (CVSS), güvenlik açıklarının ciddiyetini 0-10
+arası bir puanla ifade eder. Yamayı önceliklendirmek için kullanılır.
+Patlamış Mısır düz dolguyla
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 31 ---
+Soru: Bir bankacılık uygulamasının güvenlik testinde, geliştirici ekibinin
+kaynak koduna erişim verilirse bu hangi test türüdür?
+Black Box
+Gray Box
+White Box
+Red Team
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 32 ---
+Sızma Testi
+(Penetration Testing)
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 33 ---
+Sızma Testi (Penetration Testing)
+Yetkili kişiler tarafından gerçekleştirilen ve bir saldırganın bakış açısıyla sistemin test
+edilmesini sağlayan güvenlik değerlendirme yöntemidir. Bu testlerde amaç, sistemin
+dışarıdan veya içeriden gelebilecek saldırılara karşı ne kadar dayanıklı olduğunu
+ölçmektir.
+Sızma testleri genellikle üç aşamada gerçekleştirilir:
+• Bilgi toplama (Reconnaissance)
+• Açıkların tespiti (Scanning)
+• Saldırı ve raporlama
+Patlamış Mısır düz dolguyla
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 34 ---
+Zafiyet Tarama
+(Vulnerability Scanning)
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 35 ---
+Zafiyet Tarama (Vulnerability Scanning)
+Sistemlerde bulunan güvenlik açıklarını otomatik araçlar yardımıyla tespit etme
+işlemidir. Bu yöntem, geniş sistemlerde hızlı analiz yapılmasını sağlar ancak genellikle
+manuel analiz kadar derinlemesine sonuç vermez.
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri
+
+--- Sayfa 36 ---
+Soru & Cevap
+Gelecek Hafta: Güvenlik Protokolleri ve Standartları
+HAFTA 10: Ağ İzleme ve Güvenlik Testleri

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final Sınavı Soruları — Görsel Programlama II</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body class="quiz-app">
+  <header class="quiz-topbar">
+    <div>
+      <h1>Final Sınavı Soru Bankası</h1>
+      <a href="home.html">← Ders notları</a> · <a href="index.html">Ana sayfa</a>
+    </div>
+    <div class="quiz-stats">
+      <span>Test: <strong id="count-test">—</strong></span>
+      <span>Doğru/Yanlış: <strong id="count-dogru">—</strong></span>
+      <span>Boşluk: <strong id="count-bosluk">—</strong></span>
+      <span>Kod: <strong id="count-kod">—</strong></span>
+    </div>
+  </header>
+
+  <div class="quiz-layout">
+    <aside class="quiz-sidebar">
+      <p style="font-size:0.8rem;color:var(--muted);margin-bottom:0.75rem">Soru tipi seçin (her birinden 50+ soru)</p>
+      <div class="type-tabs">
+        <button type="button" class="type-tab active" data-type="test">
+          📝 Çoktan Seçmeli <span class="count" id="count-test-side">—</span>
+        </button>
+        <button type="button" class="type-tab" data-type="dogru">
+          ✓✗ Doğru / Yanlış <span class="count" id="count-dogru-side">—</span>
+        </button>
+        <button type="button" class="type-tab" data-type="bosluk">
+          ___ Boşluk Doldurma <span class="count" id="count-bosluk-side">—</span>
+        </button>
+        <button type="button" class="type-tab" data-type="kod">
+          { } Kod Kısa ↔ Uzun <span class="count" id="count-kod-side">—</span>
+        </button>
+      </div>
+    </aside>
+
+    <main class="quiz-main">
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+
+      <div class="quiz-controls">
+        <label>
+          Konu:
+          <select id="topic-filter"><option value="">Tüm konular</option></select>
+        </label>
+        <label><input type="checkbox" id="shuffle"> Soruları karıştır</label>
+        <button type="button" class="btn btn-primary" id="btn-check-page">Bu Sayfayı Kontrol Et</button>
+        <button type="button" class="btn btn-success" id="btn-check-all">Özet Sonuç</button>
+        <button type="button" class="btn btn-outline" id="btn-reset">Sıfırla</button>
+      </div>
+
+      <div class="score-panel" id="score-panel"></div>
+
+      <div id="loading" class="loading">Sorular yükleniyor...</div>
+      <div id="questions-container"></div>
+      <nav class="pagination" id="pagination"></nav>
+    </main>
+  </div>
+
+  <script src="js/questions-data.js"></script>
+  <script src="js/quiz.js"></script>
+  <script>
+    fetch("data/questions.json")
+      .then((r) => r.json())
+      .then((d) => {
+        const c = d.meta?.counts || {};
+        ["test", "dogru", "bosluk", "kod"].forEach((k) => {
+          const el = document.getElementById("count-" + k + "-side");
+          if (el) el.textContent = c[k] || "0";
+        });
+      });
+  </script>
+</body>
+</html>

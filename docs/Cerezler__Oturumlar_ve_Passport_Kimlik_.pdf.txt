@@ -1,0 +1,197 @@
+--- Sayfa 1 ---
+ÇEREZLER, OTURUMLAR VE PASSPORT KIMLIK
+DOĞRULAMASI
+
+--- Sayfa 2 ---
+ÇEREZLER (COOKİES) NEDİR?
+Web Geliştirmede Çerezler:
+● Web siteleri tarafından tarayıcınızda saklanan
+küçük veri parçaları
+● Şans kurabiyelerine benzer - içinde mesaj
+barındırır
+● Sizi ve tarama oturumunuzu hatırlamak için
+kullanılır
+Gerçek Dünya Örneği -TrendyolAlışveriş Sepeti:
+
+--- Sayfa 3 ---
+Chrome'da Çerezleri Görüntüleme:
+Ayarlar → Gizlilik ve Güvenlik → Çerezler ve diğer site verileri→ Tüm çerezleri ve site verilerini gör
+Çerezlerin İçerdikleri:
+● Oturum jetonları (session tokens)
+● Oturum kimlikleri (session IDs)
+● Kullanıcı tercihleri
+● Kimlik doğrulama durumu
+
+--- Sayfa 4 ---
+WEB GELIŞTIRMEDE OTURUMLAR
+(SESSIONS)
+Oturum (Session) Nedir?
+● Tarayıcının sunucuyla etkileşimde bulunduğu zaman
+dilimi
+● Kullanıcı giriş yaptığında başlar
+● Kullanıcı çıkış yaptığında veya oturum süresi
+dolduğunda sona erer
+
+--- Sayfa 5 ---
+
+
+--- Sayfa 6 ---
+PASSPORT.JS'E GIRIŞ
+En Popüler Node.js Kimlik Doğrulama
+Kütüphanesi
+Passport Nedir?
+Node.js için kimlik doğrulama ara
+●
+yazılımı (middleware)
+500'den fazla kimlik doğrulama
+●
+stratejisini destekler
+LEGO gibi - ihtiyacınız olanı takın
+●
+
+--- Sayfa 7 ---
+YEREL STRATEJI IÇIN GEREKLI PAKETLER:
+npm install passport passport-local express-session
+Temel Kurulum Sırası (KRİTİK!):
+import session from 'express-session';
+import passport from 'passport';
+import { Strategy } from 'passport-local';
+// 1. ÖNCE oturum ara yazılımı
+app.use(session({ secret: 'GIZLIANAHTAR', resave: false, saveUninitialized: true }));
+// 2. İKİNCİ Passport ara yazılımı
+app.use(passport.initialize());
+app.use(passport.session());
+// 3. Rotalar SONRA gelir
+app.get('/giris', (req, res) => { ... });
+
+--- Sayfa 8 ---
+DOĞRULAMA FONKSIYONU:
+
+--- Sayfa 9 ---
+PERDE ARKASINDA NE OLUR:
+Aşama İşlem Teknik Karşılığı Açıklama
+1 Giriş İsteği POST /login Kullanıcı bilgilerini (e-posta/şifre) gönderir.
+2 Doğrulama Passport.authenticate Bilgiler veritabanındaki kayıtlarla karşılaştırılır.
+Doğrulanan kullanıcının sadece ID'si oturum (session) içine
+3 Kimlik Kaydı serializeUser kaydedilir.
+4 Çerez Teslimi Set-Cookie Sunucu, tarayıcıya içinde Session ID bulunan bir çerez gönderir.
+Yeni bir istek geldiğinde, ID üzerinden veritabanından tüm kullanıcı
+5 Kullanıcı Çözümleme deserializeUser bilgileri çekilir.
+Yazılımcı, giriş yapmış kullanıcıya her rotada bu nesne üzerinden
+6 Erişim req.user erişebilir.
+
+--- Sayfa 10 ---
+ÖNEMLİ ÇIKARIMLAR:
+1.
+Çerezler gerçek kullanıcı verilerini değil, oturum ID'lerini saklar
+2.
+Oturumlar sayfa istekleri arasında giriş durumunu korur
+3.
+Passport.js en popüler Node.js kimlik doğrulama kütüphanesidir
+4.
+Yerel Strateji e-posta/şifre kimlik doğrulamasını yönetir
+5.
+req.isAuthenticated() kullanıcının giriş yapıp yapmadığını kontrol eder
+6.
+req.user giriş yapmış kullanıcının verilerini içerir
+7.
+Oturum çerezlerinin süresi dolar - kalıcıl ık için maxAge ayarlayın
+
+--- Sayfa 11 ---
+ORTAM DEĞİŞKENLERİ (ENVİRONMENT VARİABLES)
+Sırlarınızı Neden Git'te Saklamamalısınız?
+Potansiyel Sonuçlar:
+Sonuç Etki
+Mali Kayıp Binlerce dolarlık sahte ücret
+Veri İhlali Müşteri verileri çalınabilir
+İtibar Hasarı Müşteriler güvenini kaybeder
+Yasal Sorunlar Potansiyel davalar
+
+--- Sayfa 12 ---
+ORTAM DEĞİŞKENLERİ (ENVİRONMENT VARİABLES)
+Ortam Değişkenleri Nedir?
+Ortam değişkenleri (environment variables veya env vars), JavaScript’te kodun dışında saklanan ve uygulama
+çalışırken erişilebilen değerlerdir.
+Neden Önemlidir?
+Şunları yapmanıza yardımcı olur:
+Hassas verileri (şifreler, API anahtarları) koddan ayrı tutmakGeliştirme, test ve üretim ortamları için farklı ayarlar
+kullanmakUygulamayı daha esnek ve güvenli hale getirmek
+Ortam değişkenleri oluşturmak için, dotenv packet kullabiliriz.
+dotenv Nedir?
+ .env dosyalarını yüklemek için popüler npm paketi
+ Herkesin sırlarını güvende ve emniyette tutar
+
+--- Sayfa 13 ---
+ORTAM DEĞİŞKENLERİ (ENVİRONMENT VARİABLES)
+
+--- Sayfa 14 ---
+ORTAM DEĞİŞKENLERİ (ENVİRONMENT VARİABLES)
+.envDosyası Oluşturma Format Kuralları:
+Kural Örnek
+Dosyayı Oluşturun:
+Proje klasörünüzün KÖKÜNDE
+Tümü BÜYÜK HARF SESSION_SECRET
+Yeni dosya oluştur →adlandır: .env
+Kelimeler alt çizgi ile ayrılır DB_USER_NAME
+(Not: nokta ile başlar, uzantı yok)
+Dosya içindekleriörneği:
+=sonra (boşluk yok) API_KEY=
+# Yorumlar hashtag ile başlar
+SESSION_SECRET="süper-gizli-anahtarınız-buraya" Stringdeğerler çift tırnak
+"değer"
+PG_USER="postgres" içinde
+PG_HOST="localhost"
+Sayısal değerler tırnaksız 5432
+PG_DATABASE= "stokAlma"
+PG_PASSWORD="sifreniz"
+Her değişken yeni satırda Virgül veya noktalı virgül yok
+PG_PORT=5432
+
+--- Sayfa 15 ---
+ORTAM DEĞİŞKENLERİ (ENVİRONMENT VARİABLES)
+dotenvKurulumu (dotenv'i İçe Aktarma ve Yapılandırma) Sonra (GÜVENLİ-ortam değişkenleri kullanarak):
+Adım 1:npminstalldotenv
+app.use(session({
+Adım 2: index.js'deİçe Aktar ve Yapılandır
+secret: process.env.SESSION_SECRET,
+importdotenvfrom'dotenv';
+resave: false,
+dotenv.config(); // .envdosyasını process.env'eyükler
+Adım 3: Sabit Kodlanmış Sırları Değiştirin saveUninitialized: true
+Önce (GÜVENSİZ -kodda görünür):
+}));
+app.use(session({ secret: 'benim-oturum-gizlim', resave: false,
+constdb= newpg.Client({
+saveUninitialized: true}));
+user:process.env.PG_USER,
+constdb= newpg.Client({
+user:'postgres', host: process.env.PG_HOST,
+host: 'localhost', database:process.env.PG_DATABASE,
+database:‘stokAlma',
+password:process.env.PG_PASSWORD,
+password:'gizlişifrem',
+port:process.env.PG_PORT
+port:5432
+});
+});
+
+--- Sayfa 16 ---
+ORTAM DEĞİŞKENLERİ (ENVİRONMENT VARİABLES)
+
+--- Sayfa 17 ---
+ORTAM DEĞİŞKENLERİ (ENVİRONMENT VARİABLES)
+Önemli Çıkarımlar:
+
+Sırlarınızı asla doğrudan kodunuzda saklamayın (özellikle Git kullanıyorsanız)
+
+Ortam Değişkenleri hassas verileri kod tabanınızdan ayrı tutar
+
+dotenv .env dosyalarını Node.js uygulamalarına yüklemek için standarttır
+
+process.env Node.js'de ortam değişkenlerine erişir
+
+.gitignore gizli dosyaların GitHub'a yüklenmesini engeller
+
+Projenizin EN BAŞINDA .gitignore oluşturun
+
+Bir sır GitHub'a gönderildikten sonra, kaldırmak neredeyse imkansızdır (geçmişte kalır)

@@ -1,0 +1,513 @@
+--- Sayfa 1 ---
+İNTERNET GÜVENLİĞİ
+HAFTA 1: İnternet Güvenliğine Giriş ve Temel Kavramlar
+TSMYO – Öğr. Gör. Gizem ÇELİK
+
+--- Sayfa 2 ---
+HAFTA 1 - İÇİNDEKİLER
+1. BÖLÜM: İnternet 2. BÖLÜM: Güvenlik 3. BÖLÜM: Temel
+Güvenliğine Giriş Prensipleri Tehditler
+• İnternet güvenliği • CIA Triad detayları • Tehditlere giriş
+nedir?
+• Kişisel veri ve • Kötü amaçlı
+• İnternetin tarihi ve mahremiyet yazılımlar
+güvenlik evrimi (Malware)
+• Dijital iz (Digital
+• İnternet kullanım Footprint) • Phishing ve sosyal
+istatistikleri mühendislik
+• KVKK ve yasal
+• Temel kavramlar ve düzenlemeler • Diğer yaygın
+terminoloji tehditler
+• Güvenli internet
+kullanım ilkeleri • Korunma yöntemleri
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 3 ---
+1. BÖLÜM
+İNTERNET GÜVENLİĞİNE
+GİRİŞ
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 4 ---
+İnternet Güvenliği Nedir?
+Tanım: İnternet üzerinden yapılan tüm faaliyetlerde kullanıcıların, verilerinin ve
+sistemlerinin korunmasını içeren geniş bir disiplin.
+Basitçe, interneti kullanırken karşılaşabileceğiniz tehlikelere karşı kendinizi, bilgilerinizi
+ve cihazlarınızı koruma sanatıdır.
+İnternet Güvenliği Kapsamı:
+• Web Tarayıcı Güvenliği: Güvenli sitelere girme, zararlı site tespiti
+• E-posta Güvenliği: Spam filtresi, phishing tespiti, güvenli iletişim
+• Sosyal Medya Güvenliği: Gizlilik ayarları, sahte profil tespiti
+• Online İşlem Güvenliği: E-ticaret, online bankacılık koruması
+• Dosya Güvenliği: Güvenli indirme, bulut depolama koruması
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 5 ---
+İnternet Güvenliği vs Siber Güvenlik
+İNTERNET GÜVENLİĞİ SİBER GÜVENLİK
+• Sadece internet aktiviteleri • Tüm dijital dünya
+• Bireysel kullanıcı odaklı • Kurumsal ve endüstriyel
+• Web, e-posta, sosyal medya • Ağ, sistem, fiziksel güvenlik
+• Daha dar kapsam • Daha geniş kapsam
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 6 ---
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 7 ---
+İnternet Güvenliği Neden
+Önemli?
+Finansal Kayıplar Kimlik Hırsızlığı
+2023'te Türkiye'de 2.1 milyar Kişisel bilgilerinizin çalınması
+TL kayıp ve kötüye kullanımı
+Mahremiyet İhlali İtibar Kaybı
+Özel fotoğraf/mesajların ifşa Hesaplarınızın ele geçirilmesi,
+edilmesi sahte paylaşımlar
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 8 ---
+İnternet ve Güvenlik Tarihi
+ARPANET Doğuşu
+1969
+İlk 4 üniversite bağlandı, güvenlik yok!
+Morris Worm
+1988
+İlk büyük internet saldırısı, 6000 bilgisayar etkilendi
+Melissa Virüsü
+1999
+E-posta yoluyla yayıldı, 1M bilgisayar, $80M zarar
+ILOVEYOU
+2000
+45M bilgisayar, $10B zarar, sosyal mühendislik
+WannaCry
+2017
+230K bilgisayar, hastaneler felç, $4B zarar
+AI Devrimi
+2024
+Yapay zeka destekli saldırılar, deepfake
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 9 ---
+Dünya İnternet Kullanım
+İstatistikleri (2024)
+5.44 MİLYAR 6s 40dk %60
+İnternet Kullanıcısı Günlük Ortalama Mobil Trafik
+%67.1 dünya nüfusu İnternette geçirilen süre Mobil cihazlardan erişim
+En Popüler: Facebook (3.07B) • YouTube (2.70B) • WhatsApp (2.78B)
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 10 ---
+Türkiye İnternet Kullanımı
+(2024)
+71 MİLYON 7s 7dk %77.6
+İnternet Kullanıcısı Günlük Kullanım E-ticaret
+%82.4 penetrasyon Dünya ortalamasının üstünde! Online alışveriş yapanlar
+En Çok Kullanılan: WhatsApp (%89.6) • Instagram (%84.3) • Facebook (%65.6)
+Güvenlik: 2023'te 2.1 milyar TL internet dolandırıcılığı kaybı!
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 11 ---
+Temel Kavramlar Ve Terminoloji
+▪ Güvenlik (Security): Korunma durumu
+▪ Phishing: Kimlik avı
+▪ Gizlilik (Privacy): Kişisel bilgilerin
+▪ Spam: İstenmeyen e-postalar
+korunması
+▪ Firewall (Güvenlik Duvarı): Koruyucu
+▪ Tehdit (Threat): Potansiyel tehlike
+yazılım/donanım
+kaynağı ▪ Şifreleme (Encryption): Verileri
+▪ Risk: Tehditin gerçekleşme olasılığı okunamaz hale getirme
+▪ Zafiyet/Açık (Vulnerability): ▪ İki Faktörlü Kimlik Doğrulama
+Sistemdeki zayıf noktalar (2FA): Çift katmanlı doğrulama
+▪ Saldırı (Attack): Zararlı eylem ▪ VPN: Sanal Özel Ağ
+▪ HTTPS: Güvenli web protokolü
+▪ Kötü Amaçlı Yazılım (Malware): Zararlı
+▪ SSL/TLS: Şifreleme protokolleri
+programlar
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 12 ---
+Güvenlik (Security)
+Tanım: Varlıkların (bilgi, sistem, ağ, cihaz) yetkisiz erişim, kullanım, ifşa, değiştirme,
+hasar veya yok edilmeye karşı korunması.
+Aşamaları:
+• Koruma (Protection): Önlem alma, kalkan oluşturma
+• Tespit (Detection): Saldırıları fark etme
+• Yanıt (Response): Saldırıya müdahale etme
+• İyileştirme (Recovery): Hasarı onarma
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 13 ---
+Gizlilik (Privacy)
+Tanım: Kişisel bilgilerin kontrol altında tutulması, istenmeyen paylaşımlardan
+korunması.
+Gizliliğin Boyutları:
+Bilgi Gizliliği: Hangi bilgilerinizin kim tarafından bilindiği
+•Örnek: Telefon numaranızı sadece ailenizle paylaşmak
+İletişim Gizliliği: Konuşmalarınızın gizli kalması
+•Örnek: WhatsApp'taki uçtan uca şifreleme
+Konum Gizliliği: Nerede olduğunuzun bilinmemesi
+•Örnek: Instagram'da konum paylaşmamak
+Davranış Gizliliği: Online aktivitelerinizin izlenmemesi
+•Örnek: Reklamcıların sizi takip etmemesi
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 14 ---
+Tehdit (Threat)
+Tanım: Sisteme, veriye veya kullanıcıya zarar verebilecek potansiyel tehlike.
+Tehdit Türleri:
+Doğal Tehditler: İnsan Kaynaklı Tehditler: Teknik Tehditler:
+•Deprem •Kasıtlı (Intentional): •Yazılım hataları (bugs)
+•Sel •Hackerlar •Donanım arızaları
+•Yangın •Dolandırıcılar •Ağ sorunları
+•Elektrik kesintisi •Siber teröristler
+•Rakip firmalar
+Kasıtsız (Unintentional):
+•Kullanıcı hatası
+•Zayıf şifre kullanma
+•Güncellemeleri yapmamasi
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 15 ---
+Risk
+Tanım: Bir tehditin gerçekleşme olasılığı ile oluşturacağı zararın çarpımı.
+Risk Seviyeleri:
+Yüksek Risk Orta Risk: Düşük Risk:
+•Yüksek olasılık + Yüksek •Orta olasılık + Orta etki • Düşük olasılık + Düşük
+etki VEYA etki
+•Örnek: Güncel olmayan •Yüksek olasılık + Düşük • Örnek: Eski bir oyun
+işletim sistemi + etki VEYA hesabınızın çalınması
+İnternete bağlı •Düşük olasılık + Yüksek • İzlenebilir, acil değil
+•Acil önlem gerekir! etki
+•Örnek: Zayıf Wi-Fi şifresi
+•Önlem planlanmalı
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 16 ---
+Pratik Örnekler
+Örnek 1: Banka Hesabı
+• Tehdit: Phishing ile şifre
+çalınması
+• Olasılık: Orta (%30 şans)
+• Etki: Çok yüksek (Tüm
+paranız gidebilir)
+• Risk: YÜKSEK → 2FA kullan,
+dikkatli ol!
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 17 ---
+Pratik Örnekler
+Örnek 2: Spam E-posta
+• Tehdit: Spam kutusuna
+düşme
+• Olasılık: Yüksek (%80)
+• Etki: Düşük (Sadece
+rahatsızlık)
+• Risk: ORTA → Spam filtresi
+yeterli
+Düşük (Sadece rahatsızlık)
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 18 ---
+Zafiyet / Güvenlik Açığı (Vulnerability)
+Tanım: Sistemdeki, yazılımdaki veya prosedürdeki zayıflık ya da eksiklik. Tehdidin sisteme
+girmesine izin veren kapı.
+Zafiyet Türleri:
+İnsan Kaynaklı Organizasyonel
+Teknik Zafiyetler: Fiziksel Zafiyetler:
+Zafiyetler: Zafiyetler:
+• Yazılım Hataları •Zayıf Şifreler • Korumasız Cihazlar • Politika Eksikliği
+(Bugs) •Sosyal Mühendislik'e • Ekran Kilidi • Eğitim Eksikliği
+• Konfigürasyon Açıklık Olmaması • İzleme Eksikliği
+Hataları •Güvenlik Farkındalığı • Güvenli İmha
+• Eski/Güncellik Eksikliği Edilmeyen Cihazlar
+Olmayan Yazılım •Yetkisiz Paylaşım
+• Şifreleme Eksikliği
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 19 ---
+Default Password
+Zafiyet Örnekleri • Ne: Modem/routerlardavarsayılanşifreler
+• Zafiyet: admin/admin gibiherkesinbildiğişifreler
+• Sonuç: Mirai botnet (2016) buşekildeyayıldı
+• Ders: İlk kurulumdaşifredeğiştirin
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 20 ---
+Saldırı (Attack)
+Tanım: Bir zafiyetin kötü niyetle kullanılarak sisteme, veriye veya kullanıcıya zarar verme
+eylemi.
+Saldırı Aşamaları
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 21 ---
+Örnek Senaryo
+• Adım1 -Reconnaissance:HackerLinkedIn'deşirketiaraştırıyor:
+• Çalışanlistesi
+• Kullanılanteknolojiler
+• E-postaformatı(ad.soyad@sirket.com)
+• Adım2 -Weaponization:Sahtebir"İK Departmanı" e-postası
+hazırlıyor:
+• Konu: "MaaşZammıDuyurusu"
+• İçindezararlıExcel dosyası
+• Macro içeriyor
+• Adım3 -Delivery:E-postayıçalışanlaragönderiyor:"Değerli
+çalışanımız,Yenimaaşzammılistesiekte. Lütfenkontroledin.«
+• Adım4 -Exploitation:ÇalışanExcel'iaçıyor→ "Macrolarıetkinleştir"
+diyor→ Zararlıkodçalışıyor
+• Adım5 -Installation:Trojansistemeyerleşiyor→ Arka planda
+çalışmayabaşlıyor→ Antivirüsüatlatıyor
+• Adım6 –Hackerşirketin sunucusunabağlanıyor→ Hacker uzaktan
+erişimsağlıyor
+• Adım7 -Objectives:Hackerşunlarıyapıyor:
+• Şirketverilerinikopyalıyor
+• Şifreleriçalıyor
+• Ransomware yüklüyor
+• Fidyeistiyor
+
+--- Sayfa 22 ---
+2. BÖLÜM
+GÜVENLİK PRENSİPLERİ
+VE KİŞİSEL VERİ
+KORUMA
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 23 ---
+CIA Triad
+Tanım: Bilgilerin yetkisiz erişimlere karşı korunması, doğruluğunun
+bozulmaması ve ihtiyaç duyulduğunda erişilebilir olması gerektiğini ifade eden
+temel bilgi güvenliği modelidir.
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 24 ---
+Confidentiality - Gizlilik
+Tanım: Bilginin yalnızca yetkili kişiler tarafından erişilebilir olmasını ifade eder.
+Özellikleri:
+•Kullanıcı adı – şifre sistemleri
+•Yetkilendirme ve erişim kontrolü
+•Şifreleme (encryption)
+•Gizli verilerin korunması
+Amaç: Yetkisiz kişilerin bilgiye ulaşmasını engellemek
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 25 ---
+Gizlilik
+Örnekleri
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 26 ---
+Integrity - Bütünlük
+Tanım: Bilginin yetkisiz şekilde değiştirilmemesi, silinmemesi veya
+bozulmamasıdır.
+Özellikleri:
+•Veri doğrulama mekanizmaları
+•Yetkisiz değişikliklerin engellenmesi
+•Kayıt (log) tutma
+•Hash ve imza yöntemleri
+Amaç: Bilginin doğruluğunu ve güvenilirliğini korumak
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 27 ---
+Bütünlük
+Örnekleri
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 28 ---
+Availability - Erişilebilirlik
+Tanım: Bilgiye veya sisteme ihtiyaç duyulduğu anda erişilebilmesi durumudur.
+Özellikleri:
+•Sistem sürekliliği
+•Yedekleme
+•Sunucu ve ağ sürekliliği
+•Hizmet kesintilerinin önlenmesi
+Amaç: Yetkili kullanıcıların sistemleri kesintisiz kullanabilmesi
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 29 ---
+Erişilebilirlik
+Örnekleri
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 30 ---
+Kişisel Veri Nedir?
+Tanım: Bir kişiyi tanımlayan veya tanımlanabilir kılan bilgiler
+Kişisel Veri Türleri:
+•Kimlik bilgileri
+•İletişim bilgileri
+•Fiziksel bilgiler
+•Koum bilgileri
+•Finansal bilgiler
+•Sağlık bilgileri
+•Dijital iz
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 31 ---
+Dijital İz - Aktif vs Pasif
+Aktif İz: Bilinçli olarak Pasif İz: Otomatik
+paylaşılan bilgiler toplanan bilgiler
+• Sosyal medya • IP adresi
+paylaşımları
+• Tarayıcı bilgileri
+• Blog yazıları
+• Çerezler
+• Forum yorumları
+• Konum verileri
+• Profil bilgileri
+• Tıklama ve
+gezinme geçmişi
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 32 ---
+KVKK Nedir?
+Tanım: Kişisel verilerinizin nasıl toplanacağını, kullanılacağını, saklanacağını ve
+korunacağını düzenleyen kanun.
+Kişisel Verilerin Korunması Kanunu, 6698 sayılı kanun olarak 7 nisan
+2016 tarihinde kabul edilmiş, 24 Mart 2016 ‘da yayımlanmıştır.
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 33 ---
+KVKK Hakları
+Bilgi Edinme Hakkı
+•Kişisel verilerinizin işlenip işlenmediğini öğrenme hakkı
+Erişim Hakkı
+•Kişisel verilerinize erişme, kopyasını alma hakkı
+Düzeltme Hakkı
+•Yanlış, eksik veya güncel olmayan kişisel verilerinizi düzelttirme hakkı
+Silme Hakkı
+•Kişisel verilerinizin silinmesini, yok edilmesini, anonim hale getirilmesini isteme hakkı
+İtiraz Hakkı
+•Kişisel verilerinizin işlenmesine itiraz etme hakkı
+Aktarımdan Haberdar Olma Hakkı
+•Kişisel verilerinizin yurt içi veya yurt dışına aktarılması durumunda haberdar olma hakkı
+Başvuru Yapma Hakkı
+•Yukarıdaki tüm hakları kullanmak için veri sorumlusuna başvuruma hakkı
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 34 ---
+GÜVENLİ İNTERNET KULLANIM
+İLKELERİ
+3. SAAT
+2FA (İki HTTPS ve
+Güçlü şifre Wi-Fi
+faktörlü Güvenli
+oluşturma güvenliği
+doğrulama) bağlantı
+Tarayıcı E-posta Güvenlik
+VPN
+Güvenliği güvenliği araçları
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 35 ---
+3. BÖLÜM
+TEMEL TEHDİTLER VE
+KORUNMA YÖNTEMLERİ
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 36 ---
+Tehdit Türleri
+Teknik Sosyal Fiziksel
+Tehditler: Tehditler: Tehditler:
+• Yazılım Manipülasyon, Cihaz hırsızlığı
+açıkları aldatma
+• zararlı kodlar
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 37 ---
+3. SAAT
+YAYGIN İNTERNET TEHDİTLERİ
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 38 ---
+Malware (Kötü Amaçlı Yazılım)
+Tanım: Sistemlere zarar vermek, bilgi çalmak veya yetkisiz erişim sağlamak amacıyla
+tasarlanmış her türlü yazılım.
+Malware = Malicious (kötü niyetli) + Software (yazılım)
+Malware Türleri:
+Ransomware
+Worm Trojan (Truva
+Virus (Virüs) (Fidye
+(Solucan) Atı)
+Yazılımı)
+Spyware Adware
+(Casus (Reklam Rootkit Botnet
+Yazılım) Yazılımı)
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 39 ---
+Phishing Nedir?
+Tanım: Saldırganların kullanıcıları kandırarak kişisel bilgilerini (şifre, kredi kartı, kimlik
+bilgileri) ele geçirmek için kullandığı bir sosyal mühendislik saldırısıdır.
+Nasıl Çalışır:
+1. Temel Mekanizma: Sahte Kimlik Oluşturma
+2. Saldırgan güvenilir bir kurum/kişi gibi görünür
+3. Yem Atma: E-posta, SMS veya mesaj gönderir
+4. Aciliyet Yaratma: "Hesabınız bloke edildi!", "Ödeme yapılmadı!" gibi panik yaratır
+5. Tuzak Kurma: Sahte link veya form gönderir
+6. Bilgi Toplama: Kurban bilgilerini girdiğinde saldırgan ele geçirir
+7. İstismar: Çalınan bilgilerle gerçek hesaplara erişir
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 40 ---
+Sosyal Mühendislik
+Tanım: İnsanların psikolojik zayıflıklarını, güven duygusunu, yardımseverliğini veya korku
+hissini manipüle ederek gizli bilgi elde etme veya sistemlere yetkisiz erişim sağlama
+sanatıdır.
+Teknikleri:
+1. Pretexting: Sahte senaryo oluşturma
+2. Baiting: Cazip tuzak kurma (ücretsiz müzik, film)
+3. Quid Pro Quo: Karşılıklı fayda vaadetme
+4. Tailgating: Fiziksel takip
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 41 ---
+Korunma Yöntemleri - Teknik
+Antivirüs yazılımı
+• Güncel tutma
+• Düzenli tarama
+• Önerilen yazılımlar
+Güvenlik Duvarı
+• Windows Defender/ZoneAlarm
+• Gelen/Ggidentrafik kontrolü
+Yedekleme
+• 3-2-1 kuralı
+• Bulut ve yerel yedekleme
+• Düzenli yedekleme rutini
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 42 ---
+Korunma Yöntemleri - Davranışsal
+Tıklamadan Paylaşmadan
+Şüpheci ol Doğrula Eğitimli ol
+önce düşün önce düşün
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 43 ---
+Acil Durum Planı
+Bir saldırıya
+İnternet bağlantısını kesin
+uğradığınızda;
+Cihazı izole edin
+Şifreleri değiştirin
+Antivirüs taraması yapın
+Gerekirse yetkililere bildirin
+Bankanızı/kurumları uyarın
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 44 ---
+Hafta 1 Genel Özet
+➢ İnternet güvenliğinin ne olduğunu ve neden önemli olduğunu
+açıklayabilecek
+➢ Temel güvenlik kavramlarını ve terminolojiyi kullanabilecek
+➢ CIA Triad prensiplerini anlayıp örneklendirebilecek
+➢ Kişisel verilerinin farkında olacak ve koruma yöntemlerini
+uygulayabilecek
+➢ Güçlü şifre oluşturabilecek ve şifre yöneticisi kullanabilecek
+➢ Yaygın internet tehditlerini (phishing, malware vb.) tanımlayabilecek
+➢ Temel korunma yöntemlerini uygulayabilecek
+➢ Güvenli internet kullanım alışkanlıkları geliştirebilecek
+HAFTA 1: İnternet GüvenliğineGirişveTemel Kavramlar
+
+--- Sayfa 45 ---
+Soru & Cevap
+Gelecek Hafta: Ağ Güvenliği ve Ağ Katmanları

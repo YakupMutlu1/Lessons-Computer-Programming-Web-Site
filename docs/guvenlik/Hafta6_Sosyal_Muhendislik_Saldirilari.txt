@@ -1,0 +1,174 @@
+--- Sayfa 1 ---
+İNTERNET GÜVENLİĞİ
+HAFTA 6: Sosyal Mühendislik Saldırıları
+TSMYO – Öğr. Gör. Gizem ÇELİK
+"Bir güvenlik sistemi, en zayıf halkası kadar güçlüdür — ve bu halka çoğu zaman insandır.." — Kevin Mitnick
+
+--- Sayfa 2 ---
+İÇİNDEKİLER
+Sosyal Mühendislik Nedir?
+Sosyal Mühendislik Saldırıları
+Korunma Yöntemleri
+HAFTA 6: Sosyal Mühendislik Saldırıları
+
+--- Sayfa 3 ---
+Sosyal Mühendislik Nedir?
+Teknik açıkları değil, insan psikolojisini hedef alan; kandırma,
+manipülasyon ve aldatma yoluyla gizli bilgilere ya da sistemlere yetkisiz
+erişim sağlama sanatıdır.
+Hedef Araç Amaç
+İnsan Güven & Hile Bilgi / Erişim
+Patlamış
+Mısır düz
+dolguyla
+HAFTA 6: Sosyal Mühendislik Saldırıları
+
+--- Sayfa 4 ---
+Sosyal Mühendislik Nedir?
+Bilgi toplama
+•Saldırgan hedef kişi veya
+kurum hakkında bilgi toplar.
+İzleri gizleme Güven oluşturma
+•Bazen hesabı hemen •Kendisini inandırıcı biri gibi
+kullanmaz, bazen sessizce tanıtır.
+veri toplar.
+İstismar Manipülasyon
+•Elde ettiği bilgiyle sisteme •Kurbandan bir şey ister:
+girer veya saldırıyı büyütür. şifre, doğrulama kodu vs.
+HAFTA 6: Sosyal Mühendislik Saldırıları
+
+--- Sayfa 5 ---
+Sosyal Mühendislik
+Saldırıları
+HAFTA 6: Sosyal Mühendislik Saldırıları
+
+--- Sayfa 6 ---
+Phishing (Oltalama)
+En bilinen sosyal mühendislik saldırısıdır.
+Saldırgan, sahte bir e-posta veya mesaj göndererek kullanıcıyı
+kandırmaya çalışır.
+Amaç Özellikleri
+• şifre çalmak • tanıdık kurum adı
+• kredi kartı bilgisi almak kullanılır
+• sahte sayfaya • logo taklit edilir
+yönlendirmek • aciliyet vurgulanır
+• zararlı yazılım indirtmek • sahte link bulunur
+HAFTA 6: Sosyal Mühendislik Saldırıları
+
+--- Sayfa 7 ---
+Phishing (Oltalama)
+En bilinen sosyal mühendislik saldırısıdır.
+Saldırgan, sahte bir e-posta veya mesaj göndererek kullanıcıyı
+kandırmaya çalışır.
+• gönderen adresi şüpheli olabilir
+• link gerçek domain olmayabilir
+Amaç Özellikleri
+• yazım hataları olabilir
+• şifre •çalgmearkeksiz panik dili •vatarndıdırık kurum adı
+• kredi kartı bilgisi almak kullanılır
+• kişisel bilgi istenir
+• sahte sayfaya • logo taklit edilir
+yönlendirmek • aciliyet vurgulanır
+• zararlı yazılım indirtmek • sahte link bulunur
+HAFTA 6: Sosyal Mühendislik Saldırıları
+
+--- Sayfa 8 ---
+Phishing (Oltalama)
+Spear Phishing Voice Phishing Smishing
+• Phishing’in daha • Telefon üzerinden •SMS yoluyl yapılan
+hedefli halidir. yapılan oltalama phishing
+• Genel kitleye değil, saldırısıdır. saldırısıdır.
+belirli bir kişiye
+veya kuruma özel
+hazırlanır.
+• Saldırgan hedefi
+önceden araştırır.
+HAFTA 6: Sosyal Mühendislik Saldırıları
+
+--- Sayfa 9 ---
+Pretexting (Bahane Uydurma)
+Saldırganın sahte bir senaryo oluşturarak bilgi istemesidir.
+Burada bir hikâye kuruludur.
+Saldırgan doğrudan “şifrenizi verin” demez. Önce bir bağlam oluşturur.
+Örnek:
+Burada saldırı, kurbanın
+• Ben bilgi işlem biriminden arıyorum. teknik detay
+Dün gece sistem güncellemesi yapıldı. bilmemesinden ve
+Hesabınızda hata görünüyor. Kontrol otoriteye güvenmesinden
+için kullanıcı bilgilerinizi teyit edebilir yararlanır.
+misiniz?”
+HAFTA 6: Sosyal Mühendislik Saldırıları
+
+--- Sayfa 10 ---
+Baiting (Yemleme)
+Kurbanın merakını veya kazanç isteğini kullanır.
+Örnek:
+Özellikle fiziksel ortamda
+• “Maaş listesi.xlsx” bırakılan “bulunmuş USB” çok
+• “2026_final_sorulari.pdf” klasik bir örnektir.
+Kişi “acaba içinde ne var” diye
+• “ücretsiz premium hesap”
+takarsa sistem enfekte olabilir.
+• “kampanya hediyesi”
+• USB bellek bırakma
+HAFTA 6: Sosyal Mühendislik Saldırıları
+
+--- Sayfa 11 ---
+Quid Pro Quo (Karşılıklı Çıkar)
+“Bir şey karşılığında bir şey” mantığıdır.
+Örnek:
+• “Bilgisayarınızın yavaşlama Bir soruna çözüm vaat ederek
+insan güvenini istismar eder.
+sorunu için destek verelim,
+uzaktan bağlantı kuracağız, şu
+programı yükleyin.”
+HAFTA 6: Sosyal Mühendislik Saldırıları
+
+--- Sayfa 12 ---
+Tailgating / Piggybacking
+Yetkisiz kişilerin güvenlikli alanlara girmek için yetkili birini takip ettiği
+fiziksel güvenlik ihlalleridir. Tailgating, kişinin fark edilmeden arkadan
+sızmasıdır; Piggybacking ise yetkili kişinin izniyle (genelde nezaketen)
+giriş yapılmasıdır.
+Örnek:
+Bu saldırı, dijital değil fiziksel
+sosyal mühendislik örneğidir.
+• Bir kişi elinde dosyalarla kapıda bekler,
+çalışan da nezaketen kapıyı tutar.
+• Ama içeri alınan kişi aslında yetkisizdir.
+HAFTA 6: Sosyal Mühendislik Saldırıları
+
+--- Sayfa 13 ---
+Saldırganların Kullandığı Psikolojik
+Silahlar
+OTORİTE
+Yönetici veya yetkili kurum taklidi yaparak uyum sağlatma
+ACİLİYET
+"Hemen yapın yoksa hesabınız kapanır" baskısı
+KORKU
+Yasal işlem, para cezası veya veri kaybı tehdidi
+SOSYAL KANIT
+"Diğer çalışanlar zaten bu bilgiyi paylaştı"
+KARŞILIKLILIK
+Önce küçük iyilik yap, sonra bilgi iste
+HAFTA 6: Sosyal Mühendislik Saldırıları
+
+--- Sayfa 14 ---
+Korunma Yöntemleri
+HAFTA 6: Sosyal Mühendislik Saldırıları
+
+--- Sayfa 15 ---
+Kendinizi ve Kurumunuzu Nasıl
+Korursunuz?
+Doğrulama Farkındalık Eğitimi
+Her şüpheli isteği resmi kanallardan teyit edin Personele düzenli siber güvenlik eğitimi verin
+Çok Faktörlü Kimlik (MFA) Güvenlik Politikaları
+Tek bilgi ile erişimi engelleyin Bilgi paylaşımı için net prosedürler oluşturun
+Simülasyon Testleri Sağlıklı Şüphecilik
+Phishing simülasyonlarıyla açıkları tespit edin Aşırı aciliyet veya baskı hissinde duraksayın
+HAFTA 6: Sosyal Mühendislik Saldırıları
+
+--- Sayfa 16 ---
+Başarılar
+Gelecek Hafta: Ara Sınav
+HAFTA 6: Sosyal Mühendislik Saldırıları

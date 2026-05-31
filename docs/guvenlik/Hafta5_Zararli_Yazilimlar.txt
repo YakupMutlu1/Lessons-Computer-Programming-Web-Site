@@ -1,0 +1,245 @@
+--- Sayfa 1 ---
+İNTERNET GÜVENLİĞİ
+HAFTA 5: Zararlı Yazılımlar
+TSMYO – Öğr. Gör. Gizem ÇELİK
+"Siber güvenlik bir ürün değil, bir süreçtir." — Bruce Schneier
+
+--- Sayfa 2 ---
+İÇİNDEKİLER
+Zararlı Yazılım Nedir?
+01
+Tanım ve temel kavramlar
+Malware Türleri
+02
+Virüs, trojan, ransomware ve daha fazlası
+Nasıl Yayılır?
+03
+Bulaşma yolları ve vektörler
+Gerçek Dünya Örnekleri
+04
+Tarihteki en büyük saldırılar
+Korunma Yöntemleri
+05
+Savunma stratejileri ve araçları
+HAFTA 5: Zararlı Yazılımlar
+
+--- Sayfa 3 ---
+Zararlı Yazılım (Malware) Nedir?
+”Zararlı yazılım, bir bilgisayar sistemine zarar vermek, veri çalmak veya
+yetkisiz erişim sağlamak amacıyla tasarlanmış her türlü yazılıma verilen
+genel isimdir.
+6 Milyar 4.88M $ 4 sn
+Ortalama Veri İhlali Maliyeti Her Saldırı Aralığı
+Yıllık Malware Saldırısı
+(IBM Cost of a Data Breach Report tahmini
+(2025 SonicWall Cyber Threat Report)
+2024/2025) (Cybersecurity Ventures Report 2025)
+SALDIRGANLAR NE AMAÇLAR?
+Finansal kazanç (fidye, hırsızlık) Veri toplama ve casusluk
+Patlamış
+Sistem sabotajı Botnet oluşturma
+Mısır düz
+dolguyla
+HAFTA 5: Zararlı Yazılımlar
+
+--- Sayfa 4 ---
+TEMEL KAVRAMLAR — 1/4
+MALWARE
+"Malicious Software" kısaltması. Bir sisteme zarar vermek, veri çalmak veya yetkisiz erişim sağlamak için tasarlanmış her türlü
+yazılımın genel adıdır.
+Örnek: Virüs, Trojan, Ransomware, Spyware hepsi malware türleridir.
+PAYLOAD (Yük)
+Zararlı yazılımın asıl zararlı kısmıdır. Sistem ele geçirildikten sonra ne yapılacağını payload belirler.
+Örnek: Dosya şifreleme, ekran görüntüsü alma, veri dışarı gönderme.
+EXPLOIT
+Bir yazılım veya sistemdeki güvenlik açığından yararlanan kod parçacığıdır. Saldırganlar sisteme sızmak için exploit kullanır.
+Örnek: EternalBlue exploiti, WannaCry'ın yayılmasını sağladı.
+HAFTA 5: Zararlı Yazılımlar
+
+--- Sayfa 5 ---
+TEMEL KAVRAMLAR — 2/4
+VEKTÖR (Saldırı Vektörü)
+Zararlı yazılımın sisteme ulaşmak için kullandığı yoldur. Her saldırının bir giriş noktası vardır.
+Örnek: E-posta eki, USB bellek, tarayıcı açığı, zayıf parola.
+C2 — COMMAND & CONTROL
+Saldırganın ele geçirdiği sistemleri uzaktan yönettiği sunucudur. Zararlı yazılım bu sunucudan komut alır ve veri gönderir.
+Örnek: Trojan, C2 sunucusuna bağlanarak saldırgana ekran görüntüsü iletir.
+ZERO-DAY (Sıfırıncı Gün)
+Yazılım üreticisinin henüz bilmediği, yaması çıkmamış güvenlik açığıdır. Savunma yöntemi mevcut olmadığı için kritik tehdit
+oluşturur.
+Örnek: Stuxnet saldırısında 4 farklı zero-day açığı kullanıldı.
+HAFTA 5: Zararlı Yazılımlar
+
+--- Sayfa 6 ---
+TEMEL KAVRAMLAR — 3/4
+PERSİSTENCE (Kalıcılık)
+Zararlı yazılımın sistem yeniden başlatıldıktan sonra da aktif kalmaya devam etmesi için kullandığı tekniktir.
+Örnek: Windows kayıt defterine giriş ekleme, servis olarak kaydolma, görev zamanlayıcı kullanma.
+OBFUSCATION (Gizleme/Karmaşıklaştırma)
+Zararlı yazılımın antivirüs sistemleri tarafından tespit edilmemesi için kodun kasıtlı olarak karmaşıklaştırılması veya
+şifrelenmesidir.
+Örnek: Kod şifreleme, anlamsız değişken isimleri, polimorfik zararlı yazılımlar.
+SANDBOX (Kum Havuzu)
+Zararlı yazılımların gerçek sisteme zarar vermeden güvenli şekilde çalıştırılıp analiz edilebildiği izole sanal ortamdır.
+Örnek: VirusTotal, Cuckoo Sandbox — güvenlik araştırmacıları tarafından kullanılır.
+HAFTA 5: Zararlı Yazılımlar
+
+--- Sayfa 7 ---
+TEMEL KAVRAMLAR — 4/4
+BOTNET
+Saldırgan tarafından ele geçirilmiş ve uzaktan kontrol edilen bilgisayar ağıdır. Her bireysel sistem 'bot' veya 'zombie' olarak
+adlandırılır.
+Örnek: Mirai Botnet — 600.000 IoT cihazını ele geçirerek devasa DDoS saldırısı düzenledi.
+RANSOMWARE FİDYESİ
+Ransomware'in dosyaları şifreledikten sonra açmak için kurban için talep ettiği ödeme miktarıdır. İzlenebilirliği azaltmak için
+kripto para kullanılır.
+Örnek: WannaCry, $300 Bitcoin fidye talep etti. Bazı saldırılarda bu rakam milyonlara çıkar.
+DDoS (Dağıtık Hizmet Engelleme)
+Binlerce/milyonlarca cihazdan aynı anda hedef sunucuya istek göndererek sunucunun çökmesini sağlayan saldırı türüdür.
+Örnek: Botnetler genellikle DDoS saldırısı için kullanılır. Hedef: bankalar, devlet siteleri.
+HAFTA 5: Zararlı Yazılımlar
+
+--- Sayfa 8 ---
+Zararlı Yazılım Türleri
+HAFTA 5: Zararlı Yazılımlar
+
+--- Sayfa 9 ---
+Zararlı Yazılım Türleri
+Zararlı yazılımlar farklı çalışma prensiplerine göre çeşitli kategorilere ayrılmaktadır.
+Virüs
+Browser Worm
+Hijacking (Solucan)
+Zararlı
+Trojan (Truva
+Keylogger
+Yazılım Atı)
+Türleri
+Ransomware
+Spam (Mesaj
+(Fidye
+Sağanağı)
+Yazılımı)
+Spyware
+Rootkit (Casus
+Yazılım)
+HAFTA 5: Zararlı Yazılımlar
+
+--- Sayfa 10 ---
+Zararlı Yazılım Türleri
+VİRÜS Yüksek TROJAN Çok Yüksek
+Kendini diğer dosyalara kopyalar, çalıştırıldığında aktif olur Patlamış Zararsız görünen yazılım içinde gizlenir, arka kapı açar Patlamış
+Mısır düz Mısır düz
+dolguyla dolguyla
+RANSOMWARE Kritik SPYWARE Yüksek
+Dosyaları şifreler, açmak için fidye ister Patlamış Kullanıcıyı gizlice izler, veri toplar Patlamış
+Mısır düz Mısır düz
+dolguyla dolguyla
+WORM Çok Yüksek BOTNET Kritik
+Ağ üzerinden otomatik yayılır, kullanıcı müdahalesi gerekmez Binlerce bilgisayarı ele geçirerek zombie ağı oluşturur Patlamış
+Patlamış
+Mısır düz
+Mısır düz
+dolguyla
+dolguyla
+HAFTA 5: Zararlı Yazılımlar
+
+--- Sayfa 11 ---
+Zararlı Yazılım Türleri
+SPAM Orta KEYLOGGER Yüksek
+Toplu olarak gönderilen istenmeyen e-postalar. Phishing veya Klavye tuş vuruşlarını gizlice kaydeder. Parola ve kredi kartı
+zararlı yazılım dağıtmak için kullanılır. bilgilerini çalmak için kullanılır.
+Patlamış Patlamış
+Mısır düz Mısır düz
+dolguyla dolguyla
+ROOTKIT Kritik BROWSER HIJACKING Orta
+İşletim sisteminin en derin katmanlarına sızar. Kendini ve diğer Tarayıcı ayarlarını ele geçirir. Ana sayfayı, arama motorunu
+zararlıları gizler, tespit edilmesi çok zordur. değiştirir; sahte sitelere yönlendirir.
+Patlamış Patlamış
+Mısır düz Mısır düz
+dolguyla dolguyla
+HAFTA 5: Zararlı Yazılımlar
+
+--- Sayfa 12 ---
+Nasıl Yayılır?
+HAFTA 5: Zararlı Yazılımlar
+
+--- Sayfa 13 ---
+Nasıl Yayılır?
+📧
+Phishing E-postaları
+%80
+Sahte e-postalar içindeki zararlı bağlantı veya ek dosyalar
+Zararlı Web Siteleri
+%45
+Drive-by download saldırıları ile otomatik indirme
+USB / Harici Cihazlar
+%25
+Enfekte flash bellek veya harici diskler
+Yazılım Açıkları
+%60
+Güncel olmayan yazılımlardaki güvenlik açıklarından yararlanma
+📱
+Sosyal Mühendislik
+%70
+Kullanıcıyı kandırarak zararlı dosya çalıştırmaya ikna etme
+HAFTA 5: Zararlı Yazılımlar
+
+--- Sayfa 14 ---
+Gerçek Dünya Örnekleri
+HAFTA 5: Zararlı Yazılımlar
+
+--- Sayfa 15 ---
+Gerçek Dünya Örnekleri
+2017 WannaCry 2010 Stuxnet
+Ransomware Worm / Siber Silah
+150 ülkede 200.000+ sistem etkilendi. NHS, Renault ve Telefónica dahil İran nükleer tesisini hedef aldı. Santrüfüjleri fiziksel olarak hasar verdi.
+büyük kuruluşlar felç oldu. Devlet destekli ilk siber silah.
+4 Milyar $ Stratejik
+2016 Mirai Botnet 2020 SolarWinds
+Botnet Supply Chain
+IoT cihazlarını ele geçirdi. DNS sağlayıcısı Dyn'e DDoS saldırısı yaparak 18.000+ kuruma arka kapı açıldı. ABD hükümeti, Microsoft ve Fortune 500
+Twitter, Netflix'i çökertti. şirketleri etkilendi.
+110M $ / gün 100M $ +
+HAFTA 5: Zararlı Yazılımlar
+
+--- Sayfa 16 ---
+Korunma Yöntemleri
+HAFTA 5: Zararlı Yazılımlar
+
+--- Sayfa 17 ---
+Gerçek Dünya Örnekleri
+Antivirüs / EDR Güçlü Parola + MFA
+Gerçek zamanlı tehdit tespiti ve engellemesi Karmaşık şifreler ve iki faktörlü doğrulama
+Güncel Yazılım Kullanıcı Eğitimi
+İşletim sistemi ve uygulamaları daima güncel tut Phishing ve sosyal mühendislik farkındalığı
+Güvenlik Duvarı VPN & Şifreleme
+Ağ trafiğini filtrele, izinsiz bağlantıları engelle Ağ trafiğini şifrele, public Wi-Fi'de VPN kullan
+Yedekleme (3-2-1) Least Privilege
+3 kopya, 2 farklı ortam, 1 offsite backup Kullanıcılara yalnızca gerekli izinleri ver
+HAFTA 5: Zararlı Yazılımlar
+
+--- Sayfa 18 ---
+Mini Test
+Sistemindeki bilgileri
+Kendimi sürekli
+İstemediğin halde toplarım. İnternet
+kopyalayarak sistemin
+reklam sayfaları açarım varsa bilgilerini
+yavaşlamasını sağlarım
+hackerlara iletirim
+Adware Worm Spyware
+Dosyalarını silerim.
+Faydalı bir yazılım gibi
+Uygulamalarına zarar
+görünürüm. Hackerlar
+veririm. Kendimi başka
+için güvenlik açıkları
+sistemlere yaymaya
+oluştururum
+çalışırım.
+Trojan Virus
+HAFTA 5: Zararlı Yazılımlar
+
+--- Sayfa 19 ---
+Soru & Cevap
+Gelecek Hafta: Sosyal Mühendislik Saldırıları

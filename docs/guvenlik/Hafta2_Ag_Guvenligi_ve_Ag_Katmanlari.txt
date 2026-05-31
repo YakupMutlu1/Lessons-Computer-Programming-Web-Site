@@ -1,0 +1,546 @@
+--- Sayfa 1 ---
+İNTERNET GÜVENLİĞİ
+HAFTA 2: Ağ Güvenliği ve Ağ Katmanları
+TSMYO – Öğr. Gör. Gizem ÇELİK
+
+--- Sayfa 2 ---
+HAFTA 2 - İÇİNDEKİLER
+3. BÖLÜM: AĞ
+1. BÖLÜM: AĞ 2. BÖLÜM: AĞ
+KATMANLARI VE
+GÜVENLİĞİ MODELLERİ
+GÜVENLİK İLİŞKİSİ
+• Ağ nedir? • OSI Modeli • Ağ Güvenlik
+• Ağ Türleri • TCP / IP Modeli Araçları
+• Temel Ağ Cihazları
+• Ağ Topolojileri
+• Ağ Güvenliği
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 3 ---
+1. BÖLÜM
+AĞ GÜVENLİĞİ
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 4 ---
+Ağ Nedir?
+Tanım: Birden fazla cihazın veri alışverişi yapabilmesi için oluşturulan iletişim yapısıdır.
+Ağ = Birbirine bağlı cihazlar grubu
+Temel Ağ Bileşenleri:
+• Sunucu (Server)
+• İstemci (Client)
+• Modem
+• Router
+• Switch
+• Access Point
+• Firewall
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 5 ---
+Temel Ağ Yapısı
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 6 ---
+Ağ Türleri
+Tanım: Tanım:
+Çok küçük bir alan içinde (1–10 Aynı bina veya kampüs içindeki
+metre) kurulan kişisel ağdır. ağdır.
+Örnek: Örnek:
+•Telefon + Bluetooth kulaklık •Üniversite laboratuvar ağı
+•Akıllı saat bağlantısı •Ofis içi ağ
+•Laptop ile kablosuz mouse •Ev Wi-Fi ağı
+Güvenlik Riski: Güvenlik Riski:
+•Bluetooth saldırıları •İç tehditler
+•Yetkisiz eşleşme •ARP spoofing
+•Veri dinleme •Yetkisiz cihaz erişimi
+PAN LAN
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 7 ---
+Ağ Türleri
+Tanım: Tanım:
+LAN’ınkablosuz versiyonudur. Bir şehir veya büyük yerleşim
+Örnek: alanını kapsayan ağdır.
+Örnek:
+•Ev Wi-Fi
+•Kafedeki açık ağ •Belediyenin şehir ağı
+•Kampüs Wi-Fi •Büyük üniversite kampüs
+Güvenlik Riski: bağlantıları
+Güvenlik Riski:
+•Sahte Access Point
+•Büyük ölçekli veri trafiği
+saldırıları
+•Fiber hat sabotajı
+WLAN MAN
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 8 ---
+Ağ Türleri
+Tanım: Tanım:
+Ülke veya kıtalar arası geniş Bir üniversite kampüsü gibi
+alanı kapsar. birden fazla bina arasında
+En büyük WAN: İnternet kurulan ağdır.
+Örnek: Örnek:
+•Banka şubeleri arası bağlantı •Üniversite içindeki fakülte
+bağlantıları
+•Uluslararası şirket ağları
+Güvenlik Riski:
+•DDoS
+•IP spoofing
+•Global saldırılar
+WAN CAN
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 9 ---
+Özet Tablo
+Ağ Türü Kapsama Alanı Örnek
+PAN 1–10 metre Bluetooth
+LAN Bina Ofis ağı
+WLAN Kablosuz bina Wi-Fi
+CAN Kampüs Üniversite
+MAN Şehir Belediye ağı
+WAN Ülke/Küresel İnternet
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 10 ---
+Temel Ağ Cihazları
+Modem Router(Yönlendirici) Switch (Anahtar)
+•İnternet servis sağlayıcısından gelen sinyali Veri paketlerini bir ağdan başka bir ağa Aynı ağ içindeki cihazları birbirine bağlar.
+dijital veriye çeviren cihazdır. yönlendiren cihazdır. Çalışma Mantığı:
+•Modem = Modülatör + Demodülatör Görevi: •MAC adresi üzerinden veri iletir
+•Görevi: •LAN WAN trafiğini yönetir Güvenlik Riski:
+•ISP ile bağlantı kurar •IP adresi dağıtır (DHCP) •MAC spoofing(MAC taklit saldırısı)
+•İnternet erişimini sağlar Güvenlik Riski: •VLAN yapılandırma hataları
+•Güvenlik Riski: •Yanlış port yönlendirme
+•Varsayılan admin şifresi •NAT yapılandırma hataları
+•Uzaktan yönetim açık olması Açık portlar
+•Güncel olmayan firmware
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 11 ---
+Temel Ağ Cihazları
+Access Point (Erişim Noktası) Firewall Proxy Server
+Kablosuz cihazların ağa bağlanmasını Ağa giren ve çıkan trafiği filtreleyen Kullanıcı ile internet arasında aracı
+sağlar. güvenlik cihazıdır. görevi görür.
+Kullanım Alanı: Görevi: Amaç:
+•Kampüs •Yetkisiz erişimi engeller •İçerik filtreleme
+•Ofis •Port ve IP filtreleme yapar •Kimlik gizleme
+•Hastane •Log tutma
+Güvenlik Riski:
+•SahteAccess Point
+•Zayıf Wi-Fi şifreleme
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 12 ---
+Ağ Topolojileri
+Fiziksel
+Kabloların gerçek bağlantı şekli
+Ağ Topolojisi
+Ağ topolojisi, ağdaki cihazların fiziksel veya
+mantıksal olarak nasıl yerleştirildiğini ve
+birbirine nasıl bağlandığınıifade eder.
+Mantıksal
+Veri akışının izlediği yol
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 13 ---
+Ağ Topolojileri
+Bus(Veri yolu) Star (Yıldız) Ring (Halka)
+Tüm cihazlar tek bir ana kabloya Tüm cihazlar merkezi bir cihaza Cihazlar birbirine halka şeklinde
+bağlanır. (switch/router) bağlanır. bağlıdır.
+Avantajları: •Günümüzde en yaygın topoloji budur. Veri tek yönde dolaşır.
+•Kurulumu kolay •Avantajları: Avantaj:
+•Düşük maliyet •Bir cihaz bozulursa diğerleri etkilenmez •Veri çakışması azdır
+Dezavantajları: •Yönetimi kolay Dezavantaj:
+•Ana kablo koparsa tüm ağ çöker •Dezavantaj: •Bir bağlantı koparsa sistem etkilenir
+•Çakışma (collision) riski yüksek •Merkez cihaz bozulursa ağ durur
+Güvenlik Riski: •Güvenlik:
+•Trafik dinleme kolaydır •Merkezi kontrol avantaj sağlar
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 14 ---
+Ağ Topolojileri
+Mesh (Örgü) Tree(Ağaç) Hybrid(Hibrit)
+Her cihaz diğer •Hiyerarşik yapıdadır. Birden fazla topolojinin
+cihazlarla bağlantılıdır. •Ana omurga + alt dallar birleşimidir.
+şeklinde ilerler.
+Avantaj: •Kullanım: Günümüz kurumsal
+Çok yüksek güvenilirlik •Büyük kampüs ağları ağlarının çoğu hibrittir.
+Yedeklilik •Kurumsal yapılar
+Dezavantaj:
+Maliyetli
+Karmaşık yapı
+Güvenlik:
+Kritik sistemlerde tercih edilir
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 15 ---
+Özet Tablo
+Topoloji Güvenilirlik Maliyet Kullanım
+Bus Düşük Düşük Küçük ağ
+Star Orta-Yüksek Orta Ev/Ofis
+Ring Orta Orta Eski sistemler
+Mesh Çok Yüksek Yüksek Kritik sistem
+Tree Yüksek Orta Kampüs
+Hybrid Değişken Değişken Kurumsal
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 16 ---
+Ağ Güvenliği
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 17 ---
+Ağ Güvenliği
+Tanım: Ağ güvenliği; ağ üzerindeki veri, cihaz ve kullanıcıların yetkisiz erişime,
+saldırılara ve zararlı faaliyetlere karşı korunmasıdır.
+Temel Amaç:
+• Yetkisiz erişimi engellemek
+• Veriyi korumak
+• Sistem sürekliliğini sağlamak
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 18 ---
+Ağ Güvenliği
+Kişisel veriler Finansal işlemler Akademik sistemler Devlet sistemleri Kurumsal itibar
+korunmalı korunmalı korunmalı korunmalı korunmalı
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 19 ---
+2. BÖLÜM
+AĞ MODELLERİ
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 20 ---
+OSI MODELİ - İNTERNETİN 7 KATMANI
+Tanım: OSI (Open Systems Interconnection) Modeli, farklı üreticilere ait sistemlerin
+birbiriyle uyumlu şekilde iletişim kurabilmesi için geliştirilmiş, ağ iletişimini 7 katmana
+ayıran referans modeldir.
+1984 yılında ISO (International
+Organization for Standardization) tarafından
+geliştirilmiştir.
+OSI MODELİNİN AMACI
+•Standartlaşma sağlamak
+•Üreticiler arası uyumluluk oluşturmak
+•Ağ iletişimini sadeleştirmek
+•Hata tespitini kolaylaştırmak
+•Güvenliği katman bazlı planlamak
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 21 ---
+OSI MODELİ
+FİZİKSEL KATMAN (Physical Layer)
+Veri bağlantısının elektriksel ve fiziksel özelliklerini ve bir cihaz ile cihazın
+fiziksel aktarım aracı( örneğin: bakır, fiber optik kablo, radyo frekansı)
+arasındaki ilişkiyi tanımlar.
+Bilgisayarınızdan çıkan veriler:
+•Ethernet kablosu kullanıyorsanız → Elektrik sinyalleri
+•Fiber optik kullanıyorsanız → Işık darbeleri
+•Wi-Fi kullanıyorsanız → Radyo dalgaları
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 22 ---
+OSI MODELİ
+FİZİKSEL KATMAN (Physical Layer)
+Güvenlik Tehditleri
+1. WireTapping(Kablo Dinleme)
+•Bir hacker fiber optik kabloyu fiziksel olarak kesiyor ve ortasına bir cihaz bağlıyor. Tüm verileri
+kopyalıyor.
+•2013'te NSA'nındenizaltı fiber optik kabloları dinlediği ortaya çıktı.
+2. Jamming(Sinyal Karıştırma)
+•Wi-Fi sinyalinizi karıştırıcı cihaz ile bozuyor.
+•İnternet kesiliyor.
+•Okulda sınav sırasında öğrenciler interneti kessin diye jammingcihazı kullanılması (yasadışı!)
+3. Fiziksel Erişim
+•Birisi ofise giriyor, ağ kablosunu çıkarıyor, kendi cihazını takıyor.
+•Sonuç: Ağa yetkisiz erişim!
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 23 ---
+OSI MODELİ
+VERİ BAĞLANTISI KATMANI (Data Link Layer)
+Yerel ağda (LAN) cihazlar arası iletişimi sağlar. MAC adresleri kullanır.
+Fiziksel olarak bağlı iki cihaz arasında bağlantı
+kurmayı ve bu bağlantıyı sonlandırmayı sağlayan
+protokolü tanımlar.
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 24 ---
+OSI MODELİ
+VERİ BAĞLANTISI KATMANI (Data Link Layer)
+Güvenlik Tehditleri
+1. MAC Spoofing (MAC Sahtekarlığı)
+Hacker kendi cihazının MAC adresini değiştiriyor, sizin MAC adresinizi taklit ediyor.
+2018, Havalimanı:
+Bir hacker MAC spoofing ile2 yılboyuncaücretsiz internet kullandı. Yakalandı!
+2. ARP Spoofing (ARP Zehirleme)
+ARP Nedir?ARP (AddressResolutionProtocol), IP adreslerini MAC adreslerine çeviren protokoldür.
+Bir bilgisayar korsanı, bir cihazı kandırarak verilerini bilgisayar korsanının kontrolündeki yanlış bir
+MAC adresine göndermesine neden olan kötü amaçlı ARP yanıtları gönderir
+3. VLAN Hopping
+VLAN (Virtual LAN): Ağı bölümlere ayırma
+VLAN Hopping:
+Hacker VLAN 30'da (misafir)
+Ama bir açık bularak VLAN 10'a (muhasebe) geçiyor → Mali verilere erişiyor!
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 25 ---
+OSI MODELİ
+AĞ KATMANI (Network Layer)
+Verileri kaynak noktadan hedef noktaya yönlendirir. IP adresleri kullanır.
+Adres bilgisi eklenir ve verilerin iletilmesin en
+uygun rota çizilir. IP protokolü bu katmanda çalışır.
+Verilerin kaynak, hedef IP’si, yaşam süresi
+eklenerek paket oluşturulur. Oluşturulan paketler
+en uygun rotaya göre gönderilir.
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 26 ---
+OSI MODELİ
+AĞ KATMANI (Network Layer)
+Güvenlik Tehditleri
+1. IP Spoofing(IP Sahtekarlığı)
+Saldırgan kaynak IP adresini değiştiriyor.
+2. SmurfSaldırısı
+Klasik DDoS saldırısı:
+1. Hacker broadcast adresine ping gönderir
+2. Kaynak IP olarak kurbanın IP'sini yazar (spoofing)
+3. Ağdaki TÜM cihazlar kurbanı ping'ler
+4. Kurban cihaz patlar!
+3. RouterHijacking(RouterEle Geçirme)
+DNS ayarlarını değiştirir → facebook.com → Sahte Facebook sitesi Trafik dinler Kötü
+amaçlı yazılım yükler Botnet'eekler
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 27 ---
+OSI MODELİ
+TAŞIMA KATMANI (Transport Layer)
+Uçtan uca güvenilir veri iletimi sağlar. TCP ve UDP protokolleri burada
+çalışır.
+Verilen bağlantı üzerinden gerçekleştirilen akış
+kontrolünü, paketlerin parçalara bölünüp
+birleştirilmesini ve hata kontrolünün güvenliğinden
+sorumludur.
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 28 ---
+OSI MODELİ
+TAŞIMA KATMANI (Transport Layer)
+Güvenlik Tehditleri
+1. SYN FloodSaldırısı
+TCP SYN Floodsaldırısında, kötü niyetli varlık hedef sunucuya bir dizi SYN isteği gönderir ancak kasıtlı olarak son ACK isteğini
+göndermekten kaçınır. Bu durum, sunucunun asla gelmeyen bir yanıtı beklemesine ve bu yarı açık bağlantıların her biri için
+kaynak tüketmesine neden olur.
+2. Port Scanning (Port Tarama)
+1. TCP Connect Scan: -Tam bağlantı kurar -Kolay tespit edilir
+2. SYN Scan(Half-open): -Sadece SYN gönderir -Bağlantıyı tamamlamaz -Gizlilik
+3. UDP Scan: -UDP portlarını tarar -Yavaş
+4. Stealth Scan: -FIN, NULL, Xmas flagleri -Firewall atlatma
+3. SessionHijacking(Oturum Ele Geçirme)
+Oturum ele geçirme saldırısı, geçerli bir oturum belirtecini çalarak veya tahmin ederek web sunucusuna yetkisiz erişim
+sağlamak suretiyle oturum belirtecinin güvenliğini tehlikeye atar.
+4. UDP Flood
+Hedef sisteme çok sayıda UDP paketi göndererek sistemi meşgul etmeye ve hizmet veremez hale getirmeye yönelik bir
+saldırıdır.
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 29 ---
+OSI MODELİ
+OTURUM KATMANI (Session Layer)
+İki cihaz arasındaki oturumu (session) yönetir. Bağlantının başlatılması,
+sürdürülmesi ve sonlandırılması.
+Uygulamalar arasındaki bağlantının kurulması,
+yönetilmesi ve sonlandırılması bu katmanda olur.
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 30 ---
+OSI MODELİ
+OTURUM KATMANI (Session Layer)
+Güvenlik Tehditleri
+1. Session Fixation
+Bir saldırganın geçerli bir kullanıcı oturumunu ele
+geçirmesine izin veren, kullanıcı oturum açtıktan sonra
+istemci ile Web Sunucusu arasında kurulan oturumu
+çalan bir Oturum Saldırısı sınıfıdır.
+2. Session Timeout Yokluğu
+Sorun: Oturum hiç sonlanmıyor. Risk: - Ortak bilgisayarda
+unutulan oturum - Çalınan cookie sonsuza kadar geçerli
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 31 ---
+OSI MODELİ
+SUNUM KATMANI (Presentation Layer)
+Veriyi uygulamanın anlayacağı formata dönüştürür. Şifreleme/şifre çözme
+burada olur.
+Gönderilen verinin, karşı taraf bilgisayar tarafından
+anlaşılmasını sağlar. Uygulama katmanına verileri
+gönderir, verinin yapısında düzenleme yapar.
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 32 ---
+OSI MODELİ
+OTURUM KATMANI (Session Layer)
+Güvenlik Tehditleri
+1. Zayıf Şifreleme
+Eski veya zayıf şifreleme algoritmaları
+kullanılması.
+2. Sertifika Sahteciliği
+Sahte SSL sertifikası kullanımı
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 33 ---
+OSI MODELİ
+UYGULAMA KATMANI (Application Layer)
+Son kullanıcının etkileşimde bulunduğu katmandır. Web tarayıcısı, e-
+posta istemcisi vb.
+Doğrudan kullanıcıdan bilgi alır ve gelen verileri
+kullanıcıya götürür. Bu katmanda kullanıcıların
+gereksinimleri karşılanır.
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 34 ---
+OSI MODELİ
+UYGULAMA KATMANI (Application Layer)
+Güvenlik Tehditleri
+1. SQL Injection
+Kullanıcı giriş alanlarına zararlı SQL kodu eklenerek veritabanınınyetkisiz şekilde manipüle
+edilmesini sağlayan bir saldırıdır.
+2. XSS (Cross-Site Scripting)
+Güvenilir bir web sayfasına kötü amaçlı scriptkodu enjekte edilerek kullanıcıların tarayıcısında
+çalıştırılan saldırı türüdür.
+3. DNS Spoofing
+Kullanıcıyı gerçek site yerine sahte bir siteye yönlendirmek için DNS kayıtlarının manipüle
+edilmesidir.
+4. Phishing
+Kullanıcıları kandırarak şifre ve kişisel bilgilerini ele geçirmek amacıyla sahte mesaj veya web sitesi
+kullanılmasıdır.
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 35 ---
+TCP/IP MODELİ
+Tanım: TCP/IP (Transmission Control Protocol / Internet Protocol), internetin
+konuştuğu dildir. İki bilgisayarın birbiriyle nasıl iletişim kuracağını belirleyen kurallar
+bütünüdür.
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 36 ---
+3. BÖLÜM
+AĞ GÜVENLİK ARAÇLARI
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 37 ---
+Ağ Güvenlik Araçları
+Tanım: Ağı izlemek, saldırıları tespit etmek, engellemek ve veri güvenliğini sağlamak için
+kullanılan sistemlerdir.
+VPN (Virtual Private
+Firewall (Güvenlik IDS (Intrusion IPS (Intrusion
+Network)on
+Duvarı) Detection System) Preventi
+System)
+WAF (Web
+Antivirüs / Endpoint NAC (Network
+Proxy Server Application
+Security Access Control)
+Firewall)
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 38 ---
+Firewall (Güvenlik Duvarı)
+Tanım: Ağa giren ve çıkan trafiği belirlenen kurallara göre filtreleyen güvenlik sistemidir.
+Nasıl Çalışır:
+1. IP adresine göre filtreleme
+2. Port numarasına göre filtreleme
+3. Protokole göre filtreleme
+Örnek:
+80 portu açık (HTTP)
+22 portu kapalı (SSH)
+Belirli IP’ler engellenmiş
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 39 ---
+IDS (Intrusion Detection System)
+Tanım: Ağa yapılan şüpheli hareketleri tespit eden sistemdir.
+Nasıl Çalışır:
+• Anormal trafik algılar
+• Saldırı imzası tanır
+• Log tutar
+Engellemez, sadece uyarır.
+Örnek:
+Bir sunucuya saniyede 5000 istek geliyorsa alarm üretir.
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 40 ---
+IPS (Intrusion Prevention System)
+Tanım: Saldırıyı hem tespit eder hem engeller.
+Nasıl Çalışır:
+• Saldırı paketini düşürür
+• IP’yi engeller
+• Trafiği keser
+• Aktif savunma sistemidir.
+Örnek:
+Bir sunucuya saniyede 5000 istek geliyorsa alarm üretir.
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 41 ---
+VPN (Virtual Private Network)
+Tanım: Kullanıcı ile ağ arasında şifreli bir tünel oluşturur.
+Amaç:
+• Veriyi şifrelemek
+• Güvenli uzaktan erişim sağlamak
+Örnek:
+Evden üniversite sistemine bağlanmak.
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 42 ---
+Proxy Server
+Tanım: Kullanıcı ile internet arasında aracı görevi görür.
+Ne sağlar:
+• İçerik filtreleme
+• IP gizleme
+• Log kaydı
+Örnek:
+Okul ağında sosyal medya erişiminin kısıtlanması..
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 43 ---
+WAF (Web Application Firewall)
+Tanım: Web uygulamalarını koruyan özel firewall’dur.
+Ne engeller:
+• SQL Injection
+• XSS
+Örnek:
+E-ticaret siteleri WAF kullanır.
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 44 ---
+Antivirüs / Endpoint Security
+Tanım: Cihaz üzerindeki zararlı yazılımları tespit eder ve siler.
+Örnek:
+Trojan, Worm, Ransomware tespiti.
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 45 ---
+NAC (Network Access Control)
+Tanım: Ağa bağlanan cihazların güvenlik durumunu kontrol eder.
+Örnek:
+Güncel antivirüs yoksa ağa bağlanamaz.
+İşletim sistemi güncel değilse erişim engellenir.
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 46 ---
+Hafta 2 Genel Özet
+➢ Ağ kavramını ve temel çalışma mantığını açıklar.
+➢ Ağ türlerini (PAN, LAN, WAN vb.) ayırt eder.
+➢ Temel ağ cihazlarının görevlerini tanımlar.
+➢ Ağ topolojilerini karşılaştırır.Katmanlı ağ modelinin gerekliliğini açıklar.
+➢ OSI modelinin katmanlarını sıralar ve görevlerini belirtir.
+➢ Farklı katmanlarda ortaya çıkan güvenlik tehditlerini ayırt eder.
+➢ SQL Injection, XSS, DNS Spoofing, Phishing ve UDP Flood saldırılarını
+tanımlar.
+➢ Temel ağ güvenlik araçlarının (Firewall, IDS/IPS, VPN vb.) işlevlerini
+açıklar.
+➢ Katmanlı savunma yaklaşımının önemini değerlendirir.
+HAFTA 2: AğGüvenliğiveAğKatmanları
+
+--- Sayfa 47 ---
+Soru & Cevap
+Gelecek Hafta: Şifreleme ve Kriptografi Temelleri

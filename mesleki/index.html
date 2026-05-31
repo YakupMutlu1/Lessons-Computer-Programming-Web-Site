@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesleki İngilizce — Bilgisayar Programcılığı (Oxford EAP A2)</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .hero-mesleki { background: linear-gradient(135deg, #065f46 0%, #1a2332 50%, var(--bg)); }
+    .hero-mesleki .badge {
+      background: rgba(52, 211, 153, 0.2);
+      border-color: rgba(52, 211, 153, 0.45);
+      color: #a7f3d0;
+    }
+    .sidebar-header { background: linear-gradient(135deg, #065f46 0%, var(--surface) 100%); }
+    .module-num { background: #059669; }
+    .section h3 { border-left-color: #34d399; }
+    .nav-module-title { color: #6ee7b7; }
+    .nav-links a.active { border-left-color: #34d399; }
+    .hub-link { display: block; text-align: center; padding: 0.5rem; margin-bottom: 0.4rem; background: rgba(255,255,255,0.06); border: 1px solid var(--border); border-radius: 6px; color: var(--muted); text-decoration: none; font-size: 0.82rem; }
+    .hub-link:hover { color: var(--text); border-color: #34d399; }
+    .btn-quiz-side { display: block; text-align: center; padding: 0.55rem; background: rgba(5, 150, 105, 0.25); border: 1px solid #34d399; border-radius: 6px; color: #a7f3d0; text-decoration: none; font-size: 0.85rem; font-weight: 600; }
+    .btn-quiz-side:hover { background: rgba(5, 150, 105, 0.4); }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1>Mesleki İngilizce</h1>
+        <p>11 modül · Oxford EAP Elementary A2 · IT English</p>
+      </div>
+      <div class="search-box">
+        <input type="search" id="search" placeholder="Konu ara (ör. CPU, modal, URL, developer)...">
+      </div>
+      <div style="padding:0.5rem 1rem 0.75rem">
+        <a href="../index.html" class="hub-link">← Ders Platformu Ana Sayfa</a>
+        <a href="sorular.html" class="btn-quiz-side">📝 Question Bank (220 multiple choice)</a>
+      </div>
+      <nav>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 1 — Tanıtım <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#tanitim-amac">Ders Amacı</a>
+            <a href="#tanitim-oxford">Oxford EAP A2</a>
+            <a href="#tanitim-degerlendirme">Not Dağılımı</a>
+            <a href="#tanitim-beceriler">Dört Beceri</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 2 — IT Sektörü <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#it-tanim">Working in IT</a>
+            <a href="#it-kelime">IT Vocabulary</a>
+            <a href="#it-cift">Pair Work</a>
+            <a href="#it-ifadeler">Workplace Phrases</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 3 — Meslekler <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#meslek-liste">IT Jobs</a>
+            <a href="#meslek-roller">Roller ve Görevler</a>
+            <a href="#meslek-dialog">Sample Dialogues</a>
+            <a href="#meslek-tanitim">Self-Introduction</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 4 — Zaman <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#zaman-gunler">Days &amp; Timetable</a>
+            <a href="#zaman-sorma">Asking the Time</a>
+            <a href="#zaman-edatlar">at / on / in</a>
+            <a href="#zaman-ornekler">Sample Sentences</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 5 — Noktalama <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#nokta-isaretler">Punctuation Marks</a>
+            <a href="#nokta-kisaltma">Abbreviations</a>
+            <a href="#nokta-dinleme">Listening &amp; Speaking</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 6 — Donanım <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#donanim-sistem">Computer Systems</a>
+            <a href="#donanim-bilesen">Components</a>
+            <a href="#donanim-karsilastirma">Comparatives</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 7 — Yazılım <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#yazilim-tanim">Software &amp; OS</a>
+            <a href="#yazilim-superlative">Superlatives</a>
+            <a href="#yazilim-have">have / have got</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 8 — Present Continuous <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#present-tanim">am / is / are + -ing</a>
+            <a href="#present-ornek">IT Examples</a>
+            <a href="#present-vize">Hafta 8 — Vize Notu</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 9 — Modals <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#modal-can">can — ability</a>
+            <a href="#modal-must">must / mustn't</a>
+            <a href="#modal-have-to">have to / don't have to</a>
+            <a href="#modal-ornek">IT Modal Examples</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 10 — Web Siteleri <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#web-turler">Website Types</a>
+            <a href="#web-fonksiyon">URL &amp; Browser</a>
+            <a href="#web-konusma">Speaking Prompts</a>
+          </div>
+        </div>
+        <div class="nav-module">
+          <div class="nav-module-title">Modül 11 — Miktarlar <span class="arrow">▼</span></div>
+          <div class="nav-links">
+            <a href="#miktar-how">how much / how many</a>
+            <a href="#miktar-sayilar">Large Numbers</a>
+            <a href="#miktar-webdev">Web Dev Vocabulary</a>
+          </div>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <header class="hero hero-mesleki">
+        <h2>Mesleki İngilizce — Bilgisayar Programcılığı</h2>
+        <p>KTO Karatay Üniversitesi müfredatına uygun, <strong>Oxford EAP Elementary (A2)</strong> seviyesinde İngilizce çalışma rehberi. Türkçe açıklamalar ve İngilizce örnek cümleler bir arada; iş, ev ve eğitim İngilizcesi ile BT terimleri.</p>
+        <p style="margin-top:1rem"><a href="sorular.html" style="display:inline-block;padding:0.6rem 1.2rem;background:#059669;color:#fff;text-decoration:none;border-radius:8px;font-weight:600">📝 Question Bank (220 multiple choice) →</a></p>
+        <div class="badges">
+          <span class="badge">IT Vocabulary</span>
+          <span class="badge">Grammar A2</span>
+          <span class="badge">Hardware &amp; Software</span>
+          <span class="badge">Websites &amp; Modals</span>
+        </div>
+      </header>
+
+      <div class="content">
+
+        <article class="module" id="modul-tanitim">
+          <div class="module-header">
+            <span class="module-num">1</span>
+            <h2>Tanıtım — Course Introduction (Hafta 1)</h2>
+          </div>
+
+          <section class="section" id="tanitim-amac">
+            <h3>Ders Amacı ve Kapsam</h3>
+            <p><strong>Mesleki İngilizce</strong> dersi, bilgisayar programcılığı öğrencilerinin iş hayatında, stajda ve uluslararası kaynaklarda ihtiyaç duyacağı temel İngilizceyi A2 seviyesinde öğretir. Ders yalnızca gramer değil; <em>listening, speaking, reading, writing</em> dört becerisini dengeli geliştirir.</p>
+            <p>Üç ana bağlam vurgulanır:</p>
+            <ul>
+              <li><strong>Work English (iş):</strong> ofis, takım çalışması, toplantı, e-posta</li>
+              <li><strong>Home English (ev):</strong> günlük iletişim, teknoloji kullanımı</li>
+              <li><strong>Education English (eğitim):</strong> ders, sınav, Oxford kitabı aktiviteleri</li>
+            </ul>
+            <pre>Course objectives (English):
+- Use basic English in IT workplaces
+- Understand simple technical texts and instructions
+- Participate in pair work and short presentations
+- Build vocabulary for hardware, software, and the web</pre>
+            <div class="tip"><strong>İpucu</strong>Kitaptaki her ünite sonunda <em>review</em> bölümü vardır; vize öncesi bu özetleri mutlaka çözün.</div>
+          </section>
+
+          <section class="section" id="tanitim-oxford">
+            <h3>Oxford EAP Elementary (A2)</h3>
+            <p><strong>EAP (English for Academic Purposes)</strong> = akademik amaçlı İngilizce. <strong>Elementary A2</strong>, Avrupa Ortak Dil Referans Çerçevesi’nde temel-altı seviyedir: basit cümleler, sık kullanılan kelimeler, tanıdık konularda kısa metinler.</p>
+            <table>
+              <tr><th>Seviye</th><th>Ne yapabilirsiniz?</th></tr>
+              <tr><td>A1</td><td>Çok kısıtlı ifadeler</td></tr>
+              <tr><td><strong>A2</strong></td><td>Rutin işler, basit teknik talimatlar, kısa diyalog</td></tr>
+              <tr><td>B1</td><td>Daha bağımsız iletişim (sonraki dönem hedefi)</td></tr>
+            </table>
+            <pre>Textbook focus:
+Unit skills: listening + speaking + reading + writing
+Topics: IT sector, jobs, time, hardware, software, websites
+Grammar: present continuous, modals, comparatives, superlatives</pre>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>A2 = Elementary. Ders kitabı: Oxford EAP. Dört beceri dengeli değerlendirilir.</div>
+          </section>
+
+          <section class="section" id="tanitim-degerlendirme">
+            <h3>Not Dağılımı (Grading)</h3>
+            <p>KTO Karatay örnek dağılım (öğretim üyesi duyurusuna göre güncelleyin):</p>
+            <table>
+              <tr><th>Bileşen</th><th>Oran</th><th>Türkçe</th></tr>
+              <tr><td>Homework / Ödev</td><td><strong>10%</strong></td><td>Kitap alıştırmaları, online ödevler</td></tr>
+              <tr><td>Midterm / Vize</td><td><strong>40%</strong></td><td>Hafta 8 civarı — dinleme, okuma, dil bilgisi</td></tr>
+              <tr><td>Final</td><td><strong>50%</strong></td><td>Tüm üniteler, konuşma ve yazma dahil</td></tr>
+            </table>
+            <pre>English classroom phrases:
+"What is the deadline for the homework?"
+"The midterm covers Units 1 to 7."
+"I need to revise listening and vocabulary."</pre>
+            <div class="warn"><strong>Dikkat</strong>Devamsızlık ve ödev teslimi not baremine etki eder; Oxford online practice varsa tamamlayın.</div>
+          </section>
+
+          <section class="section" id="tanitim-beceriler">
+            <h3>Dört Dil Becerisi</h3>
+            <table>
+              <tr><th>Beceri</th><th>İngilizce</th><th>Derste örnek</th></tr>
+              <tr><td>Dinleme</td><td>Listening</td><td>CD/audio, IT diyalogları</td></tr>
+              <tr><td>Konuşma</td><td>Speaking</td><td>Pair work, self-introduction</td></tr>
+              <tr><td>Okuma</td><td>Reading</td><td>Kısa makaleler, web metinleri</td></tr>
+              <tr><td>Yazma</td><td>Writing</td><td>E-posta, kısa paragraf</td></tr>
+            </table>
+            <pre>Study tip:
+Listen → repeat → write key words → speak in pairs
+Example: "Listen to the dialogue and circle the correct job title."</pre>
+          </section>
+        </article>
+
+        <article class="module" id="modul-it">
+          <div class="module-header">
+            <span class="module-num">2</span>
+            <h2>IT Sektöründe Çalışmak (Hafta 2)</h2>
+          </div>
+
+          <section class="section" id="it-tanim">
+            <h3>Working in IT</h3>
+            <p><strong>IT (Information Technology)</strong> = bilgi teknolojileri sektörü. Yazılım, donanım, ağ, destek ve veri alanlarını kapsar. Türkiye’de ve abroad (yurt dışında) IT iş ilanları İngilizce yayınlanır; temel terimleri bilmek başvuruda avantaj sağlar.</p>
+            <pre>The IT sector is growing fast.
+Many companies need programmers and technicians.
+I work in the IT department.
+We solve technical problems for users.</pre>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>IT = Information Technology. department = departman.</div>
+          </section>
+
+          <section class="section" id="it-kelime">
+            <h3>IT Vocabulary</h3>
+            <table>
+              <tr><th>English</th><th>Türkçe</th><th>Örnek cümle</th></tr>
+              <tr><td>computer</td><td>bilgisayar</td><td>I use a computer every day.</td></tr>
+              <tr><td>laptop</td><td>dizüstü</td><td>She has a new laptop.</td></tr>
+              <tr><td>network</td><td>ağ</td><td>The network is slow today.</td></tr>
+              <tr><td>server</td><td>sunucu</td><td>The server is down.</td></tr>
+              <tr><td>software</td><td>yazılım</td><td>We install new software.</td></tr>
+              <tr><td>hardware</td><td>donanım</td><td>Hardware failures need a technician.</td></tr>
+              <tr><td>database</td><td>veritabanı</td><td>The database stores customer data.</td></tr>
+              <tr><td>bug</td><td>hata (yazılım)</td><td>There is a bug in the code.</td></tr>
+              <tr><td>update</td><td>güncelleme</td><td>Please install the latest update.</td></tr>
+              <tr><td>user</td><td>kullanıcı</td><td>The user forgot the password.</td></tr>
+            </table>
+            <div class="tip"><strong>İpucu</strong>Kelime öğrenirken tek başına değil, <em>cümle içinde</em> ezberleyin: "The server is down" kalıbı iş hayatında çok geçer.</div>
+          </section>
+
+          <section class="section" id="it-cift">
+            <h3>Pair Work (Çift Çalışma)</h3>
+            <p>Derste <strong>pair work</strong> = iki öğrenci birlikte alıştırma yapar. Amaç konuşma pratiği ve geri bildirimdir.</p>
+            <pre>Teacher: "Work in pairs. Student A asks, Student B answers."
+Student A: "What do you do in IT?"
+Student B: "I write code and test applications."
+Student A: "Do you like your job?"
+Student B: "Yes, it's interesting but sometimes stressful."</pre>
+            <ol>
+              <li>Partnerinize soru sorun, not alın.</li>
+              <li>Rol değiştirin (swap roles).</li>
+              <li>Sınıfa kısa özet verin (report back).</li>
+            </ol>
+          </section>
+
+          <section class="section" id="it-ifadeler">
+            <h3>Workplace Phrases</h3>
+            <table>
+              <tr><th>English phrase</th><th>Türkçe anlam</th></tr>
+              <tr><td>Could you help me, please?</td><td>Yardım eder misiniz?</td></tr>
+              <tr><td>I'll check and get back to you.</td><td>Kontrol edip döneceğim.</td></tr>
+              <tr><td>The system is not responding.</td><td>Sistem yanıt vermiyor.</td></tr>
+              <tr><td>Please restart your computer.</td><td>Lütfen bilgisayarı yeniden başlatın.</td></tr>
+              <tr><td>We need to fix this issue.</td><td>Bu sorunu çözmemiz lazım.</td></tr>
+              <tr><td>Let's schedule a meeting.</td><td>Bir toplantı planlayalım.</td></tr>
+            </table>
+            <pre>Polite requests at work:
+"Could you send me the file?"
+"Would you mind checking the log?"
+"Thanks for your help."</pre>
+            <div class="warn"><strong>Dikkat</strong>"Can you..." günlük dilde kabul edilir; resmi e-postada "Could you..." daha uygundur.</div>
+          </section>
+        </article>
+
+        <article class="module" id="modul-meslek">
+          <div class="module-header">
+            <span class="module-num">3</span>
+            <h2>IT Meslekleri ve Tanıtım (Hafta 3)</h2>
+          </div>
+
+          <section class="section" id="meslek-liste">
+            <h3>IT Jobs — Meslek İsimleri</h3>
+            <table>
+              <tr><th>English</th><th>Türkçe</th></tr>
+              <tr><td>software developer / programmer</td><td>yazılım geliştirici / programcı</td></tr>
+              <tr><td>network technician</td><td>ağ teknisyeni</td></tr>
+              <tr><td>system administrator (sysadmin)</td><td>sistem yöneticisi</td></tr>
+              <tr><td>UX designer</td><td>kullanıcı deneyimi tasarımcısı</td></tr>
+              <tr><td>IT support specialist / helpdesk</td><td>teknik destek uzmanı</td></tr>
+              <tr><td>web developer</td><td>web geliştirici</td></tr>
+              <tr><td>database administrator (DBA)</td><td>veritabanı yöneticisi</td></tr>
+            </table>
+            <pre>A developer writes and tests code.
+A network technician installs routers and cables.
+A system admin manages servers and user accounts.
+UX designers make apps easy to use.
+Support staff answer phone calls and tickets.</pre>
+          </section>
+
+          <section class="section" id="meslek-roller">
+            <h3>Roller ve Günlük Görevler</h3>
+            <p>Her rol farklı <strong>responsibilities</strong> (sorumluluklar) taşır:</p>
+            <ul>
+              <li><strong>Developer:</strong> design, code, debug, commit to Git</li>
+              <li><strong>Network technician:</strong> configure switches, troubleshoot connectivity</li>
+              <li><strong>Sysadmin:</strong> backups, permissions, security patches</li>
+              <li><strong>UX designer:</strong> wireframes, user research, prototypes</li>
+              <li><strong>Support:</strong> reset passwords, guide users, escalate tickets</li>
+            </ul>
+            <pre>Verb collocations:
+write code | fix a bug | install an update
+configure a router | reset a password | design an interface</pre>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>developer ≠ technician. support = helpdesk (benzer anlam).</div>
+          </section>
+
+          <section class="section" id="meslek-dialog">
+            <h3>Sample Dialogues</h3>
+            <pre>Dialogue 1 — At the office
+A: Hi, I'm Emre. I'm the new intern in the IT department.
+B: Welcome, Emre! I'm Sarah, the system administrator.
+A: Nice to meet you. What do you do here?
+B: I manage servers and user accounts. If you have network problems, ask me.
+
+Dialogue 2 — Helpdesk
+User: My laptop won't connect to Wi-Fi.
+Support: OK. What's your username?
+User: It's ahmet.yilmaz.
+Support: Please restart your laptop and try again.</pre>
+            <div class="tip"><strong>İpucu</strong>Diyalogları sesli okuyun; "Nice to meet you" ve "Welcome" kalıplarını ezberleyin.</div>
+          </section>
+
+          <section class="section" id="meslek-tanitim">
+            <h3>Self-Introduction (Kendini Tanıtma)</h3>
+            <p>İş/staj mülakatında kısa tanıtım: ad, bölüm, beceri, hedef.</p>
+            <pre>Hello, my name is Ayşe. I'm a second-year student in Computer Programming.
+I'm interested in web development. I can write HTML, CSS, and basic JavaScript.
+Last summer I did an internship at a small software company.
+I want to work as a junior developer after graduation.
+
+Merhaba, ben Ayşe. Bilgisayar Programcılığı ikinci sınıf öğrencisiyim.
+Web geliştirmeyle ilgileniyorum. HTML, CSS ve temel JavaScript yazabiliyorum.</pre>
+            <table>
+              <tr><th>Kalıp</th><th>Kullanım</th></tr>
+              <tr><td>My name is...</td><td>Ad</td></tr>
+              <tr><td>I'm a student in...</td><td>Bölüm</td></tr>
+              <tr><td>I'm interested in...</td><td>İlgi alanı</td></tr>
+              <tr><td>I can...</td><td>Yetenek (can)</td></tr>
+              <tr><td>I want to...</td><td>Hedef</td></tr>
+            </table>
+          </section>
+        </article>
+
+        <article class="module" id="modul-zaman">
+          <div class="module-header">
+            <span class="module-num">4</span>
+            <h2>Zaman ve Takvim (Hafta 4)</h2>
+          </div>
+
+          <section class="section" id="zaman-gunler">
+            <h3>Days of the Week &amp; Timetable</h3>
+            <table>
+              <tr><th>English</th><th>Türkçe</th></tr>
+              <tr><td>Monday</td><td>Pazartesi</td></tr>
+              <tr><td>Tuesday</td><td>Salı</td></tr>
+              <tr><td>Wednesday</td><td>Çarşamba</td></tr>
+              <tr><td>Thursday</td><td>Perşembe</td></tr>
+              <tr><td>Friday</td><td>Cuma</td></tr>
+              <tr><td>Saturday</td><td>Cumartesi</td></tr>
+              <tr><td>Sunday</td><td>Pazar</td></tr>
+            </table>
+            <pre>Class timetable example:
+On Monday we have Mesleki English at 10:00.
+On Wednesday we have lab practice in the afternoon.
+The IT club meeting is on Friday at 3 p.m.</pre>
+            <p><strong>weekend</strong> = hafta sonu (Saturday + Sunday). <strong>weekday</strong> = iş günü (Mon–Fri).</p>
+          </section>
+
+          <section class="section" id="zaman-sorma">
+            <h3>Asking and Answering the Time</h3>
+            <pre>Questions:
+What time is it?          = Saat kaç? (genel)
+What's the time?          = (UK — aynı anlam)
+What time does class start? = Ders saat kaçta başlıyor?
+
+Answers:
+It's nine o'clock.        = Saat dokuz.
+It's half past two.       = Saat iki buçuk.
+It's quarter past ten.    = Saat onu çeyrek geçiyor.
+It's quarter to five.    = Saat beşe çeyrek var.
+It's 14:30.               = (24 saat — "fourteen thirty")</pre>
+            <table>
+              <tr><th>İfade</th><th>Anlam</th></tr>
+              <tr><td>o'clock</td><td>tam saat (3 o'clock)</td></tr>
+              <tr><td>half past</td><td>buçuk</td></tr>
+              <tr><td>quarter past</td><td>çeyrek geçiyor</td></tr>
+              <tr><td>quarter to</td><td>çeyrek kala</td></tr>
+              <tr><td>a.m.</td><td>gece/yarından sabaha (00:00–11:59)</td></tr>
+              <tr><td>p.m.</td><td>öğleden sonra/akşam</td></tr>
+            </table>
+          </section>
+
+          <section class="section" id="zaman-edatlar">
+            <h3>Prepositions: at / on / in</h3>
+            <table>
+              <tr><th>Edat</th><th>Kullanım</th><th>Örnek</th></tr>
+              <tr><td><strong>at</strong></td><td>Belirli saat, kısa dönem</td><td>at 9:00, at noon, at night</td></tr>
+              <tr><td><strong>on</strong></td><td>Günler ve tarihler</td><td>on Monday, on 22 May</td></tr>
+              <tr><td><strong>in</strong></td><td>Aylar, yıllar, uzun dönem</td><td>in May, in 2026, in the morning*</td></tr>
+            </table>
+            <p>*<code>in the morning/afternoon/evening</code> istisnadır — gün bölümü ama <strong>in</strong> kullanılır.</p>
+            <pre>IT examples:
+The backup runs at midnight.
+We deploy updates on Friday night.
+The project started in January.
+The server crashed in the afternoon.</pre>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>Saat → at. Gün → on. Ay/yıl → in.</div>
+          </section>
+
+          <section class="section" id="zaman-ornekler">
+            <h3>Sample Sentences</h3>
+            <pre>Our class starts at eight o'clock on Tuesday and Thursday.
+The exam is in May, on the 22nd.
+I usually code in the evening.
+The helpdesk is open from 9 a.m. to 5 p.m.
+Please submit your homework before Friday at 11:59 p.m.</pre>
+            <div class="warn"><strong>Dikkat</strong>"at night" doğru; "in night" yanlış. "at the weekend" (UK) / "on the weekend" (US) — ikisi de duyulur.</div>
+          </section>
+        </article>
+
+        <article class="module" id="modul-nokta">
+          <div class="module-header">
+            <span class="module-num">5</span>
+            <h2>Noktalama ve Kısaltmalar (Hafta 5)</h2>
+          </div>
+
+          <section class="section" id="nokta-isaretler">
+            <h3>Punctuation Marks</h3>
+            <table>
+              <tr><th>Mark</th><th>Name</th><th>Türkçe / kullanım</th></tr>
+              <tr><td>.</td><td>full stop (UK) / period (US)</td><td>Cümle sonu</td></tr>
+              <tr><td>,</td><td>comma</td><td>Virgül, liste, ara cümle</td></tr>
+              <tr><td>?</td><td>question mark</td><td>Soru</td></tr>
+              <tr><td>!</td><td>exclamation mark</td><td>Ünlem, güçlü duygu</td></tr>
+              <tr><td>'</td><td>apostrophe</td><td>Kısaltma: don't, it's</td></tr>
+              <tr><td>" "</td><td>quotation marks</td><td>Alıntı, dosya adı (bazen)</td></tr>
+              <tr><td>:</td><td>colon</td><td>Liste veya açıklama öncesi</td></tr>
+              <tr><td>;</td><td>semicolon</td><td>Bağımsız ama bağlı cümleler</td></tr>
+            </table>
+            <pre>Correct:
+Install the app, then open it.
+What is the problem?
+Warning: do not turn off the server during the update!
+
+Wrong (common):
+The server is down. please restart  → "please" küçük harf (noktadan sonra boşluk + cümle)</pre>
+          </section>
+
+          <section class="section" id="nokta-kisaltma">
+            <h3>Abbreviations — i.e., e.g., ASAP, CPU, RAM</h3>
+            <table>
+              <tr><th>Kısaltma</th><th>Latin / meaning</th><th>Türkçe</th></tr>
+              <tr><td>e.g.</td><td>exempli gratia</td><td>örneğin (for example)</td></tr>
+              <tr><td>i.e.</td><td>id est</td><td>yani, başka deyişle</td></tr>
+              <tr><td>etc.</td><td>et cetera</td><td>ve benzeri</td></tr>
+              <tr><td>ASAP</td><td>as soon as possible</td><td>en kısa sürede</td></tr>
+              <tr><td>CPU</td><td>Central Processing Unit</td><td>işlemci</td></tr>
+              <tr><td>RAM</td><td>Random Access Memory</td><td>geçici bellek</td></tr>
+              <tr><td>ROM</td><td>Read-Only Memory</td><td>salt okunur bellek</td></tr>
+              <tr><td>GPU</td><td>Graphics Processing Unit</td><td>ekran/işlem birimi</td></tr>
+              <tr><td>HDD / SSD</td><td>Hard / Solid State Drive</td><td>sabit disk / SSD</td></tr>
+              <tr><td>OS</td><td>Operating System</td><td>işletim sistemi</td></tr>
+              <tr><td>URL</td><td>Uniform Resource Locator</td><td>web adresi</td></tr>
+            </table>
+            <pre>Sentences:
+We need more RAM, e.g. 16 GB for this project.
+The bug is in the CPU module, i.e. the core processor code.
+Please fix the login issue ASAP.
+Open the URL in your browser: https://example.com</pre>
+            <div class="tip"><strong>İpucu</strong>e.g. = örnek listesi; i.e. = açıklama/daraltma. Karıştırmayın!</div>
+          </section>
+
+          <section class="section" id="nokta-dinleme">
+            <h3>Listening &amp; Speaking (Noktalama bağlamı)</h3>
+            <p>Dinlemede e-posta veya talimat okunur; nokta ve virgül anlamı ayırır. Konuşmada kısaltmalar tam okunmayabilir: "CPU" /ˌsiː piː ˈjuː/ harf harf.</p>
+            <pre>Speaking drill:
+Read aloud: "Warning: save your work before the update."
+Spell abbreviations: C-P-U, R-A-M, U-R-L
+Pair work: Student A reads an email; Student B notes three action items.</pre>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>ASAP = urgency. e.g. vs i.e. farkı. CPU/RAM tanımları.</div>
+          </section>
+        </article>
+
+        <article class="module" id="modul-donanim">
+          <div class="module-header">
+            <span class="module-num">6</span>
+            <h2>Donanım — Computer Hardware (Hafta 6)</h2>
+          </div>
+
+          <section class="section" id="donanim-sistem">
+            <h3>Computer Systems</h3>
+            <p><strong>Computer system</strong> = donanım + yazılım + kullanıcı + veri. Girdi → işleme → çıktı modeli IT dersinde de geçerlidir.</p>
+            <pre>A desktop computer stays on your desk.
+A laptop is portable — you can take it to class.
+A tablet has a touch screen.
+Servers run in data centres and are always on.</pre>
+            <ul>
+              <li><strong>Input devices:</strong> keyboard, mouse, microphone, scanner</li>
+              <li><strong>Output devices:</strong> monitor, printer, speakers</li>
+              <li><strong>Processing:</strong> CPU on the motherboard</li>
+              <li><strong>Storage:</strong> HDD, SSD, USB flash drive</li>
+            </ul>
+          </section>
+
+          <section class="section" id="donanim-bilesen">
+            <h3>Components — CPU, RAM, ROM, GPU, Motherboard</h3>
+            <table>
+              <tr><th>Component</th><th>Function (English)</th><th>Türkçe</th></tr>
+              <tr><td>CPU</td><td>Executes instructions, "brain" of the PC</td><td>Merkezi işlem birimi</td></tr>
+              <tr><td>RAM</td><td>Temporary memory while the PC is on</td><td>Geçici bellek</td></tr>
+              <tr><td>ROM</td><td>Permanent firmware, rarely changed</td><td>Kalıcı / salt okunur</td></tr>
+              <tr><td>GPU</td><td>Processes graphics and video</td><td>Grafik işlemci</td></tr>
+              <tr><td>HDD</td><td>Magnetic storage, cheaper, slower</td><td>Sabit disk (klasik)</td></tr>
+              <tr><td>SSD</td><td>Flash storage, faster, no moving parts</td><td>SSD</td></tr>
+              <tr><td>motherboard</td><td>Connects all components</td><td>Anakart</td></tr>
+            </table>
+            <pre>The CPU is on the motherboard.
+When RAM is full, the computer becomes slow.
+An SSD boots faster than an HDD.
+A dedicated GPU helps with games and 3D design.</pre>
+            <div class="warn"><strong>Dikkat</strong>RAM = volatile (güç kesilince silinir). HDD/SSD = persistent storage.</div>
+          </section>
+
+          <section class="section" id="donanim-karsilastirma">
+            <h3>Comparatives — faster / slower / more ... than</h3>
+            <p><strong>Comparative</strong> = karşılaştırma. Kısa sıfat: <code>-er than</code>. Uzun sıfat: <code>more + adjective + than</code>.</p>
+            <table>
+              <tr><th>Rule</th><th>Base</th><th>Comparative</th><th>Example</th></tr>
+              <tr><td>short</td><td>fast</td><td>faster than</td><td>An SSD is faster than an HDD.</td></tr>
+              <tr><td>short</td><td>slow</td><td>slower than</td><td>Wi-Fi is slower than Ethernet sometimes.</td></tr>
+              <tr><td>long</td><td>expensive</td><td>more expensive than</td><td>GPUs are more expensive than mice.</td></tr>
+              <tr><td>y → ier</td><td>heavy</td><td>heavier than</td><td>Desktop PCs are heavier than laptops.</td></tr>
+            </table>
+            <pre>More IT comparisons:
+This laptop has more RAM than my old one.
+The new processor is more powerful than the previous model.
+Cloud storage is cheaper than buying many external drives.</pre>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>Comparative yapısı: adjective + -er + than VEYA more + adjective + than.</div>
+          </section>
+        </article>
+
+        <article class="module" id="modul-yazilim">
+          <div class="module-header">
+            <span class="module-num">7</span>
+            <h2>Yazılım — Computer Software (Hafta 7)</h2>
+          </div>
+
+          <section class="section" id="yazilim-tanim">
+            <h3>Software, OS and Applications</h3>
+            <p><strong>Software</strong> = bilgisayarda çalışan programlar. <strong>Operating System (OS)</strong> donanım ile uygulamalar arasında köprüdür.</p>
+            <table>
+              <tr><th>Type</th><th>Examples</th><th>Türkçe</th></tr>
+              <tr><td>Operating system</td><td>Windows, Linux, macOS, Android</td><td>İşletim sistemi</td></tr>
+              <tr><td>Application (app)</td><td>Word, Photoshop, VS Code, Chrome</td><td>Uygulama</td></tr>
+              <tr><td>Utility</td><td>antivirus, disk cleaner, backup tool</td><td>Yardımcı program</td></tr>
+              <tr><td>Driver</td><td>printer driver, GPU driver</td><td>Sürücü</td></tr>
+            </table>
+            <pre>We install the operating system first.
+Then we install applications like a browser and an IDE.
+Open-source software is free to use and modify.
+Proprietary software needs a licence.</pre>
+          </section>
+
+          <section class="section" id="yazilim-superlative">
+            <h3>Superlatives — the best / the fastest</h3>
+            <p><strong>Superlative</strong> = en üstünlük. Kısa sıfat: <code>the + -est</code>. Uzun: <code>the most + adjective</code>.</p>
+            <table>
+              <tr><th>Base</th><th>Superlative</th><th>IT example</th></tr>
+              <tr><td>fast</td><td>the fastest</td><td>SSD is the fastest common storage for booting.</td></tr>
+              <tr><td>good</td><td>the best</td><td>Which IDE is the best for beginners?</td></tr>
+              <tr><td>bad</td><td>the worst</td><td>That was the worst bug of the year.</td></tr>
+              <tr><td>popular</td><td>the most popular</td><td>Chrome is one of the most popular browsers.</td></tr>
+            </table>
+            <pre>This is the most important update of the month.
+Linux is the least expensive option for many servers.
+Who has the fastest internet in the class?</pre>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>Superlative her zaman <strong>the</strong> ile: the best, the most secure.</div>
+          </section>
+
+          <section class="section" id="yazilim-have">
+            <h3>have / have got — UK vs US</h3>
+            <p><strong>Sahiplik</strong> için İngiliz İngilizcesi (UK) sık <code>have got</code> kullanır; Amerikan İngilizcesi (US) genelde <code>have</code> der.</p>
+            <pre>UK:  I have got a new laptop. / She has got Linux on her PC.
+US:  I have a new laptop.     / She has Linux on her PC.
+
+Negative:
+UK:  I haven't got admin rights.
+US:  I don't have admin rights.
+
+Question:
+UK:  Have you got a Git account?
+US:  Do you have a Git account?</pre>
+            <p><strong>has</strong> = he / she / it ile: <code>He has a Mac.</code> / <code>She has got a Mac.</code> (UK)</p>
+            <table>
+              <tr><th>Subject</th><th>have</th><th>has</th></tr>
+              <tr><td>I / you / we / they</td><td>have (got)</td><td>—</td></tr>
+              <tr><td>he / she / it</td><td>—</td><td>has (got)</td></tr>
+            </table>
+            <div class="tip"><strong>İpucu</strong>Sınavda UK metni görürseniz "have got" normaldir; anlam "have" ile aynıdır.</div>
+          </section>
+        </article>
+
+        <article class="module" id="modul-present">
+          <div class="module-header">
+            <span class="module-num">8</span>
+            <h2>Working with Computers — Present Continuous (Hafta 8)</h2>
+          </div>
+
+          <section class="section" id="present-tanim">
+            <h3>Present Continuous: am / is / are + -ing</h3>
+            <p><strong>Şimdiki zaman (Present Continuous)</strong> şu anda devam eden eylemler için kullanılır. Kalıp: <code>am/is/are + verb-ing</code>.</p>
+            <table>
+              <tr><th>Subject</th><th>Form</th><th>Example</th></tr>
+              <tr><td>I</td><td>am + -ing</td><td>I am writing code.</td></tr>
+              <tr><td>he/she/it</td><td>is + -ing</td><td>She is testing the app.</td></tr>
+              <tr><td>you/we/they</td><td>are + -ing</td><td>We are installing updates.</td></tr>
+            </table>
+            <p>Zaman ifadeleri: <strong>now, right now, at the moment, currently</strong></p>
+            <pre>Negative: He is not (isn't) debugging.
+Question: Are you using the server right now?
+Yes, I am. / No, I'm not.</pre>
+            <p><strong>-ing kuralları:</strong> write → writing, run → running (çift sessiz), make → making (sessiz e düşer).</p>
+          </section>
+
+          <section class="section" id="present-ornek">
+            <h3>IT Examples — Present Continuous</h3>
+            <pre>I am working from home today.
+The technician is fixing the network.
+They are developing a new mobile app.
+The CPU is running at 90% — the computer is slowing down.
+Are you downloading a large file right now?
+The team is not meeting now; they are coding.</pre>
+            <p><strong>Present Simple vs Continuous:</strong></p>
+            <ul>
+              <li>Simple: habits — <em>I write code every day.</em></li>
+              <li>Continuous: now — <em>I am writing code now.</em></li>
+            </ul>
+            <div class="tip"><strong>İpucu</strong>State verbs (know, like, belong) genelde continuous almaz: ❌ "I am knowing" → ✓ "I know Python."</div>
+          </section>
+
+          <section class="section" id="present-vize">
+            <h3>Hafta 8 — Vize (Midterm) Notu</h3>
+            <div class="exam"><strong>Vize haftası</strong>Hafta 8 müfredatta <em>ara sınav (midterm)</em> haftasıdır; yeni konu işlenmez veya sınırlı tekrar yapılır. Vize genelde <strong>%40</strong> ağırlığındadır ve Units 1–7 (tanıtımdan yazılıma kadar) kapsar: kelime, dinleme, okuma, Present Continuous’a kadar dil bilgisi.</div>
+            <pre>Midterm revision checklist:
+□ IT jobs and workplace phrases
+□ Time: at/on/in + asking the time
+□ Punctuation and abbreviations (CPU, RAM, e.g., i.e.)
+□ Hardware components + comparatives
+□ Software + superlatives + have/have got
+□ Present Continuous form and meaning</pre>
+            <p>Vize sonrası <a href="sorular.html" style="color:#6ee7b7">soru bankası</a> ile modül 1–8 arası tekrar yapın.</p>
+          </section>
+        </article>
+
+        <article class="module" id="modul-modal">
+          <div class="module-header">
+            <span class="module-num">9</span>
+            <h2>Modal Verbs — can, must, have to (Hafta 9)</h2>
+          </div>
+
+          <section class="section" id="modal-can">
+            <h3>can — Ability and Permission</h3>
+            <p><strong>can + base verb</strong> = yapabilmek (yetenek) veya izin (bağlama göre).</p>
+            <pre>Ability:
+I can write Python and C#.
+She can configure a router.
+We can't fix it without admin rights.
+
+Permission (informal):
+Can I use your laptop?
+You can leave early today.</pre>
+            <table>
+              <tr><th>Form</th><th>Example</th></tr>
+              <tr><td>can</td><td>I can install Linux.</td></tr>
+              <tr><td>cannot / can't</td><td>He can't access the server.</td></tr>
+              <tr><td>Can ...?</td><td>Can you restart the service?</td></tr>
+            </table>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>can sonrası fiil <strong>yalın</strong> halde: can install (✓), can to install (✗).</div>
+          </section>
+
+          <section class="section" id="modal-must">
+            <h3>must / mustn't — Obligation and Prohibition</h3>
+            <p><strong>must</strong> = güçlü zorunluluk (sorumluluk). <strong>mustn't</strong> = kesinlikle yapma (yasak).</p>
+            <pre>Obligation:
+You must save your work before shutting down.
+Students must attend 70% of classes.
+
+Prohibition:
+You mustn't share your password.
+You mustn't install unknown software on college PCs.</pre>
+            <div class="warn"><strong>Dikkat</strong>mustn't ≠ don't have to. mustn't = yasak; don't have to = zorunlu değil.</div>
+          </section>
+
+          <section class="section" id="modal-have-to">
+            <h3>have to / don't have to</h3>
+            <p><strong>have to</strong> = dış kurallar, iş gereği zorunluluk. <strong>don't have to</strong> = zorunlu değil (isteğe bağlı).</p>
+            <pre>have to:
+I have to wear an ID badge at the company.
+Technicians have to document every repair.
+
+don't have to:
+You don't have to come on Saturday — it's optional.
+We don't have to use Windows; Linux is OK too.
+
+doesn't have to (he/she/it):
+He doesn't have to work night shifts.</pre>
+            <table>
+              <tr><th>Modal</th><th>Meaning</th><th>IT example</th></tr>
+              <tr><td>must</td><td>strong obligation</td><td>You must back up data.</td></tr>
+              <tr><td>mustn't</td><td>prohibition</td><td>You mustn't delete system files.</td></tr>
+              <tr><td>have to</td><td>external rule</td><td>We have to use 2FA.</td></tr>
+              <tr><td>don't have to</td><td>no obligation</td><td>You don't have to buy a GPU for web dev.</td></tr>
+            </table>
+          </section>
+
+          <section class="section" id="modal-ornek">
+            <h3>IT Modal Examples — Karışık Alıştırma</h3>
+            <pre>1. Junior developers can ask seniors for help.
+2. You must not click links in suspicious emails. (mustn't)
+3. All users have to change passwords every 90 days.
+4. You don't have to install every update immediately.
+5. Can the server handle 1000 users? — I think it can.
+
+Türkçe özet:
+can = -ebilmek
+must = mutlaka (iç kural)
+have to = zorunda (dış kural)
+mustn't = yasak
+don't have to = gerek yok</pre>
+          </section>
+        </article>
+
+        <article class="module" id="modul-web">
+          <div class="module-header">
+            <span class="module-num">10</span>
+            <h2>Web Siteleri (Hafta 10)</h2>
+          </div>
+
+          <section class="section" id="web-turler">
+            <h3>Website Types</h3>
+            <table>
+              <tr><th>Type</th><th>Description</th><th>Örnek</th></tr>
+              <tr><td>blog</td><td>Düzenli yazılar, kişisel veya kurumsal</td><td>tech blog, developer diary</td></tr>
+              <tr><td>e-commerce</td><td>Online satış</td><td>shop with cart and payment</td></tr>
+              <tr><td>portal</td><td>Toplanmış bilgi ve hizmetler</td><td>university student portal</td></tr>
+              <tr><td>corporate website</td><td>Şirket tanıtımı</td><td>about us, contact, careers</td></tr>
+              <tr><td>landing page</td><td>Tek ürün/kampanya sayfası</td><td>app download page</td></tr>
+              <tr><td>forum / community</td><td>Kullanıcı mesajları</td><td>Q&amp;A, support community</td></tr>
+            </table>
+            <pre>Our college has a student portal for grades and schedules.
+The company blog explains new product features.
+E-commerce sites need secure payment (HTTPS).</pre>
+          </section>
+
+          <section class="section" id="web-fonksiyon">
+            <h3>Functions — URL, Browser, Homepage, Login</h3>
+            <table>
+              <tr><th>Term</th><th>Meaning</th><th>Example sentence</th></tr>
+              <tr><td>URL</td><td>web address</td><td>Type the URL in the address bar.</td></tr>
+              <tr><td>browser</td><td>Chrome, Firefox, Edge</td><td>Open the site in your browser.</td></tr>
+              <tr><td>homepage</td><td>main page of a site</td><td>The homepage has a login button.</td></tr>
+              <tr><td>login / log in</td><td>giriş yapmak</td><td>Log in with your email and password.</td></tr>
+              <tr><td>logout / log out</td><td>çıkış</td><td>Remember to log out on shared PCs.</td></tr>
+              <tr><td>link</td><td>hyperlink</td><td>Click the link to download the PDF.</td></tr>
+              <tr><td>HTTPS</td><td>secure protocol</td><td>Always use HTTPS for payments.</td></tr>
+            </table>
+            <pre>Functions of a website:
+- Inform users (news, documentation)
+- Let users register and log in
+- Sell products (e-commerce)
+- Search content (search box)</pre>
+            <div class="warn"><strong>Dikkat</strong>login (noun/adj) vs log in (verb): "Click Login" / "Please log in."</div>
+          </section>
+
+          <section class="section" id="web-konusma">
+            <h3>Speaking Prompts</h3>
+            <p>Aşağıdaki soruları pair work ile cevaplayın (en az 3 tam cümle):</p>
+            <ol>
+              <li>What is your favourite website? Why?</li>
+              <li>Do you shop online? Is it safe?</li>
+              <li>Describe your college portal. What can you do there?</li>
+              <li>What should a good homepage include?</li>
+              <li>Have you ever had a login problem? What did you do?</li>
+            </ol>
+            <pre>Sample answer (prompt 1):
+My favourite website is Stack Overflow because I can find answers to programming questions. I use it almost every day when I have a bug.</pre>
+            <div class="tip"><strong>İpucu</strong>Konuşma sınavında "because" ile neden eklemek puan kazandırır.</div>
+          </section>
+        </article>
+
+        <article class="module" id="modul-miktar">
+          <div class="module-header">
+            <span class="module-num">11</span>
+            <h2>Miktarlar ve Büyük Sayılar (Hafta 11)</h2>
+          </div>
+
+          <section class="section" id="miktar-how">
+            <h3>how much / how many</h3>
+            <p><strong>how many + countable noun</strong> (sayılabilen): disks, users, tickets</p>
+            <p><strong>how much + uncountable noun</strong> (sayılamayan): RAM, time, money, traffic</p>
+            <table>
+              <tr><th>Question</th><th>Noun type</th><th>Example answer</th></tr>
+              <tr><td>How many computers?</td><td>countable</td><td>We have twenty computers.</td></tr>
+              <tr><td>How much RAM?</td><td>uncountable</td><td>It has 16 GB of RAM.</td></tr>
+              <tr><td>How much time?</td><td>uncountable</td><td>It takes two hours.</td></tr>
+              <tr><td>How many developers?</td><td>countable</td><td>There are five developers.</td></tr>
+            </table>
+            <pre>How much memory does your laptop have?
+How many lines of code did you write?
+How much does the licence cost?
+How many servers are in the data centre?</pre>
+            <div class="exam"><strong>Sınavda sorulabilir</strong>many + çoğul isim (users). much + tekil sayılamayan (money, RAM as amount).</div>
+          </section>
+
+          <section class="section" id="miktar-sayilar">
+            <h3>Large Numbers — million, billion</h3>
+            <table>
+              <tr><th>Number</th><th>Word</th><th>Türkçe</th></tr>
+              <tr><td>1,000</td><td>one thousand</td><td>bin</td></tr>
+              <tr><td>1,000,000</td><td>one million</td><td>bir milyon</td></tr>
+              <tr><td>1,000,000,000</td><td>one billion</td><td>bir milyar (US)</td></tr>
+            </table>
+            <pre>Reading numbers:
+2,500 = two thousand five hundred (or twenty-five hundred — informal)
+1,000,000 users = one million users
+The company is worth three billion dollars.
+
+Turkish note: US "billion" = TR milyar. Karışıklık olursa bağlama bakın.</pre>
+            <p>Sayı + çoğul isim: <strong>two million users</strong> (million'dan sonra plural, million değişmez).</p>
+          </section>
+
+          <section class="section" id="miktar-webdev">
+            <h3>Web Development — Listening Vocabulary</h3>
+            <p>Dinleme metinlerinde web geliştirme terimleri sık geçer:</p>
+            <table>
+              <tr><th>English</th><th>Türkçe</th></tr>
+              <tr><td>front-end</td><td>ön yüz (HTML, CSS, UI)</td></tr>
+              <tr><td>back-end</td><td>arka yüz (server, database)</td></tr>
+              <tr><td>framework</td><td>çatı (React, Express vb.)</td></tr>
+              <tr><td>API</td><td>uygulama programlama arayüzü</td></tr>
+              <tr><td>responsive design</td><td>mobil uyumlu tasarım</td></tr>
+              <tr><td>deploy</td><td>yayına almak</td></tr>
+              <tr><td>repository (repo)</td><td>kod deposu (Git)</td></tr>
+              <tr><td>commit</td><td>Git kaydı</td></tr>
+            </table>
+            <pre>Listening sample (read aloud):
+"Our team is building a responsive website. The front-end uses React.
+The back-end has an API with three million requests per month.
+We deploy to the server every Friday."</pre>
+            <div class="exam"><strong>Final tekrar</strong>Tüm modüller + how much/many + büyük sayılar. Oxford ünite review + <a href="sorular.html" style="color:#6ee7b7">220 multiple choice questions</a>.</div>
+            <div class="tip"><strong>İpucu</strong>Final öncesi her modülden en az 5 kelime ve 2 örnek cümle yazın; sesli tekrar edin.</div>
+          </section>
+        </article>
+
+      </div>
+    </main>
+  </div>
+
+  <button class="menu-toggle" aria-label="Menü">☰</button>
+  <script src="../js/app.js"></script>
+</body>
+</html>

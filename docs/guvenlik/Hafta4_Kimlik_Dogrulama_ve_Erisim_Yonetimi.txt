@@ -1,0 +1,295 @@
+--- Sayfa 1 ---
+İNTERNET GÜVENLİĞİ
+HAFTA 4: Kimlik Doğrulama ve Erişim Kontrolü
+TSMYO – Öğr. Gör. Gizem ÇELİK
+
+--- Sayfa 2 ---
+İÇİNDEKİLER
+01 04
+Kimlik Doğrulama Nedir? Erişim Kontrolü
+Temel kavramlar ve 3 faktör RBAC, ABAC, DAC, MAC
+02 05
+Şifre Güvenliği Gerçek Dünya Uygulamaları
+Hash'leme, tuzlama ve en iyi pratikler OAuth, JWT, SAML
+03
+Çok Faktörlü Kimlik Doğrulama
+MFA/2FA nasıl çalışır?
+HAFTA 4: Kimlik Doğrulama ve Erişim Kontrolü
+
+--- Sayfa 3 ---
+1. BÖLÜM
+Kimlik Doğrulama
+HAFTA 4: Kimlik Doğrulama ve Erişim Kontrolü
+
+--- Sayfa 4 ---
+Kimlik Doğrulama Nedir?
+Kimlik Doğrulama (Authentication): Bir kişi veya sistemin, iddia ettiği kimliğin
+gerçekten kendisine ait olduğunu kanıtlama sürecidir.
+Bilgi Fakötörü Sahiplik Faktörü
+Şifre, PIN,güvenliksorusu Aıllıkart, token, telefon
+Biyometri Faktörü
+Parmak izi, yüz, iris
+tanıma
+HAFTA 4: Kimlik Doğrulama ve Erişim Kontrolü
+
+--- Sayfa 5 ---
+Kimlik Doğrulama
+Medya Sunusu ana hat
+Videoyu izlemek
+için tıklayın
+HAFTA 4: Kimlik Doğrulama ve Erişim Kontrolü
+
+--- Sayfa 6 ---
+2. BÖLÜM
+Şifre Güvenliği
+HAFTA 4: Kimlik Doğrulama ve Erişim Kontrolü
+
+--- Sayfa 7 ---
+Şifre Güvenliği Nedir?
+Tanım: Kullanıcı hesaplarının yetkisiz erişime karşı korunması amacıyla güçlü, tahmin
+edilmesi zor ve güvenli şekilde saklanan parolaların oluşturulması ve yönetilmesi
+sürecidir.
+Tahmin
+edilebilir
+olmamalı
+Özel
+Rakam
+karakter
+içermeli
+içermeli
+Büyük/küçük
+harf içermeli
+Sözlük
+En az 10-12
+kelimesi
+karakter
+olmamalı
+HAFTA 4: Kimlik Doğrulama ve Erişim Kontrolü
+
+--- Sayfa 8 ---
+Şifre Güvenliği
+Medya Sunusu ana hat
+Videoyu izlemek
+için tıklayın
+HAFTA 4: Kimlik Doğrulama ve Erişim Kontrolü
+
+--- Sayfa 9 ---
+Şifreye Yönelik Saldırılar
+Brute Force Attack Dictionary Attack
+(Kaba Kuvvet Saldırısı) (Sözlük Saldırısı)
+CredentialStuffing
+Phishing(Oltalama)
+(Kimlik Bilgisi Doldurma)
+HAFTA 4: Kimlik Doğrulama ve Erişim Kontrolü
+
+--- Sayfa 10 ---
+Brute Force – Kaba Kuvvet Saldırısı
+Tanım: Saldırganın şifreyi bulmak için olası tüm karakter kombinasyonlarını otomatik
+olarak denemesidir.
+"Deneye deneye bulma işidir. Şifre kısa ve basitse kapı hemen açılır; uzunsa saldırı pratikte anlamsız hale gelir."
+Nasıl çalışır? Hedef & Örnek Korunma
+• Kullanıcı adı bilinir / öngörülür • 123456 → çok hızlı kırılır • 5 hatadan sonra hesap kilitleme
+• Bot / scriptsürekli giriş dener • Ab3! → kısa; yine hızlı kırılır • Rate limiting(IP başına limit)
+• Doğru kombinasyona kadar devam • MaviBulutKahve42# → uzun; • CAPTCHA
+eder güvenli • 2FA / MFA zorunlu
+• Önce yaygın şifreler denenir • Zayıf parola politikası olan sistemler • Uzun passphrase(12+ karakter)
+(spraying) • WordPress / SSH / Yönetici panelleri
+HAFTA 4: Kimlik Doğrulama ve Erişim Kontrolü
+
+--- Sayfa 11 ---
+Dictionary Attack — Sözlük Saldırısı
+Tanım: Brute force'un 'akıllı' hali: tüm kombinasyonlar yerine sözlük kelimeleri ve
+yaygın şifre listeleri denenir.
+"Brute force her şeyi dener; dictionary attack 'insanların gerçekten kullanma ihtimali olan' şifreleri dener."
+Nasıl çalışır? Hedef & Örnek Korunma
+•Saldırganın elinde wordlist vardır •Karatay2026 → kurum + yıl kalıbı •Tek kelime kullanmayın
+•Kelime + basit varyasyonlar •"galatasaray1905" → tahmin •Rastgele kelime kombinasyonu
+denenir edilebilir •Yasaklı şifre listesi (en yaygınları
+•ankara→ Ankara1 → ankara123 •"password!" → listede zaten var reddet)
+•Çok kısa sürede yüksek başarı •Öğrenci / kurum hesapları •Rate limiting + MFA
+oranı
+HAFTA 4: Kimlik Doğrulama ve Erişim Kontrolü
+
+--- Sayfa 12 ---
+Credential Stuffing — Kimlik Bilgisi Doldurma
+Tanım: Başka bir siteden sızmış e-posta/şifre ikililerinin farklı sitelerde otomatik olarak
+denenmesidir.
+"Bu saldırı 'şifre kırma' değil. Şifre zaten bir yerden sızmış. Saldırgan aynı şifreyi bankada, mailde, alışverişte deniyor."
+Nasıl çalışır? Hedef & Örnek Korunma
+•A sitesinde veri ihlali yaşanır •ali@mail.com: Ali.12345 sızdı •Her siteye farklı ve benzersiz şifre
+•E-mail + şifre listeleri darkweb'e •Aynı ikili 50+ sitede denenir •Şifre yöneticisi kullanın
+düşer •E-ticaret ve sosyal medya •MFA zorunlu
+•Botlar bu ikileri B, C, D sitelerinde •Oyun platformları •Breachpassword check
+dener entegrasyonu
+•Şifre tekrar kullananların hesabı
+gider
+HAFTA 4: Kimlik Doğrulama ve Erişim Kontrolü
+
+--- Sayfa 13 ---
+Phishing — Oltalama Saldırısı
+Tanım: Kullanıcıyı kandırarak şifresini / OTP'sini kendi isteğiyle verdirmek için yapılan
+sosyal mühendislik saldırısıdır.
+"Phishing'de amaç şifreyi kırmak değil, kullanıcıdan 'almak'. Saldırgan kapıyı zorlamıyor — anahtarı uzatır mısın dedirtiyor."
+Nasıl çalışır? Hedef & Örnek Korunma
+• Sahte e-posta / SMS / WhatsApp / • Spearphishing: kişiye özel saldırı • Link domainini kontrol edin (0 ≠ o)
+DM • Smishing: SMS üzerinden • Şüpheli ek / link açmayın
+• Sahte giriş sayfası (banka, e- • 'Üniversite mailin doldu, şifre • OTP(Tek kullanımlık şifre)’yi
+devlet...) güncelle' kimseyle paylaşmayın
+• Panik ve aciliyet: 'Hesabınız • Kurumsal çalışanlar (spearphishing)
+kapanacak'
+• Öğrenciler, kurumsal mail
+kullanıcıları
+HAFTA 4: Kimlik Doğrulama ve Erişim Kontrolü
+
+--- Sayfa 14 ---
+3. BÖLÜM
+Çok Faktörlü Kimlik
+Doğrulama
+HAFTA 4: Kimlik Doğrulama ve Erişim Kontrolü
+
+--- Sayfa 15 ---
+Çok Faktörlü Kimlik Doğrulama
+Tanım: Kullanıcıların yalnızca bir paroladan daha fazla bilgi girmesini gerektiren,
+hesapta çok adımlı oturum açma sürecidir.
+Tek Faktörlü Doğrulama (SFA)
+•Sadece bir doğrulama yöntemi kullanılır. Genellikle :Şifre
+İki Faktörlü Doğrulama (2FA)
+•Kimlik doğrulamada iki farklı faktörün birlikte kullanılmasıdır.
+•Bu iki faktör farklı kategoriden olmalıdır. Örn: Sms tek kullanımlık şifre, push Patlamış Mısır düz dolguyla
+notification
+Çok Faktörlü Doğrulama (MFA)
+•MFA, iki veya daha fazla farklı doğrulama faktörünün birlikte kullanılmasıdır.
+Patlamış Mısır düz dolguyla
+•2FA, MFA’nınbir alt kümesidir. Örn: Şifre>Cihaz tanıma
+Microsoft araştırması: MFA kullanımı hesap ele geçirme saldırılarının %99.9'unu önlemektedir.
+HAFTA 4: Kimlik Doğrulama ve Erişim Kontrolü
+
+--- Sayfa 16 ---
+Çok Faktörlü
+Kimlik
+Doğrulama
+Nasıl Çalışır?
+HAFTA 4: Kimlik Doğrulama ve Erişim Kontrolü
+
+--- Sayfa 17 ---
+4. BÖLÜM
+Erişim Kontrolü
+(Access Control)
+HAFTA 4: Kimlik Doğrulama ve Erişim Kontrolü
+
+--- Sayfa 18 ---
+Erişim Kontrolü (Access Control)
+Tanım: Kullanıcıların sistem kaynaklarına erişimini düzenleyen politika, model ve
+mekanizmaların bütünüdür.
+Erişim Kontrolü Modelleri
+MAC ABAC
+DAC RBAC
+HAFTA 4: Kimlik Doğrulama ve Erişim Kontrolü
+
+--- Sayfa 19 ---
+Erişim Kontrolü Modelleri
+DAC (Discretionary AC) - İsteğe RBAC (Role-Based AC) - Rol
+Bağlı Erişim Kontrolü Tabanlı Erişim Kontrolü
+•Kaynak sahibi erişim iznini kendisi •Kullanıcılara roller atanır, roller izinleri
+belirler. belirler.
+•Örn: Linux dosya izinleri, klasör •Örn: Admin, Editor, Viewer rolleri
+paylaşımı
+MAC (Mandatory AC) - Zorunlu ABAC (Attribute-Based AC) -
+Erişim Kontrolü Öznitelik Tabanlı Erişim
+Kontrolü
+•Merkezi otorite erişimi belirler, sahip
+değiştiremez.
+•Kullanıcı/kaynak/çevre özelliklerine
+•Örn: Askeri sistemler, gizlilik seviyeleri göre erişim.
+•Örn: 'Çalışanlar çalışma saatlerinde
+erişebilir'
+HAFTA 4: Kimlik Doğrulama ve Erişim Kontrolü
+
+--- Sayfa 20 ---
+Erişim Kontrolü Modelleri
+Model Uygun Olduğu Ortam Yönetim Sorumlusu
+DAC Küçük/orta ölçekli işletmeler, kişisel Bireysel dosya sahibi
+dosya paylaşımı, ofis uygulamaları
+MAC Savunma, istihbarat, devlet Merkezi güvenlik otoritesi
+kurumları, kritik altyapı güvenliği
+RBAC Kurumsal ERP/CRM, sağlık bilgi Rol yöneticisi / IT ekibi
+sistemleri, SaaS uygulamaları
+ABAC Bulut ortamları, Zero Trust mimarisi, Politika mühendisi
+GDPR uyumlu sistemler, fintech
+HAFTA 4: Kimlik Doğrulama ve Erişim Kontrolü
+
+--- Sayfa 21 ---
+En Az Yetki İlkesi (PoLP)
+Kullanıcılara, programlara veya süreçlere yalnızca
+görevlerini yerine getirebilmeleri için gerekli olan en
+minimum erişim yetkisinin verilmesini öngören bir siber
+güvenlik ilkesidir.
+CIA ile Bağlantı
+•Confidentiality → Yetkisiz erişim engellenir
+•Integrity → Yetkisiz değişiklik önlenir
+•Availability → Yanlış yetki sistemi erişimi bozabilir
+HAFTA 4: Kimlik Doğrulama ve Erişim Kontrolü
+
+--- Sayfa 22 ---
+En Az Yetki İlkesi (PoLP)
+Medya Sunusu ana hat
+Videoyu izlemek
+için tıklayın
+HAFTA 4: Kimlik Doğrulama ve Erişim Kontrolü
+
+--- Sayfa 23 ---
+5. BÖLÜM
+Gerçek Dünya
+Uygulamaları
+HAFTA 4: Kimlik Doğrulama ve Erişim Kontrolü
+
+--- Sayfa 24 ---
+OAuth
+OAuth = Kimlik doğrulama sistemi değildir.
+OAuth = Yetki devri protokolüdür.
+Yani bir uygulamanın başka bir sistemden izinli şekilde veri
+almasını sağlar.
+Bir kullanıcının şifresini paylaşmadan, üçüncü taraf bir
+uygulamaya belirli kaynaklara sınırlı erişim izni vermesini
+sağlayan yetkilendirme çerçevesidir.
+Örn: "Google ile Giriş Yap" — web/mobil uygulamalarda
+"Twitter ile paylaş" butonu üçüncü taraf sitede
+HAFTA 4: Kimlik Doğrulama ve Erişim Kontrolü
+
+--- Sayfa 25 ---
+JWT
+JSON formatında, imzalı bir dijital kimlik kartıdır.
+İki taraf arasında güvenli biçimde bilgi aktarımı için
+kullanılan, Base64 ile kodlanmış ve dijital imzayla
+doğrulanan kompakt bir token formatıdır. Durumsuz
+(stateless) kimlik doğrulamada omurga rolü oynar.
+HEADER PAYLOAD SIGNATURE
+Algoritma bilgisi içerir. Yetki ve kullanıcı bilgisi: Sunucu gizli anahtarla imza
+Örneğin: { atar.
+{ "sub": "12345", Bu sayede:
+"alg": "HS256", "role": "admin", Tokendeğiştirilemez
+"typ": "JWT"
+"exp": 1712345678 İçerik manipüle edilemez
+}
+}
+HAFTA 4: Kimlik Doğrulama ve Erişim Kontrolü
+
+--- Sayfa 26 ---
+SAML — Kurumsal SSO Sistemi
+SAML daha çok kurumsal yapılarda kullanılır.
+Kullanıcının tek bir kurumsal hesapla (örn. Active
+Directory) birden fazla uygulamaya (Salesforce, Office
+365, SAP) erişmesini sağlayan XML tabanlı SSO federe
+kimlik protokolüdür.
+SAML SSO AkışÖrneği:
+1 Kullanıcı Salesforce'a erişmek ister (SP)
+2 SP kimlik doğrulanmamış kullanıcıyı IdP'ye yönlendirir
+3 Kullanıcı şirket Active Directory'siyle giriş yapar
+4 IdP imzalı SAML Assertion (XML) oluşturur
+5 Assertion SP'ye gönderilir, SP imzayı doğrular
+6 Kullanıcı Salesforce'a erişim kazanır
+HAFTA 4: Kimlik Doğrulama ve Erişim Kontrolü
+
+--- Sayfa 27 ---
+Soru & Cevap
+Gelecek Hafta: Zararlı Yazılımlar
